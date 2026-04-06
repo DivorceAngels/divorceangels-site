@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: DivorceAngels/divorceangels-site
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Legal", value: "Legal" }
+          - { label: "Financial", value: "Financial" }
+          - { label: "Co-Parenting", value: "Co-Parenting" }
+          - { label: "Emotional", value: "Emotional" }
+          - { label: "Life After", value: "Life After" }
+          - { label: "Wellness", value: "Wellness" }
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

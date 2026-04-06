@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Forums — Divorce Angels</title>
+<meta name="description" content="A safe, moderated community for people navigating divorce. Ask questions, share experiences, and connect with others who understand.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.forums-layout { display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start; }
+
+.forum-category { margin-bottom: 44px; }
+.forum-cat-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px; background: white; border: 1px solid var(--border);
+  border-radius: 14px 14px 0 0; border-bottom: none;
+}
+.forum-cat-icon { font-size: 1.4rem; }
+.forum-cat-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+.forum-cat-desc { font-size: 0.78rem; color: var(--ink-lt); margin-top: 1px; }
+.forum-cat-count { margin-left: auto; font-size: 0.72rem; color: var(--ink-lt); font-weight: 600; }
+
+.forum-threads { border: 1px solid var(--border); border-radius: 0 0 14px 14px; overflow: hidden; }
+.forum-thread {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px; border-bottom: 1px solid var(--border);
+  text-decoration: none; color: inherit;
+  transition: background 0.18s;
+}
+.forum-thread:last-child { border-bottom: none; }
+.forum-thread:hover { background: var(--cream); }
+.ft-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700; flex-shrink: 0;
+}
+.ft-main { flex: 1; min-width: 0; }
+.ft-title { font-size: 0.88rem; font-weight: 600; color: var(--ink); margin-bottom: 3px; line-height: 1.35; }
+.ft-meta { font-size: 0.73rem; color: var(--ink-lt); display: flex; align-items: center; gap: 8px; }
+.ft-stats { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex-shrink: 0; }
+.ft-replies { font-size: 0.72rem; font-weight: 700; color: var(--ink-mid); }
+.ft-time { font-size: 0.69rem; color: var(--ink-lt); }
+.ft-hot { display: inline-block; padding: 2px 7px; background: var(--terra-lt); color: var(--terracotta); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; border-radius: 20px; text-transform: uppercase; margin-left: 6px; }
+
+/* Post new */
+.post-new-bar {
+  background: white; border: 1.5px solid var(--forest); border-radius: 14px;
+  padding: 16px 20px; display: flex; align-items: center; gap: 14px;
+  margin-bottom: 32px; cursor: text;
+}
+.pnb-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--sage-lt); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--forest); font-weight: 700; flex-shrink: 0; }
+.pnb-input { flex: 1; border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--ink-lt); cursor: text; }
+.pnb-btn { padding: 8px 18px; background: var(--forest); color: white; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+.pnb-btn:hover { background: var(--forest-lt); }
+
+/* Sidebar */
+.forum-sidebar { position: sticky; top: 96px; }
+.fs-widget { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin-bottom: 20px; }
+.fs-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: 14px; }
+.community-rules { display: flex; flex-direction: column; gap: 10px; }
+.rule { display: flex; align-items: flex-start; gap: 10px; font-size: 0.82rem; color: var(--ink-mid); line-height: 1.4; }
+.rule-num { width: 22px; height: 22px; border-radius: 50%; background: var(--sage-lt); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: var(--forest); flex-shrink: 0; margin-top: 1px; }
+.active-users { display: flex; flex-direction: column; gap: 10px; }
+.active-user { display: flex; align-items: center; gap: 10px; }
+.au-av { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
+.au-name { font-size: 0.82rem; color: var(--ink-mid); }
+.au-badge { font-size: 0.65rem; color: var(--ink-lt); }
+.online-dot { width: 7px; height: 7px; border-radius: 50%; background: #4CAF50; margin-left: auto; }
+
+@media (max-width: 900px) { .forums-layout { grid-template-columns: 1fr; } .forum-sidebar { display: none; } }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo">Divorce<span>Angels</span></a>
+  <ul class="nav-links">
+    <li><a href="../blog/index.html">Blog</a></li>
+    <li><a href="../resources/index.html">Resources</a></li>
+    <li><a href="index.html" class="active">Forums</a></li>
+    <li><a href="../index.html#community">Community</a></li>
+  </ul>
+  <div class="nav-cta"><a href="../index.html#waitlist" class="btn-nav">✦ Join Waitlist</a></div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">Community Forums</div>
+  <h1 class="display-title">You're not the first<br>to feel this. <em>Talk to<br>people who get it.</em></h1>
+  <p class="body-lg" style="max-width:500px;margin-top:12px;">A safe, moderated space to ask questions, share experiences, and connect with others navigating the same moments you are.</p>
+</div>
+
+<section class="section">
+  <div class="forums-layout">
+    <div>
+
+      <!-- Post new bar -->
+      <div class="post-new-bar">
+        <div class="pnb-avatar">You</div>
+        <div class="pnb-input">Share something or ask a question...</div>
+        <button class="pnb-btn">Post</button>
+      </div>
+
+      <!-- Legal & Process -->
+      <div class="forum-category">
+        <div class="forum-cat-header">
+          <div class="forum-cat-icon">⚖️</div>
+          <div><div class="forum-cat-title">Legal & Process</div><div class="forum-cat-desc">Questions about court, lawyers, documents, and the legal process</div></div>
+          <div class="forum-cat-count">847 threads</div>
+        </div>
+        <div class="forum-threads">
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:var(--sage-lt);color:var(--forest);">SK</div>
+            <div class="ft-main">
+              <div class="ft-title">How do I find out if my spouse is hiding assets? What should I ask my lawyer? <span class="ft-hot">Hot</span></div>
+              <div class="ft-meta"><span>Legal & Process</span><span>·</span><span>Started by SarahK</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">43 replies</div><div class="ft-time">2 hours ago</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:#E8F0FF;color:#3B5FC0;">MJ</div>
+            <div class="ft-main">
+              <div class="ft-title">My lawyer wants $25k retainer. Is that normal for Ontario?</div>
+              <div class="ft-meta"><span>Legal & Process</span><span>·</span><span>Started by MichaelJ</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">28 replies</div><div class="ft-time">4 hours ago</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:var(--terra-lt);color:var(--terracotta);">AL</div>
+            <div class="ft-main">
+              <div class="ft-title">Can I serve divorce papers by email in BC? The address issue is complicated.</div>
+              <div class="ft-meta"><span>Legal & Process</span><span>·</span><span>Started by AnnaL</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">12 replies</div><div class="ft-time">Yesterday</div></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Financial -->
+      <div class="forum-category">
+        <div class="forum-cat-header">
+          <div class="forum-cat-icon">💰</div>
+          <div><div class="forum-cat-title">Financial Questions</div><div class="forum-cat-desc">Asset division, support, debt, pensions, and financial planning</div></div>
+          <div class="forum-cat-count">612 threads</div>
+        </div>
+        <div class="forum-threads">
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:#F5EDD0;color:#8B6914;">DR</div>
+            <div class="ft-main">
+              <div class="ft-title">Should I keep the house or sell? My lawyer says it depends on my income. <span class="ft-hot">Hot</span></div>
+              <div class="ft-meta"><span>Financial</span><span>·</span><span>Started by DavidR</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">61 replies</div><div class="ft-time">5 hours ago</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:var(--sage-lt);color:var(--forest);">TM</div>
+            <div class="ft-main">
+              <div class="ft-title">My ex refuses to disclose his business income. What are my options?</div>
+              <div class="ft-meta"><span>Financial</span><span>·</span><span>Started by TraceyM</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">34 replies</div><div class="ft-time">8 hours ago</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:#EDE8F8;color:#6B52A8;">JP</div>
+            <div class="ft-main">
+              <div class="ft-title">How is a defined benefit pension valued for equalization purposes?</div>
+              <div class="ft-meta"><span>Financial</span><span>·</span><span>Started by JenP</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">19 replies</div><div class="ft-time">Yesterday</div></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Emotional -->
+      <div class="forum-category">
+        <div class="forum-cat-header">
+          <div class="forum-cat-icon">❤️‍🩹</div>
+          <div><div class="forum-cat-title">Emotional Support</div><div class="forum-cat-desc">Processing feelings, getting through the hard days, finding your footing</div></div>
+          <div class="forum-cat-count">1,204 threads</div>
+        </div>
+        <div class="forum-threads">
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:var(--terra-lt);color:var(--terracotta);">RB</div>
+            <div class="ft-main">
+              <div class="ft-title">I keep second-guessing my decision. Is this normal six months in? <span class="ft-hot">Hot</span></div>
+              <div class="ft-meta"><span>Emotional Support</span><span>·</span><span>Started by RachelB</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">89 replies</div><div class="ft-time">3 hours ago</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:var(--sage-lt);color:var(--forest);">KW</div>
+            <div class="ft-main">
+              <div class="ft-title">How do I tell my parents? They love my spouse more than they love me sometimes.</div>
+              <div class="ft-meta"><span>Emotional Support</span><span>·</span><span>Started by KarenW</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">47 replies</div><div class="ft-time">6 hours ago</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:#E8F0FF;color:#3B5FC0;">NR</div>
+            <div class="ft-main">
+              <div class="ft-title">I finally signed the papers today. Sharing because I know some of you understand.</div>
+              <div class="ft-meta"><span>Emotional Support</span><span>·</span><span>Started by NaomiR</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">102 replies</div><div class="ft-time">Yesterday</div></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Co-Parenting -->
+      <div class="forum-category">
+        <div class="forum-cat-header">
+          <div class="forum-cat-icon">👶</div>
+          <div><div class="forum-cat-title">Co-Parenting</div><div class="forum-cat-desc">Schedules, communication, difficult co-parents, and raising kids through this</div></div>
+          <div class="forum-cat-count">398 threads</div>
+        </div>
+        <div class="forum-threads">
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:#E8F0FF;color:#3B5FC0;">CM</div>
+            <div class="ft-main">
+              <div class="ft-title">Navigating holiday schedules with a difficult co-parent. What actually works?</div>
+              <div class="ft-meta"><span>Co-Parenting</span><span>·</span><span>Started by ChrisM</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">37 replies</div><div class="ft-time">Yesterday</div></div>
+          </a>
+          <a href="#" class="forum-thread">
+            <div class="ft-avatar" style="background:var(--terra-lt);color:var(--terracotta);">LH</div>
+            <div class="ft-main">
+              <div class="ft-title">My 8-year-old cries every time I drop her off. I don't know how to help her.</div>
+              <div class="ft-meta"><span>Co-Parenting</span><span>·</span><span>Started by LisaH</span></div>
+            </div>
+            <div class="ft-stats"><div class="ft-replies">55 replies</div><div class="ft-time">2 days ago</div></div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="forum-sidebar">
+      <div style="background:var(--forest);border-radius:16px;padding:22px;text-align:center;margin-bottom:20px;">
+        <div style="font-size:1.8rem;margin-bottom:10px;">✦</div>
+        <div style="font-family:'Playfair Display',serif;color:white;font-size:1rem;margin-bottom:8px;font-weight:700;">Try the Divorce Angels App</div>
+        <div style="font-size:0.77rem;color:rgba(255,255,255,0.6);margin-bottom:16px;line-height:1.55;">Angel answers your questions 24/7 — privately and without judgment.</div>
+        <a href="#" class="btn-light" style="padding:11px 18px;font-size:0.8rem;display:block;text-align:center;">✦ Ask Angel Now</a>
+      </div>
+
+      <div class="fs-widget">
+        <div class="fs-title">Community Guidelines</div>
+        <div class="community-rules">
+          <div class="rule"><div class="rule-num">1</div>Be kind. Everyone here is going through something hard.</div>
+          <div class="rule"><div class="rule-num">2</div>No legal advice. Share experiences, not legal guidance.</div>
+          <div class="rule"><div class="rule-num">3</div>Respect privacy. What's shared here stays here.</div>
+          <div class="rule"><div class="rule-num">4</div>No promotion or spam of any kind.</div>
+          <div class="rule"><div class="rule-num">5</div>Support each other. You are not alone.</div>
+        </div>
+      </div>
+
+      <div class="fs-widget">
+        <div class="fs-title">Active Members</div>
+        <div class="active-users">
+          <div class="active-user"><div class="au-av" style="background:var(--sage-lt);color:var(--forest);">SK</div><div><div class="au-name">SarahK</div><div class="au-badge">47 posts</div></div><div class="online-dot"></div></div>
+          <div class="active-user"><div class="au-av" style="background:var(--terra-lt);color:var(--terracotta);">RB</div><div><div class="au-name">RachelB</div><div class="au-badge">31 posts</div></div><div class="online-dot"></div></div>
+          <div class="active-user"><div class="au-av" style="background:#EDE8F8;color:#6B52A8;">JP</div><div><div class="au-name">JenP</div><div class="au-badge">28 posts</div></div><div class="online-dot"></div></div>
+          <div class="active-user"><div class="au-av" style="background:#E8F0FF;color:#3B5FC0;">NR</div><div><div class="au-name">NaomiR</div><div class="au-badge">22 posts</div></div><div class="online-dot"></div></div>
+        </div>
+      </div>
+
+      <div class="fs-widget">
+        <div class="fs-title">Newsletter</div>
+        <p style="font-size:0.8rem;color:var(--ink-mid);line-height:1.6;margin-bottom:13px;">Weekly resources and community highlights.</p>
+        <form class="nl-form" style="flex-direction:column;border-radius:10px;gap:0;">
+          <input type="email" class="nl-input" placeholder="Your email" style="border-radius:8px 8px 0 0;border:none;border-bottom:1px solid var(--border);padding:10px 13px;font-size:0.84rem;">
+          <button type="submit" class="nl-btn" style="border-radius:0 0 8px 8px;padding:10px;">Subscribe</button>
+        </form>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-brand">Divorce<span>Angels</span></div><div class="footer-tagline">Real guidance for real people navigating one of life's hardest transitions.</div><div class="footer-socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
+    <div><div class="footer-col-title">Content</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../resources/index.html">Resources</a></li><li><a href="index.html">Forums</a></li></ul></div>
+    <div><div class="footer-col-title">Community</div><ul class="footer-links"><li><a href="index.html">Forums</a></li><li><a href="#">Newsletter</a></li><li><a href="#">About</a></li></ul></div>
+    <div><div class="footer-col-title">The App</div><ul class="footer-links"><li><a href="#">Launch App</a></li><li><a href="#">Angel AI</a></li><li><a href="#">Privacy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-bottom-txt">© 2026 Divorce Angels.</div><div class="footer-bottom-txt">Not legal advice. Consult a licensed attorney.</div></div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
