@@ -1,0 +1,12 @@
+{
+  "name": "divorceangels-site",
+  "version": "1.0.0",
+  "description": "Divorce Angels website",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "marked": "^9.0.0",
+    "gray-matter": "^4.0.3"
+  }
+}

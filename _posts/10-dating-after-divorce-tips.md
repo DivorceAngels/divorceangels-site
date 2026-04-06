@@ -1,0 +1,12 @@
+---
+title: "10 Dating after Divorce Tips"
+date: "2019-04-12"
+category: "Life After"
+cover_image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80&fit=crop"
+excerpt: "Be open to getting fixed up by friends, as well as online dating apps and dating sites, as that is how people meet today. Be smart about it and never go home with someone you meet online until you get"
+slug: "10-dating-after-divorce-tips"
+---
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Be open to getting fixed up by friends, as well as online dating apps and dating sites, as that is how people meet today.  Be smart about it and never go home with someone you meet online until you get to know them better.</li><li>On a first date, make sure you don’t talk about your divorce or your ex too much.  Keep the convo fun and flowing and don’t bad mouth!</li><li>Talk about yourself – your interests, your job, travel, food, movies.  Keep the talk about your children to a minimum, especially in the first few dates.</li><li>Stay open-minded -- even if you don’t feel attracted right away  -sometimes after a long marriage it takes some time to feel passionate again.</li><li>Remember that disappointment is part of dating – not every first date turns into a second date…and be okay with that. Don’t shut down if you have a bad experience,  dating after divorce is about getting back on the bike after falling off.</li><li>Dating can be fun and exciting if you don’t put pressure on yourself.  Don’t look to replace your spouse with the first person you meet because you are lonely. The last thing you should be looking for is a new partner.  Dating is about getting to know yourself again, take this time to enjoy meeting some new and interesting people.</li><li>Put your phone away.  Don’t text, or check Instagram while on a date.  It’s rude!</li><li>At this stage of life, it’s important, <g class="gr_ gr_42 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Punctuation only-ins replaceWithoutSep" id="42" data-gr-id="42">to</g> be honest with yourself and your date.  If it doesn’t feel right, don’t keep going out with them.</li><li>Don’t be afraid to be vulnerable if you meet someone you connect with after several dates.  The most important thing you can do is to show the real you. </li><li>If you remain open while dating,  even after your heart was broken, you just might meet the love of your life!</li></ol>
+<!-- /wp:list -->

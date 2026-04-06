@@ -1,0 +1,10 @@
+---
+title: "Everyone needs help through a divorce - shockingly that included me!"
+date: "2015-04-08"
+category: "Financial"
+cover_image: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&q=80&fit=crop"
+excerpt: "I&nbsp;considered myself one of the few fortunate ones.&nbsp; Because of my legal background (practiced law for more then 8 years) and my experience as a partner in a financial services firm (my curre"
+slug: "2015481u73nidr2fskoukhjcoe6wc9nihmmq"
+---
+
+<p>I&nbsp;considered myself one of the few fortunate ones.&nbsp; Because of my legal background (practiced law for more then 8 years) and my experience as a partner in a financial services firm (my current occupation) I was all too well aware of what was ahead of me when the divorce proceedings began.&nbsp; I knew enough family law to be aware of the procedures, I had experience in insurance and financial matters, yet I must say that even with my background I still found myself lost and confused at times.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Despite the animosity between myself and my then wife, I naively believed that a simple amicable solution was not only possible but in fact likely.&nbsp; Why waste money fighting when it is better served going to help our autistic son?&nbsp;</p><p>Simply….when emotions take over all logic goes out the window.</p><p>Who do I turn to?&nbsp; Whose opinion can I trust?&nbsp; What do I do next?&nbsp; There were lots and lots of questions with nowhere to turn for answers.&nbsp; Sure I relied on friends.&nbsp; Of course I got the expert opinion in all areas from my jewish mother. But mostly I had to figure things out on my own.&nbsp;</p><p>Since that time I have had a new appreciation for what people go through in a divorce.&nbsp; I have learned that there are wonderful resources out there to help with the struggles and the fear of the unknown.&nbsp; Never be afraid to reach out or to ask for help.</p><p>You might just find an “angel” if you do.</p><p>Todd Gotlieb, LL.B<br />GBK Strategic Financial Partners</p>

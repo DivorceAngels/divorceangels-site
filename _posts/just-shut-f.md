@@ -1,0 +1,46 @@
+---
+title: "Just Shut the F***  Up!"
+date: "2017-07-24"
+category: "Co-Parenting"
+cover_image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&fit=crop"
+excerpt: "After trolling in a FB group, dedicated to those getting divorced and then how to co-parent, I now feel I too must share all the negative traits of my daughter's father, along with why and when he pis"
+slug: "just-shut-f"
+---
+
+After trolling in a FB group, dedicated to those getting divorced and then how to co-parent, I now feel I too must share all the negative traits of my daughter's father, along with why and when he pisses me off as we co-parent, and what really lead to the dissolution of our common law marriage. I mean, everyone else is. Sometimes, I’ll post long winded, resentful posts about how wronged I was by my ex, how he never picks up my calls, why I think his parenting style sucks balls. And then I'll take a screen shot of our private texts to each other and post them, without my exes permission, of course, for strangers to see and respond.
+
+Sorry to disappoint, but I am completely lying. I would eat a Fear Factor-style breakfast of silkworm cereal, with glass of liquefied pig liver, and three duck embryos, than to share anything negative on social media about my ex, let alone to our daughter.
+
+In fact, give me the choice of speaking or writing publicly about my ex or downing that shot of Donkey sperm and urine, Fear Factor-style, and I'll plug my nose and down that donkey sperm and urine. Do I have negative things to share sometimes about our co-parenting? Maybe. Maybe not. But you will never find out.
+
+Because you know what's even more gross and appalling than downing a shot of donkey sperm? Reading other parent’s resentful, often ugly posts on social media platforms about the other parent of their children. It’s a fucking sad state of the world when you have to air super private grievances about your children’s other parent, seemingly without a thought to how it might affect your children in the long run, or even in the present, or even when it comes to your relationship with your ex, moving forward.
+
+In this age of oversharing (and that could just be telling me what you had for breakfast) it’s also made complaining and bashing your ex, soon-to-be ex, and what lead to your divorce, so incredibly easy to share and so quickly. Spontaneity can be fun, when it comes to a last minute trip. It's not so smart, however, to spontaneously post anything negative on social medial, especially when it comes to the other parent of your children.
+You just found out, five minutes ago, that your ex let's your children eat as much junk food as they want and drops them off late for school on their days? Post it immediately for strangers, so they can back you up virtually! You just found out, three minutes ago, your ex is moving in with the person they had an affair with? Hell, yeah, the world should know, so post it!
+
+Forget the fact that, you know, once something is out there on the world wide web, it is out there. Forever. And that children are more savvy than you think.
+
+After spending some time trolling these groups - where exes complain from everything to being upset about the ex giving their kids cell phones without talking with them first, to exes who never show up on time, or are constantly changing plans, to the anger that their ex lets their children stay up late and not shower, to sharing that their ex is marrying someone they met only four weeks earlier, to sharing their resentment that their partner has already introduced their children to new partners, in their eyes, way too early - I’m always left feeling dirty, as if I were standing next to a couple in the middle of a massive fight, which I kind of am, just virtually.
+
+I'm also left asking two simple questions: What the fuck is wrong with people? And, Where's your common sense?
+
+In theory, I do think these conversations, or rants, on social media pages can be, and are, incredibly helpful for others going through divorce and wanting to know about the process of mediators, or the best fit for custody schedules. These comment boards or Facebook groups can make you feel less alone, when you need a pep talk, or because, hell, it is nice to know that others are getting along worse than you are with your ex, isn't it? They can be wonderful if you are looking for resources to guide you through divorce and co-parenting.
+
+There is one major problem though. It seems these posters forget they actually have children with their exes. It literally makes my heart sink when I see people posting screen shots of conversations they have around the children, one parent calling out another so publicly. Does it make you feel better to rant about the ex so publicly? Maybe for a few minutes, sure. But at what cost? Are you really putting your child’s best interest at heart, by posting something nasty about their mother or father? Even if you were wronged and your ex slept with the yoga instructor who also happened to be your best friend, ask yourself if this means they are a bad parent? Is it in your child's best interest to find this out on a message board how you real feel about their mom or dad? These days, who knows what will go viral? Who knows who will share your post? And, who knows? You may just feel different the next day.
+
+While parents are constantly complaining about how their exes parent their children, it does seem to me that they forget…they actually have children. Even worse, they act like children. What mature person with any semblance of common sense feels the need to write out anything about their ex, and the parent of their child, online? Have they forgotten that message boards are not personal diaries?
+Because, notwithstanding abuse or addiction, posters who are parents seem to think that there's no way their ex, or children, will end up reading these posts at some point. Even though the world wide web is, well, world wide, the world is still a small place. For all these posters know, their exes are also on these message boards, or a family friend is. For all you know, your exes parents could hear about your post from their hairdresser who heard about it from another client and passed it along. For all you know, your ex is collecting all these negative things you've said about them to use against you. By posting so negatively, especially at the start of your separation, sets the tone for what's to come.
+
+I actually want to scold these parents, and I'm not a scolder. It’s not that hard to remember who your children’s other parent is, is it? It’s not too hard to remember that they may have been a shit husband or wife, but that they still are a good mother or father. That, and they will be in your lives, in some way, forever. How do people forget this? By posting all the negative things about your ex, you are setting the tone for how you're going to co-parent.
+
+But, alas, common sense does not prevail, when you are in the throes of separation or divorce. People want revenge. People feel wronged. And instead of taking a 20 minute walk before posting (I highly suggest you do this) irate parents are venting for…...well who knows why? But it’s certainly not in the children's best interest.
+
+Just yesterday I received a private message from a stranger who is going through a divorce and she asked me how it is I get along with my ex so well and also how she has noticed that I've never said one bad thing about my ex. I believe life is a series of choices and paths. This is a very simple question to ask yourself. What path do you want to choose? The one where you’re sharing personal and private details about your children’s other parent, sounding bitter and resentful, and have your children find out? Or do you want to take the path of moving forward to a happier place, which does not include posting every slight you felt in your marriage, or posting every single time that you feel you are getting screwed over. This may all be true. You may indeed be getting screwed over. But, once you become a parent, you must put your children's best interest at heart. If you constantly ask yourself, what is best for my child, I think anyone with any common sense, would choose to not post screen shots of text messages gone wrong, or moan about how the ex was late again or what a dead beat. I know people will still post negatively, and to that I do and will say, 'What is wrong with you?’ It seems like a cop out to say, 'If you don't have anything nice to say, don't say anything at all.’ But it's true. Every separation and divorce is different, but when children are involved, it is surprisingly pretty easy to not speak poorly about your ex, especially publicly.
+
+The secret?
+
+Just shut the fuck up.
+
+<strong>Rebecca Eckler
+</strong><em>Rebecca Eckler is currently the Executive Editor of <a href="http://www.savvymom.ca">Savvy Mom.
+</a></em><em>She is the bestselling author of Knocked Up: Confessions of a Hip Mother-to-Be, Wiped!, Life With a Pint-Sized Dictator, as well as the author of the international bestseller, How to Raise a Boyfriend. Rebecca has written for numerous magazines and parenting blogs across North America, and has been a columnist for The Globe &amp; Mail and National Post.</em>
