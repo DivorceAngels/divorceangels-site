@@ -2,10 +2,6 @@
   publish = "."
   functions = "netlify/functions"
 
-# Enable Netlify Identity for CMS login
-[[plugins]]
-  package = "@netlify/plugin-identity"
-
 # Blog routing
 [[redirects]]
   from = "/blog/page/1/"
