@@ -1,9 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: DivorceAngels/divorceangels-site
   branch: main
-
-site_url: https://divorceangelssite.netlify.app
-display_url: https://divorceangelssite.netlify.app
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
