@@ -298,6 +298,18 @@ footer{background:var(--blue);padding:68px 0 32px}
 @media(max-width:860px){.blog-grid{grid-template-columns:1fr}.blog-card.feat{grid-row:auto}section{padding:64px 0}.container{padding:0 28px}.nav-inner{padding:0 28px}.nav-links{display:none}#menu-btn{display:block}.angel-popup{width:calc(100vw - 32px);right:16px}}
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}.tmock-stats{grid-template-columns:repeat(3,1fr)}.tmock-stats .tmock-stat:nth-child(4),.tmock-stats .tmock-stat:nth-child(5){border-top:1px solid #E2E8F0}h1{font-size:2.2rem}h2{font-size:1.7rem}}
 </style>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </head>
 <body>
 
