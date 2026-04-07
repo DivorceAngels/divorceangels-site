@@ -18,3 +18,4 @@ The editor works like a word processor. You can:
 - Bold and italic text
 
 When you click **Publish**, your post goes live automatically.
+ 
