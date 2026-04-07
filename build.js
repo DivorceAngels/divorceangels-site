@@ -88,7 +88,7 @@ footer{background:var(--blue);padding:68px 0 32px}
 
 const NAV = `<nav id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:44px;width:auto;display:block;"></a>
+    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:52px;width:auto;display:block;mix-blend-mode:multiply;"></a>
     <ul class="nav-links">
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/#community">Community</a></li>
