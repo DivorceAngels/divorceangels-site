@@ -128,13 +128,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop
 
 /* BLOG */
 .blog-section{background:white;padding:96px 0}
-.blog-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:auto auto;gap:24px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .blog-card{background:white;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
 .blog-card:hover{border-color:var(--g4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(44,82,64,0.08)}
-.blog-card.feat{grid-row:span 2}
+
 .blog-img{width:100%;object-fit:cover;display:block}
-.blog-card.feat .blog-img{aspect-ratio:4/3}
-.blog-card:not(.feat) .blog-img{aspect-ratio:16/9}
+
+.blog-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
 .blog-body{padding:20px 22px 22px;flex:1;display:flex;flex-direction:column}
 .btag{display:inline-block;font-size:0.66rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:11px}
 .btag-legal{background:var(--g1);color:var(--g5)}
@@ -143,7 +143,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop
 .btag-well{background:#FFF0E8;color:#7A3D18}
 .btag-life{background:#EDE5E0;color:#6B4A3A}
 .blog-title{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:10px;flex:1}
-.blog-card.feat .blog-title{font-size:1.25rem}
+
 .blog-meta{font-size:0.73rem;color:var(--ink-l);margin-top:auto}
 
 /* ANGEL SECTION */
@@ -424,7 +424,7 @@ footer{background:var(--blue);padding:68px 0 32px}
           <a href="/blog/" class="link-arrow">View all articles →</a>
         </div>
         <div class="blog-grid fade-up d1">
-          <a href="/understanding-mediation-arbitration-and-litigation-key-differences-explained/" class="blog-card feat">
+          <a href="/understanding-mediation-arbitration-and-litigation-key-differences-explained/" class="blog-card">
             <img class="blog-img" src="https://cdn.durable.co/getty/21PrKVQ3HVjeFq7KM9p0WHL7EnvraWZjUbQLr4dSeoxFVdqLExR8lrlH3g01dowh.jpeg" alt="Understanding Mediation, Arbitration, and Litigation: Key Differences Explained">
             <div class="blog-body">
               <span class="btag" style="background:#EAF0EC;color:#2C3E35">Legal</span>
