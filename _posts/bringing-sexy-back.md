@@ -1,10 +1,12 @@
 ---
-title: "Bringing Sexy Back..."
-date: "2018-10-30"
-category: "Emotional"
-cover_image: "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&q=80&fit=crop"
-excerpt: "So here I am three years post divorce and I’m ready to get my “sexy on”. I mean the last five years have been a shit storm of tears, humiliation, anger, frustration, manipulation, angst and sleepless "
-slug: "bringing-sexy-back"
+title: Bringing Sex Back...
+date: 2018-10-30
+category: Emotional
+cover_image: https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&q=80&fit=crop
+excerpt: "So here I am three years post divorce and I’m ready to get my “sexy
+  on”. I mean the last five years have been a shit storm of tears, humiliation,
+  anger, frustration, manipulation, angst and sleepless "
+slug: bringing-sexy-back
 ---
 
 So here I am three years post divorce and I’m ready to get my “sexy on”.
