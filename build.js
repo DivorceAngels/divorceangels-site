@@ -66,8 +66,7 @@ p{color:var(--ink-m);line-height:1.75}
 .container{max-width:1160px;margin:0 auto;padding:0 52px}
 nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1160px;margin:0 auto;padding:0 52px}
-.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--ink);display:flex;align-items:center;gap:6px}
-.nav-logo .mark{color:var(--g4)}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-logo{display:flex;align-items:center;}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{font-size:0.87rem;color:var(--ink-m)}.nav-links a:hover{color:var(--g5)}
 .nav-cta{font-size:0.82rem;font-weight:500;background:var(--g5);color:white;padding:9px 20px;border-radius:8px;white-space:nowrap}
 #menu-btn{display:none;background:none;border:none;cursor:pointer;color:var(--ink);font-size:1.3rem}
