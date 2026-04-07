@@ -53,7 +53,7 @@ section{padding:96px 0}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:168px;max-width:1160px;margin:0 auto;padding:0 52px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1160px;margin:0 auto;padding:0 52px}
 .nav-logo{display:flex;align-items:center;}
 .nav-logo .mark{color:var(--g4);font-size:0.9rem}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
@@ -304,7 +304,7 @@ footer{background:var(--blue);padding:68px 0 32px}
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:156px;width:auto;display:block;mix-blend-mode:multiply;"></a>
+    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:64px;width:auto;display:block;mix-blend-mode:multiply;"></a>
     <ul class="nav-links">
       <li><a href="blog/index.html">Blog</a></li>
       <li><a href="#community">Community</a></li>
@@ -413,6 +413,99 @@ footer{background:var(--blue);padding:68px 0 32px}
   </div>
 </section>
 
+<!-- ANGEL SECTION -->
+<section class="angel-section" id="angel-section">
+  <div class="container">
+    <div class="angel-grid">
+      <div class="angel-copy fade-up">
+        <div class="angel-copy-eyebrow">Free AI coach</div>
+        <h2>Meet Angel — here <em>whenever you need her.</em></h2>
+        <p>Ask anything — legal questions, financial worries, emotional struggles, or just "where do I even start?" Angel gives clear, thoughtful answers any time. No judgment. No hourly rate. Free forever on this site.</p>
+        <div class="angel-feats">
+          <div class="angel-feat"><div class="feat-ic">⚖️</div><div class="feat-txt"><strong>Legal questions</strong><span>Your rights, the process, what to expect — explained in plain language</span></div></div>
+          <div class="angel-feat"><div class="feat-ic">💰</div><div class="feat-txt"><strong>Financial guidance</strong><span>Assets, debts, support, pensions — simplified</span></div></div>
+          <div class="angel-feat"><div class="feat-ic">💙</div><div class="feat-txt"><strong>Emotional support</strong><span>Available at 2am when you can't sleep. No judgment, ever.</span></div></div>
+        </div>
+        <button class="btn-primary" onclick="openAngel()" style="background:white;color:var(--blue);">✦ Start chatting — it's free</button>
+        <p class="angel-note">No signup required. Free forever on this website.</p>
+      </div>
+      <div class="angel-panel fade-up d2">
+        <div class="ap-hdr">
+          <div class="ap-av">✦</div>
+          <div><div class="ap-name">Angel</div><div class="ap-sub">AI Divorce Coach · Powered by Claude</div></div>
+        </div>
+        <div class="ap-msgs" id="angel-msgs-section"></div>
+        <div class="ap-sugg" id="angel-sugg-section">
+          <button class="ap-chip" onclick="angelSuggestSection('Where do I even start with divorce?')">Where do I start?</button>
+          <button class="ap-chip" onclick="angelSuggestSection('What are my rights if my spouse asks me to leave?')">What are my rights?</button>
+          <button class="ap-chip" onclick="angelSuggestSection('How is debt divided in a divorce?')">How is debt split?</button>
+          <button class="ap-chip" onclick="angelSuggestSection('Do I need a lawyer?')">Do I need a lawyer?</button>
+        </div>
+        <div class="ap-input-row">
+          <input id="angel-input-section" type="text" class="ap-input" placeholder="Ask Angel anything…" onkeypress="if(event.key==='Enter')angelSendSection()">
+          <button id="angel-btn-section" class="ap-send" onclick="angelSendSection()">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community-section" id="community">
+  <div class="container">
+    <div class="community-grid">
+      <div class="fade-up">
+        <div class="eyebrow">Facebook community</div>
+        <h2>42,000+ people navigating<br>this <em style="font-style:italic;color:var(--g5);">right now.</em></h2>
+        <p style="margin-bottom:22px;max-width:420px;">Our Facebook group is one of the most active divorce support communities online — growing every day. Real people, real conversations, real support.</p>
+        <div class="community-live"><div class="live-dot"></div>Active right now — new posts every few minutes</div>
+        <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="btn-primary" style="margin-bottom:12px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Join the Facebook group
+        </a>
+        <div style="font-size:0.74rem;color:var(--ink-l);">Free to join · Moderated for safety</div>
+      </div>
+      <div class="fb-widget fade-up d2">
+        <div class="fb-hdr">
+          <div class="fb-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+          <div><div class="fb-gname">Divorce Angels Community</div><div class="fb-gcount">Group · 42,000+ members</div></div>
+          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="fb-join">+ Join Group</a>
+        </div>
+        <div class="fb-posts">
+          <div class="fb-post">
+            <div class="fb-post-hdr">
+              <div class="fb-av" style="background:var(--g1);color:var(--g5);">S</div>
+              <div><div class="fb-poster">Sarah K.</div><div class="fb-time">2 hours ago</div></div>
+            </div>
+            <p class="fb-txt">Has anyone dealt with a spouse who refuses to complete financial disclosure? My lawyer says we can bring a motion but I'm not sure if it's worth the cost...</p>
+            <div class="fb-meta"><span>👍 24 likes</span><span>💬 17 comments</span></div>
+          </div>
+          <div class="fb-post">
+            <div class="fb-post-hdr">
+              <div class="fb-av" style="background:#DDE8FF;color:var(--blue);">R</div>
+              <div><div class="fb-poster">Rachel B.</div><div class="fb-time">5 hours ago</div></div>
+            </div>
+            <p class="fb-txt">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay. More than okay. Sending love to everyone just starting this journey. 💙</p>
+            <div class="fb-meta"><span>❤️ 148 likes</span><span>💬 63 comments</span></div>
+          </div>
+          <div class="fb-post">
+            <div class="fb-post-hdr">
+              <div class="fb-av" style="background:#E8E4F0;color:#6B52A8;">M</div>
+              <div><div class="fb-poster">Michael J.</div><div class="fb-time">Yesterday</div></div>
+            </div>
+            <p class="fb-txt">Finally got the house sold and settlement signed. Used Angel to prep for every lawyer meeting. Saved me hours. Highly recommend.</p>
+            <div class="fb-meta"><span>👍 89 likes</span><span>💬 31 comments</span></div>
+          </div>
+        </div>
+        <div class="fb-ftr">
+          <span class="fb-ftr-note">Join to see all posts and participate</span>
+          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="fb-ftr-link">View in Facebook →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BLOG -->
     <section class="blog-section">
       <div class="container">
@@ -475,99 +568,6 @@ footer{background:var(--blue);padding:68px 0 32px}
         </div>
       </div>
     </section>
-
-<!-- COMMUNITY -->
-<section class="community-section" id="community">
-  <div class="container">
-    <div class="community-grid">
-      <div class="fade-up">
-        <div class="eyebrow">Facebook community</div>
-        <h2>42,000+ people navigating<br>this <em style="font-style:italic;color:var(--g5);">right now.</em></h2>
-        <p style="margin-bottom:22px;max-width:420px;">Our Facebook group is one of the most active divorce support communities online — growing every day. Real people, real conversations, real support.</p>
-        <div class="community-live"><div class="live-dot"></div>Active right now — new posts every few minutes</div>
-        <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="btn-primary" style="margin-bottom:12px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          Join the Facebook group
-        </a>
-        <div style="font-size:0.74rem;color:var(--ink-l);">Free to join · Moderated for safety</div>
-      </div>
-      <div class="fb-widget fade-up d2">
-        <div class="fb-hdr">
-          <div class="fb-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
-          <div><div class="fb-gname">Divorce Angels Community</div><div class="fb-gcount">Group · 42,000+ members</div></div>
-          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="fb-join">+ Join Group</a>
-        </div>
-        <div class="fb-posts">
-          <div class="fb-post">
-            <div class="fb-post-hdr">
-              <div class="fb-av" style="background:var(--g1);color:var(--g5);">S</div>
-              <div><div class="fb-poster">Sarah K.</div><div class="fb-time">2 hours ago</div></div>
-            </div>
-            <p class="fb-txt">Has anyone dealt with a spouse who refuses to complete financial disclosure? My lawyer says we can bring a motion but I'm not sure if it's worth the cost...</p>
-            <div class="fb-meta"><span>👍 24 likes</span><span>💬 17 comments</span></div>
-          </div>
-          <div class="fb-post">
-            <div class="fb-post-hdr">
-              <div class="fb-av" style="background:#DDE8FF;color:var(--blue);">R</div>
-              <div><div class="fb-poster">Rachel B.</div><div class="fb-time">5 hours ago</div></div>
-            </div>
-            <p class="fb-txt">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay. More than okay. Sending love to everyone just starting this journey. 💙</p>
-            <div class="fb-meta"><span>❤️ 148 likes</span><span>💬 63 comments</span></div>
-          </div>
-          <div class="fb-post">
-            <div class="fb-post-hdr">
-              <div class="fb-av" style="background:#E8E4F0;color:#6B52A8;">M</div>
-              <div><div class="fb-poster">Michael J.</div><div class="fb-time">Yesterday</div></div>
-            </div>
-            <p class="fb-txt">Finally got the house sold and settlement signed. Used Angel to prep for every lawyer meeting. Saved me hours. Highly recommend.</p>
-            <div class="fb-meta"><span>👍 89 likes</span><span>💬 31 comments</span></div>
-          </div>
-        </div>
-        <div class="fb-ftr">
-          <span class="fb-ftr-note">Join to see all posts and participate</span>
-          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="fb-ftr-link">View in Facebook →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ANGEL SECTION -->
-<section class="angel-section" id="angel-section">
-  <div class="container">
-    <div class="angel-grid">
-      <div class="angel-copy fade-up">
-        <div class="angel-copy-eyebrow">Free AI coach</div>
-        <h2>Meet Angel — here <em>whenever you need her.</em></h2>
-        <p>Ask anything — legal questions, financial worries, emotional struggles, or just "where do I even start?" Angel gives clear, thoughtful answers any time. No judgment. No hourly rate. Free forever on this site.</p>
-        <div class="angel-feats">
-          <div class="angel-feat"><div class="feat-ic">⚖️</div><div class="feat-txt"><strong>Legal questions</strong><span>Your rights, the process, what to expect — explained in plain language</span></div></div>
-          <div class="angel-feat"><div class="feat-ic">💰</div><div class="feat-txt"><strong>Financial guidance</strong><span>Assets, debts, support, pensions — simplified</span></div></div>
-          <div class="angel-feat"><div class="feat-ic">💙</div><div class="feat-txt"><strong>Emotional support</strong><span>Available at 2am when you can't sleep. No judgment, ever.</span></div></div>
-        </div>
-        <button class="btn-primary" onclick="openAngel()" style="background:white;color:var(--blue);">✦ Start chatting — it's free</button>
-        <p class="angel-note">No signup required. Free forever on this website.</p>
-      </div>
-      <div class="angel-panel fade-up d2">
-        <div class="ap-hdr">
-          <div class="ap-av">✦</div>
-          <div><div class="ap-name">Angel</div><div class="ap-sub">AI Divorce Coach · Powered by Claude</div></div>
-        </div>
-        <div class="ap-msgs" id="angel-msgs-section"></div>
-        <div class="ap-sugg" id="angel-sugg-section">
-          <button class="ap-chip" onclick="angelSuggestSection('Where do I even start with divorce?')">Where do I start?</button>
-          <button class="ap-chip" onclick="angelSuggestSection('What are my rights if my spouse asks me to leave?')">What are my rights?</button>
-          <button class="ap-chip" onclick="angelSuggestSection('How is debt divided in a divorce?')">How is debt split?</button>
-          <button class="ap-chip" onclick="angelSuggestSection('Do I need a lawyer?')">Do I need a lawyer?</button>
-        </div>
-        <div class="ap-input-row">
-          <input id="angel-input-section" type="text" class="ap-input" placeholder="Ask Angel anything…" onkeypress="if(event.key==='Enter')angelSendSection()">
-          <button id="angel-btn-section" class="ap-send" onclick="angelSendSection()">→</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- NEWSLETTER -->
 <section class="nl-section">
