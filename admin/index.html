@@ -183,12 +183,24 @@
       <button id="ai-generate" onclick="generatePost()">✦ Generate blog post</button>
     </div>
     <div id="ai-output">
+      <div id="ai-image-suggestion" style="display:none;margin-bottom:10px;">
+        <div style="font-size:0.8rem;font-weight:500;color:#3A4E42;margin-bottom:6px;">Suggested cover image</div>
+        <div style="position:relative;border-radius:8px;overflow:hidden;border:1px solid #D8E4DC;">
+          <img id="ai-cover-img" src="" style="width:100%;height:120px;object-fit:cover;display:block;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.5);padding:6px 10px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.68rem;color:rgba(255,255,255,0.7);">Via Unsplash — free to use</span>
+            <button onclick="refreshImage()" style="font-size:0.68rem;color:white;background:rgba(255,255,255,0.2);border:none;padding:3px 8px;border-radius:4px;cursor:pointer;">Try another</button>
+          </div>
+        </div>
+        <div style="font-size:0.72rem;color:#6A7A70;margin-top:5px;">Copy this URL to use as your cover image:</div>
+        <input id="ai-img-url" type="text" readonly style="width:100%;padding:6px 10px;font-size:0.72rem;border:1px solid #D8E4DC;border-radius:6px;color:#3A4E42;margin-top:4px;cursor:pointer;" onclick="this.select();document.execCommand('copy');this.style.borderColor='#4A7A5E';" title="Click to copy">
+      </div>
       <div id="ai-result"></div>
       <div class="ai-actions">
         <button id="ai-copy" onclick="copyPost()">Copy to clipboard</button>
         <button id="ai-regen" onclick="generatePost()">Regenerate</button>
       </div>
-      <div class="ai-note">Copy and paste into the blog editor above, then edit as needed before publishing.</div>
+      <div class="ai-note">Copy the post and image URL into the blog editor above, then publish.</div>
     </div>
   </div>
 
@@ -254,6 +266,7 @@ Requirements:
         const text = data.content || data.error || 'Sorry, something went wrong. Please try again.';
         result.textContent = text;
         output.classList.add('show');
+        showImageSuggestion(category);
       } catch(e) {
         result.textContent = 'Error: ' + e.message + '. Please try again.';
         output.classList.add('show');
@@ -270,8 +283,40 @@ Requirements:
       btn.textContent = '✓ Copied!';
       setTimeout(() => btn.textContent = 'Copy to clipboard', 2000);
     }
+
+    // Unsplash image suggestions by category/keyword
+    const IMAGE_POOL = {
+      'Legal':        ['photo-1589829545856-d10d557cf95f','photo-1521791136064-7986c2920216','photo-1450101499163-c8848c66ca85','photo-1507925921958-8a62f3d1a50d','photo-1554224155-6726b3ff858f'],
+      'Financial':    ['photo-1460925895917-afdab827c52f','photo-1579621970588-a35d0e7ab9b6','photo-1554224155-6726b3ff858f','photo-1450101499163-c8848c66ca85','photo-1460925895917-afdab827c52f'],
+      'Co-Parenting': ['photo-1516627145497-ae6968895b74','photo-1484665754804-74b091211472','photo-1471286174890-9c112ffca5b4','photo-1529156069898-49953e39b3ac','photo-1488521787991-ed7bbaae773c'],
+      'Emotional':    ['photo-1499209974431-9dddcece7f88','photo-1493836512294-502baa1986e2','photo-1474552226712-ac0f0961a954','photo-1528892952291-009c663ce843','photo-1518199266791-5375a83190b7'],
+      'Life After':   ['photo-1506905925346-21bda4d32df4','photo-1470770903676-69b98201ea1c','photo-1501854140801-50d01698950b','photo-1545239705-1564e58b9e4a','photo-1531746020798-e6953c6e8e04'],
+      'Wellness':     ['photo-1571019613454-1cb2f99b2d8b','photo-1518459031867-a89b944bffe4','photo-1476703993599-0035a21b17a9','photo-1491841550275-ad7854e35ca6','photo-1525338078858-d762b5e32f2c'],
+    };
+
+    let currentImagePool = [];
+    let currentImageIndex = 0;
+
+    function showImageSuggestion(category) {
+      const pool = IMAGE_POOL[category] || IMAGE_POOL['Emotional'];
+      currentImagePool = [...pool].sort(() => Math.random() - 0.5);
+      currentImageIndex = 0;
+      updateImage();
+      document.getElementById('ai-image-suggestion').style.display = 'block';
+    }
+
+    function updateImage() {
+      const id = currentImagePool[currentImageIndex % currentImagePool.length];
+      const url = `https://images.unsplash.com/${id}?w=800&q=80&fit=crop`;
+      document.getElementById('ai-cover-img').src = url;
+      document.getElementById('ai-img-url').value = url;
+    }
+
+    function refreshImage() {
+      currentImageIndex++;
+      updateImage();
+    }
   </script>
 
 </body>
 </html>
-
