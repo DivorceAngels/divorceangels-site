@@ -2,7 +2,7 @@
 title: " Dating After Separation: One Woman's Courageous First Steps"
 date: 2026-04-08
 category: Life After
-cover_image: https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80&fit=crop
+cover_image: https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=800&q=80&fit=crop
 ---
 ## The Nervous Beginning
 
