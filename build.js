@@ -65,7 +65,7 @@ h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.2}
 p{color:var(--ink-m);line-height:1.75}
 .container{max-width:1160px;margin:0 auto;padding:0 52px}
 nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:168px;max-width:1160px;margin:0 auto;padding:0 52px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1160px;margin:0 auto;padding:0 52px}
 .nav-logo{display:flex;align-items:center;}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{font-size:0.87rem;color:var(--ink-m)}.nav-links a:hover{color:var(--g5)}
 .nav-cta{font-size:0.82rem;font-weight:500;background:var(--g5);color:white;padding:9px 20px;border-radius:8px;white-space:nowrap}
@@ -87,7 +87,7 @@ footer{background:var(--blue);padding:68px 0 32px}
 
 const NAV = `<nav id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:156px;width:auto;display:block;mix-blend-mode:multiply;"></a>
+    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:64px;width:auto;display:block;mix-blend-mode:multiply;"></a>
     <ul class="nav-links">
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/#community">Community</a></li>
@@ -312,3 +312,65 @@ for (let p = 2; p <= totalPages; p++) {
 });
 
 console.log(`✓ Built ${posts.length} posts, ${totalPages} index pages, 6 category pages`);
+
+// ── Update homepage blog cards with 6 most recent posts ──
+const TAG_STYLES_HP = {
+    'Legal':        'background:#EAF0EC;color:#2C3E35',
+    'Financial':    'background:#EEF5E8;color:#2E6B27',
+    'Co-Parenting': 'background:#E8EEFF;color:#2D4A6B',
+    'Life After':   'background:#EDE5E0;color:#6B4A3A',
+    'Emotional':    'background:#EDE8F8;color:#5240A8',
+    'Wellness':     'background:#FFF0E8;color:#7A3D18',
+};
+
+function hpTag(cat) {
+    const style = TAG_STYLES_HP[cat] || 'background:#eee;color:#333';
+    return `<span class="btag" style="${style}">${cat}</span>`;
+}
+
+if (fs.existsSync('./index.html')) {
+    let hp = fs.readFileSync('./index.html', 'utf8');
+    const hp6 = posts.slice(0, 6);
+
+    const newCards = hp6.map(p => `
+          <a href="/${p.slug}/" class="blog-card">
+            <img class="blog-img" src="${p.cover_img}" alt="${escapeHtml(p.title)}">
+            <div class="blog-body">
+              ${hpTag(p.category || 'Wellness')}
+              <h3 class="blog-title">${escapeHtml(p.title)}</h3>
+              <div class="blog-meta">${p.date_fmt}</div>
+            </div>
+          </a>`).join('');
+
+    const newBlogSection = `<!-- BLOG -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="section-hdr fade-up">
+          <div>
+            <div class="eyebrow">From the blog</div>
+            <h2>Insight for every <em style="font-style:italic;color:var(--g5);">stage of the journey</em></h2>
+          </div>
+          <a href="/blog/" class="link-arrow">View all articles →</a>
+        </div>
+        <div class="blog-grid fade-up d1">
+          ${newCards}
+        </div>
+      </div>
+    </section>`;
+
+    hp = hp.replace(/<!-- BLOG -->[\s\S]*?<\/section>/, newBlogSection);
+    fs.writeFileSync('./index.html', hp);
+    console.log('✓ Homepage blog cards updated with 6 latest posts');
+}
+
+// ── Generate latest-posts.json for homepage dynamic loading ──
+const latest = posts.slice(0, 6).map(p => ({
+    title: p.title,
+    slug: p.slug,
+    date_fmt: p.date_fmt,
+    category: p.category,
+    cover_img: p.cover_img,
+    excerpt: p.excerpt ? p.excerpt.slice(0, 150) : ''
+}));
+fs.writeFileSync('./latest-posts.json', JSON.stringify(latest, null, 2));
+console.log('✓ latest-posts.json written with 6 most recent posts');
