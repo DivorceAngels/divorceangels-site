@@ -374,3 +374,4 @@ const latest = posts.slice(0, 6).map(p => ({
 }));
 fs.writeFileSync('./latest-posts.json', JSON.stringify(latest, null, 2));
 console.log('✓ latest-posts.json written with 6 most recent posts');
+
