@@ -1,54 +1,28 @@
-const Anthropic = require("@anthropic-ai/sdk");
-
-exports.handler = async (event) => {
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method not allowed" };
+exports.handler = async function(event, context) {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
   }
-
-  const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Content-Type": "application/json",
-  };
-
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return { statusCode: 500, body: JSON.stringify({ error: 'API key not configured' }) };
+  }
+  let body;
+  try { body = JSON.parse(event.body); } catch(e) {
+    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
+  }
+  const { topic, category, angle } = body;
+  const prompt = `Write a blog post for DivorceAngels.com about: "${topic}"\nCategory: ${category}\n${angle ? `Tone: ${angle}` : ''}\nWrite 500-700 words, warm empathetic tone, use ## subheadings, practical tips, Markdown format, no title at top.`;
   try {
-    const { topic, category, angle } = JSON.parse(event.body);
-
-    const client = new Anthropic();
-    const prompt = `Write a blog post for DivorceAngels.com about: "${topic}"
-
-Category: ${category}
-${angle ? `Tone/angle: ${angle}` : ''}
-
-Requirements:
-- Write in a warm, empathetic tone like a knowledgeable friend who has been through it
-- 500-700 words
-- Include a compelling intro that hooks the reader
-- Use subheadings (## for H2) to break up the content
-- Include practical, actionable tips
-- End with an encouraging, hopeful conclusion
-- Format in Markdown
-- Do not include a title at the top (the CMS handles that)
-- Do not be preachy or overly clinical
-- Write for someone in the middle of or about to start a divorce in Canada or the US`;
-
-    const message = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 1024,
-      messages: [{ role: "user", content: prompt }],
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1024, messages: [{ role: 'user', content: prompt }] })
     });
-
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({ content: message.content[0].text }),
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({ error: error.message }),
-    };
+    const data = await response.json();
+    if (!response.ok) return { statusCode: response.status, body: JSON.stringify({ error: data.error?.message || 'API error' }) };
+    const content = data.content?.[0]?.text || '';
+    return { statusCode: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ content }) };
+  } catch(e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
-
