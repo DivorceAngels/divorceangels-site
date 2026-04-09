@@ -2,7 +2,7 @@
 title: Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?
 date: 2026-04-09
 category: Legal
-cover_image: https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop
+cover_image: /uploads/screenshot-2026-04-09-at-7.22.35 am.png
 ---
 If you're going through a divorce, you've probably asked yourself this question more than once: *Why is this taking so long?* You're not alone. One of the most frustrating aspects of divorce isn't just the emotional toll—it's the seemingly endless legal process that can drag on for months, even years. When you're already dealing with heartbreak, uncertainty, and major life changes, the last thing you need is to feel trapped in a bureaucratic maze with no clear finish line in sight.
 
