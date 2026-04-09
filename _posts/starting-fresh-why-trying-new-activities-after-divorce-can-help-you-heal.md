@@ -1,10 +1,12 @@
 ---
 title: "Starting Fresh: Why Trying New Activities After Divorce Can Help You Heal"
-date: "2025-07-06"
-category: "Life After"
-cover_image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop"
-excerpt: "Divorce is a life-changing experience — one that often leaves you wondering what now? After the dust settles, it’s easy to feel stuck in a cycle of sadness, stress, or even relief mixed with uncertain"
-slug: "starting-fresh-why-trying-new-activities-after-divorce-can-help-you-heal"
+date: 2025-07-06
+category: Life After
+cover_image: /uploads/jon-matthews-fvhxfrklcpa-unsplash.jpg
+excerpt: Divorce is a life-changing experience — one that often leaves you
+  wondering what now? After the dust settles, it’s easy to feel stuck in a cycle
+  of sadness, stress, or even relief mixed with uncertain
+slug: starting-fresh-why-trying-new-activities-after-divorce-can-help-you-heal
 ---
 
 <!-- wp:paragraph -->
