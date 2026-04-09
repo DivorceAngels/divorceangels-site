@@ -48,13 +48,13 @@ img{display:block;max-width:100%}
 .hero-copy{padding-bottom:72px;padding-top:12px;flex:1;min-width:0}
 .hero-h1{font-family:'Lora',Georgia,serif;font-size:72px;font-weight:400;line-height:1.05;color:var(--ink);margin-bottom:28px}
 .hero-h1 em{color:var(--forest);font-style:italic}
-.hero-body{font-size:16px;color:var(--ink-mid);line-height:1.8;margin-bottom:36px;max-width:520px}
-.hero-btns{display:flex;flex-direction:column;gap:12px;max-width:400px;margin-bottom:20px}
-.btn-primary{background:var(--navy);color:#fff;font-size:15px;font-weight:500;padding:17px 32px;border-radius:10px;text-align:center;transition:opacity .2s;display:block}
+.hero-body{font-size:14px;color:var(--ink-mid);line-height:1.8;margin-bottom:30px;max-width:420px}
+.hero-btns{display:flex;flex-direction:column;gap:10px;max-width:280px;margin-bottom:16px}
+.btn-primary{background:var(--navy);color:#fff;font-size:13px;font-weight:500;padding:13px 24px;border-radius:8px;text-align:center;transition:opacity .2s;display:block}
 .btn-primary:hover{opacity:.88}
-.btn-secondary{background:transparent;color:var(--forest);font-size:15px;font-weight:500;padding:16px 30px;border-radius:10px;border:1.5px solid var(--forest);text-align:center;transition:all .2s;display:block}
+.btn-secondary{background:transparent;color:var(--forest);font-size:13px;font-weight:500;padding:12px 22px;border-radius:8px;border:1.5px solid var(--forest);text-align:center;transition:all .2s;display:block}
 .btn-secondary:hover{background:var(--forest);color:#fff}
-.hero-sub{font-size:13px;color:var(--ink-lt)}
+.hero-sub{font-size:12px;color:var(--ink-lt)}
 
 /* MOCKUP */
 .hero-mockup{width:400px;flex-shrink:0;border-radius:20px 20px 0 0;overflow:hidden;border:1px solid rgba(44,62,53,.18);border-bottom:none;box-shadow:0 -8px 60px rgba(44,62,53,.15);align-self:flex-end}
@@ -177,30 +177,6 @@ img{display:block;max-width:100%}
 .blog-title{font-family:'Lora',Georgia,serif;font-size:13px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:8px}
 .blog-date{font-size:11px;color:var(--ink-lt)}
 
-/* BUILD.JS INJECTED BLOG CARDS — match these class names from style.css */
-/* build.js uses: .blog-card, .blog-card-img-ph, .blog-card-body, .blog-tag, .blog-card-title, .blog-card-excerpt, .blog-card-meta */
-/* Also injects posts-grid wrapper and tag-* classes */
-#homepage-blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-#homepage-blog-grid .blog-card{background:#fff;border:.5px solid var(--sage-bd);border-radius:14px;overflow:hidden;display:block;color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s}
-#homepage-blog-grid .blog-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(44,62,53,.08)}
-#homepage-blog-grid .blog-card-img-ph{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:32px;overflow:hidden}
-#homepage-blog-grid .blog-card-img-ph img{width:100%;height:100%;object-fit:cover}
-#homepage-blog-grid .blog-card-body{padding:16px 18px}
-#homepage-blog-grid .blog-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:10px}
-#homepage-blog-grid .blog-card-title,#homepage-blog-grid h3{font-family:'Lora',Georgia,serif;font-size:13px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:8px}
-#homepage-blog-grid .blog-card-excerpt{display:none}
-#homepage-blog-grid .blog-card-meta{font-size:11px;color:var(--ink-lt)}
-/* Old tag classes from build.js */
-#homepage-blog-grid .tag-legal,#homepage-blog-grid .tag-law{background:#EAF0EC;color:var(--forest)}
-#homepage-blog-grid .tag-financial,#homepage-blog-grid .tag-money{background:#EEF5E8;color:#2E6B27}
-#homepage-blog-grid .tag-emotional,#homepage-blog-grid .tag-emotion{background:#EDE8F8;color:#5240A8}
-#homepage-blog-grid .tag-coparenting,#homepage-blog-grid .tag-children,#homepage-blog-grid .tag-coparent{background:#E8EEFF;color:var(--navy)}
-#homepage-blog-grid .tag-wellness,#homepage-blog-grid .tag-wellbeing{background:#E4EFE8;color:var(--forest)}
-#homepage-blog-grid .tag-life,#homepage-blog-grid .tag-lifeafter{background:#FFF0E8;color:#7A3D18}
-/* Section padding fix — build.js wraps in .section */
-.blog-sec .section{padding:0}
-.blog-sec .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-
 /* COMMUNITY */
 .community{background:var(--sage-mid);padding:64px 48px;border-bottom:.5px solid var(--sage-bd)}
 .comm-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
@@ -252,13 +228,14 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
 
 /* RESPONSIVE */
 @media(max-width:1100px){
-  .hero-inner{grid-template-columns:1fr 380px;gap:40px}
-  .hero-h1{font-size:60px}
+  .hero-h1{font-size:58px}
+  .hero-mockup{width:360px}
 }
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column}
   .hero-mockup{display:none}
-  .hero-h1{font-size:52px}
+  .hero-h1{font-size:48px}
+  .hero-copy{padding-bottom:40px}
   .nav-tabs-inner{overflow-x:auto;padding-bottom:4px}
   .ben-grid,.how-inner,.comm-inner{grid-template-columns:1fr}
   .chat-win{display:none}
@@ -269,8 +246,8 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
 @media(max-width:600px){
   .blog-grid{grid-template-columns:1fr}
   .nav-links{display:none}
-  .hero-h1{font-size:40px}
-  .hero-body{font-size:15px}
+  .hero-h1{font-size:38px}
+  .hero-body{font-size:14px}
 }
 </style>
 </head>
@@ -279,7 +256,7 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
 <!-- NAV -->
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">✦</div>
+    <img src="/DA-logo.jpg" alt="DivorceAngels" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
     DivorceAngels
   </a>
   <ul class="nav-links">
@@ -461,9 +438,8 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
   </div>
 </div>
 
-<!-- BLOG -->
-<!-- BUILD_BLOG_START — build.js reads this marker and replaces the 6 cards below with real posts -->
-<section class="blog-sec">
+<!-- BLOG — hardcoded 6 cards, matching approved design -->
+<section class="blog-sec" id="blog-section">
   <div class="sec-inner">
     <div class="blog-hdr">
       <div>
@@ -472,31 +448,62 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
       </div>
       <a href="blog/index.html" class="view-all">View all articles →</a>
     </div>
-    <div class="blog-grid" id="homepage-blog-grid">
+    <div class="blog-grid">
+
       <a href="blog/posts/mom-has-new-boyfriend.html" class="blog-card">
         <div class="blog-img" style="background:#E8EEFF;"><span>👨‍👩‍👧</span></div>
-        <div class="blog-body"><span class="blog-tag tag-co">Co-Parenting</span><div class="blog-title">Mom Has a New Boyfriend: Navigating This Change With Grace</div><div class="blog-date">April 9, 2026</div></div>
+        <div class="blog-body">
+          <span class="blog-tag tag-co">Co-Parenting</span>
+          <div class="blog-title">Mom Has a New Boyfriend: Navigating This Change With Grace</div>
+          <div class="blog-date">April 9, 2026</div>
+        </div>
       </a>
+
       <a href="blog/posts/protecting-yourself-financially-before-filing.html" class="blog-card">
         <div class="blog-img" style="background:#EEF5E8;"><span>💰</span></div>
-        <div class="blog-body"><span class="blog-tag tag-fin">Financial</span><div class="blog-title">Protecting Yourself Financially Before Filing for Divorce</div><div class="blog-date">April 9, 2026</div></div>
+        <div class="blog-body">
+          <span class="blog-tag tag-fin">Financial</span>
+          <div class="blog-title">Protecting Yourself Financially Before Filing for Divorce</div>
+          <div class="blog-date">April 9, 2026</div>
+        </div>
       </a>
+
       <a href="blog/posts/why-does-your-divorce-feel-slow.html" class="blog-card">
         <div class="blog-img" style="background:#EAF0EC;"><span>⚖️</span></div>
-        <div class="blog-body"><span class="blog-tag tag-leg">Legal</span><div class="blog-title">Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?</div><div class="blog-date">April 9, 2026</div></div>
+        <div class="blog-body">
+          <span class="blog-tag tag-leg">Legal</span>
+          <div class="blog-title">Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?</div>
+          <div class="blog-date">April 9, 2026</div>
+        </div>
       </a>
+
       <a href="blog/posts/how-to-tell-your-kids-about-divorce.html" class="blog-card">
         <div class="blog-img" style="background:#EDE8F8;"><span>💙</span></div>
-        <div class="blog-body"><span class="blog-tag tag-emo">Emotional</span><div class="blog-title">How to Tell Your Kids About the Divorce</div><div class="blog-date">March 28, 2026</div></div>
+        <div class="blog-body">
+          <span class="blog-tag tag-emo">Emotional</span>
+          <div class="blog-title">How to Tell Your Kids About the Divorce</div>
+          <div class="blog-date">March 28, 2026</div>
+        </div>
       </a>
+
       <a href="blog/posts/starting-fresh-activities-after-divorce.html" class="blog-card">
         <div class="blog-img" style="background:#FFF0E8;"><span>🏃</span></div>
-        <div class="blog-body"><span class="blog-tag tag-life">Life After</span><div class="blog-title">Starting Fresh: Why New Activities After Divorce Help You Heal</div><div class="blog-date">March 14, 2026</div></div>
+        <div class="blog-body">
+          <span class="blog-tag tag-life">Life After</span>
+          <div class="blog-title">Starting Fresh: Why New Activities After Divorce Help You Heal</div>
+          <div class="blog-date">March 14, 2026</div>
+        </div>
       </a>
+
       <a href="blog/posts/five-natural-ways-ease-anxiety-during-divorce.html" class="blog-card">
         <div class="blog-img" style="background:#E4EFE8;"><span>🧘</span></div>
-        <div class="blog-body"><span class="blog-tag tag-well">Wellness</span><div class="blog-title">Five Natural Ways to Ease Anxiety During Your Divorce</div><div class="blog-date">February 28, 2026</div></div>
+        <div class="blog-body">
+          <span class="blog-tag tag-well">Wellness</span>
+          <div class="blog-title">Five Natural Ways to Ease Anxiety During Your Divorce</div>
+          <div class="blog-date">February 28, 2026</div>
+        </div>
       </a>
+
     </div>
   </div>
 </section>
