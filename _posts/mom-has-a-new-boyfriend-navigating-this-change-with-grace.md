@@ -2,7 +2,7 @@
 title: "Mom Has a New Boyfriend: Navigating This Change With Grace"
 date: 2026-04-09
 category: Co-Parenting
-cover_image: /uploads/charlein-gracia-ux5mdmjnea-unsplash.jpg
+cover_image: https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80&fit=crop
 ---
 When your ex-partner introduces a new romantic interest into your children's lives, especially one who moves in, it can stir up unexpected emotions. Even when you've moved on or accepted that your marriage has ended, seeing someone else take on a role in your children's daily routine can feel unsettling. If you're struggling with these feelings, know that you're not alone—and there are healthy ways to navigate this transition while protecting what matters most: your relationship with your kids.
 
