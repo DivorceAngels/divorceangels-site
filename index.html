@@ -177,6 +177,30 @@ img{display:block;max-width:100%}
 .blog-title{font-family:'Lora',Georgia,serif;font-size:13px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:8px}
 .blog-date{font-size:11px;color:var(--ink-lt)}
 
+/* BUILD.JS INJECTED BLOG CARDS — match these class names from style.css */
+/* build.js uses: .blog-card, .blog-card-img-ph, .blog-card-body, .blog-tag, .blog-card-title, .blog-card-excerpt, .blog-card-meta */
+/* Also injects posts-grid wrapper and tag-* classes */
+#homepage-blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+#homepage-blog-grid .blog-card{background:#fff;border:.5px solid var(--sage-bd);border-radius:14px;overflow:hidden;display:block;color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s}
+#homepage-blog-grid .blog-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(44,62,53,.08)}
+#homepage-blog-grid .blog-card-img-ph{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:32px;overflow:hidden}
+#homepage-blog-grid .blog-card-img-ph img{width:100%;height:100%;object-fit:cover}
+#homepage-blog-grid .blog-card-body{padding:16px 18px}
+#homepage-blog-grid .blog-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:10px}
+#homepage-blog-grid .blog-card-title,#homepage-blog-grid h3{font-family:'Lora',Georgia,serif;font-size:13px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:8px}
+#homepage-blog-grid .blog-card-excerpt{display:none}
+#homepage-blog-grid .blog-card-meta{font-size:11px;color:var(--ink-lt)}
+/* Old tag classes from build.js */
+#homepage-blog-grid .tag-legal,#homepage-blog-grid .tag-law{background:#EAF0EC;color:var(--forest)}
+#homepage-blog-grid .tag-financial,#homepage-blog-grid .tag-money{background:#EEF5E8;color:#2E6B27}
+#homepage-blog-grid .tag-emotional,#homepage-blog-grid .tag-emotion{background:#EDE8F8;color:#5240A8}
+#homepage-blog-grid .tag-coparenting,#homepage-blog-grid .tag-children,#homepage-blog-grid .tag-coparent{background:#E8EEFF;color:var(--navy)}
+#homepage-blog-grid .tag-wellness,#homepage-blog-grid .tag-wellbeing{background:#E4EFE8;color:var(--forest)}
+#homepage-blog-grid .tag-life,#homepage-blog-grid .tag-lifeafter{background:#FFF0E8;color:#7A3D18}
+/* Section padding fix — build.js wraps in .section */
+.blog-sec .section{padding:0}
+.blog-sec .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
 /* COMMUNITY */
 .community{background:var(--sage-mid);padding:64px 48px;border-bottom:.5px solid var(--sage-bd)}
 .comm-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
