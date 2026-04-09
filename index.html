@@ -3,769 +3,616 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divorce Angels — Guidance, Resources & Community for Your Divorce</title>
-<meta name="description" content="Real guidance for real people navigating divorce. Trusted resources, expert blog, community support, and Angel — your free AI divorce coach available 24/7.">
-<meta property="og:title" content="Divorce Angels — You Are Not Alone">
-<meta property="og:description" content="Trusted divorce resources, expert blog content, and Angel — your free AI coach available 24/7.">
-<meta property="og:type" content="website">
+<title>DivorceAngels — From Overwhelmed to Organized</title>
+<meta name="description" content="Enter your financial picture once. Angel analyzes everything, runs real settlement scenarios, and guides you step by step — whether you're using a lawyer, mediator, or going it alone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --g0:    #F2F7F4;
-  --g1:    #E4EFE8;
-  --g2:    #C8D8CD;
-  --g4:    #4A7A5E;
-  --g5:    #2C3E35;
-  --blue:  #2D4A6B;
-  --blue2: #1C3A5E;
-  --blue3: #3D6088;
-  --ink:   #1A2018;
-  --ink-m: #3A4E42;
-  --ink-l: #6A7A70;
-  --bdr:   #D8E4DC;
-  --white: #FFFFFF;
+  --forest:    #2C3E35;
+  --navy:      #2D4A6B;
+  --navy-dark: #1C3A5E;
+  --sage-hero: #E4EFE8;
+  --sage-mid:  #F2F7F4;
+  --sage-bd:   #D8E4DC;
+  --ink:       #1A2018;
+  --ink-mid:   #3A4E42;
+  --ink-lt:    #6A7A70;
+  --green-a:   #5FC87A;
+  --blue-a:    #90CDF4;
+  --red-a:     #FC8181;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em}
-h1{font-size:clamp(2.4rem,4.5vw,3.6rem)}
-h2{font-size:clamp(1.8rem,3vw,2.6rem)}
-h3{font-size:1.15rem}
-p{color:var(--ink-m);line-height:1.75}
-.eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--g4);display:flex;align-items:center;gap:8px;margin-bottom:16px}
-.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--g4)}
-.container{max-width:1160px;margin:0 auto;padding:0 52px}
-section{padding:96px 0}
-.section-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:20px}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--g5);color:white;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s}
-.btn-primary:hover{background:var(--g4);transform:translateY(-1px)}
-.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--g5);font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:13px 26px;border-radius:8px;border:1.5px solid var(--g5);cursor:pointer;transition:background 0.2s,transform 0.15s}
-.btn-ghost:hover{background:var(--g1);transform:translateY(-1px)}
-.btn-blue{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:white;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s}
-.btn-blue:hover{background:var(--blue3);transform:translateY(-1px)}
-.link-arrow{font-size:0.86rem;font-weight:500;color:var(--g5);display:inline-flex;align-items:center;gap:5px;transition:gap 0.2s}
-.link-arrow:hover{gap:9px}
+img{display:block;max-width:100%}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1160px;margin:0 auto;padding:0 52px}
-.nav-logo{display:flex;align-items:center;}
-.nav-logo .mark{color:var(--g4);font-size:0.9rem}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:0.87rem;color:var(--ink-m);transition:color 0.2s}
-.nav-links a:hover{color:var(--g5)}
-.nav-cta{font-size:0.82rem;font-weight:500;background:var(--g5);color:white;padding:9px 20px;border-radius:8px;transition:background 0.2s;white-space:nowrap}
-.nav-cta:hover{background:var(--g4)}
-#menu-btn{display:none;background:none;border:none;cursor:pointer;color:var(--ink);font-size:1.3rem}
-#mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--g0);border-bottom:1px solid var(--bdr);z-index:99;flex-direction:column;padding:20px 28px;gap:16px}
-#mobile-nav a{font-size:0.95rem;font-weight:500;color:var(--ink)}
+#navbar{position:sticky;top:0;z-index:100;background:var(--sage-mid);border-bottom:.5px solid var(--sage-bd);height:68px;display:flex;align-items:center;padding:0 48px;justify-content:space-between;transition:box-shadow .2s}
+#navbar.scrolled{box-shadow:0 2px 20px rgba(44,62,53,.08)}
+.nav-logo{font-family:'Lora',Georgia,serif;font-size:17px;font-weight:400;color:var(--ink);display:flex;align-items:center;gap:9px}
+.nav-logo-mark{width:32px;height:32px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;flex-shrink:0}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:13px;color:var(--ink-lt);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--forest);font-weight:500}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.nav-signin{font-size:13px;color:var(--ink-lt)}
+.btn-nav{background:var(--forest);color:#fff;font-size:13px;font-weight:500;padding:10px 22px;border-radius:8px;transition:opacity .2s}
+.btn-nav:hover{opacity:.88}
 
 /* HERO */
-.hero{background:var(--g0);padding:88px 0 80px;overflow:hidden;position:relative;border-bottom:1px solid var(--bdr)}
-.hero-bg{position:absolute;top:0;right:0;bottom:0;width:52%;object-fit:cover;object-position:center top;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,0.55) 32%,rgba(0,0,0,0.9) 100%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,0.55) 32%,rgba(0,0,0,0.9) 100%)}
-.hero-content{position:relative;z-index:1;max-width:580px}
-.hero-headline{color:var(--ink);margin-bottom:24px}
-.hero-headline em{font-style:italic;color:var(--g5)}
-.hero-body{font-size:1.05rem;color:var(--ink-m);max-width:480px;margin-bottom:40px;line-height:1.8}
-.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:48px}
-.hero-trust{display:flex;align-items:center;gap:14px}
-.trust-avs{display:flex}
-.trust-av{width:34px;height:34px;border-radius:50%;border:2.5px solid var(--g0);margin-left:-8px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600}
-.trust-av:first-child{margin-left:0}
-.av-a{background:var(--g1);color:var(--g5)}
-.av-b{background:#DDE8FF;color:#2D4A6B}
-.av-c{background:#E8E4F0;color:#6B52A8}
-.trust-txt{font-size:0.8rem;color:var(--ink-l);line-height:1.5}
-.trust-txt strong{color:var(--ink-m);font-weight:500}
+.hero{background:var(--sage-hero);padding:56px 48px 0}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:350px 1fr;gap:40px;align-items:flex-start}
+.hero-copy{padding-bottom:56px;padding-top:8px}
+.hero-h1{font-family:'Lora',Georgia,serif;font-size:46px;font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:20px}
+.hero-h1 em{color:var(--forest);font-style:italic}
+.hero-body{font-size:14px;color:var(--ink-mid);line-height:1.8;margin-bottom:30px;max-width:300px}
+.hero-btns{display:flex;flex-direction:column;gap:10px;max-width:240px;margin-bottom:16px}
+.btn-primary{background:var(--navy);color:#fff;font-size:13px;font-weight:500;padding:14px 26px;border-radius:8px;text-align:center;transition:opacity .2s;display:block}
+.btn-primary:hover{opacity:.88}
+.btn-secondary{background:transparent;color:var(--forest);font-size:13px;font-weight:500;padding:13px 22px;border-radius:8px;border:1.5px solid var(--forest);text-align:center;transition:all .2s;display:block}
+.btn-secondary:hover{background:var(--forest);color:#fff}
+.hero-sub{font-size:12px;color:var(--ink-lt)}
 
-/* TRACKER SECTION */
-.tracker-section{background:var(--g1);padding:96px 0}
-.tracker-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}
-.tracker-eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--g4);display:flex;align-items:center;gap:8px;margin-bottom:16px}
-.tracker-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--g4)}
-.tracker-copy h2{color:var(--ink);margin-bottom:16px}
-.tracker-copy h2 em{font-style:italic;color:var(--g5)}
-.tracker-copy p{font-size:0.97rem;max-width:400px;margin-bottom:32px}
-.tracker-steps{display:flex;flex-direction:column;gap:18px;margin-bottom:36px}
-.tstep{display:flex;align-items:flex-start;gap:14px}
-.tstep-n{width:28px;height:28px;border-radius:50%;background:var(--g5);color:white;font-size:0.75rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.tstep-t strong{display:block;font-size:0.88rem;font-weight:500;color:var(--ink);margin-bottom:2px}
-.tstep-t span{font-size:0.8rem;color:var(--ink-l);line-height:1.5}
-.tracker-free{font-size:0.73rem;color:var(--ink-l);margin-top:10px}
+/* MOCKUP */
+.hero-mockup{border-radius:16px 16px 0 0;overflow:hidden;border:1px solid rgba(44,62,53,.15);border-bottom:none;box-shadow:0 -4px 40px rgba(44,62,53,.12);align-self:flex-end}
+.mock-bar{background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.07)}
+.mock-dots{display:flex;gap:4px}
+.mock-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15)}
+.mock-url{flex:1;text-align:center;font-size:10px;color:rgba(255,255,255,.3)}
+.mock-body{background:var(--navy-dark);padding:18px}
+.angel-hdr{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.angel-av{width:30px;height:30px;border-radius:50%;background:var(--sage-mid);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;border:2px solid rgba(255,255,255,.2);font-size:12px;color:var(--forest)}
+.angel-dot{position:absolute;bottom:0;right:0;width:8px;height:8px;border-radius:50%;background:var(--green-a);border:1.5px solid var(--navy-dark)}
+.angel-name{font-size:12px;font-weight:500;color:#fff}
+.angel-role{font-size:10px;color:rgba(255,255,255,.38)}
+.angel-bubble{background:rgba(255,255,255,.08);border-radius:10px 10px 10px 3px;padding:12px 14px;margin-bottom:10px}
+.angel-bubble p{font-size:11.5px;color:rgba(255,255,255,.88);line-height:1.7;margin:0}
+.angel-bubble strong{color:#fff}
+.sc-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.sc-a{background:#1a3a20;border:1px solid #2d6b3a;border-radius:7px;padding:11px}
+.sc-b{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:7px;padding:11px}
+.sc-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.sc-a .sc-lbl{color:var(--green-a)}
+.sc-b .sc-lbl{color:rgba(255,255,255,.38)}
+.sc-amt{font-size:18px;font-weight:600}
+.sc-a .sc-amt{color:#fff}
+.sc-b .sc-amt{color:rgba(255,255,255,.4)}
+.sc-note{font-size:9px;margin-top:2px}
+.sc-a .sc-note{color:var(--green-a)}
+.sc-b .sc-note{color:rgba(255,255,255,.28)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.stat{background:rgba(255,255,255,.05);border-radius:6px;padding:8px 5px;text-align:center}
+.stat-lbl{font-size:7.5px;color:rgba(255,255,255,.33);text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+.stat-val{font-size:12px;font-weight:600}
+.c-green{color:var(--green-a)}
+.c-red{color:var(--red-a)}
+.c-white{color:#fff}
+.c-blue{color:var(--blue-a)}
 
-/* Tracker mockup */
-.tmock{border-radius:16px;overflow:hidden;border:1px solid #CBD5E0;box-shadow:0 12px 48px rgba(44,62,53,0.1)}
-.tmock-hdr{background:var(--blue);padding:16px 22px;display:flex;align-items:center;gap:10px}
-.tmock-hdr-icon{font-size:16px}
-.tmock-hdr-title{font-size:0.9rem;font-weight:600;color:white}
-.tmock-hdr-meta{margin-left:auto;font-size:0.71rem;color:rgba(255,255,255,0.55)}
-.tmock-angel{background:var(--blue2);padding:24px 22px}
-.tmock-angel-who{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.tmock-av{width:34px;height:34px;border-radius:50%;background:var(--blue3);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:white;flex-shrink:0;position:relative}
-.tmock-av::after{content:'';position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid var(--blue2)}
-.tmock-angel-name{font-size:0.88rem;font-weight:600;color:white}
-.tmock-angel-sub{font-size:0.65rem;color:rgba(255,255,255,0.5);margin-top:1px}
-.tmock-bubble{background:rgba(255,255,255,0.08);border-radius:14px 14px 14px 4px;padding:14px 18px;margin-bottom:10px}
-.tmock-bubble p{font-size:0.84rem;color:rgba(255,255,255,0.88);line-height:1.7;margin:0}
-.tmock-bubble p strong{color:white}
-.tmock-stats{background:white;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #E2E8F0}
-.tmock-stat{padding:14px 12px;border-right:1px solid #E2E8F0}
-.tmock-stat:last-child{border-right:none}
-.tmock-stat-lbl{font-size:0.59rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#718096;margin-bottom:5px}
-.tmock-stat-val{font-size:1rem;font-weight:600;color:#2D3748;line-height:1}
-.tmock-stat-val.grn{color:#276749}
-.tmock-stat-val.red{color:#C53030}
-.tmock-stat-val.blu{color:var(--blue)}
-.tmock-ftr{padding:12px 22px;background:#F7FAFC;border-top:1px solid #E2E8F0;display:flex;justify-content:space-between;align-items:center}
-.tmock-ftr-note{font-size:0.71rem;color:#718096}
-.tmock-ftr-btn{font-size:0.78rem;font-weight:500;background:var(--blue);color:white;padding:7px 16px;border-radius:7px;border:none;cursor:pointer;transition:background 0.2s}
-.tmock-ftr-btn:hover{background:var(--blue3)}
+/* NAV TABS */
+.nav-tabs{background:var(--navy);padding:11px 48px}
+.nav-tabs-inner{max-width:1100px;margin:0 auto;display:flex;gap:4px}
+.tab{padding:7px 14px;border-radius:6px;font-size:11px;color:rgba(255,255,255,.55);white-space:nowrap}
+.tab.active{background:rgba(255,255,255,.15);color:#fff;font-weight:500}
+
+/* BENEFITS */
+.benefits{background:#fff;padding:64px 48px;border-bottom:.5px solid var(--sage-bd)}
+.sec-inner{max-width:1100px;margin:0 auto}
+.sec-hd{text-align:center;margin-bottom:40px}
+.sec-hd h2{font-family:'Lora',Georgia,serif;font-size:26px;font-weight:400;color:var(--ink)}
+.sec-hd h2 em{color:var(--forest);font-style:italic}
+.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ben-card{background:var(--sage-mid);border-radius:14px;padding:28px;border:.5px solid var(--sage-bd)}
+.ben-icon{width:52px;height:52px;border-radius:12px;background:var(--sage-hero);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:16px;border:1px solid var(--sage-bd);overflow:hidden}
+.ben-icon img{width:48px;height:48px;object-fit:contain;mix-blend-mode:multiply}
+.ben-title{font-family:'Lora',Georgia,serif;font-size:14px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.ben-body{font-size:12px;color:var(--ink-lt);line-height:1.75}
+
+/* HOW ANGEL */
+.how-angel{background:var(--navy-dark);padding:72px 48px}
+.how-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:20px;height:1px;background:rgba(255,255,255,.25);display:block}
+.how-h2{font-family:'Lora',Georgia,serif;font-size:28px;font-weight:400;line-height:1.2;color:#fff;margin-bottom:16px}
+.how-h2 em{color:#C8D8CD;font-style:italic}
+.how-body{font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:28px}
+.feat-list{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.feat-item{display:flex;align-items:flex-start;gap:14px}
+.feat-icon{width:38px;height:38px;flex-shrink:0;border-radius:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:17px}
+.feat-title{font-size:12px;font-weight:500;color:#fff;margin-bottom:2px}
+.feat-desc{font-size:11px;color:rgba(255,255,255,.42);line-height:1.55}
+.btn-green{background:#4A7A5E;color:#fff;font-size:13px;font-weight:500;padding:13px 26px;border-radius:8px;display:inline-block;transition:opacity .2s}
+.btn-green:hover{opacity:.88}
+.not-ready{font-size:11px;color:rgba(255,255,255,.28);margin-top:10px}
+.not-ready a{color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.18)}
+
+/* CHAT WINDOW */
+.chat-win{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden}
+.chat-hdr{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.03)}
+.chat-av{width:34px;height:34px;border-radius:50%;background:var(--sage-mid);display:flex;align-items:center;justify-content:center;position:relative;border:2px solid rgba(255,255,255,.15);font-size:14px;color:var(--forest);flex-shrink:0}
+.chat-online{position:absolute;bottom:0;right:0;width:8px;height:8px;border-radius:50%;background:var(--green-a);border:1.5px solid var(--navy-dark)}
+.chat-name{font-size:12px;font-weight:500;color:#fff}
+.chat-status{font-size:10px;color:rgba(255,255,255,.33)}
+.chat-msgs{padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg-u{background:rgba(45,74,107,.65);border-radius:10px 10px 3px 10px;padding:10px 13px;align-self:flex-end;max-width:85%;font-size:11px;color:#fff;line-height:1.6}
+.msg-a{background:rgba(255,255,255,.07);border-radius:10px 10px 10px 3px;padding:10px 13px;max-width:92%;font-size:11px;color:rgba(255,255,255,.85);line-height:1.7}
+.msg-a strong{color:#fff}
+.chat-inp{padding:10px 14px;border-top:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.15);display:flex;gap:8px}
+.chat-field{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:8px 12px;font-size:11px;color:rgba(255,255,255,.3)}
+.chat-send{background:#4A7A5E;color:#fff;padding:8px 13px;border-radius:7px;font-size:11px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--sage-mid);padding:22px 48px;border-bottom:.5px solid var(--sage-bd);border-top:.5px solid var(--sage-bd)}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+.trust-stat{text-align:center}
+.trust-num{font-size:19px;font-weight:500;color:var(--forest)}
+.trust-lbl{font-size:11px;color:var(--ink-lt);margin-top:2px}
+.trust-div{width:1px;height:30px;background:var(--sage-bd)}
 
 /* BLOG */
-.blog-section{background:white;padding:96px 0}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.blog-card{background:white;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
-.blog-card:hover{border-color:var(--g4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(44,82,64,0.08)}
-
-.blog-img{width:100%;object-fit:cover;display:block}
-
-.blog-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
-.blog-body{padding:20px 22px 22px;flex:1;display:flex;flex-direction:column}
-.btag{display:inline-block;font-size:0.66rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:11px}
-.btag-legal{background:var(--g1);color:var(--g5)}
-.btag-fin{background:#EEF5E8;color:#2E6B27}
-.btag-emo{background:#EDE8F8;color:#5240A8}
-.btag-well{background:#FFF0E8;color:#7A3D18}
-.btag-life{background:#EDE5E0;color:#6B4A3A}
-.blog-title{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:10px;flex:1}
-
-.blog-meta{font-size:0.73rem;color:var(--ink-l);margin-top:auto}
-
-/* ANGEL SECTION */
-.angel-section{background:var(--blue2);padding:96px 0;position:relative;overflow:hidden}
-.angel-section::before{content:'✦';position:absolute;font-size:420px;color:rgba(255,255,255,0.02);right:-60px;bottom:-120px;pointer-events:none;font-family:'DM Serif Display',serif;line-height:1}
-.angel-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.angel-copy-eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:8px;margin-bottom:16px}
-.angel-copy-eyebrow::before{content:'';display:block;width:20px;height:1px;background:rgba(255,255,255,0.3)}
-.angel-copy h2{color:white;margin-bottom:18px}
-.angel-copy h2 em{font-style:italic;color:var(--g2)}
-.angel-copy>p{color:rgba(255,255,255,0.65);font-size:1rem;max-width:440px;margin-bottom:32px;line-height:1.75}
-.angel-feats{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
-.angel-feat{display:flex;align-items:flex-start;gap:14px}
-.feat-ic{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;margin-top:1px}
-.feat-txt strong{display:block;color:white;font-size:0.88rem;font-weight:500;margin-bottom:3px}
-.feat-txt span{color:rgba(255,255,255,0.5);font-size:0.81rem;line-height:1.5}
-.angel-note{font-size:0.73rem;color:rgba(255,255,255,0.3);margin-top:10px}
-
-/* Angel chat panel */
-.angel-panel{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.ap-hdr{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04)}
-.ap-av{width:42px;height:42px;border-radius:50%;background:var(--blue3);display:flex;align-items:center;justify-content:center;font-size:1rem;color:white;flex-shrink:0;position:relative}
-.ap-av::after{content:'';position:absolute;bottom:1px;right:1px;width:10px;height:10px;border-radius:50%;background:#5FC87A;border:2px solid var(--blue2)}
-.ap-name{font-size:0.95rem;font-weight:600;color:white}
-.ap-sub{font-size:0.66rem;color:rgba(255,255,255,0.5);margin-top:2px}
-.ap-msgs{min-height:200px;max-height:240px;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
-.ap-sugg{padding:0 16px 12px;display:flex;gap:7px;flex-wrap:wrap}
-.ap-chip{font-size:0.67rem;padding:5px 12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:20px;color:rgba(255,255,255,0.7);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s}
-.ap-chip:hover{background:rgba(255,255,255,0.16);color:white}
-.ap-input-row{display:flex;gap:8px;padding:14px 16px;border-top:1px solid rgba(255,255,255,0.08);background:rgba(0,0,0,0.12)}
-.ap-input{flex:1;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px;color:white;font-family:'DM Sans',sans-serif;font-size:0.84rem;outline:none}
-.ap-input::placeholder{color:rgba(255,255,255,0.3)}
-.ap-input:focus{border-color:rgba(255,255,255,0.28);background:rgba(255,255,255,0.13)}
-.ap-send{width:40px;height:40px;border-radius:8px;background:var(--g4);border:none;color:white;cursor:pointer;font-size:0.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;font-family:sans-serif}
-.ap-send:hover{background:var(--g5)}
-
-/* Chat messages */
-.sa-msg{max-width:90%;padding:12px 16px;border-radius:14px 14px 14px 4px;font-size:0.84rem;line-height:1.68;color:rgba(255,255,255,0.9);background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.06);animation:fadeUp 0.3s ease;white-space:pre-wrap}
-.sa-msg.sa-user{align-self:flex-end;border-radius:14px 14px 4px 14px;background:rgba(45,74,107,0.7);border:1px solid rgba(45,74,107,0.9)}
-.sa-msg strong{color:white}
-.sa-typing{display:flex;align-items:center;gap:4px;padding:11px 15px;background:rgba(255,255,255,0.08);border-radius:14px 14px 14px 4px;width:fit-content}
-.sa-typing span{width:5px;height:5px;border-radius:50%;background:var(--g2);animation:bounce 1.2s ease-in-out infinite}
-.sa-typing span:nth-child(2){animation-delay:0.2s}
-.sa-typing span:nth-child(3){animation-delay:0.4s}
-@keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:0.5}30%{transform:translateY(-5px);opacity:1}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.blog-sec{background:#fff;padding:64px 48px;border-bottom:.5px solid var(--sage-bd)}
+.blog-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px}
+.blog-ey{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#4A7A5E;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.blog-ey::before{content:'';width:16px;height:1px;background:#4A7A5E;display:block}
+.blog-h2{font-family:'Lora',Georgia,serif;font-size:26px;font-weight:400;color:var(--ink)}
+.blog-h2 em{color:var(--forest);font-style:italic}
+.view-all{font-size:12px;color:#4A7A5E;font-weight:500;white-space:nowrap}
+.view-all:hover{text-decoration:underline}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.blog-card{background:#fff;border:.5px solid var(--sage-bd);border-radius:14px;overflow:hidden;display:block;color:inherit;transition:transform .2s,box-shadow .2s}
+.blog-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(44,62,53,.08)}
+.blog-img{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:32px;overflow:hidden}
+.blog-img img{width:100%;height:100%;object-fit:cover}
+.blog-body{padding:16px 18px}
+.blog-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:10px}
+.tag-co   {background:#E8EEFF;color:var(--navy)}
+.tag-fin  {background:#EEF5E8;color:#2E6B27}
+.tag-leg  {background:#EAF0EC;color:var(--forest)}
+.tag-emo  {background:#EDE8F8;color:#5240A8}
+.tag-life {background:#FFF0E8;color:#7A3D18}
+.tag-well {background:#E4EFE8;color:var(--forest)}
+.blog-title{font-family:'Lora',Georgia,serif;font-size:13px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:8px}
+.blog-date{font-size:11px;color:var(--ink-lt)}
 
 /* COMMUNITY */
-.community-section{background:var(--g0);padding:96px 0}
-.community-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.live-dot{width:7px;height:7px;border-radius:50%;background:#5FC87A;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(0.85)}}
-.community-live{display:flex;align-items:center;gap:9px;font-size:0.8rem;color:var(--ink-l);margin-bottom:28px}
-.fb-widget{background:white;border-radius:16px;border:1px solid var(--bdr);overflow:hidden;box-shadow:0 4px 24px rgba(44,62,53,0.06)}
-.fb-hdr{background:#1877F2;padding:16px 22px;display:flex;align-items:center;gap:12px}
-.fb-icon{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.fb-gname{font-weight:600;color:white;font-size:0.9rem}
-.fb-gcount{font-size:0.71rem;color:rgba(255,255,255,0.72);margin-top:1px}
-.fb-join{margin-left:auto;background:white;color:#1877F2;font-size:0.75rem;font-weight:700;padding:7px 14px;border-radius:7px;white-space:nowrap}
-.fb-posts{padding:4px 0}
-.fb-post{padding:16px 22px;border-bottom:1px solid var(--bdr)}
-.fb-post:last-child{border-bottom:none}
-.fb-post-hdr{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.fb-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.73rem;font-weight:600;flex-shrink:0}
-.fb-poster{font-size:0.84rem;font-weight:500;color:var(--ink)}
-.fb-time{font-size:0.69rem;color:var(--ink-l)}
-.fb-txt{font-size:0.82rem;color:var(--ink-m);line-height:1.65;margin-bottom:8px}
-.fb-meta{font-size:0.7rem;color:var(--ink-l);display:flex;gap:12px}
-.fb-ftr{padding:12px 22px;border-top:1px solid var(--bdr);background:var(--g0);display:flex;justify-content:space-between;align-items:center}
-.fb-ftr-note{font-size:0.73rem;color:var(--ink-l)}
-.fb-ftr-link{font-size:0.75rem;font-weight:600;color:#1877F2}
+.community{background:var(--sage-mid);padding:64px 48px;border-bottom:.5px solid var(--sage-bd)}
+.comm-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.comm-ey{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#4A7A5E;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.comm-ey::before{content:'';width:16px;height:1px;background:#4A7A5E;display:block}
+.comm-h2{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:400;color:var(--ink);margin-bottom:10px}
+.comm-body{font-size:13px;color:var(--ink-lt);margin-bottom:22px;line-height:1.75}
+.btn-fb{background:#1877F2;color:#fff;font-size:12px;font-weight:600;padding:13px 20px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;transition:opacity .2s}
+.btn-fb:hover{opacity:.9}
+.fb-ico{width:22px;height:22px;border-radius:5px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.fb-widget{border:.5px solid var(--sage-bd);border-radius:12px;overflow:hidden;background:#fff}
+.fb-hdr{background:#1877F2;padding:11px 16px;display:flex;align-items:center;gap:8px}
+.fb-wname{font-size:11px;font-weight:600;color:#fff}
+.fb-wcount{font-size:10px;color:rgba(255,255,255,.55)}
+.btn-fbjoin{margin-left:auto;background:#fff;color:#1877F2;font-size:10px;font-weight:600;padding:4px 10px;border-radius:5px}
+.fb-post{padding:14px 16px;border-bottom:.5px solid #F0F4F0}
+.fb-post:last-of-type{border-bottom:none}
+.fb-phdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.fb-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0}
+.fb-pname{font-size:11px;font-weight:500;color:var(--ink)}
+.fb-time{font-size:10px;color:var(--ink-lt)}
+.fb-txt{font-size:11px;color:var(--ink-mid);line-height:1.65;margin-bottom:8px}
+.fb-react{font-size:10px;color:var(--ink-lt)}
+.fb-foot{padding:10px 16px;background:#F7FAFC;border-top:.5px solid #E8ECEE;text-align:center}
+.fb-footlink{font-size:11px;color:#1877F2;font-weight:500}
 
-/* NEWSLETTER */
-.nl-section{background:var(--g1);text-align:center;padding:88px 0}
-.nl-section h2{margin-bottom:14px}
-.nl-section h2 em{font-style:italic;color:var(--g5)}
-.nl-section>div>p{max-width:460px;margin:0 auto 32px}
-.nl-form{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-.nl-input{flex:1;min-width:220px;background:white;border:1px solid var(--bdr);border-radius:8px;padding:13px 18px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--ink);outline:none;transition:border-color 0.2s}
-.nl-input:focus{border-color:var(--g4)}
-.nl-input::placeholder{color:var(--ink-l)}
-.nl-btn{background:var(--g5);color:white;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:13px 26px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap}
-.nl-btn:hover{background:var(--g4)}
+/* FREE ANGEL */
+.free-angel{background:var(--sage-hero);padding:60px 48px;text-align:center;border-bottom:.5px solid var(--sage-bd)}
+.fa-ey{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#4A7A5E;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:14px}
+.fa-ey::before,.fa-ey::after{content:'';width:16px;height:1px;background:#4A7A5E;display:block}
+.free-angel h2{font-family:'Lora',Georgia,serif;font-size:26px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.free-angel p{font-size:13px;color:var(--ink-lt);max-width:460px;margin:0 auto 26px;line-height:1.75}
+.fa-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-ask{background:var(--forest);color:#fff;font-size:13px;font-weight:500;padding:13px 24px;border-radius:8px;cursor:pointer;transition:opacity .2s}
+.btn-ask:hover{opacity:.88}
+.btn-da{background:var(--navy);color:#fff;font-size:13px;font-weight:500;padding:13px 24px;border-radius:8px;transition:opacity .2s;display:inline-block}
+.btn-da:hover{opacity:.88}
+
+/* ANGEL WIDGET */
+.angel-widget{background:var(--sage-mid);padding:60px 48px;border-bottom:.5px solid var(--sage-bd);display:none}
+.angel-widget.open{display:block}
 
 /* FOOTER */
-footer{background:var(--blue);padding:68px 0 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px}
-.footer-brand{font-family:'DM Serif Display',serif;font-size:1.3rem;color:white;margin-bottom:12px}
-.footer-brand span{color:var(--g2)}
-.footer-tag{font-size:0.83rem;color:rgba(255,255,255,0.42);line-height:1.65;max-width:260px;margin-bottom:22px}
-.footer-socials{display:flex;gap:9px}
-.social-btn{width:35px;height:35px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.55);font-size:0.8rem;font-weight:600;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
-.social-btn:hover{border-color:rgba(255,255,255,0.4);color:white}
-.footer-col-title{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:11px}
-.footer-links a{font-size:0.84rem;color:rgba(255,255,255,0.55);transition:color 0.2s}
-.footer-links a:hover{color:white}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.footer-bottom-txt{font-size:0.74rem;color:rgba(255,255,255,0.3)}
-
-/* FLOATING ANGEL BUTTON */
-.angel-fab{
-  position:fixed;bottom:28px;right:28px;z-index:9999;
-  display:flex !important;align-items:center;gap:10px;
-  background:var(--blue);color:white;
-  border:none;cursor:pointer;
-  padding:14px 22px;border-radius:40px;
-  box-shadow:0 4px 28px rgba(45,74,107,0.55);
-  font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;
-  transition:transform 0.2s,box-shadow 0.2s;
-}
-.angel-fab:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(45,74,107,0.5)}
-.fab-av{width:28px;height:28px;border-radius:50%;background:var(--blue3);display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;position:relative}
-.fab-av::after{content:'';position:absolute;top:0;right:0;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:1.5px solid var(--blue)}
-.fab-txt{white-space:nowrap}
-
-/* FLOATING ANGEL POPUP */
-.angel-popup{
-  position:fixed;bottom:90px;right:28px;z-index:199;
-  width:360px;
-  background:var(--blue2);border-radius:18px;
-  border:1px solid rgba(255,255,255,0.1);
-  overflow:hidden;
-  box-shadow:0 8px 48px rgba(0,0,0,0.3);
-  display:none;flex-direction:column;
-  max-height:calc(100vh - 120px);
-}
-.angel-popup.open{display:flex}
-.popup-hdr{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04);flex-shrink:0}
-.popup-av{width:38px;height:38px;border-radius:50%;background:var(--blue3);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:white;flex-shrink:0;position:relative}
-.popup-av::after{content:'';position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid var(--blue2)}
-.popup-name{font-size:0.92rem;font-weight:600;color:white}
-.popup-sub{font-size:0.64rem;color:rgba(255,255,255,0.5);margin-top:1px}
-.popup-close{margin-left:auto;background:none;border:none;color:rgba(255,255,255,0.4);font-size:1.2rem;cursor:pointer;padding:4px;line-height:1;transition:color 0.2s}
-.popup-close:hover{color:white}
-.popup-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;min-height:180px;max-height:280px;scroll-behavior:smooth}
-.popup-sugg{padding:0 14px 10px;display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
-.popup-input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid rgba(255,255,255,0.08);background:rgba(0,0,0,0.12);flex-shrink:0}
-.popup-input{flex:1;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:9px 13px;color:white;font-family:'DM Sans',sans-serif;font-size:0.83rem;outline:none}
-.popup-input::placeholder{color:rgba(255,255,255,0.3)}
-.popup-input:focus{border-color:rgba(255,255,255,0.28)}
-.popup-send{width:38px;height:38px;border-radius:8px;background:var(--g4);border:none;color:white;cursor:pointer;font-size:0.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:sans-serif;transition:background 0.2s}
-.popup-send:hover{background:var(--g5)}
-
-/* ANIMATIONS */
-.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}
+footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot-links{font-size:13px;color:rgba(255,255,255,.45);display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{color:rgba(255,255,255,.45);transition:color .2s}
+.foot-links a:hover{color:rgba(255,255,255,.75)}
+.foot-legal{font-size:11px;color:rgba(255,255,255,.28)}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.tracker-grid,.angel-grid,.community-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:36px}}
-@media(max-width:860px){.blog-grid{grid-template-columns:1fr}.blog-card.feat{grid-row:auto}section{padding:64px 0}.container{padding:0 28px}.nav-inner{padding:0 28px}.nav-links{display:none}#menu-btn{display:block}.angel-popup{width:calc(100vw - 32px);right:16px}}
-@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.tmock-stats{grid-template-columns:repeat(3,1fr)}.tmock-stats .tmock-stat:nth-child(4),.tmock-stats .tmock-stat:nth-child(5){border-top:1px solid #E2E8F0}h1{font-size:2.2rem}h2{font-size:1.7rem}}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-mockup{display:none}
+  .nav-tabs-inner{overflow-x:auto;padding-bottom:4px}
+  .ben-grid,.how-inner,.comm-inner{grid-template-columns:1fr}
+  .chat-win{display:none}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  #navbar,.hero,.nav-tabs,.benefits,.how-angel,.trust-bar,.blog-sec,.community,.free-angel,.angel-widget,footer{padding-left:24px;padding-right:24px}
+  .hero{padding-top:36px}
+}
+@media(max-width:600px){
+  .blog-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero-h1{font-size:34px}
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="navbar">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:64px;width:auto;display:block;mix-blend-mode:multiply;"></a>
-    <ul class="nav-links">
-      <li><a href="blog/index.html">Blog</a></li>
-      <li><a href="#community">Community</a></li>
-      <li><a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <button id="menu-btn" aria-label="Menu">☰</button>
-      <a href="#angel-section" class="nav-cta">✦ Meet Angel</a>
-    </div>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">✦</div>
+    DivorceAngels
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://divorcetracker.netlify.app" class="active">DivorceAngel</a></li>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="toolkit/index.html">Toolkit</a></li>
+    <li><a href="#community">Community</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span class="nav-signin">Sign in</span>
+    <a href="https://divorcetracker.netlify.app" class="btn-nav">Get started →</a>
   </div>
 </nav>
-<div id="mobile-nav">
-  <a href="blog/index.html">Blog</a>
-  <a href="#community">Community</a>
-  <a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a>
-  <a href="#angel-section" style="color:var(--g5);font-weight:500;">✦ Meet Angel</a>
-</div>
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="hero-image.png" alt="Two friends supporting each other">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow fade-up">You are not alone</div>
-      <h1 class="hero-headline fade-up d1">You don't have to<br>figure this out <em>alone.</em></h1>
-      <p class="hero-body fade-up d2">Divorce Angels has been helping people navigate separation since 2013 — with trusted resources, a real community, expert blog content, and Angel, your free AI coach available any time, day or night.</p>
-      <div class="hero-actions fade-up d3">
-        <a href="blog/index.html" class="btn-primary">Read the blog</a>
-        <a href="#community" class="btn-ghost">Join the community</a>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="hero-h1">From overwhelmed<br>to <em>organized.</em></h1>
+      <p class="hero-body">Enter your financial picture once. Angel analyzes everything, runs real settlement scenarios, and guides you step by step — whether you're using a lawyer, mediator, or going it alone.</p>
+      <div class="hero-btns">
+        <a href="https://divorcetracker.netlify.app" class="btn-primary">Try DivorceAngel →</a>
+        <a href="#how-angel" class="btn-secondary">See how it works</a>
       </div>
-      <div class="hero-trust fade-up d4">
-        <div class="trust-avs">
-          <div class="trust-av av-a">S</div>
-          <div class="trust-av av-b">M</div>
-          <div class="trust-av av-c">J</div>
-          <div class="trust-av av-a">K</div>
-          <div class="trust-av av-b">R</div>
-        </div>
-        <div class="trust-txt"><strong>42,000+ people</strong> in our community.<br>You'll find your footing here too.</div>
-      </div>
+      <div class="hero-sub">Save time · Save money · Reduce stress</div>
     </div>
-  </div>
-</section>
 
-<!-- TRACKER -->
-<section class="tracker-section">
-  <div class="container">
-    <div class="tracker-grid">
-      <div class="fade-up">
-        <div class="tracker-eyebrow">Divorce Tracker</div>
-        <h2>From overwhelmed to <em>organized.</em></h2>
-        <p>Enter your assets, debts, and income once. Angel analyzes your complete financial picture and tells you exactly where you stand — before you walk into a single lawyer meeting.</p>
-        <div class="tracker-steps">
-          <div class="tstep">
-            <div class="tstep-n">1</div>
-            <div class="tstep-t"><strong>Enter your finances</strong><span>Assets, debts, income, and 101 expense categories — everything courts require</span></div>
-          </div>
-          <div class="tstep">
-            <div class="tstep-n">2</div>
-            <div class="tstep-t"><strong>Angel analyzes it</strong><span>Get a personalized breakdown of your position, risks, and what to fight for</span></div>
-          </div>
-          <div class="tstep">
-            <div class="tstep-n">3</div>
-            <div class="tstep-t"><strong>Walk in prepared</strong><span>Export a court-ready PDF and go into every meeting knowing your numbers cold</span></div>
+    <div class="hero-mockup">
+      <div class="mock-bar">
+        <div class="mock-dots"><div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div></div>
+        <div class="mock-url">app.divorceangels.com</div>
+      </div>
+      <div class="mock-body">
+        <div class="angel-hdr">
+          <div class="angel-av">✦<div class="angel-dot"></div></div>
+          <div>
+            <div class="angel-name">Angel</div>
+            <div class="angel-role">Your personal advisor</div>
           </div>
         </div>
-        <a href="https://divorcetracker.netlify.app/" target="_blank" class="btn-blue">Try the Divorce Tracker — free →</a>
-        <p class="tracker-free">No credit card required · Your data stays private</p>
-      </div>
-      <div class="fade-up d2">
-        <div class="tmock">
-          <div class="tmock-hdr">
-            <span class="tmock-hdr-icon">📊</span>
-            <span class="tmock-hdr-title">Your Financial Analysis</span>
-            <span class="tmock-hdr-meta">Step 2 of 6 · divorcetracker.netlify.app</span>
+        <div class="angel-bubble">
+          <p>Based on your numbers, <strong>selling the home puts you $57,500 ahead</strong> of a buyout. Your 401(k) and HELOC are your two strongest negotiating points — don't settle those first.</p>
+        </div>
+        <div class="sc-row">
+          <div class="sc-a">
+            <div class="sc-lbl">Scenario A — Sell ✓</div>
+            <div class="sc-amt">$215,900</div>
+            <div class="sc-note">Recommended</div>
           </div>
-          <div class="tmock-angel">
-            <div class="tmock-angel-who">
-              <div class="tmock-av">✦</div>
-              <div>
-                <div class="tmock-angel-name">Angel</div>
-                <div class="tmock-angel-sub">AI Divorce Coach · Powered by Claude</div>
-              </div>
-            </div>
-            <div class="tmock-bubble">
-              <p>Based on your numbers, <strong>selling the home gives you $156,000 more liquidity</strong> than a buyout. Refinancing alone would consume 71% of your take-home — a risky position to be in long-term.</p>
-            </div>
-            <div class="tmock-bubble">
-              <p>Your <strong>401(k) split and HELOC are your two strongest negotiation points.</strong> Don't settle anything on the house until those are resolved. Focus your attorney's time there first.</p>
-            </div>
+          <div class="sc-b">
+            <div class="sc-lbl">Scenario B — Buyout</div>
+            <div class="sc-amt">$158,400</div>
+            <div class="sc-note">$57,500 less</div>
           </div>
-          <div class="tmock-stats">
-            <div class="tmock-stat"><div class="tmock-stat-lbl">Total Assets</div><div class="tmock-stat-val grn">$760,200</div></div>
-            <div class="tmock-stat"><div class="tmock-stat-lbl">Total Debts</div><div class="tmock-stat-val red">$328,400</div></div>
-            <div class="tmock-stat"><div class="tmock-stat-lbl">Net Worth</div><div class="tmock-stat-val">$431,800</div></div>
-            <div class="tmock-stat"><div class="tmock-stat-lbl">Cash Flow</div><div class="tmock-stat-val grn">$3,240/mo</div></div>
-            <div class="tmock-stat"><div class="tmock-stat-lbl">Your Share</div><div class="tmock-stat-val blu">$215,900</div></div>
-          </div>
-          <div class="tmock-ftr">
-            <span class="tmock-ftr-note">Free · Court-ready PDF export · Data stays private</span>
-            <button class="tmock-ftr-btn" onclick="window.open('https://divorcetracker.netlify.app/','_blank')">Try free →</button>
-          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat"><div class="stat-lbl">Assets</div><div class="stat-val c-green">$760k</div></div>
+          <div class="stat"><div class="stat-lbl">Debts</div><div class="stat-val c-red">$328k</div></div>
+          <div class="stat"><div class="stat-lbl">Net Worth</div><div class="stat-val c-white">$431k</div></div>
+          <div class="stat"><div class="stat-lbl">Your Share</div><div class="stat-val c-blue">$215k</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ANGEL SECTION -->
-<section class="angel-section" id="angel-section">
-  <div class="container">
-    <div class="angel-grid">
-      <div class="angel-copy fade-up">
-        <div class="angel-copy-eyebrow">Free AI coach</div>
-        <h2>Meet Angel — here <em>whenever you need her.</em></h2>
-        <p>Ask anything — legal questions, financial worries, emotional struggles, or just "where do I even start?" Angel gives clear, thoughtful answers any time. No judgment. No hourly rate. Free forever on this site.</p>
-        <div class="angel-feats">
-          <div class="angel-feat"><div class="feat-ic">⚖️</div><div class="feat-txt"><strong>Legal questions</strong><span>Your rights, the process, what to expect — explained in plain language</span></div></div>
-          <div class="angel-feat"><div class="feat-ic">💰</div><div class="feat-txt"><strong>Financial guidance</strong><span>Assets, debts, support, pensions — simplified</span></div></div>
-          <div class="angel-feat"><div class="feat-ic">💙</div><div class="feat-txt"><strong>Emotional support</strong><span>Available at 2am when you can't sleep. No judgment, ever.</span></div></div>
-        </div>
-        <button class="btn-primary" onclick="openAngel()" style="background:white;color:var(--blue);">✦ Start chatting — it's free</button>
-        <p class="angel-note">No signup required. Free forever on this website.</p>
+<!-- NAV TABS -->
+<div class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <div class="tab active">📊 Financial Overview</div>
+    <div class="tab">✦ Angel's Analysis</div>
+    <div class="tab">⚖️ Settlement Scenarios</div>
+    <div class="tab">🤝 Negotiation Prep</div>
+    <div class="tab">📁 Documents</div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <h2>The clarity you need. <em>The advisor you deserve.</em></h2>
+    </div>
+    <div class="ben-grid">
+      <div class="ben-card">
+        <div class="ben-icon">💰</div>
+        <div class="ben-title">Save thousands in fees</div>
+        <p class="ben-body">Walk into every meeting already knowing your numbers. Less time explaining basics to your lawyer or mediator means significantly less money spent on billable hours.</p>
       </div>
-      <div class="angel-panel fade-up d2">
-        <div class="ap-hdr">
-          <div class="ap-av">✦</div>
-          <div><div class="ap-name">Angel</div><div class="ap-sub">AI Divorce Coach · Powered by Claude</div></div>
-        </div>
-        <div class="ap-msgs" id="angel-msgs-section"></div>
-        <div class="ap-sugg" id="angel-sugg-section">
-          <button class="ap-chip" onclick="angelSuggestSection('Where do I even start with divorce?')">Where do I start?</button>
-          <button class="ap-chip" onclick="angelSuggestSection('What are my rights if my spouse asks me to leave?')">What are my rights?</button>
-          <button class="ap-chip" onclick="angelSuggestSection('How is debt divided in a divorce?')">How is debt split?</button>
-          <button class="ap-chip" onclick="angelSuggestSection('Do I need a lawyer?')">Do I need a lawyer?</button>
-        </div>
-        <div class="ap-input-row">
-          <input id="angel-input-section" type="text" class="ap-input" placeholder="Ask Angel anything…" onkeypress="if(event.key==='Enter')angelSendSection()">
-          <button id="angel-btn-section" class="ap-send" onclick="angelSendSection()">→</button>
-        </div>
+      <div class="ben-card">
+        <div class="ben-icon">🎯</div>
+        <div class="ben-title">Know exactly what to fight for</div>
+        <p class="ben-body">Real settlement scenarios show you what different outcomes look like in dollars before you agree to anything. Negotiate from knowledge, not guesswork.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon"><img src="/DA-logo.jpg" alt="DivorceAngels"></div>
+        <div class="ben-title">An advisor who knows your file</div>
+        <p class="ben-body">Angel has read your complete financial picture. She remembers your situation, picks up where you left off, and is available at 2am when your mind won't stop racing.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMMUNITY -->
-<section class="community-section" id="community">
-  <div class="container">
-    <div class="community-grid">
-      <div class="fade-up">
-        <div class="eyebrow">Facebook community</div>
-        <h2>42,000+ people navigating<br>this <em style="font-style:italic;color:var(--g5);">right now.</em></h2>
-        <p style="margin-bottom:22px;max-width:420px;">Our Facebook group is one of the most active divorce support communities online — growing every day. Real people, real conversations, real support.</p>
-        <div class="community-live"><div class="live-dot"></div>Active right now — new posts every few minutes</div>
-        <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="btn-primary" style="margin-bottom:12px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          Join the Facebook group
-        </a>
-        <div style="font-size:0.74rem;color:var(--ink-l);">Free to join · Moderated for safety</div>
+<!-- HOW ANGEL WORKS -->
+<section class="how-angel" id="how-angel">
+  <div class="how-inner">
+    <div>
+      <div class="eyebrow">Your personal advisor</div>
+      <h2 class="how-h2">How Angel <em>works for you.</em></h2>
+      <p class="how-body">She's read your entire file. She knows your assets, your debts, your income, your kids, and your situation. She picks up exactly where you left off — and is available at 2am when your mind won't stop racing.</p>
+      <div class="feat-list">
+        <div class="feat-item">
+          <div class="feat-icon">📊</div>
+          <div>
+            <div class="feat-title">Analyzes your complete financial picture</div>
+            <div class="feat-desc">Knows your assets, debts, and exactly what you're entitled to — specific to your situation</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">⚖️</div>
+          <div>
+            <div class="feat-title">Runs real settlement scenarios</div>
+            <div class="feat-desc">Shows what different outcomes look like in dollars before you agree to anything</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🧭</div>
+          <div>
+            <div class="feat-title">Prepares you for every meeting</div>
+            <div class="feat-desc">Negotiation checklist, questions for your lawyer, and ranks what to fight for</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">📄</div>
+          <div>
+            <div class="feat-title">Explains your legal documents</div>
+            <div class="feat-desc">Upload any document and Angel breaks it down in plain English, specific to your case</div>
+          </div>
+        </div>
       </div>
-      <div class="fb-widget fade-up d2">
-        <div class="fb-hdr">
-          <div class="fb-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
-          <div><div class="fb-gname">Divorce Angels Community</div><div class="fb-gcount">Group · 42,000+ members</div></div>
-          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="fb-join">+ Join Group</a>
+      <a href="https://divorcetracker.netlify.app" class="btn-green">Try DivorceAngel →</a>
+      <p class="not-ready">Not ready yet? <a href="#ask-angel">Ask Angel a free question below ↓</a></p>
+    </div>
+
+    <div class="chat-win">
+      <div class="chat-hdr">
+        <div class="chat-av">✦<div class="chat-online"></div></div>
+        <div>
+          <div class="chat-name">Angel</div>
+          <div class="chat-status">Knows your complete situation</div>
         </div>
-        <div class="fb-posts">
-          <div class="fb-post">
-            <div class="fb-post-hdr">
-              <div class="fb-av" style="background:var(--g1);color:var(--g5);">S</div>
-              <div><div class="fb-poster">Sarah K.</div><div class="fb-time">2 hours ago</div></div>
-            </div>
-            <p class="fb-txt">Has anyone dealt with a spouse who refuses to complete financial disclosure? My lawyer says we can bring a motion but I'm not sure if it's worth the cost...</p>
-            <div class="fb-meta"><span>👍 24 likes</span><span>💬 17 comments</span></div>
-          </div>
-          <div class="fb-post">
-            <div class="fb-post-hdr">
-              <div class="fb-av" style="background:#DDE8FF;color:var(--blue);">R</div>
-              <div><div class="fb-poster">Rachel B.</div><div class="fb-time">5 hours ago</div></div>
-            </div>
-            <p class="fb-txt">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay. More than okay. Sending love to everyone just starting this journey. 💙</p>
-            <div class="fb-meta"><span>❤️ 148 likes</span><span>💬 63 comments</span></div>
-          </div>
-          <div class="fb-post">
-            <div class="fb-post-hdr">
-              <div class="fb-av" style="background:#E8E4F0;color:#6B52A8;">M</div>
-              <div><div class="fb-poster">Michael J.</div><div class="fb-time">Yesterday</div></div>
-            </div>
-            <p class="fb-txt">Finally got the house sold and settlement signed. Used Angel to prep for every lawyer meeting. Saved me hours. Highly recommend.</p>
-            <div class="fb-meta"><span>👍 89 likes</span><span>💬 31 comments</span></div>
-          </div>
-        </div>
-        <div class="fb-ftr">
-          <span class="fb-ftr-note">Join to see all posts and participate</span>
-          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" rel="noopener" class="fb-ftr-link">View in Facebook →</a>
-        </div>
+      </div>
+      <div class="chat-msgs">
+        <div class="msg-u">Should I keep the house or sell it?</div>
+        <div class="msg-a">Based on your snapshot, <strong>selling puts you $57,500 ahead.</strong> Carrying that mortgage on your income alone would consume 68% of your take-home. I'd fight for the sale.</div>
+        <div class="msg-u">What about the 401(k)? He says it's his.</div>
+        <div class="msg-a">He's wrong. 401(k) contributions during marriage are <strong>marital property</strong> in every US state. Based on your data, you're entitled to approximately <strong>$84,000.</strong> Don't give this up.</div>
+      </div>
+      <div class="chat-inp">
+        <div class="chat-field">Ask Angel about your situation...</div>
+        <div class="chat-send">→</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-stat"><div class="trust-num">6</div><div class="trust-lbl">settlement calculators</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-stat"><div class="trust-num">101</div><div class="trust-lbl">expense categories</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-stat"><div class="trust-num">67</div><div class="trust-lbl">documents tracked</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-stat"><div class="trust-num">42,000+</div><div class="trust-lbl">community members</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-stat"><div class="trust-num">🔒</div><div class="trust-lbl">Private &amp; secure</div></div>
+  </div>
+</div>
 
 <!-- BLOG -->
-    <section class="blog-section">
-      <div class="container">
-        <div class="section-hdr fade-up">
-          <div>
-            <div class="eyebrow">From the blog</div>
-            <h2>Insight for every <em style="font-style:italic;color:var(--g5);">stage of the journey</em></h2>
-          </div>
-          <a href="/blog/" class="link-arrow">View all articles →</a>
+<!-- BUILD_BLOG_START — build.js reads this marker and replaces the 6 cards below with real posts -->
+<section class="blog-sec">
+  <div class="sec-inner">
+    <div class="blog-hdr">
+      <div>
+        <div class="blog-ey">From the blog</div>
+        <h2 class="blog-h2">Insight for every <em>stage of the journey</em></h2>
+      </div>
+      <a href="blog/index.html" class="view-all">View all articles →</a>
+    </div>
+    <div class="blog-grid" id="homepage-blog-grid">
+      <a href="blog/posts/mom-has-new-boyfriend.html" class="blog-card">
+        <div class="blog-img" style="background:#E8EEFF;"><span>👨‍👩‍👧</span></div>
+        <div class="blog-body"><span class="blog-tag tag-co">Co-Parenting</span><div class="blog-title">Mom Has a New Boyfriend: Navigating This Change With Grace</div><div class="blog-date">April 9, 2026</div></div>
+      </a>
+      <a href="blog/posts/protecting-yourself-financially-before-filing.html" class="blog-card">
+        <div class="blog-img" style="background:#EEF5E8;"><span>💰</span></div>
+        <div class="blog-body"><span class="blog-tag tag-fin">Financial</span><div class="blog-title">Protecting Yourself Financially Before Filing for Divorce</div><div class="blog-date">April 9, 2026</div></div>
+      </a>
+      <a href="blog/posts/why-does-your-divorce-feel-slow.html" class="blog-card">
+        <div class="blog-img" style="background:#EAF0EC;"><span>⚖️</span></div>
+        <div class="blog-body"><span class="blog-tag tag-leg">Legal</span><div class="blog-title">Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?</div><div class="blog-date">April 9, 2026</div></div>
+      </a>
+      <a href="blog/posts/how-to-tell-your-kids-about-divorce.html" class="blog-card">
+        <div class="blog-img" style="background:#EDE8F8;"><span>💙</span></div>
+        <div class="blog-body"><span class="blog-tag tag-emo">Emotional</span><div class="blog-title">How to Tell Your Kids About the Divorce</div><div class="blog-date">March 28, 2026</div></div>
+      </a>
+      <a href="blog/posts/starting-fresh-activities-after-divorce.html" class="blog-card">
+        <div class="blog-img" style="background:#FFF0E8;"><span>🏃</span></div>
+        <div class="blog-body"><span class="blog-tag tag-life">Life After</span><div class="blog-title">Starting Fresh: Why New Activities After Divorce Help You Heal</div><div class="blog-date">March 14, 2026</div></div>
+      </a>
+      <a href="blog/posts/five-natural-ways-ease-anxiety-during-divorce.html" class="blog-card">
+        <div class="blog-img" style="background:#E4EFE8;"><span>🧘</span></div>
+        <div class="blog-body"><span class="blog-tag tag-well">Wellness</span><div class="blog-title">Five Natural Ways to Ease Anxiety During Your Divorce</div><div class="blog-date">February 28, 2026</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- BUILD_BLOG_END -->
+
+<!-- COMMUNITY -->
+<section class="community" id="community">
+  <div class="comm-inner">
+    <div>
+      <div class="comm-ey">42,000+ members · active now</div>
+      <h2 class="comm-h2">You don't have to do this alone.</h2>
+      <p class="comm-body">Real conversations happening right now in our Facebook community — 42,000+ people navigating exactly what you're going through.</p>
+      <a href="https://www.facebook.com/groups/divorceangels" target="_blank" rel="noopener" class="btn-fb">
+        <div class="fb-ico">f</div>
+        Join Divorce Angels Community →
+      </a>
+    </div>
+    <div class="fb-widget">
+      <div class="fb-hdr">
+        <span class="fb-wname">Divorce Angels Community</span>
+        <span class="fb-wcount">· 42,000+ members</span>
+        <div class="btn-fbjoin">+ Join</div>
+      </div>
+      <div class="fb-post">
+        <div class="fb-phdr">
+          <div class="fb-av" style="background:#E4EFE8;color:var(--forest);">S</div>
+          <div><div class="fb-pname">Sarah M.</div><div class="fb-time">2 hours ago</div></div>
         </div>
-        <div class="blog-grid fade-up d1">
-          <a href="/understanding-mediation-arbitration-and-litigation-key-differences-explained/" class="blog-card">
-            <img class="blog-img" src="https://cdn.durable.co/getty/21PrKVQ3HVjeFq7KM9p0WHL7EnvraWZjUbQLr4dSeoxFVdqLExR8lrlH3g01dowh.jpeg" alt="Understanding Mediation, Arbitration, and Litigation: Key Differences Explained">
-            <div class="blog-body">
-              <span class="btag" style="background:#EAF0EC;color:#2C3E35">Legal</span>
-              <h3 class="blog-title">Understanding Mediation, Arbitration, and Litigation: Key Differences Explained</h3>
-              <div class="blog-meta">July 21, 2025</div>
-            </div>
-          </a>
-          <a href="/starting-fresh-why-trying-new-activities-after-divorce-can-help-you-heal/" class="blog-card">
-            <img class="blog-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop" alt="Starting Fresh: Why Trying New Activities After Divorce Can Help You Heal">
-            <div class="blog-body">
-              <span class="btag" style="background:#EDE5E0;color:#6B4A3A">Life After</span>
-              <h3 class="blog-title">Starting Fresh: Why Trying New Activities After Divorce Can Help You Heal</h3>
-              <div class="blog-meta">July 6, 2025</div>
-            </div>
-          </a>
-          <a href="/coping-with-divorce-a-childs-emotional-journey/" class="blog-card">
-            <img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt="Coping with Divorce: A Child's Emotional Journey">
-            <div class="blog-body">
-              <span class="btag" style="background:#EDE8F8;color:#5240A8">Emotional</span>
-              <h3 class="blog-title">Coping with Divorce: A Child's Emotional Journey</h3>
-              <div class="blog-meta">July 5, 2025</div>
-            </div>
-          </a>
-          <a href="/navigating-divorce-alone-the-challenges-of-self-representation/" class="blog-card">
-            <img class="blog-img" src="https://cdn.durable.co/getty/42OJCn5TzWeBQgghIu7pf3ekS0vLZF4p9SKMFLrDJJNHMMVRsm3QmU9byx8L81RL.jpeg" alt="Navigating Divorce Alone: The Challenges of Self-Representation">
-            <div class="blog-body">
-              <span class="btag" style="background:#EAF0EC;color:#2C3E35">Legal</span>
-              <h3 class="blog-title">Navigating Divorce Alone: The Challenges of Self-Representation</h3>
-              <div class="blog-meta">July 2, 2025</div>
-            </div>
-          </a>
-          <a href="/thriving-after-divorce-how-i-reclaimed-my-life-and-found-joy-again/" class="blog-card">
-            <img class="blog-img" src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80&fit=crop" alt="Thriving After Divorce: How I Reclaimed My Life and Found Joy Again">
-            <div class="blog-body">
-              <span class="btag" style="background:#EDE8F8;color:#5240A8">Emotional</span>
-              <h3 class="blog-title">Thriving After Divorce: How I Reclaimed My Life and Found Joy Again</h3>
-              <div class="blog-meta">June 13, 2025</div>
-            </div>
-          </a>
-          <a href="/getting-through-your-divorce-must-have-products-to-help-you-heal-and-thrive/" class="blog-card">
-            <img class="blog-img" src="https://images.unsplash.com/photo-1484665754804-74b091211472?w=800&q=80&fit=crop" alt="Getting Through Your Divorce: Must-Have Products to Help You Heal and Thrive">
-            <div class="blog-body">
-              <span class="btag" style="background:#EDE8F8;color:#5240A8">Emotional</span>
-              <h3 class="blog-title">Getting Through Your Divorce: Must-Have Products to Help You Heal and Thrive</h3>
-              <div class="blog-meta">June 12, 2025</div>
-            </div>
-          </a>
+        <p class="fb-txt">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay — more than okay. Sending love to everyone just starting. 💙</p>
+        <div class="fb-react">❤️ 148 · 💬 63 comments</div>
+      </div>
+      <div class="fb-post">
+        <div class="fb-phdr">
+          <div class="fb-av" style="background:#DDE8FF;color:var(--navy);">R</div>
+          <div><div class="fb-pname">Rachel B.</div><div class="fb-time">5 hours ago</div></div>
+        </div>
+        <p class="fb-txt">Used DivorceAngel to prep for my first lawyer meeting. Walked in with the full financial analysis — my lawyer said it was the most prepared she'd ever seen a client.</p>
+        <div class="fb-react">👍 89 · 💬 31 comments</div>
+      </div>
+      <div class="fb-foot">
+        <a href="https://www.facebook.com/groups/divorceangels" target="_blank" rel="noopener" class="fb-footlink">Join the conversation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE ANGEL CTA -->
+<section class="free-angel" id="ask-angel">
+  <div class="fa-ey">Free on this site</div>
+  <h2>Have a question right now?</h2>
+  <p>Ask Angel anything — legal process, emotional support, or where to even start. Free, no signup, no judgment. For personalized guidance based on your specific numbers, try DivorceAngel.</p>
+  <div class="fa-btns">
+    <button class="btn-ask" id="open-angel-btn">✦ Ask Angel — free</button>
+    <a href="https://divorcetracker.netlify.app" class="btn-da">Try DivorceAngel →</a>
+  </div>
+</section>
+
+<!-- ANGEL CHAT WIDGET -->
+<section class="angel-widget" id="angel-chat-widget">
+  <div style="max-width:680px;margin:0 auto;">
+    <div style="background:var(--navy-dark);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);">
+      <div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:12px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--sage-mid);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--forest);flex-shrink:0;position:relative;border:2px solid rgba(255,255,255,.15);">
+          ✦
+          <div style="position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:var(--green-a);border:2px solid var(--navy-dark);"></div>
+        </div>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:#fff;">Angel</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.35);">Free · emotional &amp; general guidance</div>
         </div>
       </div>
-    </section>
-
-<!-- NEWSLETTER -->
-<section class="nl-section">
-  <div class="container">
-    <div class="eyebrow fade-up" style="justify-content:center;">Stay informed</div>
-    <h2 class="fade-up d1">Guidance in your inbox,<br><em>when you need it most.</em></h2>
-    <p class="fade-up d2">Weekly articles, resources, and gentle reminders that you're going to be okay. No spam, ever.</p>
-    <form class="nl-form fade-up d3" onsubmit="handleNL(event)">
-      <input type="email" class="nl-input" placeholder="Your email address" required>
-      <button type="submit" class="nl-btn">Subscribe</button>
-    </form>
-    <p style="font-size:0.72rem;color:var(--ink-l);margin-top:12px;" class="fade-up d4">We respect your privacy. Unsubscribe at any time.</p>
+      <div id="angel-messages" style="padding:18px 20px;display:flex;flex-direction:column;gap:12px;min-height:120px;max-height:380px;overflow-y:auto;">
+        <div style="background:rgba(255,255,255,.07);border-radius:10px 10px 10px 3px;padding:12px 16px;max-width:90%;">
+          <p style="font-size:12px;color:rgba(255,255,255,.85);line-height:1.7;margin:0;">Hi, I'm Angel. I'm here to help with anything on your mind — legal process, what to expect, how you're feeling, or where to even start. What's going on?</p>
+        </div>
+      </div>
+      <div style="padding:12px 16px;border-top:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.2);">
+        <div style="display:flex;gap:10px;align-items:center;">
+          <input type="text" id="angel-input" placeholder="Ask Angel anything..."
+            style="flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 14px;font-size:13px;color:#fff;font-family:inherit;outline:none;"
+            onkeydown="if(event.key==='Enter')sendAngel()">
+          <button onclick="sendAngel()" style="background:#4A7A5E;color:#fff;font-size:13px;font-weight:500;padding:11px 20px;border-radius:8px;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Send →</button>
+        </div>
+        <p style="font-size:11px;color:rgba(255,255,255,.25);margin-top:8px;line-height:1.5;">For guidance based on your specific financial situation, <a href="https://divorcetracker.netlify.app" style="color:rgba(255,255,255,.45);text-decoration:underline;">try DivorceAngel</a>.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <img src="/DA-logo.jpg" alt="Divorce Angels" style="height:40px;width:auto;display:block;margin-bottom:12px;border-radius:4px;">
-        <p class="footer-tag">Real guidance for real people navigating one of life's hardest transitions. You are not alone.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn">f</a>
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">ig</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-col-title">Content</div>
-        <ul class="footer-links">
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="#">Legal Guides</a></li>
-          <li><a href="#">Financial Tools</a></li>
-          <li><a href="#">Co-Parenting</a></li>
-          <li><a href="#">Starting Over</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Community</div>
-        <ul class="footer-links">
-          <li><a href="forums/index.html">Forums</a></li>
-          <li><a href="https://www.facebook.com/groups/3705373593017325" target="_blank">Facebook Group</a></li>
-          <li><a href="#">Newsletter</a></li>
-          <li><a href="#">About Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Tools</div>
-        <ul class="footer-links">
-          <li><a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a></li>
-          <li><a href="#angel-section">Angel AI Coach</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-txt">© 2026 Divorce Angels. All rights reserved.</div>
-      <div class="footer-bottom-txt">Not legal advice. Always consult a licensed attorney.</div>
-    </div>
+  <div class="foot-links">
+    <a href="https://divorcetracker.netlify.app">DivorceAngel</a>
+    <a href="toolkit/index.html">Toolkit</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="#community">Community</a>
   </div>
+  <div class="foot-legal">Not legal advice. Always consult a licensed attorney.</div>
 </footer>
 
-<!-- FLOATING ANGEL BUTTON -->
-<button class="angel-fab" id="angel-fab" onclick="toggleAngel()">
-  <div class="fab-av">✦</div>
-  <span class="fab-txt">Ask Angel</span>
-</button>
-
-<!-- FLOATING ANGEL POPUP -->
-<div class="angel-popup" id="angel-popup">
-  <div class="popup-hdr">
-    <div class="popup-av">✦</div>
-    <div><div class="popup-name">Angel</div><div class="popup-sub">AI Divorce Coach · Powered by Claude</div></div>
-    <button class="popup-close" onclick="toggleAngel()">✕</button>
-  </div>
-  <div class="popup-msgs" id="angel-msgs-popup"></div>
-  <div class="popup-sugg" id="angel-sugg-popup">
-    <button class="ap-chip" onclick="angelSuggestPopup('Where do I even start with divorce?')">Where do I start?</button>
-    <button class="ap-chip" onclick="angelSuggestPopup('What are my rights?')">My rights?</button>
-    <button class="ap-chip" onclick="angelSuggestPopup('How is debt divided?')">Debt split?</button>
-  </div>
-  <div class="popup-input-row">
-    <input id="angel-input-popup" type="text" class="popup-input" placeholder="Ask Angel anything…" onkeypress="if(event.key==='Enter')angelSendPopup()">
-    <button id="angel-btn-popup" class="popup-send" onclick="angelSendPopup()">→</button>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
 <script>
-// Fade-up
-const obs = new IntersectionObserver(e => e.forEach(x => {if(x.isIntersecting) x.target.classList.add('visible')}), {threshold:0.1});
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+// Sticky nav shadow
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>20));
 
-// Mobile nav
-document.getElementById('menu-btn').addEventListener('click', () => {
-  const n = document.getElementById('mobile-nav');
-  n.style.display = n.style.display === 'flex' ? 'none' : 'flex';
+// Open Angel widget
+document.getElementById('open-angel-btn').addEventListener('click',()=>{
+  const w=document.getElementById('angel-chat-widget');
+  w.classList.add('open');
+  setTimeout(()=>w.scrollIntoView({behavior:'smooth',block:'start'}),50);
+  document.getElementById('angel-input').focus();
 });
 
-// Floating Angel toggle
-function toggleAngel() {
-  const p = document.getElementById('angel-popup');
-  p.classList.toggle('open');
-}
-function openAngel() {
-  document.getElementById('angel-popup').classList.add('open');
-  setTimeout(() => document.getElementById('angel-input-popup')?.focus(), 200);
-}
+// Angel chat
+async function sendAngel(){
+  const inp=document.getElementById('angel-input');
+  const msgs=document.getElementById('angel-messages');
+  const txt=inp.value.trim();
+  if(!txt)return;
 
-// Angel AI shared history + system
-const angelHistory = [];
-function angelSystem() {
-  return "You are Angel, a warm empathetic AI divorce coach on the Divorce Angels website. Give real, helpful answers about legal process, finances, emotions, and divorce. Be conversational like a knowledgeable friend. Always answer the actual question. Remind them to consult a lawyer for their specific situation when relevant. Never be preachy. If someone says they feel overwhelmed, don't know where to start, or are confused about what to do first, warmly suggest the Divorce Tracker as a great first step — it helps them organize their finances, documents, and situation all in one place. Mention it naturally: 'One thing that really helps when everything feels like too much is the Divorce Tracker at https://divorcetracker.netlify.app — it walks you through your finances and documents step by step so nothing falls through the cracks.'";
-}
+  const uBub=document.createElement('div');
+  uBub.style.cssText='background:rgba(45,74,107,.7);border-radius:10px 10px 3px 10px;padding:11px 15px;align-self:flex-end;max-width:85%;font-size:12px;color:#fff;line-height:1.65;';
+  uBub.textContent=txt;
+  msgs.appendChild(uBub);
+  inp.value='';
+  msgs.scrollTop=msgs.scrollHeight;
 
-function addMsg(cid, text, isUser) {
-  const c = document.getElementById(cid); if (!c) return;
-  const d = document.createElement('div');
-  d.className = 'sa-msg' + (isUser ? ' sa-user' : '');
-  d.innerHTML = text
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:var(--g2);font-weight:600;text-decoration:underline;">$1</a>')
-    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:var(--g2);text-decoration:underline;">$1</a>')
-    .replace(/\n/g, '<br>');
-  c.appendChild(d); c.scrollTop = c.scrollHeight;
-}
-function addTyping(cid) {
-  const c = document.getElementById(cid); if (!c) return null;
-  const d = document.createElement('div');
-  d.className = 'sa-typing'; d.innerHTML = '<span></span><span></span><span></span>';
-  c.appendChild(d); c.scrollTop = c.scrollHeight; return d;
-}
-async function callAngel(msg, msgsId, inputId, btnId, suggId) {
-  const input = document.getElementById(inputId);
-  const btn = document.getElementById(btnId);
-  const sugg = document.getElementById(suggId);
-  if (sugg) sugg.style.display = 'none';
-  if (input) input.value = '';
-  if (btn) { btn.disabled = true; btn.style.opacity = '0.5'; }
-  addMsg(msgsId, msg, true);
-  const typing = addTyping(msgsId);
-  angelHistory.push({role:'user', content:msg});
-  if (angelHistory.length > 16) angelHistory.splice(0, 2);
-  let reply = '';
-  try {
-    const resp = await fetch('/.netlify/functions/angel', {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({system: angelSystem(), messages: angelHistory})
-    });
-    const raw = await resp.text();
-    if (!resp.ok) { reply = 'I\'m having a little trouble connecting right now. Please try again in a moment.'; }
-    else { let data = {}; try { data = JSON.parse(raw); } catch(x){} reply = data.reply || 'Please try again shortly.'; }
-  } catch(e) { reply = 'I\'m not able to connect right now. Once deployed to the live site this will work — browse our blog for guidance in the meantime.'; }
-  if (typing && typing.parentNode) typing.remove();
-  angelHistory.push({role:'assistant', content:reply});
-  addMsg(msgsId, reply, false);
-  if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
-  if (input) input.focus();
-}
+  const typing=document.createElement('div');
+  typing.style.cssText='background:rgba(255,255,255,.07);border-radius:10px 10px 10px 3px;padding:11px 15px;max-width:80%;font-size:12px;color:rgba(255,255,255,.45);';
+  typing.textContent='Angel is thinking…';
+  msgs.appendChild(typing);
+  msgs.scrollTop=msgs.scrollHeight;
 
-// Section chat
-function angelSendSection() {
-  const i = document.getElementById('angel-input-section');
-  const msg = i ? i.value.trim() : ''; if (!msg) return;
-  callAngel(msg, 'angel-msgs-section', 'angel-input-section', 'angel-btn-section', 'angel-sugg-section');
+  try{
+    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:txt})});
+    const data=await res.json();
+    typing.remove();
+    const aBub=document.createElement('div');
+    aBub.style.cssText='background:rgba(255,255,255,.07);border-radius:10px 10px 10px 3px;padding:12px 15px;max-width:92%;font-size:12px;color:rgba(255,255,255,.88);line-height:1.75;';
+    const reply=(data.reply||data.content||'Something went wrong — please try again.').replace(/\[([^\]]+)\]\((https?[^)]+)\)/g,'$2');
+    aBub.innerHTML=reply.replace(/\n/g,'<br>');
+    msgs.appendChild(aBub);
+    msgs.scrollTop=msgs.scrollHeight;
+  }catch(e){
+    typing.textContent='Something went wrong — please try again.';
+  }
 }
-function angelSuggestSection(q) { callAngel(q, 'angel-msgs-section', 'angel-input-section', 'angel-btn-section', 'angel-sugg-section'); }
-
-// Popup chat
-function angelSendPopup() {
-  const i = document.getElementById('angel-input-popup');
-  const msg = i ? i.value.trim() : ''; if (!msg) return;
-  callAngel(msg, 'angel-msgs-popup', 'angel-input-popup', 'angel-btn-popup', 'angel-sugg-popup');
-}
-function angelSuggestPopup(q) { callAngel(q, 'angel-msgs-popup', 'angel-input-popup', 'angel-btn-popup', 'angel-sugg-popup'); }
-
-// Newsletter
-function handleNL(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button'); const inp = e.target.querySelector('input');
-  if (btn) { btn.textContent = '✓ You\'re subscribed!'; btn.style.background = '#4A7A5E'; btn.disabled = true; }
-  if (inp) { inp.value = ''; inp.disabled = true; }
-}
-
-// Greetings
-const greeting = "Hi, I\u2019m **Angel** \u2014 your free AI divorce coach. Whatever stage you\u2019re at, I\u2019m here. Ask me anything about the legal process, finances, or just where to start. No judgment, ever.";
-document.addEventListener('DOMContentLoaded', () => {
-  ['angel-msgs-section', 'angel-msgs-popup'].forEach(id => {
-    setTimeout(() => {
-      const c = document.getElementById(id); if (!c) return;
-      const t = document.createElement('div'); t.className = 'sa-typing'; t.innerHTML = '<span></span><span></span><span></span>';
-      c.appendChild(t);
-      setTimeout(() => { if (t.parentNode) t.remove(); addMsg(id, greeting, false); }, 900);
-    }, 600);
-  });
-});
 </script>
 </body>
 </html>
-
