@@ -92,7 +92,7 @@ const NAV = `<nav id="navbar">
       <li><a href="https://divorcetracker.netlify.app">DivorceAngel</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/toolkit/">Toolkit</a></li>
-      <li><a href="/#community">Community</a></li>
+      <li><a href="/community/">Community</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
       <button id="menu-btn">☰</button>
@@ -104,7 +104,7 @@ const NAV = `<nav id="navbar">
   <a href="https://divorcetracker.netlify.app">DivorceAngel</a>
   <a href="/blog/">Blog</a>
   <a href="/toolkit/">Toolkit</a>
-  <a href="/#community">Community</a>
+  <a href="/community/">Community</a>
 </div>`;
 
 const FOOTER = `<footer>
