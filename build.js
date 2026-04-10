@@ -87,22 +87,24 @@ footer{background:var(--blue);padding:68px 0 32px}
 
 const NAV = `<nav id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:36px;width:36px;border-radius:50%;object-fit:cover;"></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="DivorceAngels" style="height:48px;width:auto;display:block;mix-blend-mode:multiply;"></a>
     <ul class="nav-links">
+      <li><a href="https://divorcetracker.netlify.app">DivorceAngel</a></li>
       <li><a href="/blog/">Blog</a></li>
+      <li><a href="/toolkit/">Toolkit</a></li>
       <li><a href="/#community">Community</a></li>
-      <li><a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
       <button id="menu-btn">☰</button>
-      <a href="/#angel-section" class="nav-cta">✦ Ask Angel</a>
+      <a href="https://divorcetracker.netlify.app" class="nav-cta">Get started →</a>
     </div>
   </div>
 </nav>
 <div id="mobile-nav">
+  <a href="https://divorcetracker.netlify.app">DivorceAngel</a>
   <a href="/blog/">Blog</a>
+  <a href="/toolkit/">Toolkit</a>
   <a href="/#community">Community</a>
-  <a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a>
 </div>`;
 
 const FOOTER = `<footer>
