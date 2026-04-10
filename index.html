@@ -430,34 +430,34 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
     <div>
       <div class="eyebrow">Your personal advisor</div>
       <h2 class="how-h2">How Angel <em>works for you.</em></h2>
-      <p class="how-body">She's read your entire file. She knows your assets, your debts, your income, your kids, and your situation. She picks up exactly where you left off — and is available at 2am when your mind won't stop racing.</p>
+      <p class="how-body">She's read your entire file. She knows your assets, your debts, your income, your kids, and your situation. She picks up exactly where you left off — and she's available at 2am when your mind won't stop racing.</p>
       <div class="feat-list">
         <div class="feat-item">
           <div class="feat-icon">📊</div>
           <div>
             <div class="feat-title">Analyzes your complete financial picture</div>
-            <div class="feat-desc">Knows your assets, debts, and exactly what you're entitled to — specific to your situation</div>
+            <div class="feat-desc">Knows your assets, debts, income, and exactly what you're entitled to — specific to your situation</div>
           </div>
         </div>
         <div class="feat-item">
           <div class="feat-icon">⚖️</div>
           <div>
             <div class="feat-title">Runs real settlement scenarios</div>
-            <div class="feat-desc">Shows what different outcomes look like in dollars before you agree to anything</div>
+            <div class="feat-desc">Shows you what different outcomes actually look like in dollars before you agree to anything</div>
           </div>
         </div>
         <div class="feat-item">
           <div class="feat-icon">🧭</div>
           <div>
-            <div class="feat-title">Prepares you for every meeting</div>
-            <div class="feat-desc">Negotiation checklist, questions for your lawyer, and ranks what to fight for</div>
+            <div class="feat-title">Remembers your situation</div>
+            <div class="feat-desc">Picks up exactly where you left off — whether you're using a lawyer, mediator, or going it alone</div>
           </div>
         </div>
         <div class="feat-item">
-          <div class="feat-icon">📄</div>
+          <div class="feat-icon">💙</div>
           <div>
-            <div class="feat-title">Explains your legal documents</div>
-            <div class="feat-desc">Upload any document and Angel breaks it down in plain English, specific to your case</div>
+            <div class="feat-title">Available at 2am when you can't sleep</div>
+            <div class="feat-desc">No judgment. No hourly rate. Ask anything about the legal process, your finances, or how you're feeling</div>
           </div>
         </div>
       </div>
@@ -474,14 +474,14 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
         </div>
       </div>
       <div class="chat-msgs">
-        <div class="msg-u">Should I keep the house or sell it?</div>
-        <div class="msg-a">Based on your snapshot, <strong>selling puts you $57,500 ahead.</strong> Carrying that mortgage on your income alone would consume 68% of your take-home. I'd fight for the sale.</div>
-        <div class="msg-u">What about the 401(k)? He says it's his.</div>
-        <div class="msg-a">He's wrong. 401(k) contributions during marriage are <strong>marital property</strong> in every US state. Based on your data, you're entitled to approximately <strong>$84,000.</strong> Don't give this up.</div>
+        <div class="msg-u">Should I try to keep the house or sell it?</div>
+        <div class="msg-a">Based on your financial snapshot, <strong>selling puts you $57,500 ahead</strong> of a buyout. With your income, carrying the mortgage alone would consume 68% of your take-home. I'd fight for the sale and redirect that equity toward your retirement gap.</div>
+        <div class="msg-u">What about the RRSP? My husband says it's his.</div>
+        <div class="msg-a">He's wrong. RRSPs accumulated during the marriage are <strong>shared property</strong> in every Canadian province. Based on what you've entered, you're entitled to approximately <strong>$84,000</strong> of his RRSP. Don't give this up.</div>
       </div>
       <div class="chat-inp">
-        <div class="chat-field">Ask Angel about your situation...</div>
-        <div class="chat-send">→</div>
+        <input type="text" id="how-angel-input" placeholder="Ask Angel about your situation..." onkeydown="if(event.key==='Enter')sendHowAngel()" style="flex:1;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 13px;color:white;font-size:12px;outline:none;font-family:inherit;">
+        <button onclick="sendHowAngel()" style="background:#4A7A5E;color:white;padding:9px 14px;border-radius:8px;font-size:12px;border:none;cursor:pointer;">→</button>
       </div>
     </div>
   </div>
@@ -670,6 +670,40 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>20));
+
+// How Angel Works — live chat
+async function sendHowAngel(){
+  const inp=document.getElementById('how-angel-input');
+  const msgs=document.querySelector('.chat-msgs');
+  const txt=inp.value.trim();
+  if(!txt)return;
+  const uBub=document.createElement('div');
+  uBub.className='msg-u';
+  uBub.textContent=txt;
+  msgs.appendChild(uBub);
+  inp.value='';
+  msgs.scrollTop=msgs.scrollHeight;
+  const typing=document.createElement('div');
+  typing.className='msg-a';
+  typing.textContent='Angel is thinking…';
+  typing.style.opacity='.5';
+  msgs.appendChild(typing);
+  msgs.scrollTop=msgs.scrollHeight;
+  try{
+    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:txt})});
+    const data=await res.json();
+    typing.remove();
+    const aBub=document.createElement('div');
+    aBub.className='msg-a';
+    const reply=(data.reply||data.content||'Something went wrong — please try again.').replace(/\[([^\]]+)\]\((https?[^)]+)\)/g,'$2');
+    aBub.innerHTML=reply.replace(/\n/g,'<br>');
+    msgs.appendChild(aBub);
+    msgs.scrollTop=msgs.scrollHeight;
+  }catch(e){
+    typing.textContent='Something went wrong — please try again.';
+    typing.style.opacity='1';
+  }
+}
 
 // Open Angel widget
 document.getElementById('open-angel-btn').addEventListener('click',()=>{
