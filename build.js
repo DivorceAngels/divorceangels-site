@@ -67,8 +67,8 @@ p{color:var(--ink-m);line-height:1.75}
 nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;max-width:1160px;margin:0 auto;padding:0 52px}
 .nav-logo{display:flex;align-items:center;}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:0.87rem;color:var(--ink-m)}.nav-links a:hover{color:var(--g5)}
-.nav-cta{font-size:0.82rem;font-weight:500;background:var(--g5);color:white;padding:9px 20px;border-radius:8px;white-space:nowrap}
+.nav-links a{font-size:13px;color:#6A7A70;transition:color .2s}.nav-links a:hover{color:#2C3E35;font-weight:500}
+.nav-cta{font-size:13px;font-weight:500;background:#2C3E35;color:white;padding:10px 22px;border-radius:8px;white-space:nowrap}
 #menu-btn{display:none;background:none;border:none;cursor:pointer;color:var(--ink);font-size:1.3rem}
 #mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--g0);border-bottom:1px solid var(--bdr);z-index:99;flex-direction:column;padding:20px 28px;gap:16px}
 #mobile-nav a{font-size:0.95rem;font-weight:500;color:var(--ink)}
@@ -87,7 +87,7 @@ footer{background:var(--blue);padding:68px 0 32px}
 
 const NAV = `<nav id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:64px;width:auto;display:block;mix-blend-mode:multiply;"></a>
+    <a href="/" class="nav-logo"><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:36px;width:36px;border-radius:50%;object-fit:cover;"></a>
     <ul class="nav-links">
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/#community">Community</a></li>
