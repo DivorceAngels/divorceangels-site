@@ -135,13 +135,13 @@ img{display:block;max-width:100%}
 .not-ready a{color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.18)}
 
 /* CHAT WINDOW */
-.chat-win{background:#F2F7F4;border:1px solid #D8E4DC;border-radius:16px;overflow:hidden}
+.chat-win{background:#F2F7F4;border:1px solid #D8E4DC;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
 .chat-hdr{padding:14px 18px;border-bottom:1px solid #D8E4DC;display:flex;align-items:center;gap:10px;background:#E4EFE8}
 .chat-av{width:34px;height:34px;border-radius:50%;background:var(--sage-mid);display:flex;align-items:center;justify-content:center;position:relative;border:2px solid rgba(255,255,255,.15);font-size:14px;color:var(--forest);flex-shrink:0}
 .chat-online{position:absolute;bottom:0;right:0;width:8px;height:8px;border-radius:50%;background:var(--green-a);border:1.5px solid var(--navy-dark)}
 .chat-name{font-size:12px;font-weight:500;color:#1A2018}
 .chat-status{font-size:10px;color:#6A7A70}
-.chat-msgs{padding:16px;display:flex;flex-direction:column;gap:10px;background:#F2F7F4}
+.chat-msgs{padding:16px;display:flex;flex-direction:column;gap:10px;background:#F2F7F4;max-height:320px;overflow-y:auto}
 .msg-u{background:#2D4A6B;border-radius:10px 10px 3px 10px;padding:10px 13px;align-self:flex-end;max-width:85%;font-size:11px;color:#fff;line-height:1.6}
 .msg-a{background:#fff;border-radius:10px 10px 10px 3px;padding:10px 13px;max-width:92%;font-size:11px;color:#1A2018;line-height:1.7;border:.5px solid #D8E4DC}
 .msg-a strong{color:#1A2018}
