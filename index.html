@@ -51,7 +51,7 @@ img{display:block;max-width:100%}
 .hero{background:var(--sage-hero);padding:64px 64px 0}
 .hero-inner{max-width:1200px;margin:0 auto;display:flex;gap:56px;align-items:flex-end;justify-content:space-between}
 .hero-copy{padding-bottom:72px;padding-top:12px;flex:1;min-width:0}
-.hero-h1{font-family:'Lora',Georgia,serif;font-size:38px;font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:28px}
+.hero-h1{font-family:'Lora',Georgia,serif;font-size:72px;font-weight:400;line-height:1.05;color:var(--ink);margin-bottom:28px}
 .hero-h1 em{color:var(--forest);font-style:italic}
 .hero-body{font-size:14px;color:var(--ink-mid);line-height:1.8;margin-bottom:30px;max-width:420px}
 .hero-btns{display:flex;flex-direction:column;gap:10px;max-width:280px;margin-bottom:16px}
@@ -99,7 +99,7 @@ img{display:block;max-width:100%}
 
 /* NAV TABS */
 .nav-tabs{background:var(--navy);padding:11px 48px}
-.nav-tabs-inner{max-width:1100px;margin:0 auto;display:flex;gap:4px;justify-content:center}
+.nav-tabs-inner{max-width:1100px;margin:0 auto;display:flex;gap:4px}
 .tab{padding:7px 14px;border-radius:6px;font-size:11px;color:rgba(255,255,255,.55);white-space:nowrap}
 .tab.active{background:rgba(255,255,255,.15);color:#fff;font-weight:500}
 
@@ -117,18 +117,18 @@ img{display:block;max-width:100%}
 .ben-body{font-size:12px;color:var(--ink-lt);line-height:1.75}
 
 /* HOW ANGEL */
-.how-angel{background:var(--navy-dark);padding:72px 48px}
+.how-angel{background:var(--navy-dark);padding:64px 48px}
 .how-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';width:20px;height:1px;background:rgba(255,255,255,.25);display:block}
-.how-h2{font-family:'Lora',Georgia,serif;font-size:28px;font-weight:400;line-height:1.2;color:#fff;margin-bottom:16px}
+.how-h2{font-family:'Lora',Georgia,serif;font-size:30px;font-weight:400;line-height:1.2;color:#fff;margin-bottom:16px}
 .how-h2 em{color:#C8D8CD;font-style:italic}
-.how-body{font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:28px}
+.how-body{font-size:14px;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:32px;max-width:420px}
 .feat-list{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
 .feat-item{display:flex;align-items:flex-start;gap:14px}
-.feat-icon{width:38px;height:38px;flex-shrink:0;border-radius:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:17px}
-.feat-title{font-size:12px;font-weight:500;color:#fff;margin-bottom:2px}
-.feat-desc{font-size:11px;color:rgba(255,255,255,.42);line-height:1.55}
+.feat-icon{width:40px;height:40px;flex-shrink:0;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:16px}
+.feat-title{font-size:13px;font-weight:500;color:#fff;margin-bottom:3px}
+.feat-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.55}
 .btn-green{background:#4A7A5E;color:#fff;font-size:13px;font-weight:500;padding:13px 26px;border-radius:8px;display:inline-block;transition:opacity .2s}
 .btn-green:hover{opacity:.88}
 .not-ready{font-size:11px;color:rgba(255,255,255,.28);margin-top:10px}
@@ -260,6 +260,7 @@ img{display:block;max-width:100%}
 /* ANGEL WIDGET */
 .angel-widget{background:var(--sage-mid);padding:60px 48px;border-bottom:.5px solid var(--sage-bd);display:none}
 .angel-widget.open{display:block}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
 /* FOOTER */
 footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
@@ -444,17 +445,21 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
         <div class="chat-av">✦<div class="chat-online"></div></div>
         <div>
           <div class="chat-name">Angel</div>
-          <div class="chat-status">Knows your complete situation</div>
+          <div class="chat-status" style="display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#5FC87A;display:inline-block;animation:pulse 2s infinite;"></span> Live · Ask me anything</div>
         </div>
       </div>
-      <div class="chat-msgs">
-        <div class="msg-u">Should I try to keep the house or sell it?</div>
-        <div class="msg-a">Based on your financial snapshot, <strong>selling puts you $57,500 ahead</strong> of a buyout. With your income, carrying the mortgage alone would consume 68% of your take-home. I'd fight for the sale and redirect that equity toward your retirement gap.</div>
-        <div class="msg-u">What about the RRSP? My husband says it's his.</div>
-        <div class="msg-a">He's wrong. RRSPs accumulated during the marriage are <strong>shared property</strong> in every Canadian province. Based on what you've entered, you're entitled to approximately <strong>$84,000</strong> of his RRSP. Don't give this up.</div>
+      <div class="chat-msgs" id="how-angel-messages">
+        <div class="msg-a" id="angel-greeting">Hi, I'm Angel. I'm here to help with anything on your mind — the legal process, your finances, how you're feeling, or where to even start. What's going on?</div>
+      </div>
+      <!-- Clickable question chips -->
+      <div id="angel-chips" style="padding:10px 14px;display:flex;flex-wrap:wrap;gap:7px;border-top:1px solid rgba(255,255,255,.07);">
+        <button onclick="askChip('How does mediation work?')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">How does mediation work?</button>
+        <button onclick="askChip('What am I entitled to?')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">What am I entitled to?</button>
+        <button onclick="askChip('I feel completely overwhelmed')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">I feel completely overwhelmed</button>
+        <button onclick="askChip('Where do I even start?')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">Where do I even start?</button>
       </div>
       <div class="chat-inp">
-        <input type="text" id="how-angel-input" placeholder="Ask Angel about your situation..." onkeydown="if(event.key==='Enter')sendHowAngel()" style="flex:1;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 13px;color:white;font-size:12px;outline:none;font-family:inherit;">
+        <input type="text" id="how-angel-input" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')sendHowAngel()" style="flex:1;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 13px;color:white;font-size:12px;outline:none;font-family:inherit;">
         <button onclick="sendHowAngel()" style="background:#4A7A5E;color:white;padding:9px 14px;border-radius:8px;font-size:12px;border:none;cursor:pointer;">→</button>
       </div>
     </div>
@@ -486,7 +491,6 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
     </div>
   </div>
 </section>
-
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
@@ -673,11 +677,22 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
 window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>20));
 
 // How Angel Works — live chat
+function askChip(question){
+  document.getElementById('how-angel-input').value=question;
+  // Hide chips after first use
+  const chips=document.getElementById('angel-chips');
+  if(chips)chips.style.display='none';
+  sendHowAngel();
+}
+
 async function sendHowAngel(){
   const inp=document.getElementById('how-angel-input');
-  const msgs=document.getElementById('how-angel-input').closest('.chat-win').querySelector('.chat-msgs');
+  const msgs=document.getElementById('how-angel-messages');
   const txt=inp.value.trim();
   if(!txt)return;
+  // Hide chips on first real message
+  const chips=document.getElementById('angel-chips');
+  if(chips)chips.style.display='none';
   const uBub=document.createElement('div');
   uBub.className='msg-u';
   uBub.textContent=txt;
@@ -691,7 +706,7 @@ async function sendHowAngel(){
   msgs.appendChild(typing);
   msgs.scrollTop=msgs.scrollHeight;
   try{
-    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:"user",content:txt}]})});
+    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:'user',content:txt}]})});
     const data=await res.json();
     typing.remove();
     const aBub=document.createElement('div');
@@ -735,7 +750,7 @@ async function sendAngel(){
   msgs.scrollTop=msgs.scrollHeight;
 
   try{
-    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:"user",content:txt}]})});
+    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:txt})});
     const data=await res.json();
     typing.remove();
     const aBub=document.createElement('div');
