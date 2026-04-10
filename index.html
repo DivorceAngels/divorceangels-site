@@ -145,7 +145,7 @@ img{display:block;max-width:100%}
 .msg-u{background:#2D4A6B;border-radius:10px 10px 3px 10px;padding:10px 13px;align-self:flex-end;max-width:85%;font-size:11px;color:#fff;line-height:1.6}
 .msg-a{background:#fff;border-radius:10px 10px 10px 3px;padding:10px 13px;max-width:92%;font-size:11px;color:#1A2018;line-height:1.7;border:.5px solid #D8E4DC}
 .msg-a strong{color:#1A2018}
-.chat-inp{padding:10px 14px;border-top:1px solid #D8E4DC;background:#E4EFE8;display:flex;gap:8px}
+.chat-inp{padding:10px 14px;border-top:1px solid #D8E4DC;background:#E4EFE8;display:flex;gap:8px;align-items:center}
 .chat-field{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:8px 12px;font-size:11px;color:rgba(255,255,255,.3)}
 .chat-send{background:#4A7A5E;color:#fff;padding:8px 13px;border-radius:7px;font-size:11px}
 
@@ -453,7 +453,7 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
         <button onclick="askChip('Where do I even start?')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">Where do I even start?</button>
       </div>
       <div class="chat-inp">
-        <input type="text" id="how-angel-input" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')sendHowAngel()" style="flex:1;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 13px;color:white;font-size:12px;outline:none;font-family:inherit;">
+        <input type="text" id="how-angel-input" placeholder="Type your question and press Enter or →" onkeydown="if(event.key==='Enter')sendHowAngel()" style="flex:1;background:white;border:1.5px solid #D8E4DC;border-radius:8px;padding:9px 13px;color:#1A2018;font-size:12px;outline:none;font-family:inherit;">
         <button onclick="sendHowAngel()" style="background:#4A7A5E;color:white;padding:9px 14px;border-radius:8px;font-size:12px;border:none;cursor:pointer;">→</button>
       </div>
     </div>
