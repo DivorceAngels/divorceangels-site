@@ -691,7 +691,7 @@ async function sendHowAngel(){
   msgs.appendChild(typing);
   msgs.scrollTop=msgs.scrollHeight;
   try{
-    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:txt})});
+    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:"user",content:txt}]})});
     const data=await res.json();
     typing.remove();
     const aBub=document.createElement('div');
@@ -735,7 +735,7 @@ async function sendAngel(){
   msgs.scrollTop=msgs.scrollHeight;
 
   try{
-    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:txt})});
+    const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:"user",content:txt}]})});
     const data=await res.json();
     typing.remove();
     const aBub=document.createElement('div');
