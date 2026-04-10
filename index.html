@@ -675,7 +675,7 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 // How Angel Works — live chat
 async function sendHowAngel(){
   const inp=document.getElementById('how-angel-input');
-  const msgs=document.querySelector('.chat-msgs');
+  const msgs=document.getElementById('how-angel-input').closest('.chat-win').querySelector('.chat-msgs');
   const txt=inp.value.trim();
   if(!txt)return;
   const uBub=document.createElement('div');
