@@ -812,7 +812,7 @@ async function sendFloat(){
     const aBub=document.createElement('div');
     aBub.style.cssText='background:white;border-radius:10px 10px 10px 3px;padding:10px 13px;max-width:92%;font-size:12px;color:#1A2018;line-height:1.7;border:.5px solid #D8E4DC;';
     const reply=(data.reply||data.content||'Something went wrong — please try again.').replace(/\[([^\]]+)\]\((https?[^)]+)\)/g,'$2');
-    aBub.innerHTML=reply.replace(/
+    aBub.innerHTML=reply.replace(/\n
 /g,'<br>');
     msgs.appendChild(aBub);
     msgs.scrollTop=msgs.scrollHeight;
