@@ -778,7 +778,7 @@ async function sendAngel(){
 function toggleAngelChat(){
   const chat=document.getElementById('angel-float-chat');
   const isOpen=chat.style.display==='flex';
-  chat.style.display=isOpen?'none':'flex';
+  chat.style.display=isOpen?"none":"flex";
   if(!isOpen)document.getElementById('float-input').focus();
 }
 
