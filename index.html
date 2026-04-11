@@ -633,48 +633,6 @@ footer{background:var(--navy);padding:28px 48px;display:flex;justify-content:spa
   </div>
 </section>
 
-<!-- FREE ANGEL CTA -->
-<section class="free-angel" id="ask-angel">
-  <div class="fa-ey">Free on this site</div>
-  <h2>Have a question right now?</h2>
-  <p>Ask Angel anything — legal process, emotional support, or where to even start. Free, no signup, no judgment. For personalized guidance based on your specific numbers, try DivorceAngel.</p>
-  <div class="fa-btns">
-    <button class="btn-ask" id="open-angel-btn">✦ Ask Angel — free</button>
-    <a href="https://divorcetracker.netlify.app" class="btn-da">Try DivorceAngel →</a>
-  </div>
-</section>
-
-<!-- ANGEL CHAT WIDGET -->
-<section class="angel-widget" id="angel-chat-widget">
-  <div style="max-width:680px;margin:0 auto;">
-    <div style="background:var(--navy-dark);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);">
-      <div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:12px;">
-        <div style="width:36px;height:36px;border-radius:50%;background:var(--sage-mid);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--forest);flex-shrink:0;position:relative;border:2px solid rgba(255,255,255,.15);">
-          ✦
-          <div style="position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:var(--green-a);border:2px solid var(--navy-dark);"></div>
-        </div>
-        <div>
-          <div style="font-size:13px;font-weight:500;color:#fff;">Angel</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.35);">Free · emotional &amp; general guidance</div>
-        </div>
-      </div>
-      <div id="angel-messages" style="padding:18px 20px;display:flex;flex-direction:column;gap:12px;min-height:120px;max-height:380px;overflow-y:auto;">
-        <div style="background:rgba(255,255,255,.07);border-radius:10px 10px 10px 3px;padding:12px 16px;max-width:90%;">
-          <p style="font-size:12px;color:rgba(255,255,255,.85);line-height:1.7;margin:0;">Hi, I'm Angel. I'm here to help with anything on your mind — legal process, what to expect, how you're feeling, or where to even start. What's going on?</p>
-        </div>
-      </div>
-      <div style="padding:12px 16px;border-top:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.2);">
-        <div style="display:flex;gap:10px;align-items:center;">
-          <input type="text" id="angel-input" placeholder="Ask Angel anything..."
-            style="flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 14px;font-size:13px;color:#fff;font-family:inherit;outline:none;"
-            onkeydown="if(event.key==='Enter')sendAngel()">
-          <button onclick="sendAngel()" style="background:#4A7A5E;color:#fff;font-size:13px;font-weight:500;padding:11px 20px;border-radius:8px;cursor:pointer;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Send →</button>
-        </div>
-        <p style="font-size:11px;color:rgba(255,255,255,.25);margin-top:8px;line-height:1.5;">For guidance based on your specific financial situation, <a href="https://divorcetracker.netlify.app" style="color:rgba(255,255,255,.45);text-decoration:underline;">try DivorceAngel</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
@@ -778,5 +736,11 @@ async function sendAngel(){
   }
 }
 </script>
+
+<!-- FLOATING ANGEL BUTTON -->
+<div id="floating-angel" onclick="document.getElementById('how-angel').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('how-angel-input').focus(),600);" style="position:fixed;bottom:28px;right:28px;z-index:999;background:#2D4A6B;color:white;padding:12px 20px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(45,74,107,.4);transition:all .2s;" onmouseover="this.style.background='#1C3A5E';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#2D4A6B';this.style.transform='translateY(0)'">
+  <span style="width:8px;height:8px;border-radius:50%;background:#5FC87A;display:inline-block;animation:pulse 2s infinite;flex-shrink:0;"></span>
+  ✦ Ask Angel
+</div>
 </body>
 </html>
