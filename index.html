@@ -37,13 +37,13 @@
     /* FINANCIAL CARD */
     .fcard{border-radius:12px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 4px 24px rgba(42,90,122,.12);}
     .fcard-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:8px;}
-    .fcard-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;}
+    .fcard-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:white;border-radius:50%;overflow:hidden;}
     .fcard-icon img{height:22px;filter:brightness(0) invert(1);opacity:1;}
     .fcard-title{font-size:13px;font-weight:500;color:white;font-family:'Cormorant Garamond',serif;letter-spacing:.02em;}
     .fcard-step{margin-left:auto;font-size:10px;color:rgba(255,255,255,.5);font-family:'Cormorant Garamond',serif;}
     .fcard-body{background:#2A5A7A;padding:16px;}
     .angel-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-    .angel-av{width:34px;height:34px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+    .angel-av{width:38px;height:38px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
     .angel-av img{height:24px;filter:brightness(0) invert(1);opacity:1;}
     .angel-dot{position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid #2A5A7A;}
     .angel-name{font-size:13px;font-weight:500;color:white;font-family:'Cormorant Garamond',serif;font-style:italic;}
@@ -98,7 +98,7 @@
     .af-desc{font-size:14px;color:#6A8A9A;line-height:1.65;font-family:'Cormorant Garamond',serif;}
     .chat-demo{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden;box-shadow:0 4px 24px rgba(42,90,122,.1);}
     .chat-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:10px;}
-    .ch-av{width:30px;height:30px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+    .ch-av{width:34px;height:34px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
     .ch-av img{height:22px;filter:brightness(0) invert(1);opacity:1;}
     .ch-dot{position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
     .ch-name{font-size:13px;font-weight:500;color:white;font-family:'Cormorant Garamond',serif;font-style:italic;}
@@ -175,7 +175,7 @@
     #angel-modal{display:none;position:fixed;bottom:80px;right:24px;width:360px;border-radius:16px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 8px 40px rgba(0,0,0,.2);z-index:1000;font-family:'Cormorant Garamond',serif;}
     #angel-modal.open{display:flex;flex-direction:column;}
     .modal-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:10px;}
-    .modal-av{width:30px;height:30px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+    .modal-av{width:34px;height:34px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
     .modal-av img{height:22px;filter:brightness(0) invert(1);opacity:1;}
     .modal-av-dot{position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
     .modal-name{font-size:14px;font-weight:500;color:white;font-style:italic;}
@@ -238,13 +238,13 @@
       </div>
       <div class="fcard">
         <div class="fcard-hdr">
-          <div class="fcard-icon"><svg class="wings-icon wings-white" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M100 45 C85 45 60 35 30 15 C45 30 55 42 65 48 C55 46 40 44 20 48 C35 46 50 48 65 52 C55 55 45 58 35 65 C50 56 65 50 80 50 C85 50 90 48 95 46"/><ellipse cx="100" cy="42" rx="7" ry="4.5"/><path d="M100 45 C115 45 140 35 170 15 C155 30 145 42 135 48 C145 46 160 44 180 48 C165 46 150 48 135 52 C145 55 155 58 165 65 C150 56 135 50 120 50 C115 50 110 48 105 46"/></svg></div>
+          <div class="fcard-icon"><img src="/yda-logo.png" style="width:28px;height:28px;object-fit:contain;"></div>
           <div class="fcard-title">Your Financial Analysis</div>
           <div class="fcard-step">Step 2 of 6 &middot; <em>Your Divorce Angel</em></div>
         </div>
         <div class="fcard-body">
           <div class="angel-row">
-            <div class="angel-av"><svg class="wings-icon wings-sm" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M100 45 C85 45 60 35 30 15 C45 30 55 42 65 48 C55 46 40 44 20 48 C35 46 50 48 65 52 C55 55 45 58 35 65 C50 56 65 50 80 50 C85 50 90 48 95 46"/><ellipse cx="100" cy="42" rx="7" ry="4.5"/><path d="M100 45 C115 45 140 35 170 15 C155 30 145 42 135 48 C145 46 160 44 180 48 C165 46 150 48 135 52 C145 55 155 58 165 65 C150 56 135 50 120 50 C115 50 110 48 105 46"/></svg><div class="angel-dot"></div></div>
+            <div class="angel-av"><img src="/yda-logo.png" alt="Your Divorce Angel" style="width:34px;height:34px;object-fit:contain;border-radius:50%;"><div class="angel-dot"></div></div>
             <div><div class="angel-name">Your Divorce Angel</div><div class="angel-sub">Your personal advisor</div></div>
           </div>
           <div class="bubble">Based on your numbers, <strong>selling the home gives you $156,000 more liquidity</strong> than a buyout. Refinancing alone would consume 71% of your take-home &mdash; a risky position long-term.</div>
@@ -329,7 +329,7 @@
         </div>
         <div class="chat-demo">
           <div class="chat-hdr">
-            <div class="ch-av"><svg class="wings-icon wings-sm" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M100 45 C85 45 60 35 30 15 C45 30 55 42 65 48 C55 46 40 44 20 48 C35 46 50 48 65 52 C55 55 45 58 35 65 C50 56 65 50 80 50 C85 50 90 48 95 46"/><ellipse cx="100" cy="42" rx="7" ry="4.5"/><path d="M100 45 C115 45 140 35 170 15 C155 30 145 42 135 48 C145 46 160 44 180 48 C165 46 150 48 135 52 C145 55 155 58 165 65 C150 56 135 50 120 50 C115 50 110 48 105 46"/></svg><div class="ch-dot"></div></div>
+            <div class="ch-av"><img src="/yda-logo.png" alt="Your Divorce Angel" style="width:30px;height:30px;object-fit:contain;"><div class="ch-dot"></div></div>
             <div><div class="ch-name">Your Divorce Angel</div><div class="ch-status">Live &middot; Ask me anything</div></div>
           </div>
           <div class="chat-body">
@@ -441,13 +441,13 @@
   <!-- ASK ANGEL FAB -->
   <div id="ask-angel-fab" onclick="toggleAngel()">
     <div class="fab-dot"></div>
-    <svg class="wings-icon wings-sm" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M100 45 C85 45 60 35 30 15 C45 30 55 42 65 48 C55 46 40 44 20 48 C35 46 50 48 65 52 C55 55 45 58 35 65 C50 56 65 50 80 50 C85 50 90 48 95 46"/><ellipse cx="100" cy="42" rx="7" ry="4.5"/><path d="M100 45 C115 45 140 35 170 15 C155 30 145 42 135 48 C145 46 160 44 180 48 C165 46 150 48 135 52 C145 55 155 58 165 65 C150 56 135 50 120 50 C115 50 110 48 105 46"/></svg> <em>Ask Angel</em>
+    <img src="/yda-logo.png" style="height:24px;object-fit:contain;filter:brightness(0) invert(1);"> <em>Ask Angel</em>
   </div>
 
   <!-- ANGEL MODAL -->
   <div id="angel-modal">
     <div class="modal-hdr">
-      <div class="modal-av"><svg class="wings-icon wings-sm" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M100 45 C85 45 60 35 30 15 C45 30 55 42 65 48 C55 46 40 44 20 48 C35 46 50 48 65 52 C55 55 45 58 35 65 C50 56 65 50 80 50 C85 50 90 48 95 46"/><ellipse cx="100" cy="42" rx="7" ry="4.5"/><path d="M100 45 C115 45 140 35 170 15 C155 30 145 42 135 48 C145 46 160 44 180 48 C165 46 150 48 135 52 C145 55 155 58 165 65 C150 56 135 50 120 50 C115 50 110 48 105 46"/></svg><div class="modal-av-dot"></div></div>
+      <div class="modal-av"><img src="/yda-logo.png" alt="Your Divorce Angel" style="width:30px;height:30px;object-fit:contain;"><div class="modal-av-dot"></div></div>
       <div><div class="modal-name">Your Divorce Angel</div><div class="modal-status">Live &middot; Ask me anything</div></div>
       <div class="modal-close" onclick="toggleAngel()">&#215;</div>
     </div>
