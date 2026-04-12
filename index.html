@@ -6,68 +6,71 @@
   <title>Your Divorce Angel - Guidance, clarity, and confidence every step of the way.</title>
   <meta name="description" content="Your Divorce Angel organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Georgia&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#1A2A35;}
+    body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A35;font-size:16px;line-height:1.75;}
 
     /* NAV */
     .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #EDF4F8;position:sticky;top:0;z-index:101;}
     .nav-logo{height:64px;mix-blend-mode:multiply;display:block;}
     .nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;padding:0 32px;position:sticky;top:94px;z-index:100;}
-    .nav-links{display:flex;gap:32px;font-size:13px;flex:1;justify-content:center;align-items:center;}
-    .nav-links a{color:white;text-decoration:none;}
+    .nav-links{display:flex;gap:32px;font-size:14px;flex:1;justify-content:center;align-items:center;font-family:'Cormorant Garamond',serif;}
+    .nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
     .nav-links a:first-child{font-weight:500;}
     .nav-links a:hover{color:rgba(255,255,255,.8);}
-    .nav-btn{background:white;color:#2A7AAB;font-size:11px;font-weight:400;padding:7px 16px;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap;text-align:center;line-height:1.4;flex-shrink:0;}
-    .nav-btn span{display:block;font-weight:600;font-size:12px;}
+    .nav-btn{background:white;color:#2A7AAB;font-size:11px;font-weight:400;padding:7px 16px;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap;text-align:center;line-height:1.5;flex-shrink:0;font-family:'Cormorant Garamond',serif;}
+    .nav-btn strong{display:block;font-weight:700;font-size:12px;font-style:italic;color:#1A5A8A;}
 
     /* HERO */
-    .hero-wrap{background:#fff;}
     .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 40px 56px;align-items:center;max-width:1200px;margin:0 auto;}
-    .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+    .hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;display:flex;align-items:center;gap:8px;font-family:'Cormorant Garamond',serif;}
     .hero-eyebrow-line{width:16px;height:1px;background:#6FAACB;display:block;}
-    .hero h1{font-family:Georgia,serif;font-size:36px;font-weight:400;line-height:1.15;color:#1A2A35;margin-bottom:20px;}
+    .hero-eyebrow-wings{height:18px;opacity:.8;}
+    .hero h1{font-family:Georgia,serif;font-size:38px;font-weight:400;line-height:1.15;color:#1A2A35;margin-bottom:20px;}
     .hero h1 em{color:#6FAACB;font-style:italic;}
-    .hero-p{font-size:14px;color:#4A6070;line-height:1.9;margin-bottom:28px;}
+    .hero-p{font-size:17px;color:#4A6070;line-height:1.85;margin-bottom:28px;}
     .cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-    .btn-primary{background:#6FAACB;color:white;font-size:13px;font-weight:500;padding:13px 28px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;}
-    .btn-ghost{background:transparent;color:#6FAACB;font-size:13px;font-weight:500;padding:13px 20px;border-radius:6px;border:1px solid #9DCBE4;cursor:pointer;text-decoration:none;display:inline-block;}
+    .btn-primary{background:#6FAACB;color:white;font-size:15px;font-weight:500;padding:13px 28px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;font-family:'Cormorant Garamond',serif;letter-spacing:.02em;}
+    .btn-ghost{background:transparent;color:#6FAACB;font-size:15px;font-weight:500;padding:13px 20px;border-radius:6px;border:1px solid #9DCBE4;cursor:pointer;text-decoration:none;display:inline-block;font-family:'Cormorant Garamond',serif;}
 
     /* FINANCIAL CARD */
     .fcard{border-radius:12px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 4px 24px rgba(42,90,122,.12);}
     .fcard-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:8px;}
-    .fcard-icon{width:20px;height:20px;background:#CFE6F3;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#2A5A7A;}
-    .fcard-title{font-size:12px;font-weight:500;color:white;}
-    .fcard-step{margin-left:auto;font-size:10px;color:rgba(255,255,255,.5);}
+    .fcard-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center;}
+    .fcard-icon img{height:16px;filter:brightness(0) invert(1);opacity:.85;}
+    .fcard-title{font-size:13px;font-weight:500;color:white;font-family:'Cormorant Garamond',serif;letter-spacing:.02em;}
+    .fcard-step{margin-left:auto;font-size:10px;color:rgba(255,255,255,.5);font-family:'Cormorant Garamond',serif;}
     .fcard-body{background:#2A5A7A;padding:16px;}
     .angel-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-    .angel-av{width:32px;height:32px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:13px;color:#2A5A7A;position:relative;flex-shrink:0;}
+    .angel-av{width:34px;height:34px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+    .angel-av img{height:20px;opacity:.9;}
     .angel-dot{position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid #2A5A7A;}
-    .angel-name{font-size:12px;font-weight:500;color:white;}
-    .angel-sub{font-size:10px;color:rgba(255,255,255,.45);}
-    .bubble{background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:11px 13px;margin-bottom:9px;font-size:12px;line-height:1.65;color:rgba(255,255,255,.85);}
+    .angel-name{font-size:13px;font-weight:500;color:white;font-family:'Cormorant Garamond',serif;font-style:italic;}
+    .angel-sub{font-size:10px;color:rgba(255,255,255,.45);font-family:'Cormorant Garamond',serif;}
+    .bubble{background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:11px 13px;margin-bottom:9px;font-size:13px;line-height:1.65;color:rgba(255,255,255,.85);font-family:'Cormorant Garamond',serif;}
     .bubble strong{color:white;font-weight:500;}
     .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);background:white;border-radius:8px;overflow:hidden;margin-bottom:9px;}
     .stat-cell{padding:9px 4px;text-align:center;border-right:1px solid #E2E8F0;}
     .stat-cell:last-child{border-right:none;}
-    .stat-lbl{font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:#718096;margin-bottom:3px;}
-    .stat-val{font-size:12px;font-weight:500;}
+    .stat-lbl{font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:#718096;margin-bottom:3px;font-family:'Cormorant Garamond',serif;}
+    .stat-val{font-size:13px;font-weight:500;font-family:'Cormorant Garamond',serif;}
     .scenarios-box{background:#F0F7FB;border-radius:8px;padding:11px 13px;}
-    .sc-lbl{font-size:8px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#6A8A9A;margin-bottom:9px;}
+    .sc-lbl{font-size:8px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#6A8A9A;margin-bottom:9px;font-family:'Cormorant Garamond',serif;}
     .sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
     .sc-a{background:#EEF5E8;border-radius:6px;padding:10px;border:1px solid #C8D8CD;}
     .sc-b{background:white;border-radius:6px;padding:10px;border:1px solid #E2E8F0;}
-    .sc-tag{font-size:8px;font-weight:500;margin-bottom:3px;}
-    .sc-val{font-size:15px;font-weight:500;margin-bottom:2px;}
-    .sc-note{font-size:8px;}
+    .sc-tag{font-size:9px;font-weight:500;margin-bottom:3px;font-family:'Cormorant Garamond',serif;}
+    .sc-val{font-size:16px;font-weight:500;margin-bottom:2px;font-family:'Cormorant Garamond',serif;}
+    .sc-note{font-size:9px;font-family:'Cormorant Garamond',serif;}
 
     /* SECTIONS */
     .sec-wrap{padding:64px 40px;max-width:1200px;margin:0 auto;}
-    .sec-eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;}
-    .sec-h2{font-family:Georgia,serif;font-size:30px;font-weight:400;color:#1A2A35;margin-bottom:12px;line-height:1.2;}
+    .sec-eyebrow{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-family:'Cormorant Garamond',serif;}
+    .sec-eyebrow-wings{height:16px;opacity:.7;}
+    .sec-h2{font-family:Georgia,serif;font-size:32px;font-weight:400;color:#1A2A35;margin-bottom:12px;line-height:1.2;}
     .sec-h2 em{color:#6FAACB;font-style:italic;}
-    .sec-sub{font-size:14px;color:#6A8A9A;line-height:1.75;}
+    .sec-sub{font-size:17px;color:#6A8A9A;line-height:1.75;}
     .bg-white{background:#fff;}
     .bg-blue{background:#E8F4FA;}
     .full-sec{width:100%;}
@@ -79,35 +82,36 @@
     .steps-line{position:absolute;top:26px;left:calc(100%/12);right:calc(100%/12);height:1px;background:#9DCBE4;z-index:0;}
     .circles-row{display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:20px;position:relative;z-index:1;}
     .circle-cell{display:flex;justify-content:center;}
-    .step-circle{width:52px;height:52px;border-radius:50%;background:#6FAACB;color:white;font-size:17px;font-weight:500;display:flex;align-items:center;justify-content:center;}
+    .step-circle{width:52px;height:52px;border-radius:50%;background:#6FAACB;color:white;font-size:18px;font-weight:500;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;}
     .titles-row{display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:10px;}
-    .title-cell{padding:0 8px;font-size:12px;font-weight:500;color:#1A2A35;line-height:1.4;min-height:52px;display:flex;align-items:flex-start;justify-content:center;text-align:center;}
+    .title-cell{padding:0 8px;font-size:13px;font-weight:500;color:#1A2A35;line-height:1.4;min-height:52px;display:flex;align-items:flex-start;justify-content:center;text-align:center;font-family:'Cormorant Garamond',serif;}
     .descs-row{display:grid;grid-template-columns:repeat(6,1fr);}
-    .desc-cell{padding:0 8px;font-size:10px;color:#5A7A8A;line-height:1.6;text-align:center;}
-    .steps-note{font-size:13px;color:#6FAACB;font-weight:500;text-align:center;margin-top:36px;}
+    .desc-cell{padding:0 8px;font-size:12px;color:#5A7A8A;line-height:1.6;text-align:center;font-family:'Cormorant Garamond',serif;}
+    .steps-note{font-size:15px;color:#6FAACB;font-weight:500;text-align:center;margin-top:36px;font-family:'Cormorant Garamond',serif;letter-spacing:.04em;}
 
     /* HOW ANGEL WORKS */
     .angel-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
     .af-list{display:flex;flex-direction:column;gap:16px;margin-top:22px;}
     .af{display:flex;gap:14px;align-items:flex-start;}
     .af-icon{width:38px;height:38px;border-radius:8px;background:#E8F4FA;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
-    .af-title{font-size:14px;font-weight:500;color:#1A2A35;margin-bottom:4px;}
-    .af-desc{font-size:13px;color:#6A8A9A;line-height:1.65;}
+    .af-title{font-size:15px;font-weight:500;color:#1A2A35;margin-bottom:4px;font-family:'Cormorant Garamond',serif;}
+    .af-desc{font-size:14px;color:#6A8A9A;line-height:1.65;font-family:'Cormorant Garamond',serif;}
     .chat-demo{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden;box-shadow:0 4px 24px rgba(42,90,122,.1);}
     .chat-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:10px;}
-    .ch-av{width:28px;height:28px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:12px;color:#2A5A7A;position:relative;flex-shrink:0;}
+    .ch-av{width:30px;height:30px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+    .ch-av img{height:18px;opacity:.9;}
     .ch-dot{position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
-    .ch-name{font-size:13px;font-weight:500;color:white;}
-    .ch-status{font-size:11px;color:rgba(255,255,255,.55);}
+    .ch-name{font-size:13px;font-weight:500;color:white;font-family:'Cormorant Garamond',serif;font-style:italic;}
+    .ch-status{font-size:11px;color:rgba(255,255,255,.55);font-family:'Cormorant Garamond',serif;}
     .chat-body{background:#2A5A7A;padding:16px;display:flex;flex-direction:column;gap:10px;}
-    .user-b{background:#CFE6F3;color:#1A3A4F;font-size:12px;padding:9px 13px;border-radius:8px 8px 2px 8px;align-self:flex-end;max-width:80%;line-height:1.55;}
-    .angel-b{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);font-size:12px;padding:9px 13px;border-radius:8px 8px 8px 2px;max-width:90%;line-height:1.65;}
+    .user-b{background:#CFE6F3;color:#1A3A4F;font-size:13px;padding:9px 13px;border-radius:8px 8px 2px 8px;align-self:flex-end;max-width:80%;line-height:1.55;font-family:'Cormorant Garamond',serif;}
+    .angel-b{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);font-size:13px;padding:9px 13px;border-radius:8px 8px 8px 2px;max-width:90%;line-height:1.65;font-family:'Cormorant Garamond',serif;}
     .angel-b strong{color:white;}
     .chat-sugs{background:#1F4A62;padding:10px 16px;display:flex;gap:7px;flex-wrap:wrap;}
-    .sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 11px;border-radius:20px;cursor:pointer;}
+    .sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:12px;padding:6px 11px;border-radius:20px;cursor:pointer;font-family:'Cormorant Garamond',serif;}
     .chat-inp{background:#1F4A62;padding:10px 16px 14px;display:flex;gap:8px;}
-    .inp-box{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:9px 12px;font-size:12px;color:rgba(255,255,255,.45);font-family:inherit;}
-    .inp-btn{background:#6FAACB;color:white;font-size:12px;font-weight:500;padding:9px 16px;border-radius:6px;cursor:pointer;border:none;}
+    .inp-box{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:9px 12px;font-size:13px;color:rgba(255,255,255,.45);font-family:'Cormorant Garamond',serif;}
+    .inp-btn{background:#6FAACB;color:white;font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;cursor:pointer;border:none;font-family:'Cormorant Garamond',serif;}
 
     /* VALUE PROPS */
     .value-header{text-align:center;margin-bottom:36px;}
@@ -115,72 +119,76 @@
     .vcard{background:white;border-radius:10px;padding:22px;border:1px solid #D0E8F5;}
     .vcard-hl{background:#CFE6F3;border-color:#9DCBE4;}
     .v-icon{width:38px;height:38px;border-radius:8px;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:14px;}
-    .v-title{font-size:14px;font-weight:500;color:#1A2A35;margin-bottom:7px;}
-    .v-desc{font-size:12px;color:#6A8A9A;line-height:1.65;}
+    .v-icon-wings{background:#CFE6F3;border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+    .v-icon-wings img{height:20px;opacity:.8;}
+    .v-title{font-size:16px;font-weight:500;color:#1A2A35;margin-bottom:7px;font-family:'Cormorant Garamond',serif;}
+    .v-desc{font-size:14px;color:#6A8A9A;line-height:1.65;font-family:'Cormorant Garamond',serif;}
 
     /* BLOG */
     .blog-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:30px;}
-    .blog-view-all{font-size:13px;color:#6FAACB;font-weight:500;text-decoration:none;}
+    .blog-view-all{font-size:15px;color:#6FAACB;font-weight:500;text-decoration:none;font-family:'Cormorant Garamond',serif;}
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
     .blog-card{border-radius:10px;overflow:hidden;border:1px solid #E0EEF5;text-decoration:none;display:block;}
     .blog-card:hover{border-color:#9DCBE4;}
     .blog-img{height:160px;object-fit:cover;width:100%;display:block;background:#CFE6F3;}
     .blog-body{padding:16px;}
-    .blog-tag{display:inline-block;font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#2A5A7A;background:#E8F4FA;padding:3px 9px;border-radius:4px;margin-bottom:9px;}
-    .blog-title{font-size:13px;font-weight:500;color:#1A2A35;line-height:1.45;margin-bottom:6px;}
-    .blog-date{font-size:11px;color:#9BAAB5;}
+    .blog-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#2A5A7A;background:#E8F4FA;padding:3px 9px;border-radius:4px;margin-bottom:9px;font-family:'Cormorant Garamond',serif;}
+    .blog-title{font-size:15px;font-weight:500;color:#1A2A35;line-height:1.45;margin-bottom:6px;font-family:'Cormorant Garamond',serif;}
+    .blog-date{font-size:12px;color:#9BAAB5;font-family:'Cormorant Garamond',serif;}
 
     /* COMMUNITY */
     .comm-inner{max-width:720px;margin:0 auto;text-align:center;}
-    .comm-badge{display:inline-flex;align-items:center;gap:7px;background:#CFE6F3;color:#2A5A7A;font-size:12px;font-weight:500;padding:7px 16px;border-radius:20px;margin-bottom:20px;}
-    .comm-live{width:8px;height:8px;border-radius:50%;background:#5FC87A;}
+    .comm-badge{display:inline-flex;align-items:center;gap:7px;background:#CFE6F3;color:#2A5A7A;font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;margin-bottom:20px;font-family:'Cormorant Garamond',serif;}
+    .comm-live{width:8px;height:8px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
     .comm-posts{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden;margin:26px 0;text-align:left;}
     .cp{padding:16px 18px;border-bottom:1px solid #E8F2F8;}
     .cp:last-child{border-bottom:none;}
     .cp-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
-    .cp-av{width:28px;height:28px;border-radius:50%;background:#9DCBE4;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;color:white;flex-shrink:0;}
-    .cp-name{font-size:13px;font-weight:500;color:#1A2A35;}
-    .cp-time{font-size:11px;color:#9BAAB5;margin-left:auto;}
-    .cp-text{font-size:13px;color:#4A6070;line-height:1.65;}
-    .cp-react{font-size:11px;color:#9BAAB5;margin-top:8px;}
+    .cp-av{width:28px;height:28px;border-radius:50%;background:#9DCBE4;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:white;flex-shrink:0;font-family:'Cormorant Garamond',serif;}
+    .cp-name{font-size:14px;font-weight:500;color:#1A2A35;font-family:'Cormorant Garamond',serif;}
+    .cp-time{font-size:12px;color:#9BAAB5;margin-left:auto;font-family:'Cormorant Garamond',serif;}
+    .cp-text{font-size:14px;color:#4A6070;line-height:1.65;font-family:'Cormorant Garamond',serif;}
+    .cp-react{font-size:12px;color:#9BAAB5;margin-top:8px;font-family:'Cormorant Garamond',serif;}
 
     /* TESTIMONIALS */
     .test-header{text-align:center;margin-bottom:36px;}
     .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
     .tcard{background:#F7FBFD;border-radius:10px;padding:20px;border:1px solid #E0EEF5;}
-    .stars{color:#6FAACB;font-size:12px;margin-bottom:10px;letter-spacing:3px;}
-    .tquote{font-size:12px;color:#4A6070;line-height:1.75;margin-bottom:12px;font-style:italic;}
-    .tauthor{font-size:11px;font-weight:500;color:#6FAACB;}
+    .stars{color:#6FAACB;font-size:14px;margin-bottom:10px;letter-spacing:3px;}
+    .tquote{font-size:15px;color:#4A6070;line-height:1.75;margin-bottom:12px;font-style:italic;font-family:'Cormorant Garamond',serif;}
+    .tauthor{font-size:12px;font-weight:500;color:#6FAACB;font-family:'Cormorant Garamond',serif;}
 
     /* FOOTER */
     .footer-nav-bar{background:#9DCBE4;width:100%;padding:12px 40px;display:flex;align-items:center;justify-content:center;gap:32px;}
-    .footer-nav-bar a{font-size:12px;color:white;text-decoration:none;}
+    .footer-nav-bar a{font-size:14px;color:white;text-decoration:none;font-family:'Cormorant Garamond',serif;letter-spacing:.02em;}
     .footer-nav-bar a:hover{color:rgba(255,255,255,.8);}
     .footer-logo-bar{background:white;width:100%;padding:16px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;border-top:1px solid #EDF4F8;}
     .footer-logo{height:52px;mix-blend-mode:multiply;display:block;}
-    .footer-legal{font-size:11px;color:#9BAAB5;}
+    .footer-legal{font-size:12px;color:#9BAAB5;font-family:'Cormorant Garamond',serif;}
 
     /* ASK ANGEL FAB */
-    #ask-angel-fab{position:fixed;bottom:24px;right:24px;background:#2A5A7A;color:white;font-size:13px;font-weight:500;padding:12px 22px;border-radius:30px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:2px solid rgba(255,255,255,.15);box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:999;font-family:inherit;}
-    .fab-dot{width:9px;height:9px;border-radius:50%;background:#5FC87A;}
+    #ask-angel-fab{position:fixed;bottom:24px;right:24px;background:#2A5A7A;color:white;font-size:14px;font-weight:500;padding:12px 22px;border-radius:30px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:2px solid rgba(255,255,255,.15);box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:999;font-family:'Cormorant Garamond',serif;}
+    #ask-angel-fab img{height:18px;filter:brightness(0) invert(1);opacity:.9;}
+    .fab-dot{width:9px;height:9px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
 
     /* ANGEL MODAL */
-    #angel-modal{display:none;position:fixed;bottom:80px;right:24px;width:360px;border-radius:16px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 8px 40px rgba(0,0,0,.2);z-index:1000;font-family:inherit;}
+    #angel-modal{display:none;position:fixed;bottom:80px;right:24px;width:360px;border-radius:16px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 8px 40px rgba(0,0,0,.2);z-index:1000;font-family:'Cormorant Garamond',serif;}
     #angel-modal.open{display:flex;flex-direction:column;}
     .modal-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:10px;}
-    .modal-av{width:28px;height:28px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:12px;color:#2A5A7A;position:relative;flex-shrink:0;}
+    .modal-av{width:30px;height:30px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+    .modal-av img{height:18px;opacity:.9;}
     .modal-av-dot{position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
-    .modal-name{font-size:13px;font-weight:500;color:white;}
+    .modal-name{font-size:14px;font-weight:500;color:white;font-style:italic;}
     .modal-status{font-size:11px;color:rgba(255,255,255,.55);}
-    .modal-close{margin-left:auto;color:rgba(255,255,255,.6);cursor:pointer;font-size:18px;line-height:1;}
+    .modal-close{margin-left:auto;color:rgba(255,255,255,.6);cursor:pointer;font-size:20px;line-height:1;}
     .modal-body{background:#2A5A7A;padding:16px;min-height:200px;display:flex;flex-direction:column;gap:10px;max-height:320px;overflow-y:auto;}
-    .modal-intro{background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:10px 13px;font-size:12px;color:rgba(255,255,255,.85);line-height:1.65;}
+    .modal-intro{background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:10px 13px;font-size:13px;color:rgba(255,255,255,.85);line-height:1.65;}
     .modal-sugs{background:#1F4A62;padding:8px 14px;display:flex;gap:6px;flex-wrap:wrap;}
-    .modal-sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:5px 10px;border-radius:20px;cursor:pointer;}
+    .modal-sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:12px;padding:5px 10px;border-radius:20px;cursor:pointer;}
     .modal-inp{background:#1F4A62;padding:8px 14px 12px;display:flex;gap:8px;}
-    .modal-input{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:8px 10px;font-size:12px;color:white;font-family:inherit;}
+    .modal-input{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:8px 10px;font-size:13px;color:white;font-family:'Cormorant Garamond',serif;}
     .modal-input::placeholder{color:rgba(255,255,255,.4);}
-    .modal-send{background:#6FAACB;color:white;font-size:12px;font-weight:500;padding:8px 14px;border-radius:6px;cursor:pointer;border:none;font-family:inherit;}
+    .modal-send{background:#6FAACB;color:white;font-size:13px;font-weight:500;padding:8px 14px;border-radius:6px;cursor:pointer;border:none;}
 
     @media(max-width:900px){
       .hero{grid-template-columns:1fr;padding:40px 20px;}
@@ -202,35 +210,35 @@
   </div>
   <nav class="nav">
     <div class="nav-links">
-      <a href="https://divorcetracker.netlify.app">Your Divorce Angel</a>
+      <a href="https://divorcetracker.netlify.app"><em>Your Divorce Angel</em></a>
       <a href="/blog/">Blog</a>
       <a href="/toolkit/">Toolkit</a>
       <a href="/community/">Community</a>
     </div>
-    <a class="nav-btn" href="https://divorcetracker.netlify.app">Get started with<span><em>Your Divorce Angel</em></span></a>
+    <a class="nav-btn" href="https://divorcetracker.netlify.app">Get started with<strong><em>Your Divorce Angel</em></strong></a>
   </nav>
 
   <!-- 1. HERO - white -->
   <section class="bg-white full-sec">
     <div class="hero">
       <div>
-        <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span>Your Divorce Angel</div>
+        <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span><img class="hero-eyebrow-wings" src="/angel-wings.png" alt=""><em>Your Divorce Angel</em></div>
         <h1>Navigate Your Divorce<br>With <em>Clarity &amp; Confidence</em></h1>
         <p class="hero-p">Your Divorce Angel organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation &mdash; so you spend less on lawyers, know what to fight for, and never agree to something you'll regret.</p>
         <div class="cta-row">
-          <a class="btn-primary" href="https://divorcetracker.netlify.app">Try Your Divorce Angel &rarr;</a>
+          <a class="btn-primary" href="https://divorcetracker.netlify.app">Try <em>Your Divorce Angel</em> &rarr;</a>
           <a class="btn-ghost" href="#how-it-works">See how it works</a>
         </div>
       </div>
       <div class="fcard">
         <div class="fcard-hdr">
-          <div class="fcard-icon">&#128202;</div>
+          <div class="fcard-icon"><img src="/angel-wings.png" alt=""></div>
           <div class="fcard-title">Your Financial Analysis</div>
-          <div class="fcard-step">Step 2 of 6 &middot; Your Divorce Angel</div>
+          <div class="fcard-step">Step 2 of 6 &middot; <em>Your Divorce Angel</em></div>
         </div>
         <div class="fcard-body">
           <div class="angel-row">
-            <div class="angel-av">&#10022;<div class="angel-dot"></div></div>
+            <div class="angel-av"><img src="/angel-wings.png" alt=""><div class="angel-dot"></div></div>
             <div><div class="angel-name">Your Divorce Angel</div><div class="angel-sub">Your personal advisor</div></div>
           </div>
           <div class="bubble">Based on your numbers, <strong>selling the home gives you $156,000 more liquidity</strong> than a buyout. Refinancing alone would consume 71% of your take-home &mdash; a risky position long-term.</div>
@@ -259,9 +267,9 @@
     <div class="sec-wrap">
       <div class="steps-inner">
         <div class="steps-header">
-          <div class="sec-eyebrow">How it works</div>
+          <div class="sec-eyebrow" style="justify-content:center;"><img class="sec-eyebrow-wings" src="/angel-wings.png" alt="">How it works</div>
           <h2 class="sec-h2">From overwhelmed to <em>prepared</em> in 6 easy steps</h2>
-          <p class="sec-sub">Your Divorce Angel walks you through everything your lawyer, mediator, or court needs &mdash; all in one place.</p>
+          <p class="sec-sub"><em>Your Divorce Angel</em> walks you through everything your lawyer, mediator, or court needs &mdash; all in one place.</p>
         </div>
         <div class="steps-wrap">
           <div class="steps-line"></div>
@@ -300,9 +308,9 @@
     <div class="sec-wrap">
       <div class="angel-grid">
         <div>
-          <div class="sec-eyebrow">Your personal advisor</div>
-          <h2 class="sec-h2">How Angel <em>works for you.</em></h2>
-          <p style="font-size:14px;color:#4A6070;line-height:1.9;margin-top:10px;">She's read your entire file. She knows your assets, your debts, your income, and your situation. She picks up exactly where you left off &mdash; and she's available at 2am when your mind won't stop racing.</p>
+          <div class="sec-eyebrow"><img class="sec-eyebrow-wings" src="/angel-wings.png" alt="">Your personal advisor</div>
+          <h2 class="sec-h2">How <em>Your Divorce Angel</em> works for you.</h2>
+          <p style="font-size:17px;color:#4A6070;line-height:1.85;margin-top:10px;font-family:'Cormorant Garamond',serif;">She's read your entire file. She knows your assets, your debts, your income, and your situation. She picks up exactly where you left off &mdash; and she's available at 2am when your mind won't stop racing.</p>
           <div class="af-list">
             <div class="af"><div class="af-icon">&#128202;</div><div><div class="af-title">Analyses your complete financial picture</div><div class="af-desc">Knows your assets, debts, income, and exactly what you're entitled to &mdash; specific to your situation</div></div></div>
             <div class="af"><div class="af-icon">&#9878;&#65039;</div><div><div class="af-title">Runs real settlement scenarios</div><div class="af-desc">Shows what different outcomes actually look like in dollars before you agree to anything</div></div></div>
@@ -310,12 +318,12 @@
             <div class="af"><div class="af-icon">&#128153;</div><div><div class="af-title">Available at 2am when you can't sleep</div><div class="af-desc">No judgment. No hourly rate. Ask anything about the legal process, your finances, or how you're feeling</div></div></div>
           </div>
           <div class="cta-row" style="margin-top:30px;">
-            <a class="btn-primary" href="https://divorcetracker.netlify.app">Try Your Divorce Angel &rarr;</a>
+            <a class="btn-primary" href="https://divorcetracker.netlify.app">Try <em>Your Divorce Angel</em> &rarr;</a>
           </div>
         </div>
         <div class="chat-demo">
           <div class="chat-hdr">
-            <div class="ch-av">&#10022;<div class="ch-dot"></div></div>
+            <div class="ch-av"><img src="/angel-wings.png" alt=""><div class="ch-dot"></div></div>
             <div><div class="ch-name">Your Divorce Angel</div><div class="ch-status">Live &middot; Ask me anything</div></div>
           </div>
           <div class="chat-body">
@@ -339,17 +347,17 @@
     </div>
   </section>
 
-  <!-- 4. WHY YOUR DIVORCE ANGEL - light blue -->
+  <!-- 4. WHY - light blue -->
   <section class="bg-blue full-sec">
     <div class="sec-wrap">
       <div class="value-header">
-        <div class="sec-eyebrow">Why Your Divorce Angel</div>
+        <div class="sec-eyebrow" style="justify-content:center;"><img class="sec-eyebrow-wings" src="/angel-wings.png" alt="">Why <em>Your Divorce Angel</em></div>
         <h2 class="sec-h2">The clarity you need. <em>The advisor you deserve.</em></h2>
       </div>
       <div class="v-grid">
         <div class="vcard"><div class="v-icon">&#128176;</div><div class="v-title">Save thousands in fees</div><div class="v-desc">Walk into every meeting already knowing your numbers. Less time explaining basics means significantly less spent on billable hours.</div></div>
         <div class="vcard"><div class="v-icon">&#127919;</div><div class="v-title">Know exactly what to fight for</div><div class="v-desc">Real settlement scenarios show what different outcomes look like in dollars before you agree to anything. Negotiate from knowledge, not guesswork.</div></div>
-        <div class="vcard vcard-hl"><div class="v-icon" style="background:white;">&#10022;</div><div class="v-title">An advisor who knows your file</div><div class="v-desc">Angel has read your complete financial picture. She remembers your situation and is available at 2am when your mind won't stop racing.</div></div>
+        <div class="vcard vcard-hl"><div class="v-icon-wings"><img src="/angel-wings.png" alt=""></div><div class="v-title">An advisor who knows your file</div><div class="v-desc">Angel has read your complete financial picture. She remembers your situation and is available at 2am when your mind won't stop racing.</div></div>
       </div>
     </div>
   </section>
@@ -381,10 +389,10 @@
       <div class="comm-inner">
         <div class="comm-badge"><div class="comm-live"></div>42,000+ members &middot; active now</div>
         <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
-        <p style="font-size:14px;color:#4A6070;line-height:1.9;margin-top:10px;">Real conversations happening right now &mdash; 42,000+ people navigating exactly what you're going through.</p>
+        <p style="font-size:17px;color:#4A6070;line-height:1.85;margin-top:10px;font-family:'Cormorant Garamond',serif;">Real conversations happening right now &mdash; 42,000+ people navigating exactly what you're going through.</p>
         <div class="comm-posts">
           <div class="cp"><div class="cp-row"><div class="cp-av">S</div><div class="cp-name">Sarah M.</div><div class="cp-time">2 hours ago</div></div><p class="cp-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay &mdash; more than okay. Sending love to everyone just starting. &#128153;</p><div class="cp-react">&#10084;&#65039; 148 &middot; &#128172; 63 comments</div></div>
-          <div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used Your Divorce Angel to prep for my first lawyer meeting. Walked in with the full financial analysis &mdash; my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">&#128077; 89 &middot; &#128172; 31 comments</div></div>
+          <div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used <em>Your Divorce Angel</em> to prep for my first lawyer meeting. Walked in with the full financial analysis &mdash; my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">&#128077; 89 &middot; &#128172; 31 comments</div></div>
         </div>
         <a class="btn-primary" href="https://www.facebook.com/groups/divorceangels">Join Divorce Angels Community &rarr;</a>
       </div>
@@ -395,9 +403,9 @@
   <section class="bg-white full-sec">
     <div class="sec-wrap">
       <div class="test-header">
-        <div class="sec-eyebrow">What people are saying</div>
+        <div class="sec-eyebrow" style="justify-content:center;"><img class="sec-eyebrow-wings" src="/angel-wings.png" alt="">What people are saying</div>
         <h2 class="sec-h2">Real people. <em>Real outcomes.</em></h2>
-        <p class="sec-sub" style="margin-top:8px;">From Toronto to Sydney &mdash; people navigating divorce with Your Divorce Angel</p>
+        <p class="sec-sub" style="margin-top:8px;">From Toronto to Sydney &mdash; people navigating divorce with <em>Your Divorce Angel</em></p>
       </div>
       <div class="test-grid">
         <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tquote">"Using Angel relieved so much of my stress. I finally understood what I was entitled to."</p><div class="tauthor">Sarah M. &mdash; Toronto, Canada</div></div>
@@ -413,7 +421,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-nav-bar">
-      <a href="https://divorcetracker.netlify.app">Your Divorce Angel</a>
+      <a href="https://divorcetracker.netlify.app"><em>Your Divorce Angel</em></a>
       <a href="/toolkit/">Toolkit</a>
       <a href="/blog/">Blog</a>
       <a href="/community/">Community</a>
@@ -427,13 +435,13 @@
   <!-- ASK ANGEL FAB -->
   <div id="ask-angel-fab" onclick="toggleAngel()">
     <div class="fab-dot"></div>
-    &#10022; Ask Angel
+    <img src="/angel-wings.png" alt=""> <em>Ask Angel</em>
   </div>
 
   <!-- ANGEL MODAL -->
   <div id="angel-modal">
     <div class="modal-hdr">
-      <div class="modal-av">&#10022;<div class="modal-av-dot"></div></div>
+      <div class="modal-av"><img src="/angel-wings.png" alt=""><div class="modal-av-dot"></div></div>
       <div><div class="modal-name">Your Divorce Angel</div><div class="modal-status">Live &middot; Ask me anything</div></div>
       <div class="modal-close" onclick="toggleAngel()">&#215;</div>
     </div>
@@ -461,12 +469,12 @@
       const input=document.getElementById('modal-input');
       input.value='';
       const ub=document.createElement('div');
-      ub.style.cssText='background:#CFE6F3;color:#1A3A4F;font-size:12px;padding:9px 13px;border-radius:8px 8px 2px 8px;align-self:flex-end;max-width:80%;line-height:1.55;margin-left:auto;';
+      ub.style.cssText='background:#CFE6F3;color:#1A3A4F;font-size:13px;padding:9px 13px;border-radius:8px 8px 2px 8px;align-self:flex-end;max-width:80%;line-height:1.55;margin-left:auto;font-family:Cormorant Garamond,serif;';
       ub.textContent=q;
       msgs.appendChild(ub);
       msgs.scrollTop=msgs.scrollHeight;
       const typing=document.createElement('div');
-      typing.style.cssText='background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:9px 13px;font-size:12px;color:rgba(255,255,255,.6);';
+      typing.style.cssText='background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:9px 13px;font-size:13px;color:rgba(255,255,255,.6);font-family:Cormorant Garamond,serif;';
       typing.textContent='Angel is thinking...';
       msgs.appendChild(typing);
       msgs.scrollTop=msgs.scrollHeight;
