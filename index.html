@@ -1,162 +1,510 @@
-￼
-Your Divorce Angel
-Blog
-Toolkit
-Community
-Get started →
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Divorce Angel — Guidance, clarity, and confidence every step of the way.</title>
+  <meta name="description" content="Your Divorce Angel organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#1A2A35;}
 
-YOUR DIVORCE ANGEL
-Navigate Your Divorce With Clarity & Confidence
-Your Divorce Angel organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation — so you spend less on lawyers, know what to fight for, and never agree to something you'll regret.
-Try Your Divorce Angel →
-See how it works
-📊
-Your Financial Analysis
-Step 2 of 6 · Your Divorce Angel
-✦
+    /* ── NAV ── */
+    .nav{background:#6FAACB;height:64px;display:flex;align-items:center;padding:0 40px;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .nav-logo-wrap{background:white;border-radius:8px;padding:4px 10px;display:flex;align-items:center;}
+    .nav-logo{height:36px;display:block;}
+    .nav-links{display:flex;gap:28px;font-size:13px;color:rgba(255,255,255,.9);}
+    .nav-links a{color:rgba(255,255,255,.9);text-decoration:none;}
+    .nav-links a:first-child{font-weight:500;color:white;}
+    .nav-links a:hover{color:white;}
+    .nav-btn{background:white;color:#6FAACB;font-size:12px;font-weight:500;padding:9px 20px;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap;}
 
-Angel
-Your personal advisor
-Based on your numbers, selling the home gives you $156,000 more liquidity than a buyout. Refinancing alone would consume 71% of your take-home — a risky position long-term.
-Your pension split and HELOC are your two strongest negotiation points. Don't settle anything on the house until those are resolved.
-TOTAL ASSETS
-$760k
-TOTAL DEBTS
-$328k
-NET WORTH
-$431k
-CASH FLOW
-$3,240/mo
-YOUR SHARE
-$215k
-SETTLEMENT SCENARIOS
-Scenario A — Sell home ✓
-$215,900
-Recommended by Angel
-Scenario B — Buyout
-$158,400
-$57,500 less
-HOW IT WORKS
-From overwhelmed to prepared in 6 easy steps
-Your Divorce Angel walks you through everything your lawyer, mediator, or court needs — all in one place.
+    /* ── HERO ── */
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 40px 56px;align-items:center;background:#fff;max-width:1200px;margin:0 auto;}
+    .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+    .hero-eyebrow-line{width:16px;height:1px;background:#6FAACB;display:block;}
+    .hero h1{font-family:Georgia,serif;font-size:36px;font-weight:400;line-height:1.15;color:#1A2A35;margin-bottom:20px;}
+    .hero h1 em{color:#6FAACB;font-style:italic;}
+    .hero-p{font-size:14px;color:#4A6070;line-height:1.9;margin-bottom:28px;}
+    .cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .btn-primary{background:#6FAACB;color:white;font-size:13px;font-weight:500;padding:13px 28px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;}
+    .btn-ghost{background:transparent;color:#6FAACB;font-size:13px;font-weight:500;padding:13px 20px;border-radius:6px;border:1px solid #9DCBE4;cursor:pointer;text-decoration:none;display:inline-block;}
 
-1 2 3 4 5 6 Enter your financial snapshot Angel analyses your situation See real settlement scenarios Prepare for every negotiation Store & track your documents Understand any document
-Assets, debts, income & expenses — everything courts require
-Personalised guidance based on your finances, location & family
-Walk in prepared — know what to fight for in every meeting
-Personalised checklist, lawyer questions & ranked priorities
-Every document required, tailored to your jurisdiction
-Plain-English explanations specific to your situation
-Save time · Save money · Reduce stress
-YOUR PERSONAL ADVISOR
-How Angel works for you.
-She's read your entire file. She knows your assets, your debts, your income, and your situation. She picks up exactly where you left off — and she's available at 2am when your mind won't stop racing.
-📊
-Analyses your complete financial picture
-Knows your assets, debts, income, and exactly what you're entitled to — specific to your situation
-⚖️
-Runs real settlement scenarios
-Shows what different outcomes actually look like in dollars before you agree to anything
-🧭
-Remembers your situation
-Picks up exactly where you left off — whether you're using a lawyer, mediator, or going it alone
-💙
-Available at 2am when you can't sleep
-No judgment. No hourly rate. Ask anything about the legal process, your finances, or how you're feeling
-Try Your Divorce Angel →
-✦
+    /* ── FINANCIAL CARD ── */
+    .fcard{border-radius:12px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 4px 24px rgba(42,90,122,.12);}
+    .fcard-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:8px;}
+    .fcard-icon{width:20px;height:20px;background:#CFE6F3;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#2A5A7A;}
+    .fcard-title{font-size:12px;font-weight:500;color:white;}
+    .fcard-step{margin-left:auto;font-size:10px;color:rgba(255,255,255,.5);}
+    .fcard-body{background:#2A5A7A;padding:18px;}
+    .angel-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+    .angel-av{width:32px;height:32px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:13px;color:#2A5A7A;position:relative;flex-shrink:0;}
+    .angel-dot{position:absolute;bottom:0;right:0;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid #2A5A7A;}
+    .angel-name{font-size:12px;font-weight:500;color:white;}
+    .angel-sub{font-size:10px;color:rgba(255,255,255,.45);}
+    .bubble{background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:11px 13px;margin-bottom:9px;font-size:12px;line-height:1.65;color:rgba(255,255,255,.85);}
+    .bubble strong{color:white;font-weight:500;}
+    .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);background:white;border-radius:8px;overflow:hidden;margin-bottom:9px;}
+    .stat-cell{padding:9px 4px;text-align:center;border-right:1px solid #E2E8F0;}
+    .stat-cell:last-child{border-right:none;}
+    .stat-lbl{font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:#718096;margin-bottom:3px;}
+    .stat-val{font-size:12px;font-weight:500;}
+    .scenarios-box{background:#F0F7FB;border-radius:8px;padding:11px 13px;}
+    .sc-lbl{font-size:8px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#6A8A9A;margin-bottom:9px;}
+    .sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+    .sc-a{background:#EEF5E8;border-radius:6px;padding:10px;border:1px solid #C8D8CD;}
+    .sc-b{background:white;border-radius:6px;padding:10px;border:1px solid #E2E8F0;}
+    .sc-tag{font-size:8px;font-weight:500;margin-bottom:3px;}
+    .sc-val{font-size:15px;font-weight:500;margin-bottom:2px;}
+    .sc-note{font-size:8px;}
 
-Angel
-Live · Ask me anything
-Should I try to keep the house or sell it?
-Based on your snapshot, selling puts you $57,500 ahead of a buyout. With your income, carrying the mortgage alone would consume 68% of take-home. I'd fight for the sale and redirect equity toward your retirement gap.
-What about the RRSP? My husband says it's his.
-He's wrong. RRSPs accumulated during the marriage are shared property in every Canadian province. Based on your entries, you're entitled to approximately $84,000 of his RRSP. Don't give this up.
-How does mediation work?
-What am I entitled to?
-I feel overwhelmed
-Where do I start?
+    /* ── SECTION SHARED ── */
+    .sec-wrap{padding:64px 40px;max-width:1200px;margin:0 auto;}
+    .sec-eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;}
+    .sec-h2{font-family:Georgia,serif;font-size:30px;font-weight:400;color:#1A2A35;margin-bottom:12px;line-height:1.2;}
+    .sec-h2 em{color:#6FAACB;font-style:italic;}
+    .sec-sub{font-size:14px;color:#6A8A9A;line-height:1.75;}
+    .bg-white{background:#fff;}
+    .bg-blue{background:#E8F4FA;}
+    .full-sec{width:100%;}
 
-→
-WHY YOUR DIVORCE ANGEL
-The clarity you need. The advisor you deserve.
-💰
-Save thousands in fees
-Walk into every meeting already knowing your numbers. Less time explaining basics means significantly less spent on billable hours.
-🎯
-Know exactly what to fight for
-Real settlement scenarios show what different outcomes look like in dollars before you agree to anything. Negotiate from knowledge, not guesswork.
-✦
-An advisor who knows your file
-Angel has read your complete financial picture. She remembers your situation and is available at 2am when your mind won't stop racing.
-FROM THE BLOG
-Insight for every stage of the journey
-View all articles →
-￼
-CO-PARENTING
-Coping With Divorce: A Child's Emotional Journey
-April 9, 2026
-￼
-FINANCIAL
-Divorce Is One of the Biggest Financial Events of Your Life
-April 9, 2026
-￼
-LEGAL
-Help, I Am Getting a Divorce — Do I Need a Lawyer?
-April 9, 2026
-￼
-EMOTIONAL
-What Happens to Kids During Divorce
-March 28, 2026
-￼
-LIFE AFTER
-Starting Fresh: Why New Activities After Divorce Help You Heal
-March 14, 2026
-￼
-WELLNESS
-Five Natural Tips to Ease Anxiety During Your Divorce
-February 28, 2026
+    /* ── 6 STEPS ── */
+    .steps-inner{max-width:1000px;margin:0 auto;}
+    .steps-header{text-align:center;margin-bottom:52px;}
+    .steps-wrap{position:relative;margin-bottom:32px;}
+    .steps-line{position:absolute;top:26px;left:calc(100%/12);right:calc(100%/12);height:1px;background:#9DCBE4;z-index:0;}
+    .circles-row{display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:20px;position:relative;z-index:1;}
+    .circle-cell{display:flex;justify-content:center;}
+    .step-circle{width:52px;height:52px;border-radius:50%;background:#6FAACB;color:white;font-size:17px;font-weight:500;display:flex;align-items:center;justify-content:center;}
+    .titles-row{display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:10px;}
+    .title-cell{padding:0 8px;font-size:13px;font-weight:500;color:#1A2A35;line-height:1.4;min-height:52px;display:flex;align-items:flex-start;justify-content:center;text-align:center;}
+    .descs-row{display:grid;grid-template-columns:repeat(6,1fr);}
+    .desc-cell{padding:0 8px;font-size:11px;color:#5A7A8A;line-height:1.6;text-align:center;}
+    .steps-note{font-size:14px;color:#6FAACB;font-weight:500;text-align:center;margin-top:36px;}
 
-42,000+ members · active now
-You don't have to do this alone.
-Real conversations happening right now — 42,000+ people navigating exactly what you're going through.
-S
-Sarah M.
-2 hours ago
-One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay — more than okay. Sending love to everyone just starting. 💙
-❤️ 148 · 💬 63 comments
-R
-Rachel B.
-5 hours ago
-Used Your Divorce Angel to prep for my first lawyer meeting. Walked in with the full financial analysis — my lawyer said it was the most prepared she'd ever seen a client.
-👍 89 · 💬 31 comments
-Join Divorce Angels Community →
-WHAT PEOPLE ARE SAYING
-Real people. Real outcomes.
-From Toronto to Sydney — people navigating divorce with Your Divorce Angel
-★★★★★
-"Using Angel relieved so much of my stress. I finally understood what I was entitled to."
-Sarah M. — Toronto, Canada
-★★★★★
-"I walked into my lawyer meeting completely prepared. She said she'd never seen that before."
-Rachel B. — Chicago, USA
-★★★★★
-"The settlement scenarios showed me exactly what I'd be giving up. I didn't settle."
-Jennifer K. — Melbourne, Australia
-★★★★★
-"The 401(k) analysis alone saved me from making a huge mistake. Worth every minute."
-James W. — Austin, USA
-★★★★★
-"Angel helped me understand what I was entitled to from our pension. My husband said it was his."
-Amanda R. — London, UK
-★★★★★
-"I felt so alone at 3am. Angel was there and actually understood what I was going through."
-Claire F. — Sydney, Australia
-￼
-Your Divorce Angel
-Toolkit
-Blog
-Community
-Not legal advice. Always consult a licensed attorney.
+    /* ── HOW ANGEL WORKS ── */
+    .angel-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .af-list{display:flex;flex-direction:column;gap:18px;margin-top:24px;}
+    .af{display:flex;gap:14px;align-items:flex-start;}
+    .af-icon{width:38px;height:38px;border-radius:8px;background:#E8F4FA;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+    .af-title{font-size:14px;font-weight:500;color:#1A2A35;margin-bottom:4px;}
+    .af-desc{font-size:13px;color:#6A8A9A;line-height:1.65;}
 
-✦ Ask Angel
+    /* ── CHAT DEMO ── */
+    .chat-demo{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden;box-shadow:0 4px 24px rgba(42,90,122,.1);}
+    .chat-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:10px;}
+    .ch-av{width:28px;height:28px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:12px;color:#2A5A7A;position:relative;flex-shrink:0;}
+    .ch-dot{position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
+    .ch-name{font-size:13px;font-weight:500;color:white;}
+    .ch-status{font-size:11px;color:rgba(255,255,255,.55);}
+    .chat-body{background:#2A5A7A;padding:16px;display:flex;flex-direction:column;gap:10px;}
+    .user-b{background:#CFE6F3;color:#1A3A4F;font-size:12px;padding:9px 13px;border-radius:8px 8px 2px 8px;align-self:flex-end;max-width:80%;line-height:1.55;}
+    .angel-b{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);font-size:12px;padding:9px 13px;border-radius:8px 8px 8px 2px;max-width:90%;line-height:1.65;}
+    .angel-b strong{color:white;}
+    .chat-sugs{background:#1F4A62;padding:10px 16px;display:flex;gap:7px;flex-wrap:wrap;}
+    .sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:6px 11px;border-radius:20px;cursor:pointer;}
+    .chat-inp{background:#1F4A62;padding:10px 16px 14px;display:flex;gap:8px;}
+    .inp-box{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:9px 12px;font-size:12px;color:rgba(255,255,255,.45);font-family:inherit;}
+    .inp-btn{background:#6FAACB;color:white;font-size:12px;font-weight:500;padding:9px 16px;border-radius:6px;cursor:pointer;border:none;}
+
+    /* ── VALUE PROPS ── */
+    .value-header{text-align:center;margin-bottom:36px;}
+    .v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    .vcard{background:white;border-radius:10px;padding:24px;border:1px solid #D0E8F5;}
+    .vcard-hl{background:#CFE6F3;border-color:#9DCBE4;}
+    .v-icon{width:40px;height:40px;border-radius:8px;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px;}
+    .v-title{font-size:15px;font-weight:500;color:#1A2A35;margin-bottom:8px;}
+    .v-desc{font-size:13px;color:#6A8A9A;line-height:1.7;}
+
+    /* ── BLOG ── */
+    .blog-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:30px;}
+    .blog-view-all{font-size:13px;color:#6FAACB;font-weight:500;text-decoration:none;}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .blog-card{border-radius:10px;overflow:hidden;border:1px solid #E0EEF5;text-decoration:none;display:block;transition:border-color .2s;}
+    .blog-card:hover{border-color:#9DCBE4;}
+    .blog-img{height:160px;object-fit:cover;width:100%;display:block;background:#CFE6F3;}
+    .blog-body{padding:16px;}
+    .blog-tag{display:inline-block;font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#2A5A7A;background:#E8F4FA;padding:3px 9px;border-radius:4px;margin-bottom:9px;}
+    .blog-title{font-size:13px;font-weight:500;color:#1A2A35;line-height:1.45;margin-bottom:6px;}
+    .blog-date{font-size:11px;color:#9BAAB5;}
+
+    /* ── COMMUNITY ── */
+    .comm-inner{max-width:720px;margin:0 auto;text-align:center;}
+    .comm-badge{display:inline-flex;align-items:center;gap:7px;background:#CFE6F3;color:#2A5A7A;font-size:12px;font-weight:500;padding:7px 16px;border-radius:20px;margin-bottom:20px;}
+    .comm-live{width:8px;height:8px;border-radius:50%;background:#5FC87A;}
+    .comm-posts{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden;margin:26px 0;text-align:left;}
+    .cp{padding:16px 18px;border-bottom:1px solid #E8F2F8;}
+    .cp:last-child{border-bottom:none;}
+    .cp-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+    .cp-av{width:28px;height:28px;border-radius:50%;background:#9DCBE4;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;color:white;flex-shrink:0;}
+    .cp-name{font-size:13px;font-weight:500;color:#1A2A35;}
+    .cp-time{font-size:11px;color:#9BAAB5;margin-left:auto;}
+    .cp-text{font-size:13px;color:#4A6070;line-height:1.65;}
+    .cp-react{font-size:11px;color:#9BAAB5;margin-top:8px;}
+
+    /* ── TESTIMONIALS ── */
+    .test-header{text-align:center;margin-bottom:36px;}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .tcard{background:#F7FBFD;border-radius:10px;padding:22px;border:1px solid #E0EEF5;}
+    .stars{color:#6FAACB;font-size:13px;margin-bottom:11px;letter-spacing:3px;}
+    .tquote{font-size:13px;color:#4A6070;line-height:1.75;margin-bottom:13px;font-style:italic;}
+    .tauthor{font-size:11px;font-weight:500;color:#6FAACB;}
+
+    /* ── FOOTER ── */
+    .footer{background:#6FAACB;padding:32px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+    .footer-logo-wrap{background:white;border-radius:8px;padding:4px 10px;}
+    .footer-logo{height:28px;display:block;}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:12px;color:rgba(255,255,255,.85);text-decoration:none;}
+    .footer-links a:hover{color:white;}
+    .footer-legal{font-size:11px;color:rgba(255,255,255,.6);}
+
+    /* ── ASK ANGEL FAB ── */
+    #ask-angel-fab{position:fixed;bottom:24px;right:24px;background:#2A5A7A;color:white;font-size:13px;font-weight:500;padding:12px 22px;border-radius:30px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:2px solid rgba(255,255,255,.15);box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:999;font-family:inherit;}
+    .fab-dot{width:9px;height:9px;border-radius:50%;background:#5FC87A;}
+
+    /* ── ANGEL MODAL ── */
+    #angel-modal{display:none;position:fixed;bottom:80px;right:24px;width:360px;border-radius:16px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 8px 40px rgba(0,0,0,.2);z-index:1000;font-family:inherit;}
+    #angel-modal.open{display:flex;flex-direction:column;}
+    .modal-hdr{background:#4A7A9B;padding:12px 16px;display:flex;align-items:center;gap:10px;}
+    .modal-av{width:28px;height:28px;border-radius:50%;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:12px;color:#2A5A7A;position:relative;flex-shrink:0;}
+    .modal-av-dot{position:absolute;bottom:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
+    .modal-name{font-size:13px;font-weight:500;color:white;}
+    .modal-status{font-size:11px;color:rgba(255,255,255,.55);}
+    .modal-close{margin-left:auto;color:rgba(255,255,255,.6);cursor:pointer;font-size:18px;line-height:1;}
+    .modal-body{background:#2A5A7A;padding:16px;min-height:200px;display:flex;flex-direction:column;gap:10px;max-height:320px;overflow-y:auto;}
+    .modal-intro{background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:10px 13px;font-size:12px;color:rgba(255,255,255,.85);line-height:1.65;}
+    .modal-sugs{background:#1F4A62;padding:8px 14px;display:flex;gap:6px;flex-wrap:wrap;}
+    .modal-sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:11px;padding:5px 10px;border-radius:20px;cursor:pointer;}
+    .modal-inp{background:#1F4A62;padding:8px 14px 12px;display:flex;gap:8px;}
+    .modal-input{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:8px 10px;font-size:12px;color:white;font-family:inherit;}
+    .modal-input::placeholder{color:rgba(255,255,255,.4);}
+    .modal-send{background:#6FAACB;color:white;font-size:12px;font-weight:500;padding:8px 14px;border-radius:6px;cursor:pointer;border:none;font-family:inherit;}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;padding:40px 20px;}
+      .sec-wrap{padding:48px 20px;}
+      .steps-grid,.titles-row,.descs-row,.circles-row{grid-template-columns:repeat(3,1fr);}
+      .angel-grid,.v-grid,.blog-grid,.test-grid{grid-template-columns:1fr;}
+      .nav{padding:0 20px;}
+      .footer{padding:24px 20px;}
+      #angel-modal{width:calc(100vw - 48px);right:24px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo-wrap">
+      <img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel">
+    </a>
+    <div class="nav-links">
+      <a href="https://divorcetracker.netlify.app">Your Divorce Angel</a>
+      <a href="/blog/">Blog</a>
+      <a href="/toolkit/">Toolkit</a>
+      <a href="/community/">Community</a>
+    </div>
+    <a class="nav-btn" href="https://divorcetracker.netlify.app">Get started →</a>
+  </nav>
+
+  <!-- 1. HERO — white -->
+  <section class="bg-white full-sec">
+    <div class="hero">
+      <div>
+        <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span>Your Divorce Angel</div>
+        <h1>Navigate Your Divorce<br>With <em>Clarity &amp; Confidence</em></h1>
+        <p class="hero-p">Your Divorce Angel organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation — so you spend less on lawyers, know what to fight for, and never agree to something you'll regret.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="https://divorcetracker.netlify.app">Try Your Divorce Angel →</a>
+          <a class="btn-ghost" href="#how-it-works">See how it works</a>
+        </div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-hdr">
+          <div class="fcard-icon">📊</div>
+          <div class="fcard-title">Your Financial Analysis</div>
+          <div class="fcard-step">Step 2 of 6 · Your Divorce Angel</div>
+        </div>
+        <div class="fcard-body">
+          <div class="angel-row">
+            <div class="angel-av">✦<div class="angel-dot"></div></div>
+            <div><div class="angel-name">Angel</div><div class="angel-sub">Your personal advisor</div></div>
+          </div>
+          <div class="bubble">Based on your numbers, <strong>selling the home gives you $156,000 more liquidity</strong> than a buyout. Refinancing alone would consume 71% of your take-home — a risky position long-term.</div>
+          <div class="bubble">Your <strong>pension split and HELOC are your two strongest negotiation points.</strong> Don't settle anything on the house until those are resolved.</div>
+          <div class="stats-grid">
+            <div class="stat-cell"><div class="stat-lbl">Total assets</div><div class="stat-val" style="color:#27500A;">$760k</div></div>
+            <div class="stat-cell"><div class="stat-lbl">Total debts</div><div class="stat-val" style="color:#C53030;">$328k</div></div>
+            <div class="stat-cell"><div class="stat-lbl">Net worth</div><div class="stat-val" style="color:#1A2A35;">$431k</div></div>
+            <div class="stat-cell"><div class="stat-lbl">Cash flow</div><div class="stat-val" style="color:#2A5A7A;">$3,240/mo</div></div>
+            <div class="stat-cell"><div class="stat-lbl">Your share</div><div class="stat-val" style="color:#2A5A7A;">$215k</div></div>
+          </div>
+          <div class="scenarios-box">
+            <div class="sc-lbl">Settlement scenarios</div>
+            <div class="sc-grid">
+              <div class="sc-a"><div class="sc-tag" style="color:#2E6B27;">Scenario A — Sell home ✓</div><div class="sc-val" style="color:#1A2018;">$215,900</div><div class="sc-note" style="color:#4A7A5E;">Recommended by Angel</div></div>
+              <div class="sc-b"><div class="sc-tag" style="color:#718096;">Scenario B — Buyout</div><div class="sc-val" style="color:#9BAAB5;">$158,400</div><div class="sc-note" style="color:#9BAAB5;">$57,500 less</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 6 STEPS — light blue -->
+  <section class="bg-blue full-sec" id="how-it-works">
+    <div class="sec-wrap">
+      <div class="steps-inner">
+        <div class="steps-header">
+          <div class="sec-eyebrow">How it works</div>
+          <h2 class="sec-h2">From overwhelmed to <em>prepared</em> in 6 easy steps</h2>
+          <p class="sec-sub">Your Divorce Angel walks you through everything your lawyer, mediator, or court needs — all in one place.</p>
+        </div>
+        <div class="steps-wrap">
+          <div class="steps-line"></div>
+          <div class="circles-row">
+            <div class="circle-cell"><div class="step-circle">1</div></div>
+            <div class="circle-cell"><div class="step-circle">2</div></div>
+            <div class="circle-cell"><div class="step-circle">3</div></div>
+            <div class="circle-cell"><div class="step-circle">4</div></div>
+            <div class="circle-cell"><div class="step-circle">5</div></div>
+            <div class="circle-cell"><div class="step-circle">6</div></div>
+          </div>
+          <div class="titles-row">
+            <div class="title-cell">Enter your financial snapshot</div>
+            <div class="title-cell">Angel analyses your situation</div>
+            <div class="title-cell">See real settlement scenarios</div>
+            <div class="title-cell">Prepare for every negotiation</div>
+            <div class="title-cell">Store &amp; track your documents</div>
+            <div class="title-cell">Understand any document</div>
+          </div>
+          <div class="descs-row">
+            <div class="desc-cell">Assets, debts, income &amp; expenses — everything courts require</div>
+            <div class="desc-cell">Personalised guidance based on your finances, location &amp; family</div>
+            <div class="desc-cell">Walk in prepared — know what to fight for in every meeting</div>
+            <div class="desc-cell">Personalised checklist, lawyer questions &amp; ranked priorities</div>
+            <div class="desc-cell">Every document required, tailored to your jurisdiction</div>
+            <div class="desc-cell">Plain-English explanations specific to your situation</div>
+          </div>
+        </div>
+        <div class="steps-note">Save time · Save money · Reduce stress</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW ANGEL WORKS — white -->
+  <section class="bg-white full-sec">
+    <div class="sec-wrap">
+      <div class="angel-grid">
+        <div>
+          <div class="sec-eyebrow">Your personal advisor</div>
+          <h2 class="sec-h2">How Angel <em>works for you.</em></h2>
+          <p style="font-size:14px;color:#4A6070;line-height:1.9;margin-top:10px;">She's read your entire file. She knows your assets, your debts, your income, and your situation. She picks up exactly where you left off — and she's available at 2am when your mind won't stop racing.</p>
+          <div class="af-list">
+            <div class="af"><div class="af-icon">📊</div><div><div class="af-title">Analyses your complete financial picture</div><div class="af-desc">Knows your assets, debts, income, and exactly what you're entitled to — specific to your situation</div></div></div>
+            <div class="af"><div class="af-icon">⚖️</div><div><div class="af-title">Runs real settlement scenarios</div><div class="af-desc">Shows what different outcomes actually look like in dollars before you agree to anything</div></div></div>
+            <div class="af"><div class="af-icon">🧭</div><div><div class="af-title">Remembers your situation</div><div class="af-desc">Picks up exactly where you left off — whether you're using a lawyer, mediator, or going it alone</div></div></div>
+            <div class="af"><div class="af-icon">💙</div><div><div class="af-title">Available at 2am when you can't sleep</div><div class="af-desc">No judgment. No hourly rate. Ask anything about the legal process, your finances, or how you're feeling</div></div></div>
+          </div>
+          <div class="cta-row" style="margin-top:30px;">
+            <a class="btn-primary" href="https://divorcetracker.netlify.app">Try Your Divorce Angel →</a>
+          </div>
+        </div>
+        <div class="chat-demo">
+          <div class="chat-hdr">
+            <div class="ch-av">✦<div class="ch-dot"></div></div>
+            <div><div class="ch-name">Angel</div><div class="ch-status">Live · Ask me anything</div></div>
+          </div>
+          <div class="chat-body">
+            <div class="user-b">Should I try to keep the house or sell it?</div>
+            <div class="angel-b">Based on your snapshot, <strong>selling puts you $57,500 ahead</strong> of a buyout. With your income, carrying the mortgage alone would consume 68% of take-home. I'd fight for the sale and redirect equity toward your retirement gap.</div>
+            <div class="user-b">What about the RRSP? My husband says it's his.</div>
+            <div class="angel-b">He's wrong. RRSPs accumulated during the marriage are <strong>shared property</strong> in every Canadian province. Based on your entries, you're entitled to approximately <strong>$84,000</strong> of his RRSP. Don't give this up.</div>
+          </div>
+          <div class="chat-sugs">
+            <div class="sug" onclick="openAngel('How does mediation work?')">How does mediation work?</div>
+            <div class="sug" onclick="openAngel('What am I entitled to?')">What am I entitled to?</div>
+            <div class="sug" onclick="openAngel('I feel overwhelmed')">I feel overwhelmed</div>
+            <div class="sug" onclick="openAngel('Where do I start?')">Where do I start?</div>
+          </div>
+          <div class="chat-inp">
+            <input class="inp-box" type="text" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')openAngel(this.value)">
+            <button class="inp-btn" onclick="openAngel(document.querySelector('.inp-box').value)">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHY YOUR DIVORCE ANGEL — light blue -->
+  <section class="bg-blue full-sec">
+    <div class="sec-wrap">
+      <div class="value-header">
+        <div class="sec-eyebrow">Why Your Divorce Angel</div>
+        <h2 class="sec-h2">The clarity you need. <em>The advisor you deserve.</em></h2>
+      </div>
+      <div class="v-grid">
+        <div class="vcard"><div class="v-icon">💰</div><div class="v-title">Save thousands in fees</div><div class="v-desc">Walk into every meeting already knowing your numbers. Less time explaining basics means significantly less spent on billable hours.</div></div>
+        <div class="vcard"><div class="v-icon">🎯</div><div class="v-title">Know exactly what to fight for</div><div class="v-desc">Real settlement scenarios show what different outcomes look like in dollars before you agree to anything. Negotiate from knowledge, not guesswork.</div></div>
+        <div class="vcard vcard-hl"><div class="v-icon" style="background:white;">✦</div><div class="v-title">An advisor who knows your file</div><div class="v-desc">Angel has read your complete financial picture. She remembers your situation and is available at 2am when your mind won't stop racing.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BLOG — white -->
+  <section class="bg-white full-sec">
+    <div class="sec-wrap">
+      <div class="blog-header">
+        <div>
+          <div class="sec-eyebrow">From the blog</div>
+          <h2 class="sec-h2">Insight for every <em>stage of the journey</em></h2>
+        </div>
+        <a class="blog-view-all" href="/blog/">View all articles →</a>
+      </div>
+      <div class="blog-grid">
+        <a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/">
+          <img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt="Coping with divorce" onerror="this.style.background='#CFE6F3';this.removeAttribute('src')">
+          <div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child's Emotional Journey</div><div class="blog-date">April 9, 2026</div></div>
+        </a>
+        <a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/">
+          <img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt="Financial events" onerror="this.style.background='#B8D4E8';this.removeAttribute('src')">
+          <div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div>
+        </a>
+        <a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/">
+          <img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt="Do I need a lawyer" onerror="this.style.background='#D4E8D4';this.removeAttribute('src')">
+          <div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce — Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div>
+        </a>
+        <a class="blog-card" href="/what-happens-to-kids-during-divorce/">
+          <img class="blog-img" src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?w=800&q=80&fit=crop" alt="Kids during divorce" onerror="this.style.background='#CFE6F3';this.removeAttribute('src')">
+          <div class="blog-body"><div class="blog-tag">Emotional</div><div class="blog-title">What Happens to Kids During Divorce</div><div class="blog-date">March 28, 2026</div></div>
+        </a>
+        <a class="blog-card" href="/starting-fresh-why-trying-new-activities-after-divorce-can-help-you-heal/">
+          <img class="blog-img" src="/images/starting-fresh.jpg" alt="Starting fresh" onerror="this.style.background='#E8D4C8';this.removeAttribute('src')">
+          <div class="blog-body"><div class="blog-tag">Life After</div><div class="blog-title">Starting Fresh: Why New Activities After Divorce Help You Heal</div><div class="blog-date">March 14, 2026</div></div>
+        </a>
+        <a class="blog-card" href="/five-natural-tips-and-supplements-to-ease-anxiety-during-a-divorce/">
+          <img class="blog-img" src="/images/anxiety.jpg" alt="Ease anxiety" onerror="this.style.background='#D4C8E8';this.removeAttribute('src')">
+          <div class="blog-body"><div class="blog-tag">Wellness</div><div class="blog-title">Five Natural Tips to Ease Anxiety During Your Divorce</div><div class="blog-date">February 28, 2026</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. COMMUNITY — light blue -->
+  <section class="bg-blue full-sec" id="community">
+    <div class="sec-wrap">
+      <div class="comm-inner">
+        <div class="comm-badge"><div class="comm-live"></div>42,000+ members · active now</div>
+        <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
+        <p style="font-size:14px;color:#4A6070;line-height:1.9;margin-top:10px;">Real conversations happening right now — 42,000+ people navigating exactly what you're going through.</p>
+        <div class="comm-posts">
+          <div class="cp"><div class="cp-row"><div class="cp-av">S</div><div class="cp-name">Sarah M.</div><div class="cp-time">2 hours ago</div></div><p class="cp-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay — more than okay. Sending love to everyone just starting. 💙</p><div class="cp-react">❤️ 148 · 💬 63 comments</div></div>
+          <div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used Your Divorce Angel to prep for my first lawyer meeting. Walked in with the full financial analysis — my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">👍 89 · 💬 31 comments</div></div>
+        </div>
+        <a class="btn-primary" href="https://www.facebook.com/groups/divorceangels">Join Divorce Angels Community →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TESTIMONIALS — white -->
+  <section class="bg-white full-sec">
+    <div class="sec-wrap">
+      <div class="test-header">
+        <div class="sec-eyebrow">What people are saying</div>
+        <h2 class="sec-h2">Real people. <em>Real outcomes.</em></h2>
+        <p class="sec-sub" style="margin-top:8px;">From Toronto to Sydney — people navigating divorce with Your Divorce Angel</p>
+      </div>
+      <div class="test-grid">
+        <div class="tcard"><div class="stars">★★★★★</div><p class="tquote">"Using Angel relieved so much of my stress. I finally understood what I was entitled to."</p><div class="tauthor">Sarah M. — Toronto, Canada</div></div>
+        <div class="tcard"><div class="stars">★★★★★</div><p class="tquote">"I walked into my lawyer meeting completely prepared. She said she'd never seen that before."</p><div class="tauthor">Rachel B. — Chicago, USA</div></div>
+        <div class="tcard"><div class="stars">★★★★★</div><p class="tquote">"The settlement scenarios showed me exactly what I'd be giving up. I didn't settle."</p><div class="tauthor">Jennifer K. — Melbourne, Australia</div></div>
+        <div class="tcard"><div class="stars">★★★★★</div><p class="tquote">"The 401(k) analysis alone saved me from making a huge mistake. Worth every minute."</p><div class="tauthor">James W. — Austin, USA</div></div>
+        <div class="tcard"><div class="stars">★★★★★</div><p class="tquote">"Angel helped me understand what I was entitled to from our pension. My husband said it was his."</p><div class="tauthor">Amanda R. — London, UK</div></div>
+        <div class="tcard"><div class="stars">★★★★★</div><p class="tquote">"I felt so alone at 3am. Angel was there and actually understood what I was going through."</p><div class="tauthor">Claire F. — Sydney, Australia</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="/" class="footer-logo-wrap">
+      <img class="footer-logo" src="/yda-logo.png" alt="Your Divorce Angel">
+    </a>
+    <div class="footer-links">
+      <a href="https://divorcetracker.netlify.app">Your Divorce Angel</a>
+      <a href="/toolkit/">Toolkit</a>
+      <a href="/blog/">Blog</a>
+      <a href="/community/">Community</a>
+    </div>
+    <div class="footer-legal">Not legal advice. Always consult a licensed attorney.</div>
+  </footer>
+
+  <!-- ASK ANGEL FAB -->
+  <div id="ask-angel-fab" onclick="toggleAngel()">
+    <div class="fab-dot"></div>
+    ✦ Ask Angel
+  </div>
+
+  <!-- ANGEL MODAL -->
+  <div id="angel-modal">
+    <div class="modal-hdr">
+      <div class="modal-av">✦<div class="modal-av-dot"></div></div>
+      <div><div class="modal-name">Angel</div><div class="modal-status">Live · Ask me anything</div></div>
+      <div class="modal-close" onclick="toggleAngel()">×</div>
+    </div>
+    <div class="modal-body" id="modal-messages">
+      <div class="modal-intro">Hi, I'm Angel. Ask me anything — the legal process, your finances, how you're feeling, or where to even start.</div>
+    </div>
+    <div class="modal-sugs">
+      <div class="modal-sug" onclick="sendToAngel('How does mediation work?')">How does mediation work?</div>
+      <div class="modal-sug" onclick="sendToAngel('What am I entitled to?')">What am I entitled to?</div>
+      <div class="modal-sug" onclick="sendToAngel('I feel overwhelmed')">I feel overwhelmed</div>
+      <div class="modal-sug" onclick="sendToAngel('Where do I start?')">Where do I start?</div>
+    </div>
+    <div class="modal-inp">
+      <input class="modal-input" id="modal-input" type="text" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')sendToAngel(this.value)">
+      <button class="modal-send" onclick="sendToAngel(document.getElementById('modal-input').value)">→</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleAngel(){
+      const m=document.getElementById('angel-modal');
+      m.classList.toggle('open');
+    }
+    function openAngel(q){
+      const m=document.getElementById('angel-modal');
+      m.classList.add('open');
+      if(q)sendToAngel(q);
+    }
+    async function sendToAngel(q){
+      if(!q||!q.trim())return;
+      const msgs=document.getElementById('modal-messages');
+      const input=document.getElementById('modal-input');
+      input.value='';
+      const ub=document.createElement('div');
+      ub.style.cssText='background:#CFE6F3;color:#1A3A4F;font-size:12px;padding:9px 13px;border-radius:8px 8px 2px 8px;align-self:flex-end;max-width:80%;line-height:1.55;margin-left:auto;';
+      ub.textContent=q;
+      msgs.appendChild(ub);
+      msgs.scrollTop=msgs.scrollHeight;
+      const typing=document.createElement('div');
+      typing.style.cssText='background:rgba(255,255,255,.1);border-radius:8px 8px 8px 2px;padding:9px 13px;font-size:12px;color:rgba(255,255,255,.6);';
+      typing.textContent='Angel is thinking...';
+      msgs.appendChild(typing);
+      msgs.scrollTop=msgs.scrollHeight;
+      try{
+        const r=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q})});
+        const d=await r.json();
+        typing.style.color='rgba(255,255,255,.9)';
+        typing.innerHTML=d.reply||d.message||'Sorry, I had trouble with that. Please try again.';
+      }catch(e){
+        typing.textContent='Sorry, something went wrong. Please try again.';
+      }
+      msgs.scrollTop=msgs.scrollHeight;
+    }
+  </script>
+</body>
+</html>
