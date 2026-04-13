@@ -15,9 +15,13 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .nav-logo-bar{background:white;width:100%;padding:16px 40px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #EDF4F8;position:sticky;top:0;z-index:101;}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
 
-.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
-.nav-btn{background:white;color:#2A5A7A;padding:9px 22px;border-radius:6px;text-decoration:none;font-size:15px;font-weight:600;font-style:italic;white-space:nowrap;flex-shrink:0;}
-.nav-btn:hover{background:#EAF4FA;}
+/* Get Started bar — sits between logo bar and nav */
+.get-started-bar{background:#6FAACB;width:100%;padding:9px 20px;text-align:center;position:sticky;top:100px;z-index:100;}
+.get-started-bar a{color:white;font-size:16px;font-weight:500;text-decoration:none;letter-spacing:.03em;font-family:'Cormorant Garamond',Georgia,serif;}
+.get-started-bar a em{font-style:italic;}
+.get-started-bar a:hover{color:rgba(255,255,255,.85);}
+
+.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;padding:0 36px;position:sticky;top:141px;z-index:99;}
 .nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;}
 .nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
 .nav-links a:hover{color:rgba(255,255,255,.8);}
@@ -217,6 +221,11 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   <a href="/"><img class="nav-logo" src="/logo.jpg" alt="DivorceAngels"></a>
 </div>
 
+<!-- GET STARTED BAR -->
+<div class="get-started-bar">
+  <a href="https://divorcetracker.netlify.app">✨ Get started with <em>Your Divorce Angel</em> &rarr;</a>
+</div>
+
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-links">
@@ -228,7 +237,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     <a href="/toolkit/">Toolkit</a>
     <a href="/community/">Community</a>
   </div>
-  <a class="nav-btn" href="https://divorcetracker.netlify.app">Get started &rarr;</a>
 </nav>
 
 <!-- 1. HERO -->
