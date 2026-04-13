@@ -59,62 +59,16 @@ footer{background:var(--blue);padding:68px 0 32px}
 </style>
 </head>
 <body>
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="DivorceAngels" style="height:48px;width:auto;display:block;mix-blend-mode:multiply;"></a>
-    <ul class="nav-links">
-      <li><a href="https://divorcetracker.netlify.app">DivorceAngel</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/toolkit/">Toolkit</a></li>
-      <li><a href="/community/">Community</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <button id="menu-btn">☰</button>
-      <a href="https://divorcetracker.netlify.app" class="nav-cta">Get started →</a>
-    </div>
-  </div>
-</nav>
-<div id="mobile-nav">
-  <a href="https://divorcetracker.netlify.app">DivorceAngel</a>
-  <a href="/blog/">Blog</a>
-  <a href="/toolkit/">Toolkit</a>
-  <a href="/community/">Community</a>
+<div class="da-nav-bar" style="background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;">
+  <a href="/"><img src="/logo.jpg" alt="DivorceAngels" style="height:68px;width:auto;display:block;mix-blend-mode:multiply;"></a>
 </div>
-
-<div id="angel-float-btn" onclick="toggleAngelChat()" style="position:fixed;bottom:28px;right:28px;z-index:1000;background:#2D4A6B;color:white;padding:12px 22px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 4px 24px rgba(45,74,107,.45);transition:all .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-  <span style="width:8px;height:8px;border-radius:50%;background:#5FC87A;display:inline-block;animation:pulse 2s infinite;flex-shrink:0;"></span>
-  ✦ Ask Angel
+<a href="https://divorcetracker.netlify.app" style="position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.12);">Get Started →</a>
+<div style="background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;gap:36px;position:sticky;top:96px;z-index:99;">
+  <a href="/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Your Divorce Angel</a>
+  <a href="/blog/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Blog</a>
+  <a href="/toolkit/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Toolkit</a>
+  <a href="/community/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Community</a>
 </div>
-<div id="angel-float-chat" style="position:fixed;bottom:90px;right:28px;z-index:1000;width:360px;background:white;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.18);display:none;flex-direction:column;overflow:hidden;border:1px solid #D8E4DC;max-height:500px;">
-  <div style="background:#2D4A6B;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="width:32px;height:32px;border-radius:50%;background:#F2F7F4;display:flex;align-items:center;justify-content:center;font-size:13px;color:#2C3E35;position:relative;">✦<div style="position:absolute;bottom:0;right:0;width:8px;height:8px;border-radius:50%;background:#5FC87A;border:2px solid #2D4A6B;"></div></div>
-      <div><div style="font-size:13px;font-weight:500;color:white;">Angel</div><div style="font-size:10px;color:rgba(255,255,255,.5);">Live · Ask me anything</div></div>
-    </div>
-    <button onclick="toggleAngelChat()" style="background:none;border:none;color:rgba(255,255,255,.6);font-size:18px;cursor:pointer;padding:0;line-height:1;">×</button>
-  </div>
-  <div id="float-msgs" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#F2F7F4;max-height:320px;">
-    <div style="background:white;border-radius:10px 10px 10px 3px;padding:11px 14px;font-size:12px;color:#1A2018;line-height:1.7;border:.5px solid #D8E4DC;">Hi, I&apos;m Angel. Ask me anything — the legal process, your finances, how you&apos;re feeling, or where to even start.</div>
-  </div>
-  <div id="float-chips" style="padding:10px 12px;display:flex;flex-wrap:wrap;gap:6px;background:#F2F7F4;border-top:1px solid #D8E4DC;">
-    <button onclick="floatChip('How does mediation work?')" style="background:white;border:1px solid #D8E4DC;color:#3A4E42;font-size:11px;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;">How does mediation work?</button>
-    <button onclick="floatChip('What am I entitled to?')" style="background:white;border:1px solid #D8E4DC;color:#3A4E42;font-size:11px;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;">What am I entitled to?</button>
-    <button onclick="floatChip('I feel overwhelmed')" style="background:white;border:1px solid #D8E4DC;color:#3A4E42;font-size:11px;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;">I feel overwhelmed</button>
-    <button onclick="floatChip('Where do I start?')" style="background:white;border:1px solid #D8E4DC;color:#3A4E42;font-size:11px;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;">Where do I start?</button>
-  </div>
-  <div style="padding:10px 12px;background:white;border-top:1px solid #D8E4DC;display:flex;gap:8px;">
-    <input type="text" id="float-input" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')sendFloat()" style="flex:1;background:#F2F7F4;border:1px solid #D8E4DC;border-radius:8px;padding:8px 12px;font-size:12px;color:#1A2018;font-family:inherit;outline:none;">
-    <button onclick="sendFloat()" style="background:#2D4A6B;color:white;padding:8px 14px;border-radius:8px;font-size:12px;border:none;cursor:pointer;">→</button>
-  </div>
-</div>
-<style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}</style>
-<script>
-function toggleAngelChat(){const chat=document.getElementById('angel-float-chat');const isOpen=chat.style.display==='flex';chat.style.display=isOpen?'none':'flex';if(!isOpen)document.getElementById('float-input').focus();}
-function floatChip(q){document.getElementById('float-chips').style.display='none';document.getElementById('float-input').value=q;sendFloat();}
-async function sendFloat(){const inp=document.getElementById('float-input');const msgs=document.getElementById('float-msgs');const txt=inp.value.trim();if(!txt)return;document.getElementById('float-chips').style.display='none';const uBub=document.createElement('div');uBub.style.cssText='background:#2D4A6B;border-radius:10px 10px 3px 10px;padding:10px 13px;align-self:flex-end;max-width:85%;font-size:12px;color:white;line-height:1.65;';uBub.textContent=txt;msgs.appendChild(uBub);inp.value='';msgs.scrollTop=msgs.scrollHeight;const typing=document.createElement('div');typing.style.cssText='background:white;border-radius:10px 10px 10px 3px;padding:10px 13px;font-size:12px;color:#6A7A70;line-height:1.65;border:.5px solid #D8E4DC;';typing.textContent='Angel is thinking…';msgs.appendChild(typing);msgs.scrollTop=msgs.scrollHeight;try{const res=await fetch('/.netlify/functions/angel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:'user',content:txt}]})});const data=await res.json();typing.remove();const aBub=document.createElement('div');aBub.style.cssText='background:white;border-radius:10px 10px 10px 3px;padding:10px 13px;max-width:92%;font-size:12px;color:#1A2018;line-height:1.7;border:.5px solid #D8E4DC;';const reply=(data.reply||data.content||'Something went wrong.').replace(/[([^]]+)]((https?[^)]+))/g,'$2');aBub.innerHTML=reply.replace(/
-/g,'<br>');msgs.appendChild(aBub);msgs.scrollTop=msgs.scrollHeight;}catch(e){typing.textContent='Something went wrong — please try again.';}}
-</script>
-
 <div class="post-hero">
   <div class="container">
     <a href="/blog/" class="back">← Back to blog</a>
@@ -145,17 +99,38 @@ async function sendFloat(){const inp=document.getElementById('float-input');cons
   </div>
 </div>
 </div>
-<footer>
+<footer style="background:#4a7fa5;padding:48px 0 28px;">
   <div class="container">
-    <div class="footer-grid">
-      <div><div class="footer-brand">✦ Divorce<span>Angels</span></div><p class="footer-tag">Real guidance for real people navigating one of life's hardest transitions.</p><div class="footer-socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
-      <div><div class="footer-col-title">Content</div><ul class="footer-links"><li><a href="/blog/">Blog</a></li><li><a href="/#angel-section">Ask Angel</a></li></ul></div>
-      <div><div class="footer-col-title">Community</div><ul class="footer-links"><li><a href="https://www.facebook.com/groups/3705373593017325" target="_blank">Facebook Group</a></li><li><a href="#">Newsletter</a></li></ul></div>
-      <div><div class="footer-col-title">Tools</div><ul class="footer-links"><li><a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a></li><li><a href="/#angel-section">Angel AI</a></li></ul></div>
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.4rem;color:white;margin-bottom:10px;">Divorce Angels</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;max-width:260px;">Real guidance for real people navigating one of life's hardest transitions.</p>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Content</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="/blog/" style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Blog</a>
+          <a href="/" style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Ask Angel</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Community</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Facebook Group</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Tools</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="https://divorcetracker.netlify.app/" target="_blank" style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Divorce Tracker</a>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom"><div class="footer-bottom-txt">© 2026 Divorce Angels. All rights reserved.</div><div class="footer-bottom-txt">Not legal advice. Always consult a licensed attorney.</div></div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="font-size:0.74rem;color:rgba(255,255,255,0.3);">© 2026 Divorce Angels. All rights reserved.</div>
+      <div style="font-size:0.74rem;color:rgba(255,255,255,0.3);">Not legal advice. Always consult a licensed attorney.</div>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('menu-btn').addEventListener('click',()=>{const n=document.getElementById('mobile-nav');n.style.display=n.style.display==='flex'?'none':'flex';});</script>
 </body>
 </html>
