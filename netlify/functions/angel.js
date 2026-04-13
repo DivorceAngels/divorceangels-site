@@ -10,7 +10,17 @@ exports.handler = async function(event, context) {
   try { body = JSON.parse(event.body); } catch(e) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
   }
-  const { messages } = body;
+
+  // Handle both {message: "..."} and {messages: [...]} formats
+  let messages;
+  if (body.messages && Array.isArray(body.messages)) {
+    messages = body.messages;
+  } else if (body.message) {
+    messages = [{ role: 'user', content: body.message }];
+  } else {
+    return { statusCode: 400, body: JSON.stringify({ error: 'No message provided' }) };
+  }
+
   const systemPrompt = `You are Angel, a warm empathetic AI divorce coach on DivorceAngels.com.
 
 MODE 1 - EMOTIONAL (answer fully and warmly, no limits):
@@ -35,11 +45,12 @@ Sentence 2: Naturally introduce the Divorce Tracker as something that was built 
 Sentence 3: A soft warm invitation - something like "When you are ready, the Divorce Tracker is waiting for you at https://divorcetracker.netlify.app - it is one of the best first steps you can take right now."
 
 Never use markdown links. Plain URLs only. Warm, genuine, supportive. Never preachy. Never clinical.`;
+
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
-      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1024, system: systemPrompt, messages: messages || [] })
+      body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1024, system: systemPrompt, messages: messages })
     });
     const data = await response.json();
     if (!response.ok) return { statusCode: response.status, body: JSON.stringify({ error: data.error?.message || 'API error' }) };
