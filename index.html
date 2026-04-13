@@ -12,13 +12,12 @@
 body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A35;font-size:18px;line-height:1.8;}
 
 /* ── NAV ── */
-.nav-logo-bar{background:white;width:100%;padding:16px 40px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #EDF4F8;position:sticky;top:0;z-index:101;}
+.nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #EDF4F8;position:sticky;top:0;z-index:101;}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
-.get-started-strip{background:#fff;width:100%;padding:10px 40px;display:flex;justify-content:center;border-bottom:1px solid #EDF4F8;}
-.get-started-strip a{display:inline-block;background:#6FAACB;color:white;font-size:16px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:600;padding:10px 28px;border-radius:6px;text-decoration:none;letter-spacing:.02em;}
-.get-started-strip a:hover{background:#5A9ABB;}
+.get-started-btn{display:inline-block;background:#6FAACB;color:white;font-size:16px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:600;padding:10px 28px;border-radius:6px;text-decoration:none;letter-spacing:.02em;white-space:nowrap;}
+.get-started-btn:hover{background:#5A9ABB;}
 
-.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:138px;z-index:99;}
+.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
 .nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;margin-right:0;}
 .nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
 .nav-links a:hover{color:rgba(255,255,255,.8);}
@@ -215,19 +214,16 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <!-- LOGO BAR -->
 <div class="nav-logo-bar">
+  <div style="width:200px;"></div>
   <a href="/"><img class="nav-logo" src="/logo.jpg" alt="DivorceAngels"></a>
-</div>
-
-<!-- GET STARTED STRIP -->
-<div class="get-started-strip">
-  <a href="https://divorcetracker.netlify.app">Get started with <em>Your Divorce Angel</em> &rarr;</a>
+  <a class="get-started-btn" href="https://divorcetracker.netlify.app">Get started with <em>Your Divorce Angel</em> &rarr;</a>
 </div>
 
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-links">
     <a class="nav-brand" href="https://divorcetracker.netlify.app">
-      <img class="nav-wings" src="/wings.svg" alt="">
+      <img class="nav-wings" src="/wings.jpg" alt="">
       <em>Your Divorce Angel</em>
     </a>
     <a href="/blog/">Blog</a>
