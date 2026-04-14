@@ -172,7 +172,7 @@ posts.forEach((post, i) => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     
     const htmlContent = marked(post.body || '');
-    const related = posts.filter((_, j) => Math.abs(j - i) <= 2 && j !== i).slice(0, 3);
+    const related = [...posts.filter((_, j) => j !== i)].sort(() => 0.5 - Math.random()).slice(0, 3);
     const relHtml = related.length ? `
 <div style="padding:52px 0;border-top:1px solid #D5E8F0;">
   <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:#1A2A35;margin-bottom:22px;">More articles</h3>
