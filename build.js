@@ -174,10 +174,10 @@ posts.forEach((post, i) => {
     const htmlContent = marked(post.body || '');
     const related = posts.filter((_, j) => Math.abs(j - i) <= 2 && j !== i).slice(0, 3);
     const relHtml = related.length ? `
-<div style="padding:52px 0;border-top:1px solid #D8E4DC;">
+<div style="padding:52px 0;border-top:1px solid #D5E8F0;">
   <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:#1A2A35;margin-bottom:22px;">More articles</h3>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-    ${related.map(p => `<a href="/${p.slug}/" style="background:white;border:1px solid #D8E4DC;border-radius:12px;padding:20px;display:block;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#6FAACB'" onmouseout="this.style.borderColor='#D5E8F0'"><div style="font-size:0.71rem;color:#6A7A70;margin-bottom:5px;">${p.date_fmt}</div><div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:0.95rem;color:#1A2018;line-height:1.35;">${escapeHtml(p.title)}</div></a>`).join('')}
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+    ${related.slice(0,3).map(p => `<a href="/${p.slug}/" style="background:white;border:1px solid #D5E8F0;border-radius:12px;overflow:hidden;display:block;transition:border-color 0.2s;box-shadow:0 2px 8px rgba(0,0,0,.04);" onmouseover="this.style.borderColor='#6FAACB'" onmouseout="this.style.borderColor='#D5E8F0'"><img src="${p.cover_img}" alt="${escapeHtml(p.title)}" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;"><div style="padding:16px 18px;"><div style="font-size:11px;color:#6A8A9F;margin-bottom:5px;">${p.date_fmt}</div><div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;color:#1A2A35;line-height:1.4;font-weight:600;">${escapeHtml(p.title)}</div></div></a>`).join('')}
   </div>
 </div>` : '';
 
