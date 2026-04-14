@@ -191,12 +191,9 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .footer-legal{font-size:13px;color:#9BAAB5;}
 
 /* ── ASK ANGEL FAB ── */
-#ask-angel-fab{position:fixed;bottom:24px;right:24px;background:#2A5A7A;color:white;font-size:16px;font-weight:600;padding:13px 26px;border-radius:30px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:2px solid rgba(255,255,255,.15);box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:999;font-family:'Cormorant Garamond',serif;font-style:italic;}
 .fab-dot{width:10px;height:10px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
 
 /* ── ANGEL MODAL ── */
-#angel-modal{display:none;position:fixed;bottom:84px;right:24px;width:380px;border-radius:18px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 8px 40px rgba(0,0,0,.2);z-index:1000;font-family:'Cormorant Garamond',serif;}
-#angel-modal.open{display:flex;flex-direction:column;}
 .modal-hdr{background:#4A7A9B;padding:14px 18px;display:flex;align-items:center;gap:12px;}
 .modal-av{width:38px;height:38px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
 .modal-av img{width:34px;height:34px;object-fit:contain;}
@@ -223,7 +220,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   .nav{top:132px;padding:0 24px;}
   .nav-links{gap:20px;font-size:15px;}
   .footer-nav-bar,.footer-logo-bar{padding:14px 24px;}
-  #angel-modal{width:calc(100vw - 48px);right:24px;}
 }
 
 .cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;font-style:normal;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.12);}
@@ -391,13 +387,8 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
           <div class="angel-b">He's wrong. RRSPs accumulated during the marriage are <strong>shared property</strong> in every Canadian province. Based on your entries, you're entitled to approximately <strong>$84,000</strong> of his RRSP. Don't give this up.</div>
         </div>
         <div class="chat-sugs">
-          <div class="sug" onclick="openAngel('How does mediation work?')">How does mediation work?</div>
-          <div class="sug" onclick="openAngel('What am I entitled to?')">What am I entitled to?</div>
-          <div class="sug" onclick="openAngel('I feel overwhelmed')">I feel overwhelmed</div>
-          <div class="sug" onclick="openAngel('Where do I start?')">Where do I start?</div>
         </div>
         <div class="chat-inp">
-          <input class="inp-box" type="text" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')openAngel(this.value)">
           
         </div>
       </div>
@@ -503,9 +494,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </footer>
 
 <!-- ASK ANGEL FAB -->
-<div id="ask-angel-fab" onclick="toggleAngel()">
   <div class="fab-dot"></div>
-  Ask Angel
 </div>
 
 <!-- ANGEL MODAL -->
