@@ -43,6 +43,23 @@ footer{background:var(--blue);padding:68px 0 32px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .footer-bottom-txt{font-size:0.74rem;color:rgba(255,255,255,0.3)}
 @media(max-width:860px){.container{padding:0 28px}.nav-inner{padding:0 28px}.nav-links{display:none}#menu-btn{display:block}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:768px){
+  .da-nav-bar{padding:10px 20px;}
+  .da-nav-logo{height:52px!important;}
+  .da-cta-btn,a[style*="position:fixed;top:22px"]{top:14px!important;right:16px!important;font-size:13px!important;padding:8px 14px!important;}
+  .da-nav-menu,[style*="background:#9DCBE4"]{gap:16px!important;top:76px!important;flex-wrap:wrap!important;height:auto!important;padding:8px 20px!important;}
+  .container{padding:0 24px!important;}
+  .blog-hero{padding:40px 0 32px!important;}
+  .cards-grid{grid-template-columns:1fr 1fr!important;}
+  .feat-card{grid-template-columns:1fr!important;}
+  h1{font-size:1.8rem!important;}
+}
+@media(max-width:480px){
+  .cards-grid{grid-template-columns:1fr!important;}
+  h1{font-size:1.5rem!important;}
+  .da-cta-btn{display:none!important;}
+}
+
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
 </style>
 <style>
