@@ -95,6 +95,20 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .title-cell{padding:0 10px;font-size:15px;font-weight:700;color:#1A2A35;line-height:1.4;min-height:54px;display:flex;align-items:flex-start;justify-content:center;text-align:center;}
 .descs-row{display:grid;grid-template-columns:repeat(6,1fr);}
 .desc-cell{padding:0 10px;font-size:14px;color:#5A7A8A;line-height:1.65;text-align:center;}
+
+.steps-unified{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
+.step-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;}
+.step-item .step-circle{margin-bottom:12px;flex-shrink:0;}
+.step-item .title-cell{min-height:auto;margin-bottom:8px;justify-content:center;}
+.step-item .desc-cell{padding:0;}
+@media(max-width:768px){
+  .steps-unified{grid-template-columns:repeat(2,1fr);gap:24px;}
+  .step-item{padding:0 4px;}
+}
+@media(max-width:480px){
+  .steps-unified{grid-template-columns:1fr 1fr;gap:20px;}
+}
+
 .steps-note{font-size:17px;color:#6FAACB;font-weight:600;text-align:center;margin-top:40px;letter-spacing:.04em;}
 
 /* ── HOW ANGEL WORKS ── */
@@ -334,32 +348,13 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
         <h2 class="sec-h2">From overwhelmed to <em>prepared</em> in 6 easy steps</h2>
         <p class="sec-sub"><em>Your Divorce Angel</em> walks you through everything your lawyer, mediator, or court needs &mdash; all in one place.</p>
       </div>
-      <div class="steps-wrap">
-        <div class="steps-line"></div>
-        <div class="circles-row">
-          <div class="circle-cell"><div class="step-circle">1</div></div>
-          <div class="circle-cell"><div class="step-circle">2</div></div>
-          <div class="circle-cell"><div class="step-circle">3</div></div>
-          <div class="circle-cell"><div class="step-circle">4</div></div>
-          <div class="circle-cell"><div class="step-circle">5</div></div>
-          <div class="circle-cell"><div class="step-circle">6</div></div>
-        </div>
-        <div class="titles-row">
-          <div class="title-cell">Enter your financial snapshot</div>
-          <div class="title-cell">Angel analyzes your situation</div>
-          <div class="title-cell">See real settlement scenarios</div>
-          <div class="title-cell">Prepare for every negotiation</div>
-          <div class="title-cell">Store &amp; track your documents</div>
-          <div class="title-cell">Understand any document</div>
-        </div>
-        <div class="descs-row">
-          <div class="desc-cell">Assets, debts, income &amp; expenses &mdash; everything courts require</div>
-          <div class="desc-cell">Personalized guidance based on your finances, location &amp; family</div>
-          <div class="desc-cell">Walk in prepared &mdash; know what to fight for in every meeting</div>
-          <div class="desc-cell">Personalized checklist, lawyer questions &amp; ranked priorities</div>
-          <div class="desc-cell">Every document required, tailored to your jurisdiction</div>
-          <div class="desc-cell">Plain-English explanations specific to your situation</div>
-        </div>
+      <div class="steps-unified">
+        <div class="step-item"><div class="step-circle">1</div><div class="title-cell">Enter your financial snapshot</div><div class="desc-cell">Assets, debts, income &amp; expenses &mdash; everything courts require</div></div>
+        <div class="step-item"><div class="step-circle">2</div><div class="title-cell">Angel analyzes your situation</div><div class="desc-cell">Personalized guidance based on your finances, location &amp; family</div></div>
+        <div class="step-item"><div class="step-circle">3</div><div class="title-cell">See real settlement scenarios</div><div class="desc-cell">Walk in prepared &mdash; know what to fight for in every meeting</div></div>
+        <div class="step-item"><div class="step-circle">4</div><div class="title-cell">Prepare for every negotiation</div><div class="desc-cell">Personalized checklist, lawyer questions &amp; ranked priorities</div></div>
+        <div class="step-item"><div class="step-circle">5</div><div class="title-cell">Store &amp; track your documents</div><div class="desc-cell">Every document required, tailored to your jurisdiction</div></div>
+        <div class="step-item"><div class="step-circle">6</div><div class="title-cell">Understand any document</div><div class="desc-cell">Plain-English explanations specific to your situation</div></div>
       </div>
       <div class="steps-note">Save time &middot; Save money &middot; Reduce stress</div>
     </div>
