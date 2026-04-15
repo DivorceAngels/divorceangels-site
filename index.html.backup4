@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A35;font-size:20px;line-height:1.8;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A35;font-size:18px;line-height:1.8;}
 
 /* ── NAV ── */
 .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
@@ -19,7 +19,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 
 .nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
-.nav-links{display:flex;gap:36px;font-size:19px;flex:1;justify-content:center;align-items:center;margin-right:0;}
+.nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;margin-right:0;}
 .nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
 .nav-links a:hover{color:rgba(255,255,255,.8);}
 
@@ -32,9 +32,9 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;padding:56px 48px 52px;align-items:start;max-width:1060px;margin:0 auto;}
 .hero-eyebrow{font-size:13px;font-weight:500;letter-spacing:1.04px;text-transform:uppercase;color:#6FAACB;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
 .hero-eyebrow-line{width:18px;height:1px;background:#6FAACB;display:block;flex-shrink:0;}
-.hero h1{font-family:Georgia,serif;font-size:52px;font-weight:400;line-height:1.12;color:#1A2A35;margin-bottom:22px;}
+.hero h1{font-family:Georgia,serif;font-size:42px;font-weight:400;line-height:1.12;color:#1A2A35;margin-bottom:22px;}
 .hero h1 em{color:#6FAACB;font-style:italic;}
-.hero-p{font-size:21px;color:#4A6070;line-height:1.85;margin-bottom:32px;}
+.hero-p{font-size:19px;color:#4A6070;line-height:1.85;margin-bottom:32px;}
 .hero-p em{font-style:italic;color:#3A7A9B;}
 .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
 .btn-primary{background:#6FAACB;color:white;font-size:17px;font-weight:500;padding:14px 32px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;}
@@ -74,9 +74,9 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .sec-wrap{padding:48px 48px;max-width:1200px;margin:0 auto;}
 
 .sec-eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
-.sec-h2{font-family:Georgia,serif;font-size:42px;font-weight:400;color:#1A2A35;margin-bottom:14px;line-height:1.18;}
+.sec-h2{font-family:Georgia,serif;font-size:36px;font-weight:400;color:#1A2A35;margin-bottom:14px;line-height:1.18;}
 .sec-h2 em{color:#6FAACB;font-style:italic;}
-.sec-sub{font-size:21px;color:#5A7A8A;line-height:1.8;}
+.sec-sub{font-size:19px;color:#5A7A8A;line-height:1.8;}
 .sec-sub em{font-style:italic;color:#3A7A9B;}
 .bg-white{background:#fff;}
 .bg-blue{background:#E8F4FA;}
@@ -144,7 +144,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .v-icon{width:44px;height:44px;border-radius:10px;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
 .v-icon-yda{width:44px;height:44px;border-radius:10px;background:white;display:flex;align-items:center;justify-content:center;margin-bottom:16px;overflow:hidden;}
 .v-icon-yda img{width:40px;height:40px;object-fit:contain;}
-.v-title{font-size:21px;font-weight:600;color:#1A2A35;margin-bottom:10px;}
+.v-title{font-size:19px;font-weight:600;color:#1A2A35;margin-bottom:10px;}
 .v-desc{font-size:16px;color:#5A7A8A;line-height:1.7;}
 
 /* ── BLOG ── */
@@ -156,7 +156,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .blog-img{height:172px;object-fit:cover;width:100%;display:block;background:#CFE6F3;}
 .blog-body{padding:18px;}
 .blog-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#2A5A7A;background:#E8F4FA;padding:4px 10px;border-radius:4px;margin-bottom:10px;}
-.blog-title{font-size:19px;font-weight:500;color:#1A2A35;line-height:1.45;margin-bottom:8px;}
+.blog-title{font-size:17px;font-weight:500;color:#1A2A35;line-height:1.45;margin-bottom:8px;}
 .blog-date{font-size:13px;color:#9BAAB5;}
 
 /* ── COMMUNITY ── */
@@ -178,7 +178,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .tcard{background:#F7FBFD;border-radius:12px;padding:24px;border:1px solid #E0EEF5;}
 .stars{color:#6FAACB;font-size:16px;margin-bottom:12px;letter-spacing:3px;}
-.tquote{font-size:19px;color:#4A6070;line-height:1.75;margin-bottom:14px;font-style:italic;}
+.tquote{font-size:17px;color:#4A6070;line-height:1.75;margin-bottom:14px;font-style:italic;}
 .tauthor{font-size:14px;font-weight:500;color:#6FAACB;}
 
 /* ── FOOTER ── */
@@ -438,7 +438,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <!-- 6. COMMUNITY -->
 <section class="bg-blue full-sec" id="community">
   <div class="sec-wrap">
-    <div class="comm-inner" style="text-align:left;">
+    <div class="comm-inner">
       <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;">Your Community</p>
       <div class="comm-badge"><div class="comm-live"></div>44,000+ members &middot; active now</div>
       <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
