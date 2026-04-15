@@ -64,7 +64,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:var(--
 img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.2}h1{font-size:clamp(2.2rem,4vw,3rem)}h2{font-size:clamp(1.8rem,3vw,2.5rem)}h3{font-size:1.4rem}
 p{color:var(--ink-m);line-height:1.75;font-size:1rem}
-.container{max-width:1060px;margin:0 auto;padding:0 48px}
+.container{max-width:1160px;margin:0 auto;padding:0 52px}
 
 .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
@@ -304,7 +304,7 @@ function buildBlogIndex(pagePosts, pageNum, totalPages, activeCategory = 'All') 
 <meta name="description" content="Expert articles on divorce — legal process, finances, emotional wellness, co-parenting, and building a new life.">
 ${SHARED_CSS}
 <style>
-.blog-hero{background:var(--g0);padding:48px 0 40px;border-bottom:1px solid var(--bdr)}
+.blog-hero{background:var(--g0);padding:72px 0 56px;border-bottom:1px solid var(--bdr)}
 .cat-pill{font-size:0.82rem;font-weight:500;padding:8px 18px;border-radius:20px;border:1.5px solid var(--bdr);color:var(--ink-m);transition:all 0.2s}
 .cat-pill:hover,.cat-pill.active{background:var(--g5);color:white;border-color:var(--g5)}
 .feat-card{display:grid;grid-template-columns:1.2fr 1fr;border-radius:16px;overflow:hidden;border:1px solid var(--bdr);margin-bottom:32px;transition:box-shadow 0.2s,transform 0.2s}
