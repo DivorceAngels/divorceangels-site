@@ -51,16 +51,6 @@ footer{background:var(--blue);padding:68px 0 32px}
 }
 
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
-
-/* ── NAV (injected) ── */
-.nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
-.nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
-.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
-.nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;}
-.nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
-.nav-links a:hover{color:rgba(255,255,255,.8);}
-.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}
-.cta-btn:hover{background:#5A9ABB;}
 </style>
 <style>
 .blog-hero{background:var(--g0);padding:72px 0 56px;border-bottom:1px solid var(--bdr)}
@@ -81,21 +71,16 @@ footer{background:var(--blue);padding:68px 0 32px}
 </style>
 </head>
 <body>
-<!-- LOGO BAR -->
-<div class="nav-logo-bar">
-  <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+<div class="da-nav-bar" style="background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;">
+  <a href="/"><img src="/logo.jpg" alt="DivorceAngels" style="height:68px;width:auto;display:block;mix-blend-mode:multiply;"></a>
 </div>
-
-<!-- NAV -->
-<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started &#8594;</a>
-<nav class="nav">
-  <div class="nav-links">
-    <a href="https://divorcetracker.netlify.app" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
-    <a href="/blog/">Blog</a>
-    <a href="/resources/">Resources</a>
-    <a href="/community/">Community</a>
-  </div>
-</nav>
+<a href="https://divorcetracker.netlify.app" style="position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.12);">Get Started →</a>
+<div style="background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;gap:36px;position:sticky;top:96px;z-index:99;">
+  <a href="/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Your Divorce Angel</a>
+  <a href="/blog/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Blog</a>
+  <a href="/resources/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Resources</a>
+  <a href="/community/" style="color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;">Community</a>
+</div>
 <div class="blog-hero">
   <div class="container">
     <h1 style="font-size:clamp(2rem,4vw,2.8rem);color:var(--ink);margin-bottom:12px;">Insight for every <em style="font-style:italic;color:var(--g5);">stage of the journey</em></h1>
