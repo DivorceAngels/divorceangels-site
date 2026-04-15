@@ -15,65 +15,41 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
 
-
-
-
 .nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
 .nav-links{display:flex;gap:36px;font-size:19px;flex:1;justify-content:center;align-items:center;margin-right:0;}
 .nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
 .nav-links a:hover{color:rgba(255,255,255,.8);}
 
-/* Wings brand link in nav */
-.nav-brand{display:inline-flex;align-items:center;gap:8px;color:white;text-decoration:none;font-weight:600;font-style:italic;letter-spacing:.02em;}
-.nav-brand:hover{color:rgba(255,255,255,.8);}
-.nav-wings{height:30px;width:auto;display:block;}
-
 /* ── HERO ── */
 .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;padding:56px 48px 52px;align-items:start;max-width:1060px;margin:0 auto;}
 .hero-eyebrow{font-size:13px;font-weight:500;letter-spacing:1.04px;text-transform:uppercase;color:#6FAACB;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-.hero-eyebrow-line{width:18px;height:1px;background:#6FAACB;display:block;flex-shrink:0;}
 .hero h1{font-family:Georgia,serif;font-size:52px;font-weight:400;line-height:1.12;color:#1A2A35;margin-bottom:22px;}
 .hero h1 em{color:#6FAACB;font-style:italic;}
 .hero-p{font-size:21px;color:#4A6070;line-height:1.85;margin-bottom:32px;}
 .hero-p em{font-style:italic;color:#3A7A9B;}
 .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
 .btn-primary{background:#6FAACB;color:white;font-size:17px;font-weight:500;padding:14px 32px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;}
-.btn-primary em{font-style:italic;}
 .btn-ghost{background:transparent;color:#6FAACB;font-size:17px;font-weight:500;padding:14px 24px;border-radius:6px;border:1px solid #9DCBE4;cursor:pointer;text-decoration:none;display:inline-block;}
 
 /* ── FINANCIAL CARD ── */
 .fcard{border-radius:20px;overflow:hidden;border:1px solid #B8D4E8;box-shadow:0 6px 32px rgba(42,90,122,.14);}
 .fcard-hdr{background:#4A7A9B;padding:14px 18px;display:flex;align-items:center;gap:12px;}
-.fcard-hdr-logo{height:26px;object-fit:contain;border-radius:4px;}
 .fcard-title{font-size:15px;font-weight:400;color:white;letter-spacing:.02em;font-family:Georgia,serif;}
 .fcard-step{margin-left:auto;font-size:11px;color:rgba(255,255,255,.5);font-style:italic;font-family:Georgia,serif;}
 .fcard-body{background:#3D6880;padding:20px;}
-.angel-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
-.angel-av{width:42px;height:42px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
-.angel-av img{width:38px;height:38px;object-fit:contain;}
-.angel-dot{position:absolute;bottom:1px;right:1px;width:10px;height:10px;border-radius:50%;background:#5FC87A;border:2px solid #2A5A7A;}
-.angel-name{font-size:15px;font-weight:600;color:white;font-style:italic;}
-.angel-sub{font-size:12px;color:rgba(255,255,255,.45);}
 .bubble{background:rgba(255,255,255,.1);border-radius:8px;padding:12px 14px;margin-bottom:8px;font-size:13px;line-height:1.6;color:rgba(255,255,255,.92);font-family:Georgia,serif;}
 .bubble strong{color:white;font-weight:600;}
-.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);background:white;border-radius:8px;overflow:hidden;margin-bottom:10px;}
-.stat-cell{padding:10px 6px;text-align:center;border-right:1px solid #E2E8F0;}
-.stat-cell:last-child{border-right:none;}
-.stat-lbl{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#718096;margin-bottom:4px;}
-.stat-val{font-size:14px;font-weight:600;}
 .scenarios-box{background:#F0F7FB;border-radius:8px;padding:12px 14px;}
 .sc-lbl{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6A8A9A;margin-bottom:10px;}
 .sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .sc-a{background:#EEF5E8;border-radius:6px;padding:11px;border:1px solid #C8D8CD;}
 .sc-b{background:white;border-radius:6px;padding:11px;border:1px solid #E2E8F0;}
-.sc-tag{font-size:10px;font-weight:500;margin-bottom:4px;}
 .sc-val{font-size:22px;font-weight:400;line-height:1.2;margin-bottom:4px;font-family:Georgia,serif;}
 .sc-note{font-size:10px;}
 
 /* ── SECTIONS ── */
-.sec-wrap{padding:48px 48px;max-width:1060px;margin:0 auto;}
-
-.sec-eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.sec-wrap{padding:56px 48px;max-width:1060px;margin:0 auto;}
+.sec-eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;}
 .sec-h2{font-family:Georgia,serif;font-size:42px;font-weight:400;color:#1A2A35;margin-bottom:14px;line-height:1.18;}
 .sec-h2 em{color:#6FAACB;font-style:italic;}
 .sec-sub{font-size:21px;color:#5A7A8A;line-height:1.8;}
@@ -84,72 +60,17 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 /* ── 6 STEPS ── */
 .steps-inner{max-width:1060px;margin:0 auto;}
-.steps-header{text-align:center;margin-bottom:32px;}
-.steps-logo{height:80px;width:auto;object-fit:contain;display:block;margin:0 auto;}
-.steps-wrap{position:relative;margin-bottom:32px;}
-.steps-line{position:absolute;top:28px;left:calc(100%/12);right:calc(100%/12);height:2px;background:#9DCBE4;z-index:0;}
-.circles-row{display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:22px;position:relative;z-index:1;}
-.circle-cell{display:flex;justify-content:center;}
-.step-circle{width:56px;height:56px;border-radius:50%;background:#6FAACB;color:white;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;}
-.titles-row{display:grid;grid-template-columns:repeat(6,1fr);margin-bottom:12px;}
-.title-cell{padding:0 10px;font-size:15px;font-weight:700;color:#1A2A35;line-height:1.4;min-height:54px;display:flex;align-items:flex-start;justify-content:center;text-align:center;}
-.descs-row{display:grid;grid-template-columns:repeat(6,1fr);}
-.desc-cell{padding:0 10px;font-size:14px;color:#5A7A8A;line-height:1.65;text-align:center;}
-
-.steps-unified{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
-.step-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;}
-.step-item .step-circle{margin-bottom:12px;flex-shrink:0;}
-.step-item .title-cell{min-height:auto;margin-bottom:8px;justify-content:center;}
-.step-item .desc-cell{padding:0;}
-@media(max-width:768px){
-  .steps-unified{grid-template-columns:repeat(2,1fr);gap:24px;}
-  .step-item{padding:0 4px;}
-}
-@media(max-width:480px){
-  .steps-unified{grid-template-columns:1fr 1fr;gap:20px;}
-}
-
-.steps-note{font-size:17px;color:#6FAACB;font-weight:600;text-align:center;margin-top:40px;letter-spacing:.04em;}
-
-/* ── HOW ANGEL WORKS ── */
-.angel-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
-.af-list{display:flex;flex-direction:column;gap:20px;margin-top:26px;}
-.af{display:flex;gap:16px;align-items:flex-start;}
-.af-icon{width:44px;height:44px;border-radius:10px;background:#E8F4FA;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
-.af-title{font-size:17px;font-weight:600;color:#1A2A35;margin-bottom:5px;}
-.af-desc{font-size:16px;color:#5A7A8A;line-height:1.7;}
-.chat-demo{background:white;border-radius:14px;border:1px solid #B8D4E8;overflow:hidden;box-shadow:0 6px 28px rgba(42,90,122,.1);}
-.chat-hdr{background:#4A7A9B;padding:14px 18px;display:flex;align-items:center;gap:12px;}
-.ch-av{width:38px;height:38px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
-.ch-av img{width:34px;height:34px;object-fit:contain;}
-.ch-dot{position:absolute;bottom:-1px;right:-1px;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
-.ch-name{font-size:15px;font-weight:600;color:white;font-style:italic;}
-.ch-status{font-size:12px;color:rgba(255,255,255,.55);}
-.chat-body{background:#2A5A7A;padding:18px;display:flex;flex-direction:column;gap:12px;}
-.user-b{background:#CFE6F3;color:#1A3A4F;font-size:15px;padding:11px 15px;border-radius:10px 10px 2px 10px;align-self:flex-end;max-width:82%;line-height:1.6;}
-.angel-b{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);font-size:15px;padding:11px 15px;border-radius:10px 10px 10px 2px;max-width:92%;line-height:1.7;}
-.angel-b strong{color:white;}
-.chat-sugs{background:#1F4A62;padding:11px 18px;display:flex;gap:8px;flex-wrap:wrap;}
-.sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:13px;padding:7px 13px;border-radius:20px;cursor:pointer;}
-.chat-inp{background:#1F4A62;padding:11px 18px 15px;display:flex;gap:10px;}
-.inp-box{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:7px;padding:10px 14px;font-size:14px;color:rgba(255,255,255,.45);font-family:'Cormorant Garamond',serif;}
-.inp-btn{background:#6FAACB;color:white;font-size:15px;font-weight:600;padding:10px 18px;border-radius:7px;cursor:pointer;border:none;}
+.steps-note{font-size:17px;color:#6FAACB;font-weight:600;text-align:center;margin-top:32px;letter-spacing:.04em;}
 
 /* ── VALUE PROPS ── */
-.value-header{text-align:left;margin-bottom:40px;}
-.value-header .sec-h2{text-align:center;}
 .v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .vcard{background:white;border-radius:12px;padding:28px;border:1px solid #D0E8F5;}
 .vcard-hl{background:#ffffff;border-color:#D0E8F5;}
 .v-icon{width:44px;height:44px;border-radius:10px;background:#CFE6F3;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
-.v-icon-yda{width:44px;height:44px;border-radius:10px;background:white;display:flex;align-items:center;justify-content:center;margin-bottom:16px;overflow:hidden;}
-.v-icon-yda img{width:40px;height:40px;object-fit:contain;}
 .v-title{font-size:21px;font-weight:600;color:#1A2A35;margin-bottom:10px;}
-.v-desc{font-size:16px;color:#5A7A8A;line-height:1.7;}
+.v-desc{font-size:17px;color:#5A7A8A;line-height:1.7;}
 
 /* ── BLOG ── */
-.blog-header{display:flex;align-items:flex-end;justify-content:center;margin-bottom:32px;}
-.blog-view-all{font-size:17px;color:#6FAACB;font-weight:500;text-decoration:none;}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .blog-card{border-radius:12px;overflow:hidden;border:1px solid #E0EEF5;text-decoration:none;display:block;}
 .blog-card:hover{border-color:#9DCBE4;}
@@ -160,21 +81,19 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .blog-date{font-size:13px;color:#9BAAB5;}
 
 /* ── COMMUNITY ── */
-.comm-inner{max-width:760px;margin:0 auto;text-align:left;}
-.comm-badge{display:flex;align-items:center;gap:8px;background:#CFE6F3;color:#2A5A7A;font-size:15px;font-weight:500;padding:8px 20px;border-radius:20px;margin-bottom:22px;}
+.comm-badge{display:inline-flex;align-items:center;gap:8px;background:#CFE6F3;color:#2A5A7A;font-size:15px;font-weight:500;padding:8px 20px;border-radius:20px;margin-bottom:22px;}
 .comm-live{width:9px;height:9px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
-.comm-posts{background:white;border-radius:14px;border:1px solid #B8D4E8;overflow:hidden;margin:28px 0;text-align:left;}
+.comm-posts{background:white;border-radius:14px;border:1px solid #B8D4E8;overflow:hidden;margin:28px 0;}
 .cp{padding:18px 22px;border-bottom:1px solid #E8F2F8;}
 .cp:last-child{border-bottom:none;}
 .cp-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
 .cp-av{width:32px;height:32px;border-radius:50%;background:#9DCBE4;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:white;flex-shrink:0;}
 .cp-name{font-size:16px;font-weight:600;color:#1A2A35;}
 .cp-time{font-size:13px;color:#9BAAB5;margin-left:auto;}
-.cp-text{font-size:16px;color:#4A6070;line-height:1.7;}
+.cp-text{font-size:17px;color:#4A6070;line-height:1.7;}
 .cp-react{font-size:13px;color:#9BAAB5;margin-top:10px;}
 
 /* ── TESTIMONIALS ── */
-.test-header{text-align:center;margin-bottom:40px;}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .tcard{background:#F7FBFD;border-radius:12px;padding:24px;border:1px solid #E0EEF5;}
 .stars{color:#6FAACB;font-size:16px;margin-bottom:12px;letter-spacing:3px;}
@@ -187,75 +106,29 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .footer-nav-bar a:first-child{font-style:italic;font-weight:600;}
 .footer-nav-bar a:hover{color:rgba(255,255,255,.8);}
 .footer-logo-bar{background:white;width:100%;padding:18px 48px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;border-top:1px solid #EDF4F8;}
-.footer-logo{height:56px;mix-blend-mode:multiply;display:block;}
-.footer-legal{font-size:13px;color:#9BAAB5;}
+.footer-logo{height:72px;mix-blend-mode:multiply;display:block;}
+.footer-legal{font-size:15px;color:#9BAAB5;}
 
-/* ── ASK ANGEL FAB ── */
-.fab-dot{width:10px;height:10px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
-
-/* ── ANGEL MODAL ── */
-.modal-hdr{background:#4A7A9B;padding:14px 18px;display:flex;align-items:center;gap:12px;}
-.modal-av{width:38px;height:38px;border-radius:50%;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
-.modal-av img{width:34px;height:34px;object-fit:contain;}
-.modal-av-dot{position:absolute;bottom:-1px;right:-1px;width:9px;height:9px;border-radius:50%;background:#5FC87A;border:2px solid #4A7A9B;}
-.modal-name{font-size:16px;font-weight:600;color:white;font-style:italic;}
-.modal-status{font-size:12px;color:rgba(255,255,255,.55);}
-.modal-close{margin-left:auto;color:rgba(255,255,255,.6);cursor:pointer;font-size:22px;line-height:1;}
-.modal-body{background:#2A5A7A;padding:18px;min-height:200px;display:flex;flex-direction:column;gap:12px;max-height:340px;overflow-y:auto;}
-.modal-intro{background:rgba(255,255,255,.1);border-radius:10px 10px 10px 2px;padding:12px 15px;font-size:15px;color:rgba(255,255,255,.88);line-height:1.7;}
-.modal-sugs{background:#1F4A62;padding:10px 16px;display:flex;gap:7px;flex-wrap:wrap;}
-.modal-sug{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);font-size:13px;padding:6px 12px;border-radius:20px;cursor:pointer;}
-.modal-inp{background:#1F4A62;padding:10px 16px 14px;display:flex;gap:9px;}
-.modal-input{flex:1;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:7px;padding:9px 12px;font-size:14px;color:white;font-family:'Cormorant Garamond',serif;}
-.modal-input::placeholder{color:rgba(255,255,255,.4);}
-.modal-send{background:#6FAACB;color:white;font-size:15px;font-weight:600;padding:9px 16px;border-radius:7px;cursor:pointer;border:none;}
+.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.cta-btn:hover{background:#5A9ABB;}
 
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;padding:40px 24px;}
-  .sec-wrap{padding:52px 24px;}
-  .circles-row,.titles-row,.descs-row{grid-template-columns:repeat(3,1fr);}
-  .angel-grid,.v-grid,.blog-grid,.test-grid{grid-template-columns:1fr;}
-  .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
-  .get-started-bar{top:94px;}
-  .nav{top:132px;padding:0 24px;}
-  .nav-links{gap:20px;font-size:15px;}
+  .sec-wrap{padding:40px 24px;}
+  .v-grid,.blog-grid,.test-grid{grid-template-columns:1fr;}
   .footer-nav-bar,.footer-logo-bar{padding:14px 24px;}
 }
-
-.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;font-style:normal;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.12);}
-.cta-btn:hover{background:#5A9ABB;}
-.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}.cta-btn:hover{background:#5A9ABB;}.blog-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;}.blog-header .sec-h2{margin:0;}
-/* ── MOBILE & TABLET ── */
 @media(max-width:768px){
   .nav-logo-bar{padding:10px 20px;}
-  .da-nav-logo,.nav-logo{height:52px!important;}
+  .nav-logo{height:52px!important;}
   .cta-btn{top:14px;right:16px;font-size:13px;padding:8px 14px;}
-  .nav{height:auto;padding:10px 20px;gap:20px;flex-wrap:wrap;top:76px;}
-  .nav-links{gap:18px;}
-  .hero{grid-template-columns:1fr;padding:40px 24px;gap:32px;}
-  .hero-text{text-align:center;}
+  .hero{padding:32px 20px;gap:24px;}
   .hero h1{font-size:2rem;}
-  .hero-btns{justify-content:center;flex-wrap:wrap;}
-  .mock-card{display:none;}
-  .full-sec{padding:48px 24px;}
   .sec-h2{font-size:1.8rem;}
-  .steps-grid{grid-template-columns:1fr 1fr;gap:16px;}
-  .advisor-grid{grid-template-columns:1fr;gap:32px;}
-  .advisor-chat{display:none;}
-  .value-header{text-align:center;}
-  .v-grid{grid-template-columns:1fr!important;}
   .blog-grid{grid-template-columns:1fr!important;}
-  .blog-header{flex-direction:column;gap:8px;align-items:flex-start;}
-  .community-preview{grid-template-columns:1fr!important;}
-  .testimonials-grid{grid-template-columns:1fr!important;}
-  .sec-wrap{padding:0 24px;}
-  .hero-label{display:none;}
-  footer .footer-inner{grid-template-columns:1fr 1fr!important;gap:24px;}
 }
 @media(max-width:480px){
   .cta-btn{display:none;}
-  .nav-links a{font-size:14px;}
-  .steps-grid{grid-template-columns:1fr;}
   .hero h1{font-size:1.7rem;}
   .sec-h2{font-size:1.5rem;}
 }
@@ -265,13 +138,12 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <!-- LOGO BAR -->
 <div class="nav-logo-bar">
-  
   <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
-  
 </div>
 
 <!-- NAV -->
-<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started →</a><nav class="nav">
+<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started →</a>
+<nav class="nav">
   <div class="nav-links">
     <a href="https://divorcetracker.netlify.app" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
     <a href="/blog/">Blog</a>
@@ -284,9 +156,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <section class="bg-white full-sec">
   <div class="hero">
     <div>
-      <div class="hero-eyebrow">
-        AI-guided divorce system
-      </div>
+      <div class="hero-eyebrow">AI-guided divorce system</div>
       <h1>Stop wondering<br>what to do next.<br><em>Your Angel<br>knows.</em></h1>
       <p class="hero-p"><em>Your Divorce Angel</em> is an AI-powered system that organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation based on your location. You will spend less on lawyers, know what to fight for, and never agree to something you'll regret.</p>
       <div class="cta-row">
@@ -301,100 +171,97 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
       </div>
       <div class="fcard-body">
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:5px;font-size:0;">
-          <div style="background:white;border-radius:8px;padding:10px 12px;font-size:0;"><div style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;font-weight:400;line-height:1;">TOTAL ASSETS</div><div style="display:block;font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$760k</div></div>
-          <div style="background:white;border-radius:8px;padding:10px 12px;font-size:0;"><div style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;font-weight:400;line-height:1;">TOTAL DEBTS</div><div style="display:block;font-size:18px;color:#C53030;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$328k</div></div>
-          <div style="background:white;border-radius:8px;padding:10px 12px;font-size:0;"><div style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;font-weight:400;line-height:1;">NET WORTH</div><div style="display:block;font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$431k</div></div>
+          <div style="background:white;border-radius:8px;padding:10px 12px;"><div style="font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;line-height:1;">TOTAL ASSETS</div><div style="font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$760k</div></div>
+          <div style="background:white;border-radius:8px;padding:10px 12px;"><div style="font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;line-height:1;">TOTAL DEBTS</div><div style="font-size:18px;color:#C53030;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$328k</div></div>
+          <div style="background:white;border-radius:8px;padding:10px 12px;"><div style="font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;line-height:1;">NET WORTH</div><div style="font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$431k</div></div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:12px;font-size:0;">
-          <div style="background:white;border-radius:8px;padding:10px 12px;font-size:0;"><div style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;font-weight:400;line-height:1;">CASH FLOW</div><div style="display:block;font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$3,240/mo</div></div>
-          <div style="background:white;border-radius:8px;padding:10px 12px;font-size:0;"><div style="display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;font-weight:400;line-height:1;">YOUR SHARE</div><div style="display:block;font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$215k</div></div>
+          <div style="background:white;border-radius:8px;padding:10px 12px;"><div style="font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;line-height:1;">CASH FLOW</div><div style="font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$3,240/mo</div></div>
+          <div style="background:white;border-radius:8px;padding:10px 12px;"><div style="font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa8b8;margin-bottom:4px;line-height:1;">YOUR SHARE</div><div style="font-size:18px;color:#1A2A35;font-weight:400;line-height:1.2;font-family:Georgia,serif;">$215k</div></div>
         </div>
         <div class="bubble">Based on your numbers, <strong>selling the home gives you $156,000 more liquidity</strong> than a buyout. Refinancing alone would consume 71% of your take-home &mdash; a risky position long-term.</div>
         <div class="bubble">Your <strong>pension split and HELOC are your two strongest negotiation points.</strong> Don't settle anything on the house until those are resolved.</div>
         <div class="scenarios-box">
           <div class="sc-lbl">Settlement scenarios</div>
           <div class="sc-grid">
-            <div class="sc-a"><div class="sc-tag" style="color:#1A2A35;font-family:Georgia,serif;font-size:12px;margin-bottom:6px;">Scenario A &mdash; Sell home &#10003;</div><div class="sc-val" style="color:#1A2018;font-size:20px;font-family:Georgia,serif;font-weight:400;line-height:1.2;margin-bottom:4px;">$215,900</div><div class="sc-note" style="color:#6A8A9F;font-style:italic;font-family:Georgia,serif;font-size:11px;">Recommended by Angel</div></div>
-            <div class="sc-b"><div class="sc-tag" style="color:#4A6878;font-family:Georgia,serif;font-size:12px;margin-bottom:6px;">Scenario B &mdash; Buyout</div><div class="sc-val" style="color:#4A6878;font-size:20px;font-family:Georgia,serif;font-weight:400;line-height:1.2;margin-bottom:4px;">$158,400</div><div class="sc-note" style="color:#6A8A9F;font-style:italic;font-family:Georgia,serif;font-size:11px;">$57,500 less</div></div>
+            <div class="sc-a"><div style="color:#1A2A35;font-family:Georgia,serif;font-size:12px;margin-bottom:6px;">Scenario A &mdash; Sell home &#10003;</div><div class="sc-val" style="color:#1A2A35;">$215,900</div><div class="sc-note" style="color:#6A8A9F;font-style:italic;font-family:Georgia,serif;">Recommended by Angel</div></div>
+            <div class="sc-b"><div style="color:#4A6878;font-family:Georgia,serif;font-size:12px;margin-bottom:6px;">Scenario B &mdash; Buyout</div><div class="sc-val" style="color:#4A6878;">$158,400</div><div class="sc-note" style="color:#6A8A9F;font-style:italic;font-family:Georgia,serif;">$57,500 less</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- 2. HOW IT WORKS -->
 <section class="bg-blue full-sec" id="how-it-works">
   <div class="sec-wrap">
     <div class="steps-inner">
-      <div class="steps-header" style="text-align:left;">
-        <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;">How it works</p>
-        <h2 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:400;color:#1A2A35;line-height:1.2;margin-bottom:16px;font-family:'Cormorant Garamond',Georgia,serif;">From overwhelmed to <em style="color:#6FAACB;">prepared</em><br>in 6 easy steps</h2>
-        <p style="font-size:17px;color:#4a6878;line-height:1.7;margin-bottom:32px;"><em>Your Divorce Angel</em> walks you through everything your lawyer, mediator, or court needs &mdash; all in one place.</p>
+      <p style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;">How it works</p>
+      <h2 style="font-size:42px;font-weight:400;color:#1A2A35;line-height:1.2;margin-bottom:16px;font-family:'Cormorant Garamond',Georgia,serif;">From overwhelmed to <em style="color:#6FAACB;">prepared</em><br>in 6 easy steps</h2>
+      <p style="font-size:19px;color:#4a6878;line-height:1.7;margin-bottom:32px;"><em>Your Divorce Angel</em> walks you through everything your lawyer, mediator, or court needs &mdash; all in one place.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
+        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">1</div><div style="font-size:15px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Enter your financial snapshot</div><div style="font-size:14px;color:#4a6878;line-height:1.55;font-style:italic;">Assets, debts, income &amp; expenses — everything courts require</div></div>
+        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">2</div><div style="font-size:15px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Angel analyzes your situation</div><div style="font-size:14px;color:#4a6878;line-height:1.55;font-style:italic;">Personalized guidance based on your finances, location &amp; family</div></div>
+        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">3</div><div style="font-size:15px;color:#1A2A35;margin-bottom:5px;font-weight:600;">See real settlement scenarios</div><div style="font-size:14px;color:#4a6878;line-height:1.55;font-style:italic;">Walk in prepared — know what to fight for in every meeting</div></div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
-        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">1</div><div style="font-size:14px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Enter your financial snapshot</div><div style="font-size:13px;color:#4a6878;line-height:1.55;font-style:italic;">Assets, debts, income &amp; expenses — everything courts require</div></div>
-        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">2</div><div style="font-size:14px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Angel analyzes your situation</div><div style="font-size:13px;color:#4a6878;line-height:1.55;font-style:italic;">Personalized guidance based on your finances, location &amp; family</div></div>
-        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">3</div><div style="font-size:14px;color:#1A2A35;margin-bottom:5px;font-weight:600;">See real settlement scenarios</div><div style="font-size:13px;color:#4a6878;line-height:1.55;font-style:italic;">Walk in prepared — know what to fight for in every meeting</div></div>
+        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">4</div><div style="font-size:15px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Prepare for every negotiation</div><div style="font-size:14px;color:#4a6878;line-height:1.55;font-style:italic;">Personalized checklist, lawyer questions &amp; ranked priorities</div></div>
+        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">5</div><div style="font-size:15px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Store &amp; track your documents</div><div style="font-size:14px;color:#4a6878;line-height:1.55;font-style:italic;">Every document required, tailored to your jurisdiction</div></div>
+        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">6</div><div style="font-size:15px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Understand any document</div><div style="font-size:14px;color:#4a6878;line-height:1.55;font-style:italic;">Plain-English explanations specific to your situation</div></div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
-        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">4</div><div style="font-size:14px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Prepare for every negotiation</div><div style="font-size:13px;color:#4a6878;line-height:1.55;font-style:italic;">Personalized checklist, lawyer questions &amp; ranked priorities</div></div>
-        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">5</div><div style="font-size:14px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Store &amp; track your documents</div><div style="font-size:13px;color:#4a6878;line-height:1.55;font-style:italic;">Every document required, tailored to your jurisdiction</div></div>
-        <div style="background:white;border-radius:10px;border:1px solid #D5E8F0;padding:18px;"><div style="width:28px;height:28px;border-radius:50%;background:#6FAACB;color:white;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;">6</div><div style="font-size:14px;color:#1A2A35;margin-bottom:5px;font-weight:600;">Understand any document</div><div style="font-size:13px;color:#4a6878;line-height:1.55;font-style:italic;">Plain-English explanations specific to your situation</div></div>
-      </div>
-      <div class="steps-note"><div class="steps-note">Save time &middot; Save money &middot; Reduce stress</div>
+      <div class="steps-note">Save time &middot; Save money &middot; Reduce stress</div>
     </div>
   </div>
 </section>
 
 <!-- 3. AI COACH -->
 <section class="bg-white full-sec">
-  <div class="sec-wrap" style="max-width:1060px;margin:0 auto;">
-    <p style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6FAACB;margin-bottom:10px;">Your AI Coach</p>
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:38px;font-weight:700;color:#1A2A35;line-height:1.15;margin-bottom:2px;">Ask anything.</h2>
-    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:38px;font-weight:400;font-style:italic;color:#6FAACB;line-height:1.15;margin-bottom:22px;">Angel already knows your file.</div>
-    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;color:#4a6878;line-height:1.72;max-width:600px;margin-bottom:36px;">Alongside your financial analysis and settlement scenarios, <em>Your Divorce Angel</em> is available any time to answer your questions, explain your options, and help you prepare &mdash; with no judgment and no hourly rate.</p>
+  <div class="sec-wrap">
+    <p class="sec-eyebrow">Your AI Coach</p>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;font-weight:700;color:#1A2A35;line-height:1.15;margin-bottom:2px;">Ask anything.</h2>
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;font-weight:400;font-style:italic;color:#6FAACB;line-height:1.15;margin-bottom:22px;">Angel already knows your file.</div>
+    <p style="font-size:19px;color:#4a6878;line-height:1.72;max-width:640px;margin-bottom:36px;">Alongside your financial analysis and settlement scenarios, <em>Your Divorce Angel</em> is available any time to answer your questions, explain your options, and help you prepare &mdash; with no judgment and no hourly rate.</p>
     <div style="background:#e8f2f8;border-radius:14px;border:.5px solid #b8d6e8;overflow:hidden;margin-bottom:20px;">
       <div style="background:#d4e9f3;padding:13px 20px;display:flex;align-items:center;gap:9px;border-bottom:.5px solid #b8d6e8;">
         <div style="width:9px;height:9px;border-radius:50%;background:#6FAACB;flex-shrink:0;"></div>
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:14px;font-style:italic;color:#1A2A35;opacity:.85;"><em>Your Divorce Angel</em></div>
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:12px;font-style:italic;color:#6FAACB;margin-left:auto;">Live &middot; Ask me anything</div>
+        <div style="font-size:15px;font-style:italic;color:#1A2A35;opacity:.85;"><em>Your Divorce Angel</em></div>
+        <div style="font-size:13px;font-style:italic;color:#6FAACB;margin-left:auto;">Live &middot; Ask me anything</div>
       </div>
       <div style="padding:20px 20px 16px;display:flex;flex-direction:column;gap:14px;">
-        <div style="align-self:flex-end;background:#ffffff;border:.5px solid #b8d6e8;border-radius:14px 14px 3px 14px;padding:11px 17px;max-width:62%;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-style:italic;color:#1A2A35;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,.05);">Should I try to keep the house or sell it?</div>
-        <div style="align-self:flex-start;background:#6b9fc0;border-radius:3px 14px 14px 14px;padding:14px 17px;max-width:74%;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;color:rgba(255,255,255,.96);line-height:1.72;">Based on your snapshot, <strong style="color:#ffffff;font-weight:700;">selling puts you $57,500 ahead</strong> of a buyout. With your income, carrying the mortgage alone would consume 68% of your take-home. I&rsquo;d fight for the sale and redirect that equity toward your retirement gap.</div>
-        <div style="align-self:flex-end;background:#ffffff;border:.5px solid #b8d6e8;border-radius:14px 14px 3px 14px;padding:11px 17px;max-width:62%;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-style:italic;color:#1A2A35;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,.05);">My husband says his 401(k) is all his. Is that true?</div>
-        <div style="align-self:flex-start;background:#6b9fc0;border-radius:3px 14px 14px 14px;padding:14px 17px;max-width:74%;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;color:rgba(255,255,255,.96);line-height:1.72;">No. Contributions made during the marriage are <strong style="color:#ffffff;font-weight:700;">marital property</strong> in every US state. Based on your entries, you&rsquo;re entitled to approximately <strong style="color:#ffffff;font-weight:700;">$74,000</strong>. This is secured through a QDRO &mdash; don&rsquo;t leave this on the table.</div>
+        <div style="align-self:flex-end;background:#ffffff;border:.5px solid #b8d6e8;border-radius:14px 14px 3px 14px;padding:11px 17px;max-width:62%;font-size:16px;font-style:italic;color:#1A2A35;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,.05);">Should I try to keep the house or sell it?</div>
+        <div style="align-self:flex-start;background:#6b9fc0;border-radius:3px 14px 14px 14px;padding:14px 17px;max-width:74%;font-size:16px;color:rgba(255,255,255,.96);line-height:1.72;">Based on your snapshot, <strong style="color:#ffffff;font-weight:700;">selling puts you $57,500 ahead</strong> of a buyout. With your income, carrying the mortgage alone would consume 68% of your take-home. I&rsquo;d fight for the sale and redirect that equity toward your retirement gap.</div>
+        <div style="align-self:flex-end;background:#ffffff;border:.5px solid #b8d6e8;border-radius:14px 14px 3px 14px;padding:11px 17px;max-width:62%;font-size:16px;font-style:italic;color:#1A2A35;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,.05);">My husband says his 401(k) is all his. Is that true?</div>
+        <div style="align-self:flex-start;background:#6b9fc0;border-radius:3px 14px 14px 14px;padding:14px 17px;max-width:74%;font-size:16px;color:rgba(255,255,255,.96);line-height:1.72;">No. Contributions made during the marriage are <strong style="color:#ffffff;font-weight:700;">marital property</strong> in every US state. Based on your entries, you&rsquo;re entitled to approximately <strong style="color:#ffffff;font-weight:700;">$74,000</strong>. This is secured through a QDRO &mdash; don&rsquo;t leave this on the table.</div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px 16px;border-top:.5px solid #c8dde8;background:rgba(255,255,255,.45);">
-        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;font-style:italic;color:#4a6878;">How does mediation work?</span>
-        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;font-style:italic;color:#4a6878;">What am I entitled to?</span>
-        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;font-style:italic;color:#4a6878;">I feel overwhelmed</span>
-        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;font-style:italic;color:#4a6878;">Where do I start?</span>
+        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-size:14px;font-style:italic;color:#4a6878;">How does mediation work?</span>
+        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-size:14px;font-style:italic;color:#4a6878;">What am I entitled to?</span>
+        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-size:14px;font-style:italic;color:#4a6878;">I feel overwhelmed</span>
+        <span style="background:#ffffff;border:.5px solid #b8d6e8;border-radius:22px;padding:7px 15px;font-size:14px;font-style:italic;color:#4a6878;">Where do I start?</span>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-      <div style="background:#EDF4F8;border-radius:12px;border:.5px solid #b8d6e8;padding:22px 22px 24px;">
-        <div style="font-size:22px;margin-bottom:12px;line-height:1;">&#129517;</div>
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;font-weight:600;color:#1A2A35;margin-bottom:8px;line-height:1.3;">Remembers everything about your situation</div>
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:14px;font-style:italic;color:#4a6878;line-height:1.65;">Angel picks up exactly where you left off &mdash; whether you&rsquo;re working with a lawyer, a mediator, or going it alone. Every answer is specific to your numbers, your jurisdiction, and your family.</div>
+      <div style="background:#EDF4F8;border-radius:12px;border:.5px solid #b8d6e8;padding:24px;">
+        <div style="font-size:24px;margin-bottom:12px;line-height:1;">&#129517;</div>
+        <div style="font-size:18px;font-weight:600;color:#1A2A35;margin-bottom:8px;line-height:1.3;">Remembers everything about your situation</div>
+        <div style="font-size:16px;font-style:italic;color:#4a6878;line-height:1.65;">Angel picks up exactly where you left off &mdash; whether you&rsquo;re working with a lawyer, a mediator, or going it alone. Every answer is specific to your numbers, your jurisdiction, and your family.</div>
       </div>
-      <div style="background:#EDF4F8;border-radius:12px;border:.5px solid #b8d6e8;padding:22px 22px 24px;">
-        <div style="font-size:22px;margin-bottom:12px;line-height:1;">&#128153;</div>
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;font-weight:600;color:#1A2A35;margin-bottom:8px;line-height:1.3;">Available at 2am when your mind won&rsquo;t stop</div>
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:14px;font-style:italic;color:#4a6878;line-height:1.65;">No judgment. No hourly rate. Ask anything about the legal process, what you&rsquo;re entitled to, how to handle a difficult conversation, or simply how you&rsquo;re feeling. Angel is always there.</div>
+      <div style="background:#EDF4F8;border-radius:12px;border:.5px solid #b8d6e8;padding:24px;">
+        <div style="font-size:24px;margin-bottom:12px;line-height:1;">&#128153;</div>
+        <div style="font-size:18px;font-weight:600;color:#1A2A35;margin-bottom:8px;line-height:1.3;">Available at 2am when your mind won&rsquo;t stop</div>
+        <div style="font-size:16px;font-style:italic;color:#4a6878;line-height:1.65;">No judgment. No hourly rate. Ask anything about the legal process, what you&rsquo;re entitled to, how to handle a difficult conversation, or simply how you&rsquo;re feeling. Angel is always there.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4. WHY AI-GUIDED DIVORCE SYSTEM -->
+<!-- 4. WHY USE -->
 <section class="bg-blue full-sec">
   <div class="sec-wrap">
-    <div class="value-header">
-      <div style="font-size:13px;font-weight:600;color:#6FAACB;margin-bottom:14px;letter-spacing:1.04px;text-transform:uppercase;">Why use <em style="text-transform:none;letter-spacing:0;font-style:italic;">Your Divorce Angel</em></div>
-      <h2 class="sec-h2">The clarity you need. <em>The advisor you deserve.</em></h2>
-    </div>
-    <div class="v-grid">
+    <p class="sec-eyebrow">Why use <em style="text-transform:none;letter-spacing:0;font-style:italic;">Your Divorce Angel</em></p>
+    <h2 class="sec-h2">The clarity you need. <em>The advisor you deserve.</em></h2>
+    <div class="v-grid" style="margin-top:32px;">
       <div class="vcard">
         <div class="v-icon">&#128176;</div>
         <div class="v-title">Save thousands in fees</div>
@@ -406,7 +273,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
         <div class="v-desc">Real settlement scenarios show what different outcomes look like in dollars before you agree to anything. Negotiate from knowledge, not guesswork.</div>
       </div>
       <div class="vcard vcard-hl">
-        <div style="width:64px;height:48px;margin-bottom:16px;"><img src="/wings.png" alt="" style="width:100%;height:100%;object-fit:contain;"></div>
+        <div style="width:80px;height:56px;margin-bottom:16px;"><img src="/wings.png" alt="" style="width:100%;height:100%;object-fit:contain;"></div>
         <div class="v-title">An advisor who knows your file</div>
         <div class="v-desc">Angel has read your complete financial picture. She remembers your situation and is available at 2am when your mind won't stop racing.</div>
       </div>
@@ -417,12 +284,12 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <!-- 5. BLOG -->
 <section class="bg-white full-sec">
   <div class="sec-wrap">
-    <div class="blog-header">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;">
       <div>
-        <div class="sec-eyebrow">From the blog</div>
+        <p class="sec-eyebrow">From the blog</p>
         <h2 class="sec-h2">Insight for every <em>stage of the journey</em></h2>
-      </div><div style="text-align:right;margin-top:8px;"><a href="/blog" style="font-size:15px;font-family:Cormorant Garamond,Georgia,serif;font-style:italic;color:#6FAACB;text-decoration:none;">View all articles →</a></div>
-
+      </div>
+      <div style="text-align:right;margin-top:8px;"><a href="/blog" style="font-size:16px;font-style:italic;color:#6FAACB;text-decoration:none;">View all articles →</a></div>
     </div>
     <div class="blog-grid">
       <a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt="" onerror="this.style.background='#CFE6F3';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child's Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a>
@@ -438,28 +305,24 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <!-- 6. COMMUNITY -->
 <section class="bg-blue full-sec" id="community">
   <div class="sec-wrap">
-    <div class="comm-inner" style="text-align:left;">
-      <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;">Your Community</p>
-      <div class="comm-badge"><div class="comm-live"></div>44,000+ members &middot; active now</div>
-      <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
-      <p style="font-size:19px;color:#4A6070;line-height:1.85;margin-top:12px;">Real conversations happening right now &mdash; 44,000+ people navigating exactly what you're going through.</p>
-      <div class="comm-posts">
-        <div class="cp"><div class="cp-row"><div class="cp-av">S</div><div class="cp-name">Sarah M.</div><div class="cp-time">2 hours ago</div></div><p class="cp-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay &mdash; more than okay. Sending love to everyone just starting. &#128153;</p><div class="cp-react">&#10084;&#65039; 148 &middot; &#128172; 63 comments</div></div>
-        <div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used <em>Your Divorce Angel</em> to prep for my first lawyer meeting. Walked in with the full financial analysis &mdash; my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">&#128077; 89 &middot; &#128172; 31 comments</div></div>
-      </div>
-      <a class="btn-primary" href="https://www.facebook.com/groups/divorceangels">Join Divorce Angels Community &rarr;</a>
+    <p class="sec-eyebrow">Your Community</p>
+    <div class="comm-badge"><div class="comm-live"></div>44,000+ members &middot; active now</div>
+    <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
+    <p style="font-size:19px;color:#4A6070;line-height:1.85;margin-top:12px;">Real conversations happening right now &mdash; 44,000+ people navigating exactly what you're going through.</p>
+    <div class="comm-posts">
+      <div class="cp"><div class="cp-row"><div class="cp-av">S</div><div class="cp-name">Sarah M.</div><div class="cp-time">2 hours ago</div></div><p class="cp-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay &mdash; more than okay. Sending love to everyone just starting. &#128153;</p><div class="cp-react">&#10084;&#65039; 148 &middot; &#128172; 63 comments</div></div>
+      <div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used <em>Your Divorce Angel</em> to prep for my first lawyer meeting. Walked in with the full financial analysis &mdash; my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">&#128077; 89 &middot; &#128172; 31 comments</div></div>
     </div>
+    <a class="btn-primary" href="https://www.facebook.com/groups/divorceangels">Join Divorce Angels Community &rarr;</a>
   </div>
 </section>
 
 <!-- 7. TESTIMONIALS -->
 <section class="bg-white full-sec">
   <div class="sec-wrap">
-    <div class="test-header">
-      <div class="sec-eyebrow">What people are saying</div>
-      <h2 class="sec-h2">Real people. <em>Real outcomes.</em></h2>
-      <p class="sec-sub" style="margin-top:10px;">From Toronto to Sydney &mdash; people navigating divorce with <em>Your Divorce Angel</em></p>
-    </div>
+    <p class="sec-eyebrow">What people are saying</p>
+    <h2 class="sec-h2">Real people. <em>Real outcomes.</em></h2>
+    <p class="sec-sub" style="margin-bottom:32px;">From Toronto to Sydney &mdash; people navigating divorce with <em>Your Divorce Angel</em></p>
     <div class="test-grid">
       <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tquote">"Using Angel relieved so much of my stress. I finally understood what I was entitled to."</p><div class="tauthor">Sarah M. &mdash; Toronto, Canada</div></div>
       <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="tquote">"I walked into my lawyer meeting completely prepared. She said she'd never seen that before."</p><div class="tauthor">Rachel B. &mdash; Chicago, USA</div></div>
@@ -471,10 +334,11 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CTA -->
 <section style="background:#6FAACB;padding:48px 40px;text-align:center;">
   <a href="https://divorcetracker.netlify.app" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Try Your Divorce Angel →</a>
 </section>
+
 <footer>
   <div class="footer-nav-bar">
     <a href="https://divorcetracker.netlify.app"><em>Your Divorce Angel</em></a>
@@ -483,16 +347,10 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     <a href="/community/">Community</a>
   </div>
   <div class="footer-logo-bar">
-    <a href="/"><img class="footer-logo" src="/yda-logo.png" alt="Your Divorce Angel" style="height:72px;"></a>
-    <div class="footer-legal" style="font-size:15px;">Not legal advice. Always consult a licensed attorney.</div>
+    <a href="/"><img class="footer-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+    <div class="footer-legal">Not legal advice. Always consult a licensed attorney.</div>
   </div>
 </footer>
-
-<!-- ASK ANGEL FAB -->
-  <div class="fab-dot"></div>
-</div>
-
-<!-- ANGEL MODAL -->
 
 </body>
 </html>
