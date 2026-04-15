@@ -1,0 +1,80 @@
+[build]
+  publish = "."
+  command = "npm install && node build.js"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/blog/page/1/"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-professional-listings/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/promotions/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/promotions"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/polls/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/polls"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/events/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/events"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/community/*"
+  to = "https://www.facebook.com/groups/3705373593017325"
+  status = 301
+
+[[redirects]]
+  from = "/vendor/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ang-rec/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sign-up"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/resources/*"
+  to = "/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
