@@ -1,3 +1,4 @@
+// build.js - updated April 15 2026
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
