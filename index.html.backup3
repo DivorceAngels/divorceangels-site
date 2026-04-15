@@ -439,10 +439,10 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <section class="bg-blue full-sec" id="community">
   <div class="sec-wrap">
     <div class="comm-inner">
-      <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;">Your Community</p>
-      <div class="comm-badge"><div class="comm-live"></div>44,000+ members &middot; active now</div>
+      <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;text-align:center;">Your Community</p>
+      <div class="comm-badge"><div class="comm-live"></div>42,000+ members &middot; active now</div>
       <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
-      <p style="font-size:19px;color:#4A6070;line-height:1.85;margin-top:12px;">Real conversations happening right now &mdash; 44,000+ people navigating exactly what you're going through.</p>
+      <p style="font-size:19px;color:#4A6070;line-height:1.85;margin-top:12px;">Real conversations happening right now &mdash; 42,000+ people navigating exactly what you're going through.</p>
       <div class="comm-posts">
         <div class="cp"><div class="cp-row"><div class="cp-av">S</div><div class="cp-name">Sarah M.</div><div class="cp-time">2 hours ago</div></div><p class="cp-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay &mdash; more than okay. Sending love to everyone just starting. &#128153;</p><div class="cp-react">&#10084;&#65039; 148 &middot; &#128172; 63 comments</div></div>
         <div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used <em>Your Divorce Angel</em> to prep for my first lawyer meeting. Walked in with the full financial analysis &mdash; my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">&#128077; 89 &middot; &#128172; 31 comments</div></div>
@@ -472,8 +472,10 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </section>
 
 <!-- FOOTER -->
-<section style="background:#6FAACB;padding:48px 40px;text-align:center;">
-  <a href="https://divorcetracker.netlify.app" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Try Your Divorce Angel →</a>
+<section style="background:#6FAACB;padding:56px 40px;text-align:center;">
+  <h2 style="font-size:2rem;color:white;font-weight:400;margin-bottom:8px;font-family:'Cormorant Garamond',Georgia,serif;">Try <em>Your Divorce Angel</em> →</h2>
+  <p style="font-size:16px;color:rgba(255,255,255,.85);font-style:italic;margin-bottom:28px;font-family:'Cormorant Garamond',Georgia,serif;">Start with your financial picture.</p>
+  <a href="https://divorcetracker.netlify.app" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;">Get my financial picture →</a>
 </section>
 <footer>
   <div class="footer-nav-bar">
@@ -483,8 +485,8 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     <a href="/community/">Community</a>
   </div>
   <div class="footer-logo-bar">
-    <a href="/"><img class="footer-logo" src="/yda-logo.png" alt="Your Divorce Angel" style="height:72px;"></a>
-    <div class="footer-legal" style="font-size:15px;">Not legal advice. Always consult a licensed attorney.</div>
+    <a href="/"><img class="footer-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+    <div class="footer-legal">Not legal advice. Always consult a licensed attorney.</div>
   </div>
 </footer>
 
