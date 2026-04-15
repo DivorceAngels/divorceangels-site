@@ -83,7 +83,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .full-sec{width:100%;}
 
 /* ── 6 STEPS ── */
-.steps-inner{max-width:1060px;margin:0 auto;}
+.steps-inner{max-width:1100px;margin:0 auto;}
 .steps-header{text-align:center;margin-bottom:32px;}
 .steps-logo{height:80px;width:auto;object-fit:contain;display:block;margin:0 auto;}
 .steps-wrap{position:relative;margin-bottom:32px;}
@@ -160,7 +160,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .blog-date{font-size:13px;color:#9BAAB5;}
 
 /* ── COMMUNITY ── */
-.comm-inner{max-width:1060px;margin:0 auto;text-align:left;}
+.comm-inner{max-width:760px;margin:0 auto;text-align:left;}
 .comm-badge{display:flex;align-items:center;gap:8px;background:#CFE6F3;color:#2A5A7A;font-size:15px;font-weight:500;padding:8px 20px;border-radius:20px;margin-bottom:22px;}
 .comm-live{width:9px;height:9px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
 .comm-posts{background:white;border-radius:14px;border:1px solid #B8D4E8;overflow:hidden;margin:28px 0;text-align:left;}
@@ -326,7 +326,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <section class="bg-blue full-sec" id="how-it-works">
   <div class="sec-wrap">
     <div class="steps-inner">
-      <div class="steps-header" style="text-align:left;">
+      <div class="steps-header" style="text-align:left;max-width:700px;">
         <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;">How it works</p>
         <h2 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:400;color:#1A2A35;line-height:1.2;margin-bottom:16px;font-family:'Cormorant Garamond',Georgia,serif;">From overwhelmed to <em style="color:#6FAACB;">prepared</em><br>in 6 easy steps</h2>
         <p style="font-size:17px;color:#4a6878;line-height:1.7;margin-bottom:32px;"><em>Your Divorce Angel</em> walks you through everything your lawyer, mediator, or court needs &mdash; all in one place.</p>
