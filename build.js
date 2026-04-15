@@ -105,6 +105,16 @@ footer{background:var(--blue);padding:68px 0 32px}
 }
 
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
+
+/* ── NAV OVERRIDE - forces correct nav on all built pages ── */
+.nav-logo-bar{background:white!important;width:100%!important;padding:14px 40px!important;display:flex!important;align-items:center!important;justify-content:center!important;position:sticky!important;top:0!important;z-index:101!important;border-bottom:1px solid #EDF4F8!important;box-sizing:border-box!important;}
+.nav-logo{height:68px!important;mix-blend-mode:multiply!important;display:block!important;}
+nav.nav{background:#9DCBE4!important;width:100%!important;height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 36px!important;position:sticky!important;top:96px!important;z-index:99!important;border:none!important;}
+nav.nav .nav-links{display:flex!important;gap:36px!important;font-size:17px!important;flex:1!important;justify-content:center!important;align-items:center!important;list-style:none!important;}
+nav.nav .nav-links a{color:white!important;text-decoration:none!important;letter-spacing:.02em!important;font-size:17px!important;}
+nav.nav .nav-links a:hover{color:rgba(255,255,255,.8)!important;}
+.cta-btn{position:fixed!important;top:22px!important;right:32px!important;z-index:200!important;background:#6FAACB!important;color:white!important;font-size:15px!important;font-weight:600!important;padding:10px 22px!important;border-radius:8px!important;text-decoration:none!important;}
+
 </style>`;
 
 const NAV = `<!-- LOGO BAR -->
