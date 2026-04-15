@@ -285,7 +285,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   <div class="hero">
     <div>
       <div class="hero-eyebrow">
-        AI-guided divorce system
+        <em>Your Divorce Angel</em>
       </div>
       <h1>Stop wondering<br>what to do next.<br><em>Your Angel<br>knows.</em></h1>
       <p class="hero-p"><em>Your Divorce Angel</em> is an AI-powered system that organises your complete financial picture, runs real settlement scenarios, and prepares you for every negotiation based on your location. You will spend less on lawyers, know what to fight for, and never agree to something you'll regret.</p>
@@ -439,7 +439,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <section class="bg-blue full-sec" id="community">
   <div class="sec-wrap">
     <div class="comm-inner">
-      <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:14px;text-align:center;">Your Community</p>
       <div class="comm-badge"><div class="comm-live"></div>42,000+ members &middot; active now</div>
       <h2 class="sec-h2">You don't have to <em>do this alone.</em></h2>
       <p style="font-size:19px;color:#4A6070;line-height:1.85;margin-top:12px;">Real conversations happening right now &mdash; 42,000+ people navigating exactly what you're going through.</p>
@@ -456,7 +455,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <section class="bg-white full-sec">
   <div class="sec-wrap">
     <div class="test-header">
-      <div class="sec-eyebrow">What people are saying</div>
+      <div class="sec-eyebrow" style="justify-content:center;">What people are saying</div>
       <h2 class="sec-h2">Real people. <em>Real outcomes.</em></h2>
       <p class="sec-sub" style="margin-top:10px;">From Toronto to Sydney &mdash; people navigating divorce with <em>Your Divorce Angel</em></p>
     </div>
