@@ -160,8 +160,8 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .blog-date{font-size:13px;color:#9BAAB5;}
 
 /* ── COMMUNITY ── */
-.comm-inner{max-width:760px;margin:0 auto;text-align:left;}
-.comm-badge{display:flex;align-items:center;gap:8px;background:#CFE6F3;color:#2A5A7A;font-size:15px;font-weight:500;padding:8px 20px;border-radius:20px;margin-bottom:22px;}
+.comm-inner{max-width:760px;margin:0 auto;text-align:center;}
+.comm-badge{display:inline-flex;align-items:center;gap:8px;background:#CFE6F3;color:#2A5A7A;font-size:15px;font-weight:500;padding:8px 20px;border-radius:20px;margin-bottom:22px;}
 .comm-live{width:9px;height:9px;border-radius:50%;background:#5FC87A;flex-shrink:0;}
 .comm-posts{background:white;border-radius:14px;border:1px solid #B8D4E8;overflow:hidden;margin:28px 0;text-align:left;}
 .cp{padding:18px 22px;border-bottom:1px solid #E8F2F8;}
