@@ -225,7 +225,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
         <p style="font-size:19px;color:#4A6070;line-height:1.85;margin-top:14px;margin-bottom:32px;">Angel isn&rsquo;t a generic chatbot &mdash; she has your complete financial picture, your jurisdiction, your custody arrangement, and your goals. Every answer is specific to your situation.</p>
         <div class="af-list">
           <div class="af">
-            <div class="af-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+            <div class="af-icon">&#9881;</div>
             <div><div class="af-title">Knows your whole situation</div><div class="af-desc">Picks up exactly where you left off &mdash; every answer uses your actual numbers.</div></div>
           </div>
           <div class="af">
@@ -233,7 +233,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
             <div><div class="af-title">Available at 2am</div><div class="af-desc">No judgment. No hourly rate. Ask about the process, your rights, or how you&rsquo;re feeling.</div></div>
           </div>
           <div class="af">
-            <div class="af-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div class="af-icon">&#127758;</div>
             <div><div class="af-title">Jurisdiction-aware</div><div class="af-desc">US, Canada, UK, and Australia &mdash; Angel knows the laws that apply to you.</div></div>
           </div>
         </div>
@@ -247,10 +247,10 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
             <div class="ch-av" style="background:#4A7A9B;"><img src="/wings_white.png" alt="Your Divorce Angel" style="width:100%;height:100%;object-fit:contain;padding:3px;"><div class="ch-dot"></div></div>
             <div><div class="ch-name">Your Divorce Angel</div><div class="ch-status">Live &middot; Ask me anything</div></div>
           </div>
-          <div class="chat-body" id="chatBody">
-            <div class="user-b" id="u0" style="opacity:0;transform:translateY(8px);transition:all 0.4s;">Should I try to keep the house or sell it?</div>
+          <div class="chat-body" id="chatBody" style="min-height:280px;">
+            <div class="user-b" id="u0" style="opacity:0;transform:translateY(8px);transition:all 0.4s;align-self:flex-end;">Should I try to keep the house or sell it?</div>
             <div class="angel-b" id="a0" style="opacity:0;transform:translateY(8px);transition:all 0.5s;"><span id="a0t"></span><span class="chat-cur" id="a0c" style="display:none;"></span></div>
-            <div class="user-b" id="u1" style="opacity:0;transform:translateY(8px);transition:all 0.4s;">My husband says his 401(k) is all his. Is that true?</div>
+            <div class="user-b" id="u1" style="opacity:0;transform:translateY(8px);transition:all 0.4s;align-self:flex-end;">My husband says his 401(k) is all his. Is that true?</div>
             <div class="angel-b" id="a1" style="opacity:0;transform:translateY(8px);transition:all 0.5s;"><span id="a1t"></span><span class="chat-cur" id="a1c" style="display:none;"></span></div>
           </div>
           <div class="chat-sugs" id="chatSugs" style="opacity:0;transition:opacity 0.5s;">
@@ -274,50 +274,50 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </style>
 <script>
 (function(){
-  var chatT=[];
-  function typeHTML(el,text,cur,spd,cb){
+  var T=[];
+  function type(el,text,cur,spd,cb){
     var i=0;
     if(cur)cur.style.display='inline-block';
     function tick(){
-      if(i<=text.length){el.innerHTML=text.substring(0,i);i++;chatT.push(setTimeout(tick,spd));}
+      if(i<=text.length){el.innerHTML=text.substring(0,i);i++;T.push(setTimeout(tick,spd));}
       else{if(cur)cur.style.display='none';if(cb)cb();}
     }
     tick();
   }
-  function show(el){el.style.opacity='1';el.style.transform='translateY(0)';}
+  function show(id){var el=document.getElementById(id);if(el){el.style.opacity='1';el.style.transform='translateY(0)';}}
   function startChat(){
-    chatT.push(setTimeout(function(){
-      show(document.getElementById('u0'));
-      chatT.push(setTimeout(function(){
-        show(document.getElementById('a0'));
-        typeHTML(document.getElementById('a0t'),
+    T.push(setTimeout(function(){
+      show('u0');
+      T.push(setTimeout(function(){
+        show('a0');
+        type(document.getElementById('a0t'),
           '<strong style="color:#6FAACB">Selling puts you $57,500 ahead</strong> of a buyout. With your income, carrying the mortgage alone would consume 68% of your take-home. I’d fight for the sale and redirect that equity toward your retirement gap.',
           document.getElementById('a0c'),14,function(){
-            chatT.push(setTimeout(function(){
-              show(document.getElementById('u1'));
-              chatT.push(setTimeout(function(){
-                show(document.getElementById('a1'));
-                typeHTML(document.getElementById('a1t'),
-                  'No. Contributions made during the marriage are <strong style="color:#6FAACB">marital property</strong> in every US state. Based on your entries, you’re entitled to approximately <strong style="color:#6FAACB">$74,000</strong>. This is secured through a QDRO — don’t leave this on the table.',
-                  document.getElementById('a1c'),14,function(){
-                    chatT.push(setTimeout(function(){
-                      document.getElementById('chatSugs').style.opacity='1';
-                      document.getElementById('chatInp').style.opacity='1';
-                    },400));
-                  }
-                );
-              },500));
-            },600));
-          }
-        );
+          T.push(setTimeout(function(){
+            show('u1');
+            T.push(setTimeout(function(){
+              show('a1');
+              type(document.getElementById('a1t'),
+                'No. Contributions made during the marriage are <strong style="color:#6FAACB">marital property</strong> in every US state. Based on your entries, you’re entitled to approximately <strong style="color:#6FAACB">$74,000</strong>. This is secured through a QDRO — don’t leave this on the table.',
+                document.getElementById('a1c'),14,function(){
+                T.push(setTimeout(function(){
+                  var s=document.getElementById('chatSugs');if(s)s.style.opacity='1';
+                  var inp=document.getElementById('chatInp');if(inp)inp.style.opacity='1';
+                },400));
+              });
+            },500));
+          },600));
+        });
       },600));
     },800));
   }
-  var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){startChat();obs.disconnect();}});
-  },{threshold:0.3});
   var frame=document.getElementById('chatFrame');
-  if(frame)obs.observe(frame);
+  if(frame){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){startChat();obs.disconnect();}});
+    },{threshold:0.3});
+    obs.observe(frame);
+  }
 })();
 </script>
 
