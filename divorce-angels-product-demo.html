@@ -8,25 +8,23 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--b:#4A7B94;--bl:#EDF4F8;--bm:#B5D4E8;--dk:#1A2A35;--ds:#2D4A5C;--wr:#D4956B;--gn:#5BA67D;--rd:#B94040;--bg:#f5f8fa}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--dk);font-size:13px;line-height:1.5;background:transparent}
+html,body{background:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--dk);font-size:13px;line-height:1.5}
 .demo-wrap{max-width:100%;margin:0 auto;padding:0;font-family:'Cormorant Garamond',Georgia,serif}
-.site-card{background:#E8F4FA;border-radius:16px;border:1px solid #B8D4E8;padding:28px 20px 20px;position:relative;overflow:hidden}
+.site-card{background:#E8F4FA;border-radius:16px;border:1px solid #B8D4E8;padding:18px 18px 14px;position:relative;overflow:hidden}
 .site-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--b)}
-.demo-hdr{text-align:center;margin-bottom:14px}
-.demo-ey{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#6FAACB;font-weight:600;margin-bottom:6px}
+.demo-hdr{text-align:center;margin-bottom:12px}
 .demo-h1{font-size:28px;font-weight:400;color:var(--dk);line-height:1.25}
 .demo-h1 em{color:#6FAACB;font-style:italic}
-.nav-strip{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:12px}
+.nav-strip{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px}
 .nav-step{font-size:14px;font-weight:500;color:var(--dk);background:white;padding:6px 18px;border-radius:20px;border:1px solid #B8D4E8;min-width:200px;text-align:center}
-.nav-arrow{width:34px;height:34px;border-radius:50%;background:white;border:1px solid #B8D4E8;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--b);cursor:pointer;flex-shrink:0;transition:background .2s}
-.nav-arrow:hover{background:#f0f7fb}
 .frame{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden}
 .topbar{background:var(--b);padding:7px 16px;display:flex;align-items:center;justify-content:space-between}
 .topbar-t{color:#fff;font-size:15px;font-weight:500}
 .topbar-u{color:rgba(255,255,255,.8);font-size:12px;display:flex;align-items:center;gap:5px}
 .topbar-av{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600}
-.body{background:#fff;padding:16px;min-height:400px;position:relative}
-.panel{position:absolute;top:16px;left:16px;right:16px;bottom:16px;opacity:0;pointer-events:none;transition:opacity .5s}
+.body{background:#fff;padding:16px;min-height:460px;position:relative}
+.panel{position:absolute;top:16px;left:16px;right:16px;bottom:16px;opacity:0;pointer-events:none;transition:opacity .5s;overflow:hidden}
 .panel.vis{opacity:1;pointer-events:auto}
 .p-title{font-size:16px;font-weight:500;color:var(--dk);margin-bottom:3px}
 .p-desc{font-size:13px;color:#6a8fa5;margin-bottom:8px;font-style:italic}
@@ -110,10 +108,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:va
 .anl-cta.pop{opacity:1;transform:scale(1)}
 .progress-bar{height:3px;background:rgba(74,123,148,.12);margin-top:10px;border-radius:2px;overflow:hidden}
 .progress-fill{height:100%;width:0%;background:var(--b);transition:width linear}
-.controls{display:flex;justify-content:center;gap:6px;margin-top:8px}
-.controls button{background:white;border:1px solid #B8D4E8;color:var(--b);font-size:12px;padding:5px 14px;border-radius:6px;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:500;transition:all .2s}
-.controls button:hover{background:#f0f7fb}
-.controls button.act{background:var(--dk);color:#fff;border-color:var(--dk)}
 .disclaimer{text-align:center;font-size:11px;color:#8ca8b8;margin-top:8px;font-style:italic}
 </style>
 </head>
@@ -135,7 +129,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:va
 <div class="panel" id="p9"><div class="p-title" style="text-align:center;margin-top:4px">Ask Angel anything</div><div class="p-desc" style="text-align:center">Angel knows your entire file. No judgment. No hourly rate.</div><div style="display:flex;flex-direction:column;gap:5px;margin-top:8px"><div class="ch-u" id="q0">Should I keep the house or sell?</div><div class="ch-a" id="a0"><strong>Selling puts you $57,500 ahead.</strong> Carrying the mortgage alone would consume 68% of take-home. I'd recommend the sale and redirecting equity toward your retirement gap.</div><div class="ch-u" id="q1">Is his 401(k) really all his?</div><div class="ch-a" id="a1">No. Contributions during marriage are <strong>marital property</strong> in Florida. You're entitled to approx. <strong>$74,000</strong> via a QDRO &mdash; don't leave it on the table.</div><div class="ch-u" id="q2">What should I ask my lawyer first?</div><div class="ch-a" id="a2"><strong>1)</strong> How will the HELOC be handled? <strong>2)</strong> Timeline for a QDRO? <strong>3)</strong> Should we get an independent appraisal? Full list is in your Negotiation Prep.</div></div></div>
 </div></div>
 <div class="progress-bar"><div class="progress-fill" id="pf"></div></div>
-<button id="ppb" class="act" onclick="tp()">Pause</button><button onclick="restart()">Replay</button><button onclick="sk(-1)">&#8592; Prev</button><button onclick="sk(1)">Next &#8594;</button></div>
 <div class="disclaimer">Example data &mdash; Cindy, Florida &middot; 18.8-year marriage &middot; 1 child</div>
 </div></div>
 <script>
@@ -176,14 +169,10 @@ function run5(){show(5);Q(function(){document.getElementById('gb5').classList.ad
 function run6(){show(6);Q(function(){document.getElementById('gb6').classList.add('pop');},200);Q(function(){document.getElementById('pr0').classList.add('pop');},700);Q(function(){document.getElementById('pr1').classList.add('pop');},3200);Q(function(){document.getElementById('pr2').classList.add('pop');},5200);Q(function(){document.getElementById('strat').classList.add('pop');},8500);Q(next,durs[6]);}
 function run7(){show(7);for(var i=0;i<9;i++){(function(i){Q(function(){document.getElementById('d'+i).classList.add('pop');},i*200);})(i);}Q(function(){document.getElementById('dfill').style.width='7%';},2000);Q(next,durs[7]);}
 function run8(){show(8);['tg0','tg1','tg2','tg3','tg4'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*180);});Q(function(){document.getElementById('upz').classList.add('pop');},1100);Q(function(){document.getElementById('ab8').classList.add('pop');var txt='Upload your separation agreement and I\'ll highlight what\'s <strong>fair vs. unfair</strong> based on your numbers, flag anything you might be <strong>giving up too much</strong> on, and generate questions for your lawyer.';var el=document.getElementById('at8');el.innerHTML='';var plain=txt.replace(/<[^>]+>/g,''),ci=0;var iv=setInterval(function(){ci++;var out='',count=0,inTag=false,buf='';for(var j=0;j<txt.length;j++){if(txt[j]==='<'){inTag=true;buf+=txt[j];continue;}if(inTag){buf+=txt[j];if(txt[j]==='>'){inTag=false;out+=buf;buf='';}continue;}count++;if(count<=ci)out+=txt[j];else break;}el.innerHTML=out;if(ci>=plain.length)clearInterval(iv);},16);},2200);Q(next,durs[8]);}
-function run9(){show(9);Q(function(){document.getElementById('q0').classList.add('pop');},200);Q(function(){document.getElementById('a0').classList.add('pop');},700);Q(function(){document.getElementById('q1').classList.add('pop');},2400);Q(function(){document.getElementById('a1').classList.add('pop');},2900);Q(function(){document.getElementById('q2').classList.add('pop');},4800);Q(function(){document.getElementById('a2').classList.add('pop');},5300);}
+function run9(){show(9);Q(function(){document.getElementById('q0').classList.add('pop');},200);Q(function(){document.getElementById('a0').classList.add('pop');},700);Q(function(){document.getElementById('q1').classList.add('pop');},2400);Q(function(){document.getElementById('a1').classList.add('pop');},2900);Q(function(){document.getElementById('q2').classList.add('pop');},4800);Q(function(){document.getElementById('a2').classList.add('pop');},5300);Q(function(){step=-1;resetAll();next();},durs[9]);}
 var runners=[run0,run1,run2,run3,run4,run5,run6,run7,run8,run9];
-function next(){if(!playing||step>=N-1)return;step++;runTimer();runners[step]();}
+function next(){if(!playing)return;if(step>=N-1){step=-1;resetAll();}step++;runTimer();runners[step]();}
 function runTimer(){var t=document.getElementById('pf'),el=0;for(var i=0;i<step;i++)el+=durs[i];var tot=0;for(var i=0;i<N;i++)tot+=durs[i];t.style.transition='none';t.style.width=Math.round(el/tot*100)+'%';t.offsetHeight;t.style.transition='width '+durs[step]+'ms linear';t.style.width=Math.round((el+durs[step])/tot*100)+'%';}
-function jumpTo(n){clr();resetAll();step=n;if(playing){runTimer();runners[n]();}else{show(n);}}
-function sk(dir){jumpTo(Math.max(0,Math.min(N-1,step+dir)));}
-function tp(){playing=!playing;document.getElementById('ppb').textContent=playing?'Pause':'Play';document.getElementById('ppb').classList.toggle('act',playing);if(!playing){clr();document.getElementById('pf').style.transition='none';}else jumpTo(step);}
-function restart(){playing=true;document.getElementById('ppb').textContent='Pause';document.getElementById('ppb').classList.add('act');clr();resetAll();step=0;runTimer();runners[0]();}
 setTimeout(function(){runTimer();runners[0]();},600);
 </script>
 </body>
