@@ -62,7 +62,7 @@ const SHARED_CSS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 html{scroll-behavior:smooth}
 body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:var(--ink);font-size:20px;line-height:1.8;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.2}
+h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.2}
 h1{font-size:clamp(2.2rem,4vw,3rem)}h2{font-size:clamp(1.8rem,3vw,2.5rem)}h3{font-size:1.4rem}
 p{color:var(--ink-m);line-height:1.75;font-size:1rem}
 .container{max-width:1060px;margin:0 auto;padding:0 48px}
