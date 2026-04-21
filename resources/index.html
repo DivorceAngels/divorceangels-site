@@ -16,20 +16,20 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.2}
 p{color:var(--ink-m);line-height:1.75}
 .container{max-width:1160px;margin:0 auto;padding:0 52px}
-nav{position:sticky;top:0;z-index:100;background:rgba(242,247,244,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:168px;max-width:1160px;margin:0 auto;padding:0 52px}
-.nav-logo{display:flex;align-items:center;}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:0.87rem;transition:color 0.2s}
-.nav-links a:hover,.nav-links a.active{font-weight:500}
-.nav-cta{font-size:0.82rem;font-weight:500;background:var(--g5);color:white;padding:9px 20px;border-radius:8px;white-space:nowrap}
-#menu-btn{display:none;background:none;border:none;cursor:pointer;color:var(--ink);font-size:1.3rem}
-#mobile-nav{display:none;position:fixed;top:168px;left:0;right:0;background:var(--g0);border-bottom:1px solid var(--bdr);z-index:99;flex-direction:column;padding:20px 28px;gap:16px}
-#mobile-nav a{font-size:0.95rem;font-weight:500;color:var(--ink)}
+
+
+
+
+
+
+
+
+#mobile-
+
 .page-hero{background:var(--g0);padding:72px 0 60px;border-bottom:1px solid var(--bdr)}
 .eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--g4);display:flex;align-items:center;gap:8px;margin-bottom:16px}
 .eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--g4)}
-.cat-nav{background:white;border-bottom:1px solid var(--bdr);position:sticky;top:168px;z-index:50}
+.cat-
 .cat-nav-inner{display:flex;max-width:1160px;margin:0 auto;padding:0 52px;overflow-x:auto}
 .cat-nav-link{font-size:0.85rem;font-weight:500;color:var(--ink-l);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:all 0.2s}
 .cat-nav-link:hover,.cat-nav-link.active{color:var(--g5);border-bottom-color:var(--g5)}
@@ -76,7 +76,7 @@ footer{background:var(--blue);padding:68px 0 32px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .footer-bottom-txt{font-size:0.74rem;color:rgba(255,255,255,0.3)}
 @media(max-width:900px){.product-grid{grid-template-columns:1fr 1fr}.book-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:860px){.container{padding:0 28px}.nav-inner{padding:0 28px}.nav-links{display:none}#menu-btn{display:block}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:860px){.container{padding:0 28px}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
 @media(max-width:600px){.product-grid{grid-template-columns:1fr}.book-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}}
 
 @media(max-width:768px){
@@ -95,13 +95,22 @@ footer{background:var(--blue);padding:68px 0 32px}
 
 /* ── NAV (injected) ── */
 .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
-.nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
-.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
-.nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;}
-.nav-links a{color:white!important;text-decoration:none!important;letter-spacing:.02em!important;opacity:1!important;}
-.nav-links a:hover{color:rgba(255,255,255,.8);}
+
+.
+
+
+
 .cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}
 .cta-btn:hover{background:#5A9ABB;}
+
+/* ── CORRECT NAV ── */
+.nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
+.nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
+nav.nav{background:#9DCBE4 !important;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:96px;z-index:99;border:none !important;}
+nav.nav .nav-links{display:flex !important;gap:36px;font-size:19px;flex:1;justify-content:center;align-items:center;list-style:none;}
+nav.nav .nav-links a{color:white !important;font-size:19px !important;font-weight:400;text-decoration:none;letter-spacing:.02em;}
+nav.nav .nav-links a:hover{color:rgba(255,255,255,.8) !important;}
+.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.15);}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
@@ -123,10 +132,10 @@ h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;}
 </style>
 <style>
 .nav-logo-bar{background:white!important;width:100%!important;padding:14px 40px!important;display:flex!important;align-items:center!important;justify-content:center!important;position:sticky!important;top:0!important;z-index:101!important;border-bottom:1px solid #EDF4F8!important;}
-.nav-logo{height:68px!important;mix-blend-mode:multiply!important;display:block!important;}
-nav.nav{background:#9DCBE4!important;width:100%!important;height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 36px!important;position:sticky!important;top:96px!important;z-index:99!important;border:none!important;}
-nav.nav .nav-links{display:flex!important;gap:36px!important;font-size:17px!important;flex:1!important;justify-content:center!important;align-items:center!important;}
-nav.nav .nav-links a{color:white!important;font-size:17px!important;font-weight:400!important;}
+
+nav.
+nav.nav 
+nav.nav 
 .cta-btn{position:fixed!important;top:22px!important;right:32px!important;z-index:200!important;background:#6FAACB!important;color:white!important;font-size:15px!important;font-weight:600!important;padding:10px 22px!important;border-radius:8px!important;}
 </style>
 </head>
