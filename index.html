@@ -320,16 +320,103 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
       </div>
       <div style="text-align:right;margin-top:8px;"><a href="/blog" style="font-size:16px;font-style:italic;color:#6FAACB;text-decoration:none;">View all articles →</a></div>
     </div>
-    <div class="blog-grid">
-      <a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt="" onerror="this.style.background='#CFE6F3';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child's Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a>
-      <a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/"><img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt="" onerror="this.style.background='#B8D4E8';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div></a>
-      <a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/"><img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt="" onerror="this.style.background='#D4E8D4';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce &mdash; Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div></a>
-      <a class="blog-card" href="/what-happens-to-kids-during-divorce/"><img class="blog-img" src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?w=800&q=80&fit=crop" alt="" onerror="this.style.background='#CFE6F3';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Emotional</div><div class="blog-title">What Happens to Kids During Divorce</div><div class="blog-date">March 28, 2026</div></div></a>
-      <a class="blog-card" href="/starting-fresh-why-trying-new-activities-after-divorce-can-help-you-heal/"><img class="blog-img" src="/images/starting-fresh.jpg" alt="" onerror="this.style.background='#E8D4C8';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Life After</div><div class="blog-title">Starting Fresh: Why New Activities After Divorce Help You Heal</div><div class="blog-date">March 14, 2026</div></div></a>
-      <a class="blog-card" href="/five-natural-tips-and-supplements-to-ease-anxiety-during-a-divorce/"><img class="blog-img" src="/images/anxiety.jpg" alt="" onerror="this.style.background='#D4C8E8';this.removeAttribute('src')"><div class="blog-body"><div class="blog-tag">Wellness</div><div class="blog-title">Five Natural Tips to Ease Anxiety During Your Divorce</div><div class="blog-date">February 28, 2026</div></div></a>
+    <div class="blog-grid" id="blogGrid">
+      <!-- Populated dynamically from _posts/ via GitHub API -->
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  var REPO = 'DivorceAngels/divorceangels-site';
+  var BRANCH = 'main';
+  var POSTS_FOLDER = '_posts';
+  var MAX_POSTS = 6;
+  var FALLBACK_BG = ['#CFE6F3','#B8D4E8','#D4E8D4','#CFE6F3','#E8D4C8','#D4C8E8'];
+
+  var grid = document.getElementById('blogGrid');
+  if (!grid) return;
+
+  function esc(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  function parseFrontmatter(text){
+    var m = text.match(/^---\s*\n([\s\S]*?)\n---/);
+    if (!m) return {};
+    var out = {};
+    m[1].split('\n').forEach(function(line){
+      var i = line.indexOf(':');
+      if (i === -1) return;
+      var key = line.slice(0, i).trim();
+      var val = line.slice(i+1).trim().replace(/^["']|["']$/g, '');
+      out[key] = val;
+    });
+    return out;
+  }
+
+  function formatDate(d){
+    var dt = new Date(d);
+    if (isNaN(dt)) return '';
+    return dt.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+  }
+
+  function slugFromFilename(name){
+    // Filenames look like: 2026-04-21-my-post-title.md
+    return name.replace(/\.md$/,'').replace(/^\d{4}-\d{1,2}-\d{1,2}-/, '');
+  }
+
+  function render(posts){
+    if (!posts.length){ grid.innerHTML = '<p style="color:#9BAAB5;">No posts yet.</p>'; return; }
+    grid.innerHTML = posts.map(function(p, idx){
+      var bg = FALLBACK_BG[idx % FALLBACK_BG.length];
+      var img = p.cover_image
+        ? '<img class="blog-img" src="'+esc(p.cover_image)+'" alt="" onerror="this.style.background=\''+bg+'\';this.removeAttribute(\'src\')">'
+        : '<div class="blog-img" style="background:'+bg+';"></div>';
+      return '<a class="blog-card" href="/'+esc(p.slug)+'/">'
+        + img
+        + '<div class="blog-body">'
+        + (p.category ? '<div class="blog-tag">'+esc(p.category)+'</div>' : '')
+        + '<div class="blog-title">'+esc(p.title)+'</div>'
+        + '<div class="blog-date">'+esc(formatDate(p.date))+'</div>'
+        + '</div></a>';
+    }).join('');
+  }
+
+  fetch('https://api.github.com/repos/'+REPO+'/contents/'+POSTS_FOLDER+'?ref='+BRANCH)
+    .then(function(r){ if(!r.ok) throw new Error('list'); return r.json(); })
+    .then(function(files){
+      files = files.filter(function(f){ return f.name && f.name.match(/\.md$/i); });
+      // Sort filenames descending (newest first) — works because of YYYY-MM-DD- prefix
+      files.sort(function(a,b){ return a.name < b.name ? 1 : -1; });
+      files = files.slice(0, MAX_POSTS);
+      return Promise.all(files.map(function(f){
+        return fetch(f.download_url)
+          .then(function(r){ return r.text(); })
+          .then(function(text){
+            var fm = parseFrontmatter(text);
+            return {
+              slug: slugFromFilename(f.name),
+              title: fm.title || slugFromFilename(f.name),
+              date: fm.date || f.name.slice(0,10),
+              category: fm.category || '',
+              cover_image: fm.cover_image || ''
+            };
+          });
+      }));
+    })
+    .then(function(posts){
+      // Final sort by date descending (in case frontmatter dates differ from filename)
+      posts.sort(function(a,b){ return new Date(b.date) - new Date(a.date); });
+      render(posts);
+    })
+    .catch(function(err){
+      console.error('Blog list failed, using fallback:', err);
+      // Fallback to the existing hard-coded list so the page never shows empty
+      grid.innerHTML = '<a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt="" onerror="this.style.background=\'#CFE6F3\';this.removeAttribute(\'src\')"><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child\'s Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a>'
+        + '<a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/"><img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt="" onerror="this.style.background=\'#B8D4E8\';this.removeAttribute(\'src\')"><div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div></a>'
+        + '<a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/"><img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt="" onerror="this.style.background=\'#D4E8D4\';this.removeAttribute(\'src\')"><div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce — Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div></a>';
+    });
+})();
+</script>
 
 <!-- 5. COMMUNITY -->
 <section class="bg-blue full-sec" id="community">
