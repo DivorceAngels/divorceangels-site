@@ -70,7 +70,7 @@ p{color:var(--ink-m);line-height:1.75;font-size:1rem}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
 .nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
 .nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;}
-.nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
+.nav-links a{color:white!important;text-decoration:none!important;letter-spacing:.02em!important;opacity:1!important;}
 .nav-links a:hover{color:rgba(255,255,255,.8);}
 .cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}
 .cta-btn:hover{background:#5A9ABB;}
