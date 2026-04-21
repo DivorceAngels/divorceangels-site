@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — Divorce Angels</title>
+<meta name="description" content="Join 44,000+ people navigating divorce in our Facebook community. Real conversations, real support, real people who understand what you're going through.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A35;font-size:18px;line-height:1.8;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+.container{max-width:1160px;margin:0 auto;padding:0 52px;}
+
+
+
+.da-nav-menu a{color:white;text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;letter-spacing:.02em;}
+
+.page-hero{background:#EDF4F8;padding:72px 0 56px;border-bottom:1px solid #D5E8F0;}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before,.eyebrow::after{content:'';display:inline-block;width:28px;height:1px;background:#6FAACB;}
+h1{font-size:clamp(2rem,4vw,2.8rem);color:#1A2A35;line-height:1.2;margin-bottom:16px;font-weight:400;}
+h2{font-size:1.8rem;color:#1A2A35;line-height:1.2;margin-bottom:16px;}
+.stats-bar{background:#CFE6F3;padding:48px 0;border-bottom:1px solid #D5E8F0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.stat-item{text-align:center;padding:0 24px;border-right:1px solid #9DCBE4;}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-size:2.4rem;font-weight:400;color:#1A3A4F;display:block;}
+.stat-lbl{font-size:0.85rem;color:#6A8A9F;margin-top:4px;}
+.section{padding:72px 0;}
+.comment-card{background:white;border:1px solid #D5E8F0;border-radius:14px;padding:28px 32px;margin-bottom:20px;}
+.comment-avatar{width:40px;height:40px;border-radius:50%;background:#6FAACB;color:white;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0;}
+.comment-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.comment-name{font-weight:600;color:#1A2A35;font-size:15px;}
+.comment-time{font-size:13px;color:#6A8A9F;}
+.comment-text{font-size:16px;color:#2A4A5F;line-height:1.75;}
+.comment-likes{font-size:13px;color:#6A8A9F;margin-top:12px;}
+.fb-btn{display:inline-flex;align-items:center;gap:10px;background:#6FAACB;color:white;padding:14px 28px;border-radius:10px;font-size:16px;font-weight:600;margin-top:32px;}
+.sec-eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;}
+footer{background:#4a7fa5;padding:48px 0 28px;}
+footer a{color:rgba(255,255,255,.6);}
+footer a:hover{color:white;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+@media(max-width:768px){
+  
+  
+  
+  
+  .da-nav-menu a{font-size:14px;}
+  .container{padding:0 24px;}
+  .page-hero{padding:48px 0 36px;}
+  h1{font-size:1.8rem!important;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .stat-item{border-right:none;border-bottom:1px solid #9DCBE4;padding:16px 0;}
+  .fb-btn{width:100%;justify-content:center;}
+}
+@media(max-width:480px){
+  
+  .stats-grid{grid-template-columns:1fr;}
+  h1{font-size:1.5rem!important;}
+}
+
+/* ── NAV (injected) ── */
+.nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
+.nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
+.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
+.nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;}
+.nav-links a{color:white!important;text-decoration:none!important;letter-spacing:.02em!important;opacity:1!important;}
+.nav-links a:hover{color:rgba(255,255,255,.8);}
+.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.cta-btn:hover{background:#5A9ABB;}
+</style>
+<style>
+.nav-logo-bar{background:white!important;width:100%!important;padding:14px 40px!important;display:flex!important;align-items:center!important;justify-content:center!important;position:sticky!important;top:0!important;z-index:101!important;border-bottom:1px solid #EDF4F8!important;}
+.nav-logo{height:68px!important;mix-blend-mode:multiply!important;display:block!important;}
+nav.nav{background:#9DCBE4!important;width:100%!important;height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 36px!important;position:sticky!important;top:96px!important;z-index:99!important;border:none!important;}
+nav.nav .nav-links{display:flex!important;gap:36px!important;font-size:17px!important;flex:1!important;justify-content:center!important;align-items:center!important;}
+nav.nav .nav-links a{color:white!important;font-size:17px!important;font-weight:400!important;}
+.cta-btn{position:fixed!important;top:22px!important;right:32px!important;z-index:200!important;background:#6FAACB!important;color:white!important;font-size:15px!important;font-weight:600!important;padding:10px 22px!important;border-radius:8px!important;}
+</style>
+</head>
+<body>
+<!-- LOGO BAR -->
+<div class="nav-logo-bar">
+  <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+</div>
+<!-- NAV -->
+<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started &#8594;</a>
+<nav class="nav">
+  <div class="nav-links">
+    <a href="https://divorcetracker.netlify.app" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
+    <a href="/blog/">Blog</a>
+    <a href="/resources/">Resources</a>
+    <a href="/community/">Community</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">44,000+ Members</div>
+    <h1>You don't have to do this <em>alone.</em></h1>
+    <p style="max-width:520px;color:#2A4A5F;font-size:1rem;margin-bottom:8px;">Real conversations, real support, real people who understand exactly what you're going through. Join our Facebook community and find your people.</p>
+    <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" class="fb-btn">
+      Join Divorce Angels Community →
+    </a>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><span class="stat-num">44,000+</span><div class="stat-lbl">community members</div></div>
+      <div class="stat-item"><span class="stat-num">Active</span><div class="stat-lbl">every single day</div></div>
+      <div class="stat-item"><span class="stat-num">Free</span><div class="stat-lbl">always & forever</div></div>
+      <div class="stat-item"><span class="stat-num">Private</span><div class="stat-lbl">safe & supportive</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="sec-eyebrow">From the community</div>
+    <h2>What people are <em>saying</em></h2>
+    <div style="margin-top:36px;">
+      <div class="comment-card">
+        <div class="comment-meta">
+          <div class="comment-avatar">S</div>
+          <div><div class="comment-name">Sarah M.</div><div class="comment-time">2 hours ago</div></div>
+        </div>
+        <div class="comment-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay — more than okay. Sending love to everyone just starting. 💙❤️</div>
+        <div class="comment-likes">148 · 💬 63 comments</div>
+      </div>
+      <div class="comment-card">
+        <div class="comment-meta">
+          <div class="comment-avatar">R</div>
+          <div><div class="comment-name">Rachel B.</div><div class="comment-time">5 hours ago</div></div>
+        </div>
+        <div class="comment-text">Used Your Divorce Angel to prep for my first lawyer meeting. Walked in with the full financial analysis — my lawyer said it was the most prepared she'd ever seen a client.</div>
+        <div class="comment-likes">89 · 💬 31 comments</div>
+      </div>
+      <div class="comment-card">
+        <div class="comment-meta">
+          <div class="comment-avatar">M</div>
+          <div><div class="comment-name">Michelle T.</div><div class="comment-time">Yesterday</div></div>
+        </div>
+        <div class="comment-text">Finally felt understood for the first time in months. This group has been my lifeline. Nobody gets it like the people in here do. Thank you all. 🙏</div>
+        <div class="comment-likes">214 · 💬 47 comments</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://www.facebook.com/groups/3705373593017325" target="_blank" class="fb-btn">Join Divorce Angels Community →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.4rem;color:white;margin-bottom:10px;">Divorce Angels</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;max-width:260px;">Real guidance for real people navigating one of life's hardest transitions.</p>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Content</div>
+        <div style="display:flex;flex-direction:column;gap:10px;"><a href="/blog/">Blog</a><a href="/">Ask Angel</a></div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Community</div>
+        <div style="display:flex;flex-direction:column;gap:10px;"><a href="https://www.facebook.com/groups/3705373593017325" target="_blank">Facebook Group</a></div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Tools</div>
+        <div style="display:flex;flex-direction:column;gap:10px;"><a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a></div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="font-size:0.74rem;color:rgba(255,255,255,0.3);">© 2026 Divorce Angels. All rights reserved.</div>
+      <div style="font-size:0.74rem;color:rgba(255,255,255,0.3);">Not legal advice. Always consult a licensed attorney.</div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
