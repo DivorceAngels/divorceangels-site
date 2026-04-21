@@ -64,7 +64,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:var(--
 img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.2}
 h1{font-size:clamp(2.2rem,4vw,3rem)}h2{font-size:clamp(1.8rem,3vw,2.5rem)}h3{font-size:1.4rem}
-p{color:var(--ink-m);line-height:1.75;font-size:1rem}
+p{color:var(--ink-m);line-height:1.75;font-size:19px;font-family:'Cormorant Garamond',Georgia,serif}
 .container{max-width:1060px;margin:0 auto;padding:0 48px}
 .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
