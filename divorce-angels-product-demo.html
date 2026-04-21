@@ -26,7 +26,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dk);font-size:13
 .panel-meta{margin-top:12px;padding-top:12px;border-top:1px solid var(--hr);display:flex;gap:14px;font-size:11px;color:var(--tx);letter-spacing:.2px;font-family:-apple-system,sans-serif;font-weight:500;flex-wrap:wrap}
 .panel-meta span{display:flex;align-items:center;gap:4px}
 .body{position:relative;min-height:440px}
-.panel{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;pointer-events:none;transition:opacity .5s;overflow:hidden;display:flex;flex-direction:column}
+.panel{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;pointer-events:none;transition:opacity .3s;overflow:hidden;display:flex;flex-direction:column}
 .panel.vis{opacity:1;pointer-events:auto}
 .panel-body{padding:18px 24px 22px;flex:1;overflow:hidden}
 .sect-l{font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--b);margin-bottom:8px;margin-top:14px;font-family:-apple-system,sans-serif}
@@ -76,6 +76,26 @@ body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dk);font-size:13
 .warn{font-size:12px;padding:8px 12px;background:var(--wrbg);border-left:3px solid var(--wr);color:#8B5E3C;margin-top:12px;opacity:0;transition:opacity .4s;font-family:'Cormorant Garamond',serif;line-height:1.5;border-radius:0 4px 4px 0}
 .warn.pop{opacity:1}
 .warn strong{font-weight:600}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:4px}
+.sco-card{background:#fff;border:1px solid var(--hr);border-radius:10px;overflow:hidden;opacity:0;transform:translateY(6px);transition:all .45s;display:flex;flex-direction:column;position:relative}
+.sco-card.pop{opacity:1;transform:translateY(0)}
+.sco-card.best{border-color:var(--b)}
+.sco-hdr{background:var(--bl);padding:14px 14px 12px;position:relative;color:#fff}
+.sco-hdr .sco-label{font-size:9px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;opacity:.75;margin-bottom:2px;font-family:-apple-system,sans-serif}
+.sco-hdr .sco-name{font-size:15px;font-weight:500;font-family:'Cormorant Garamond',serif;letter-spacing:.2px;display:flex;align-items:center;gap:6px}
+.sco-hdr .sco-emoji{font-size:16px}
+.sco-badge{position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#fff;color:var(--b);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:10px;border:1px solid var(--b);font-family:-apple-system,sans-serif;white-space:nowrap}
+.sco-body{padding:11px 14px 12px;background:#fff}
+.sco-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid var(--hr);gap:6px}
+.sco-row:last-child{border-bottom:none}
+.sco-key{font-size:11px;color:var(--tx);font-family:-apple-system,sans-serif;font-weight:500;letter-spacing:.1px}
+.sco-val{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;color:var(--dk);white-space:nowrap;letter-spacing:-.1px}
+.sco-val.hi{color:var(--b)}
+.sco-val.rd{color:var(--rd)}
+.sco-desc{padding:9px 14px 10px;font-size:11.5px;line-height:1.5;color:var(--ds);font-family:'Cormorant Garamond',serif;border-top:1px solid var(--hr);background:#fff}
+.sco-take{padding:10px 14px 12px;background:var(--bg);border-top:1px solid var(--hr)}
+.sco-take-h{font-size:9px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--b);margin-bottom:4px;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:4px}
+.sco-take-p{font-size:11.5px;line-height:1.5;color:var(--dk);font-family:'Cormorant Garamond',serif}
 .gbtn{display:inline-block;background:var(--b);color:#fff;padding:6px 14px;border-radius:6px;font-size:11px;font-weight:500;margin-bottom:14px;opacity:0;transform:scale(.95);transition:all .4s;letter-spacing:.3px;font-family:-apple-system,sans-serif}
 .gbtn.pop{opacity:1;transform:scale(1)}
 .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -226,28 +246,61 @@ body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dk);font-size:13
   <div class="panel-hdr">
     <div class="panel-step-label">Step 3 of 6</div>
     <div class="panel-title">Settlement scenarios</div>
-    <div class="panel-subtitle">Real estate analyzer &mdash; keep vs. sell.</div>
+    <div class="panel-subtitle">Three realistic outcomes &mdash; compared side by side.</div>
   </div>
   <div class="panel-body">
-    <div class="tabs">
-      <div class="tab">Assets</div>
-      <div class="tab">Child support</div>
-      <div class="tab">Spousal</div>
-      <div class="tab on">Real estate</div>
+    <div class="scenarios-grid">
+      <div class="sco-card" id="sc-a">
+        <div class="sco-hdr">
+          <div class="sco-label">Scenario A</div>
+          <div class="sco-name"><span class="sco-emoji">&#9878;</span> Equal Split</div>
+        </div>
+        <div class="sco-body">
+          <div class="sco-row"><span class="sco-key">Asset Share</span><span class="sco-val">$380,000</span></div>
+          <div class="sco-row"><span class="sco-key">Net Position</span><span class="sco-val hi">$215,800</span></div>
+        </div>
+        <div class="sco-desc">All marital assets divided equally. Joint debts split 50/50. The court's default starting position.</div>
+        <div class="sco-take">
+          <div class="sco-take-h"><span>&#10022;</span> Angel&rsquo;s take</div>
+          <div class="sco-take-p">50/50 is the baseline, not the final answer. With an 18.8-year marriage and a large income gap, there may be grounds to argue for more.</div>
+        </div>
+      </div>
+
+      <div class="sco-card best" id="sc-b">
+        <div class="sco-hdr">
+          <div class="sco-badge">Strongest net position</div>
+          <div class="sco-label">Scenario B</div>
+          <div class="sco-name"><span class="sco-emoji">&#127968;</span> You keep the Home</div>
+        </div>
+        <div class="sco-body">
+          <div class="sco-row"><span class="sco-key">Asset Share</span><span class="sco-val">$633,000</span></div>
+          <div class="sco-row"><span class="sco-key">Net Position</span><span class="sco-val hi">$328,300</span></div>
+          <div class="sco-row"><span class="sco-key">Buyout to Spouse</span><span class="sco-val rd">$80,000</span></div>
+        </div>
+        <div class="sco-desc">You refinance in your name and pay spouse their $80,000 equity share &mdash; as cash or offset against other assets.</div>
+        <div class="sco-take">
+          <div class="sco-take-h"><span>&#10022;</span> Angel&rsquo;s take</div>
+          <div class="sco-take-p">Your strongest scenario at $328,300 net. Mortgage of $2,230/mo. Buyout can be paid in cash or offset by giving up a portion of your 401(k).</div>
+        </div>
+      </div>
+
+      <div class="sco-card" id="sc-c">
+        <div class="sco-hdr">
+          <div class="sco-label">Scenario C</div>
+          <div class="sco-name"><span class="sco-emoji">&#127991;&#65039;</span> Sell the Home &amp; Split</div>
+        </div>
+        <div class="sco-body">
+          <div class="sco-row"><span class="sco-key">Asset Share</span><span class="sco-val">$325,000</span></div>
+          <div class="sco-row"><span class="sco-key">Net Position</span><span class="sco-val hi">$293,300</span></div>
+        </div>
+        <div class="sco-desc">House sells for $425,000 after $25,000 in costs. You each receive $67,500 cash from the sale.</div>
+        <div class="sco-take">
+          <div class="sco-take-h"><span>&#10022;</span> Angel&rsquo;s take</div>
+          <div class="sco-take-p">Liquid cash plus your share of all other assets &mdash; lower than Scenario B but no refinancing risk and all joint debts cleared.</div>
+        </div>
+      </div>
     </div>
-    <div class="scenario-tabs">
-      <div class="scn on">I keep the house</div>
-      <div class="scn off">We sell</div>
-    </div>
-    <div class="re-grid">
-      <div class="re-c" id="re0"><div class="re-l">Home value</div><div class="re-v">$425,000</div></div>
-      <div class="re-c" id="re1"><div class="re-l">Mortgage</div><div class="re-v">$265,000</div></div>
-      <div class="re-c" id="re2"><div class="re-l">New payment</div><div class="re-v" style="color:var(--rd)">$2,230/mo</div></div>
-      <div class="re-c" id="re3"><div class="re-l">Income needed</div><div class="re-v">$8,370/mo</div></div>
-      <div class="re-c" id="re4"><div class="re-l">Can you refinance?</div><div class="re-v" style="color:var(--rd)">&#9888; Income gap</div></div>
-      <div class="re-c" id="re5"><div class="re-l">5-year equity (est.)</div><div class="re-v" style="color:var(--gn)">$480,000</div></div>
-    </div>
-    <div class="warn" id="rew">&#9888; Housing cost ratio: <strong>68% of take-home</strong> &mdash; High risk.</div>
+    <div class="warn" id="rew">&#9888; Housing cost in Scenario B: <strong>37% of take-home</strong> &mdash; manageable, but tight. Temporary spousal support could ease the squeeze.</div>
   </div>
 </div>
 
@@ -400,7 +453,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dk);font-size:13
 <script>
 var playing=true,TOs=[],step=0,N=10;
 var labels=['Step 1 \u00b7 Your finances','Step 1 \u00b7 Income & expenses','Step 2 \u00b7 Angel\u2019s analysis','Step 3 \u00b7 Settlement scenarios','Step 4 \u00b7 Negotiation checklist','Step 4 \u00b7 Questions to ask','Step 4 \u00b7 Financial priorities','Step 5 \u00b7 Documents','Step 6 \u00b7 Document analyzer','Your Angel \u00b7 Ask anything'];
-var durs=[5000,5000,7500,6000,6500,7500,12000,4500,5500,7500];
+var durs=[4500,4500,6500,6500,5500,6500,10500,4000,5000,7000];
 function clr(){TOs.forEach(clearTimeout);TOs=[];}
 function Q(fn,d){TOs.push(setTimeout(fn,d));}
 function show(n){for(var i=0;i<N;i++)document.getElementById('p'+i).classList.toggle('vis',i===n);document.getElementById('slbl').textContent=labels[n]||'';}
@@ -411,7 +464,7 @@ for(var s=0;s<2;s++)for(var i=0;i<7;i++){var e=document.getElementById('v'+s+i);
 ['ta','td','tn','tni','tcf'].forEach(function(id){var e=document.getElementById(id);if(e){e.textContent='$0';e.style.color='';}});
 document.getElementById('acta').classList.remove('pop');
 ['x0','x1','x2','rp0','rp1','rp2'].forEach(function(id){var e=document.getElementById(id);if(e)e.classList.remove('pop');});
-for(var i=0;i<6;i++){var e=document.getElementById('re'+i);if(e)e.classList.remove('pop');}
+['sc-a','sc-b','sc-c'].forEach(function(id){var e=document.getElementById(id);if(e)e.classList.remove('pop');});
 document.getElementById('rew').classList.remove('pop');
 ['gb4','gb5','gb6'].forEach(function(id){document.getElementById(id).classList.remove('pop');});
 ['c0','c1','c2','c3'].forEach(function(id){document.getElementById(id).classList.remove('pop');});
@@ -426,16 +479,16 @@ document.getElementById('ab8').classList.remove('pop');
 document.getElementById('at8').innerHTML='';
 ['q0','a0','q1','a1','q2','a2'].forEach(function(id){var e=document.getElementById(id);if(e)e.classList.remove('pop');});
 }
-function run0(){show(0);fillRow('r00','v00','$425,000',0);fillRow('r01','v01','$180,000',700);fillRow('r02','v02','$127,000',1400);fillRow('r03','v03','$28,000',2000);Q(function(){document.getElementById('ta').textContent='$760,000';},2500);fillRow('r04','v04','$265,000',2600);fillRow('r05','v05','$47,400',3200);fillRow('r06','v06','$16,000',3700);Q(function(){document.getElementById('td').textContent='$328,400';document.getElementById('tn').textContent='$431,600';},4200);Q(next,durs[0]);}
-function run1(){show(1);fillRow('r10','v10','$5,400',0);fillRow('r11','v11','$570',600);fillRow('r12','v12','$7,800',1200);Q(function(){document.getElementById('tni').textContent='$5,970';},1800);fillRow('r13','v13','$2,190',2000);fillRow('r14','v14','$1,200',2600);fillRow('r15','v15','$840',3100);Q(function(){document.getElementById('tcf').textContent='-$1,687';document.getElementById('tcf').style.color='var(--rd)';},3600);Q(function(){document.getElementById('acta').classList.add('pop');},4000);Q(next,durs[1]);}
-function run2(){show(2);['x0','x1','x2'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*200);});Q(function(){document.getElementById('rp0').classList.add('pop');},900);Q(function(){document.getElementById('rp1').classList.add('pop');},2800);Q(function(){document.getElementById('rp2').classList.add('pop');},4800);Q(next,durs[2]);}
-function run3(){show(3);['re0','re1','re2','re3','re4','re5'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*300);});Q(function(){document.getElementById('rew').classList.add('pop');},2200);Q(next,durs[3]);}
-function run4(){show(4);Q(function(){document.getElementById('gb4').classList.add('pop');},200);['c0','c1','c2','c3'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},700+i*400);});Q(next,durs[4]);}
-function run5(){show(5);Q(function(){document.getElementById('gb5').classList.add('pop');},200);Q(function(){document.getElementById('qs0').classList.add('pop');},700);Q(function(){document.getElementById('qs1').classList.add('pop');},2200);Q(function(){document.getElementById('qs2').classList.add('pop');},3800);Q(function(){document.getElementById('qs3').classList.add('pop');},5200);Q(next,durs[5]);}
-function run6(){show(6);Q(function(){document.getElementById('gb6').classList.add('pop');},200);Q(function(){document.getElementById('pr0').classList.add('pop');},700);Q(function(){document.getElementById('pr1').classList.add('pop');},3200);Q(function(){document.getElementById('pr2').classList.add('pop');},5200);Q(function(){document.getElementById('strat').classList.add('pop');},8500);Q(next,durs[6]);}
-function run7(){show(7);for(var i=0;i<9;i++){(function(i){Q(function(){document.getElementById('d'+i).classList.add('pop');},i*200);})(i);}Q(function(){document.getElementById('dfill').style.width='7%';},2000);Q(next,durs[7]);}
-function run8(){show(8);['tg0','tg1','tg2','tg3','tg4'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*180);});Q(function(){document.getElementById('upz').classList.add('pop');},1100);Q(function(){document.getElementById('ab8').classList.add('pop');var txt='Upload your separation agreement and I\'ll highlight what\'s <strong>fair vs. unfair</strong> based on your numbers, flag anything you might be <strong>giving up too much</strong> on, and generate questions for your lawyer.';var el=document.getElementById('at8');el.innerHTML='';var plain=txt.replace(/<[^>]+>/g,''),ci=0;var iv=setInterval(function(){ci++;var out='',count=0,inTag=false,buf='';for(var j=0;j<txt.length;j++){if(txt[j]==='<'){inTag=true;buf+=txt[j];continue;}if(inTag){buf+=txt[j];if(txt[j]==='>'){inTag=false;out+=buf;buf='';}continue;}count++;if(count<=ci)out+=txt[j];else break;}el.innerHTML=out;if(ci>=plain.length)clearInterval(iv);},16);},2200);Q(next,durs[8]);}
-function run9(){show(9);Q(function(){document.getElementById('q0').classList.add('pop');},200);Q(function(){document.getElementById('a0').classList.add('pop');},700);Q(function(){document.getElementById('q1').classList.add('pop');},2400);Q(function(){document.getElementById('a1').classList.add('pop');},2900);Q(function(){step=-1;resetAll();next();},durs[9]);}
+function run0(){show(0);fillRow('r00','v00','$425,000',0);fillRow('r01','v01','$180,000',600);fillRow('r02','v02','$127,000',1200);fillRow('r03','v03','$28,000',1700);Q(function(){document.getElementById('ta').textContent='$760,000';},2150);fillRow('r04','v04','$265,000',2200);fillRow('r05','v05','$47,400',2700);fillRow('r06','v06','$16,000',3150);Q(function(){document.getElementById('td').textContent='$328,400';document.getElementById('tn').textContent='$431,600';},3600);Q(next,durs[0]);}
+function run1(){show(1);fillRow('r10','v10','$5,400',0);fillRow('r11','v11','$570',500);fillRow('r12','v12','$7,800',1000);Q(function(){document.getElementById('tni').textContent='$5,970';},1550);fillRow('r13','v13','$2,190',1700);fillRow('r14','v14','$1,200',2200);fillRow('r15','v15','$840',2650);Q(function(){document.getElementById('tcf').textContent='-$1,687';document.getElementById('tcf').style.color='var(--rd)';},3100);Q(function(){document.getElementById('acta').classList.add('pop');},3400);Q(next,durs[1]);}
+function run2(){show(2);['x0','x1','x2'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*180);});Q(function(){document.getElementById('rp0').classList.add('pop');},800);Q(function(){document.getElementById('rp1').classList.add('pop');},2400);Q(function(){document.getElementById('rp2').classList.add('pop');},4100);Q(next,durs[2]);}
+function run3(){show(3);['sc-a','sc-b','sc-c'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*500);});Q(function(){document.getElementById('rew').classList.add('pop');},2400);Q(next,durs[3]);}
+function run4(){show(4);Q(function(){document.getElementById('gb4').classList.add('pop');},200);['c0','c1','c2','c3'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},600+i*350);});Q(next,durs[4]);}
+function run5(){show(5);Q(function(){document.getElementById('gb5').classList.add('pop');},200);Q(function(){document.getElementById('qs0').classList.add('pop');},600);Q(function(){document.getElementById('qs1').classList.add('pop');},1900);Q(function(){document.getElementById('qs2').classList.add('pop');},3200);Q(function(){document.getElementById('qs3').classList.add('pop');},4500);Q(next,durs[5]);}
+function run6(){show(6);Q(function(){document.getElementById('gb6').classList.add('pop');},200);Q(function(){document.getElementById('pr0').classList.add('pop');},600);Q(function(){document.getElementById('pr1').classList.add('pop');},2800);Q(function(){document.getElementById('pr2').classList.add('pop');},4500);Q(function(){document.getElementById('strat').classList.add('pop');},7500);Q(next,durs[6]);}
+function run7(){show(7);for(var i=0;i<9;i++){(function(i){Q(function(){document.getElementById('d'+i).classList.add('pop');},i*180);})(i);}Q(function(){document.getElementById('dfill').style.width='7%';},1800);Q(next,durs[7]);}
+function run8(){show(8);['tg0','tg1','tg2','tg3','tg4'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*150);});Q(function(){document.getElementById('upz').classList.add('pop');},1000);Q(function(){document.getElementById('ab8').classList.add('pop');var txt='Upload your separation agreement and I\'ll highlight what\'s <strong>fair vs. unfair</strong> based on your numbers, flag anything you might be <strong>giving up too much</strong> on, and generate questions for your lawyer.';var el=document.getElementById('at8');el.innerHTML='';var plain=txt.replace(/<[^>]+>/g,''),ci=0;var iv=setInterval(function(){ci++;var out='',count=0,inTag=false,buf='';for(var j=0;j<txt.length;j++){if(txt[j]==='<'){inTag=true;buf+=txt[j];continue;}if(inTag){buf+=txt[j];if(txt[j]==='>'){inTag=false;out+=buf;buf='';}continue;}count++;if(count<=ci)out+=txt[j];else break;}el.innerHTML=out;if(ci>=plain.length)clearInterval(iv);},14);},2000);Q(next,durs[8]);}
+function run9(){show(9);Q(function(){document.getElementById('q0').classList.add('pop');},200);Q(function(){document.getElementById('a0').classList.add('pop');},600);Q(function(){document.getElementById('q1').classList.add('pop');},2100);Q(function(){document.getElementById('a1').classList.add('pop');},2500);Q(function(){document.getElementById('q2').classList.add('pop');},4300);Q(function(){document.getElementById('a2').classList.add('pop');},4700);Q(function(){step=-1;resetAll();next();},durs[9]);}
 var runners=[run0,run1,run2,run3,run4,run5,run6,run7,run8,run9];
 function next(){if(!playing)return;if(step>=N-1){step=-1;resetAll();}step++;runTimer();runners[step]();}
 function runTimer(){var t=document.getElementById('pf'),el=0;for(var i=0;i<step;i++)el+=durs[i];var tot=0;for(var i=0;i<N;i++)tot+=durs[i];t.style.transition='none';t.style.width=Math.round(el/tot*100)+'%';t.offsetHeight;t.style.transition='width '+durs[step]+'ms linear';t.style.width=Math.round((el+durs[step])/tot*100)+'%';}
