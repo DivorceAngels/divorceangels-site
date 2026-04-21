@@ -57,64 +57,34 @@ function escapeHtml(str) {
 const SHARED_CSS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--g0:#EDF4F8;--g1:#CFE6F3;--g2:#9DCBE4;--g4:#6FAACB;--g5:#1A3A4F;--blue:#4a7fa5;--ink:#1A2A35;--ink-m:#2A4A5F;--ink-l:#6A8A9F;--bdr:#D5E8F0}
+:root{--g0:#EDF4F8;--g1:#CFE6F3;--g2:#9DCBE4;--g4:#6FAACB;--g5:#1A3A4F;--blue:#4a7fa5;--ink:#1A2A35;--ink-m:#4a6878;--ink-l:#6A8A9F;--bdr:#b8d6e8}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:var(--ink);font-size:20px;line-height:1.8;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.2}h1{font-size:clamp(2.2rem,4vw,3rem)}h2{font-size:clamp(1.8rem,3vw,2.5rem)}h3{font-size:1.4rem}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.2}
+h1{font-size:clamp(2.2rem,4vw,3rem)}h2{font-size:clamp(1.8rem,3vw,2.5rem)}h3{font-size:1.4rem}
 p{color:var(--ink-m);line-height:1.75;font-size:1rem}
 .container{max-width:1060px;margin:0 auto;padding:0 48px}
-
 .nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
 .nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
-.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
-.nav-links{display:flex;gap:36px;font-size:17px;flex:1;justify-content:center;align-items:center;}
-.nav-links a{color:white!important;text-decoration:none!important;letter-spacing:.02em!important;opacity:1!important;}
-.nav-links a:hover{color:rgba(255,255,255,.8);}
+nav.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:96px;z-index:99;border:none;}
+nav.nav .nav-links{display:flex;gap:36px;font-size:19px;flex:1;justify-content:center;align-items:center;list-style:none;}
+nav.nav .nav-links a{color:white!important;font-size:19px!important;text-decoration:none;letter-spacing:.02em;}
+nav.nav .nav-links a:hover{color:rgba(255,255,255,.8)!important;}
 .cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;letter-spacing:.02em;box-shadow:0 2px 8px rgba(0,0,0,.15);}
 .cta-btn:hover{background:#5A9ABB;}
-#menu-btn{display:none;background:none;border:none;cursor:pointer;color:var(--ink);font-size:1.3rem}
-#mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--g0);border-bottom:1px solid var(--bdr);z-index:99;flex-direction:column;padding:20px 28px;gap:16px}
-#mobile-nav a{font-size:0.95rem;font-weight:500;color:var(--ink)}
-footer{background:var(--blue);padding:68px 0 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:48px}
-.footer-brand{font-family:'DM Serif Display',serif;font-size:1.3rem;color:white;margin-bottom:12px}
-.footer-brand span{color:var(--g2)}.footer-tag{font-size:0.83rem;color:rgba(255,255,255,0.42);line-height:1.65;max-width:260px;margin-bottom:22px}
-.footer-socials{display:flex;gap:9px}.social-btn{width:35px;height:35px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.55);font-size:0.8rem;font-weight:600;display:flex;align-items:center;justify-content:center}
-.footer-col-title{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:11px}.footer-links a{font-size:0.84rem;color:rgba(255,255,255,0.55)}.footer-links a:hover{color:white}
+footer{background:#4a7fa5;padding:48px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-tag{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;max-width:260px;margin-bottom:22px}
+.footer-col-title{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:11px}.footer-links a{font-size:14px;color:rgba(255,255,255,0.55)}.footer-links a:hover{color:white}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.footer-bottom-txt{font-size:0.74rem;color:rgba(255,255,255,0.3)}
+.footer-bottom-txt{font-size:12px;color:rgba(255,255,255,0.3)}
 @media(max-width:860px){.container{padding:0 28px}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:768px){
-  
-  
-  
-  .da-nav-menu,[style*="background:#9DCBE4"]{gap:16px!important;top:76px!important;flex-wrap:wrap!important;height:auto!important;padding:8px 20px!important;}
-  .container{padding:0 24px!important;}
-  .blog-hero{padding:40px 0 32px!important;}
-  .cards-grid{grid-template-columns:1fr 1fr!important;}
-  .feat-card{grid-template-columns:1fr!important;}
-  h1{font-size:1.8rem!important;}
-}
-@media(max-width:480px){
-  .cards-grid{grid-template-columns:1fr!important;}
-  h1{font-size:1.5rem!important;}
-  
-}
-
+@media(max-width:768px){.container{padding:0 24px!important}.blog-hero{padding:40px 0 32px!important}.cards-grid{grid-template-columns:1fr 1fr!important}h1{font-size:1.8rem!important}}
+@media(max-width:480px){.cards-grid{grid-template-columns:1fr!important}h1{font-size:1.5rem!important}}
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
-
-/* ── NAV OVERRIDE - forces correct nav on all built pages ── */
-.nav-logo-bar{background:white!important;width:100%!important;padding:14px 40px!important;display:flex!important;align-items:center!important;justify-content:center!important;position:sticky!important;top:0!important;z-index:101!important;border-bottom:1px solid #EDF4F8!important;box-sizing:border-box!important;}
-.nav-logo{height:68px!important;mix-blend-mode:multiply!important;display:block!important;}
-nav.nav{background:#9DCBE4!important;width:100%!important;height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 36px!important;position:sticky!important;top:96px!important;z-index:99!important;border:none!important;}
-nav.nav .nav-links{display:flex!important;gap:36px!important;font-size:17px!important;flex:1!important;justify-content:center!important;align-items:center!important;list-style:none!important;}
-nav.nav .nav-links a{color:white!important;text-decoration:none!important;letter-spacing:.02em!important;font-size:17px!important;}
-nav.nav .nav-links a:hover{color:rgba(255,255,255,.8)!important;}
-.cta-btn{position:fixed!important;top:22px!important;right:32px!important;z-index:200!important;background:#6FAACB!important;color:white!important;font-size:15px!important;font-weight:600!important;padding:10px 22px!important;border-radius:8px!important;text-decoration:none!important;}
-
 </style>`;
 
 const NAV = `<!-- LOGO BAR -->
