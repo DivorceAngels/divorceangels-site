@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+:root{--g0:#EDF4F8;--g1:#CFE6F3;--g2:#9DCBE4;--g4:#6FAACB;--g5:#1A3A4F;--blue:#4a7fa5;--ink:#1A2A35;--ink-m:#4a6878;--ink-l:#6A8A9F;--bdr:#b8d6e8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:var(--ink);font-size:20px;font-size:20px;line-height:1.8;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.2}
+p{color:var(--ink-m);line-height:1.75}
+.container{max-width:1060px;margin:0 auto;padding:0 48px}
+.nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;box-sizing:border-box;}
+.nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
+nav.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:96px;z-index:99;border:none;}
+nav.nav .nav-links{display:flex;gap:36px;font-size:19px;flex:1;justify-content:center;align-items:center;list-style:none;}
+nav.nav .nav-links a{color:white!important;font-size:19px!important;font-weight:400;text-decoration:none;letter-spacing:.02em;}
+nav.nav .nav-links a:hover{color:rgba(255,255,255,.8);}
+.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.cta-btn:hover{background:#5A9ABB;}
+.page-hero{background:var(--g0);padding:48px 0 40px;border-bottom:1px solid var(--bdr)}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g4);margin-bottom:16px;}
+.cat-nav{background:white;border-bottom:1px solid var(--bdr);position:sticky;top:148px;z-index:50}
+.cat-nav-inner{display:flex;max-width:1060px;margin:0 auto;padding:0 48px;overflow-x:auto}
+.cat-nav-link{font-size:15px;font-weight:500;color:var(--ink-l);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:all 0.2s}
+.cat-nav-link:hover,.cat-nav-link.active{color:var(--g5);border-bottom-color:var(--g4)}
+.toolkit-section{padding:56px 0;border-bottom:1px solid var(--bdr)}
+.section-intro{max-width:600px;margin-bottom:40px}
+.section-intro h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--ink);margin-bottom:12px}
+.section-intro h2 em{font-style:italic;color:var(--g4)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product-card{background:white;border:1px solid var(--bdr);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
+.product-card:hover{border-color:var(--g4);transform:translateY(-3px);box-shadow:0 12px 36px rgba(42,90,122,.08)}
+.product-icon{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--g0)}
+.product-body{padding:22px 24px;flex:1;display:flex;flex-direction:column}
+.product-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:12px}
+.badge-app{background:#E8EEFF;color:#2D4A6B}
+.badge-tool{background:#EAF0EC;color:#2C3E35}
+.badge-therapy{background:#EDE8F8;color:#5240A8}
+.badge-ours{background:#EEF5E8;color:#2E6B27}
+.product-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:8px}
+.product-desc{font-size:16px;color:var(--ink-m);line-height:1.65;flex:1;margin-bottom:14px}
+.product-why{font-size:14px;color:var(--g5);background:var(--g0);border-radius:8px;padding:10px 14px;margin-bottom:14px;line-height:1.6}
+.product-cta{display:block;text-align:center;background:#6FAACB;color:white;font-size:15px;font-weight:500;padding:12px 20px;border-radius:8px;transition:background 0.2s;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;}
+.product-cta:hover{background:#5A9ABB}
+.affiliate-note{font-size:12px;color:var(--ink-l);text-align:center;margin-top:8px}
+.book-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.book-card{background:white;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s}
+.book-card:hover{border-color:var(--g4);transform:translateY(-2px);box-shadow:0 8px 28px rgba(42,90,122,.08)}
+.book-icon{width:100%;aspect-ratio:2/3;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:var(--g0)}
+.book-body{padding:16px 18px;flex:1;display:flex;flex-direction:column}
+.book-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:4px;line-height:1.3}
+.book-author{font-size:13px;color:var(--ink-l);margin-bottom:10px}
+.book-desc{font-size:14px;color:var(--ink-m);line-height:1.6;flex:1;margin-bottom:12px}
+.book-cta{display:block;text-align:center;background:#6FAACB;color:white;font-size:14px;font-weight:500;padding:9px;border-radius:7px;transition:background 0.2s}
+.book-cta:hover{background:#5A9ABB}
+.disclaimer{background:var(--g0);border-radius:12px;padding:20px 24px;margin-top:48px;border:1px solid var(--bdr)}
+.disclaimer p{font-size:13px;color:var(--ink-l);line-height:1.7;margin:0}
+footer{background:#4a7fa5;padding:48px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-tag{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;max-width:260px;margin-bottom:22px}
+.footer-col-title{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:11px}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.55)}.footer-links a:hover{color:white}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom-txt{font-size:12px;color:rgba(255,255,255,0.3)}
+@media(max-width:900px){.product-grid{grid-template-columns:1fr 1fr}.book-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.container{padding:0 24px!important}.cat-nav-inner{padding:0 24px}}
+@media(max-width:600px){.product-grid{grid-template-columns:1fr}.book-grid{grid-template-columns:1fr 1fr}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divorce Resources — Recommended Tools, Apps & Books | Divorce Angels</title>
+<meta name="description" content="Trusted tools, apps, and books recommended by Divorce Angels to help you navigate separation with confidence.">
+
+</head>
+<body>
+<!-- LOGO BAR -->
+<div class="nav-logo-bar">
+  <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+</div>
+<!-- NAV -->
+<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started &#8594;</a>
+<nav class="nav">
+  <div class="nav-links">
+    <a href="https://divorcetracker.netlify.app" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
+    <a href="/blog/">Blog</a>
+    <a href="/resources/">Resources</a>
+    <a href="/community/">Community</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Curated by Divorce Angels</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);color:var(--ink);margin-bottom:14px;">Your Divorce <em style="font-style:italic;color:var(--g5);">Resources</em></h1>
+    <p style="font-size:1rem;max-width:560px;">Curated apps, tools, and resources to support you through every step of your divorce.</p>
+  </div>
+</div>
+
+<div class="cat-nav">
+  <div class="cat-nav-inner">
+    <a href="#therapy" class="cat-nav-link active">Therapy & Support</a>
+    <a href="#coparenting" class="cat-nav-link">Co-Parenting</a>
+    <a href="#finance" class="cat-nav-link">Finance</a>
+    <a href="#legal" class="cat-nav-link">Legal Tools</a>
+    <a href="#life-after" class="cat-nav-link">Life After</a>
+    <a href="#books" class="cat-nav-link">Books</a>
+  </div>
+</div>
+
+<!-- THERAPY -->
+<section class="toolkit-section" id="therapy">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow">Therapy &amp; Emotional Support</div>
+      <h2>You don't have to process this <em>alone</em></h2>
+      <p>Divorce is one of life's most emotionally demanding experiences. These platforms make professional support accessible, affordable, and available when you need it most.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon">💙</div>
+        <div class="product-body">
+          <span class="product-badge badge-therapy">Therapy</span>
+          <div class="product-name">BetterHelp</div>
+          <p class="product-desc">The world's largest online therapy platform. Match with a licensed therapist within 48 hours and connect via video, phone, or messaging — on your schedule.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Divorce clients need flexible, affordable therapy. BetterHelp makes it possible to see a therapist from your car, your office, or your couch at 11pm.</div>
+          <a href="BETTERHELP_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Get matched with a therapist →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">🗣️</div>
+        <div class="product-body">
+          <span class="product-badge badge-therapy">Therapy</span>
+          <div class="product-name">Talkspace</div>
+          <p class="product-desc">Text, audio, and video therapy with licensed therapists. Many insurance plans accepted. Specializes in life transitions including divorce and relationship breakdown.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> If you prefer messaging your therapist between sessions, Talkspace's async format works really well for the chaotic schedule of someone going through a divorce.</div>
+          <a href="TALKSPACE_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Start with Talkspace →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">🧘</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">Calm</div>
+          <p class="product-desc">Guided meditations, sleep stories, and breathing exercises. When your mind won't stop racing at 2am, Calm gives you something to hold onto.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Anxiety and insomnia are almost universal during divorce. Calm is one of the most effective and accessible tools for managing both.</div>
+          <a href="CALM_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try Calm free →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CO-PARENTING -->
+<section class="toolkit-section" id="coparenting" style="background:var(--g0);">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow">Co-Parenting</div>
+      <h2>Make co-parenting <em>less complicated</em></h2>
+      <p>The right tools can dramatically reduce conflict and keep your kids out of the middle.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon">👨‍👩‍👧</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">OurFamilyWizard</div>
+          <p class="product-desc">The gold standard co-parenting app. Shared calendar, messaging, expense tracking, and an info bank — all in one place. Court-admissible communication records.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> When communication with your ex is difficult, having everything documented in a neutral platform protects you and keeps things focused on the kids.</div>
+          <a href="OFW_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try OurFamilyWizard →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">📅</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">2houses</div>
+          <p class="product-desc">Co-parenting app with shared calendar, journal, finances, and information bank. Simple, affordable, and designed specifically for separated families.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> A simpler, lower-cost alternative to OurFamilyWizard that covers all the essentials for most co-parenting situations.</div>
+          <a href="2HOUSES_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try 2houses →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">💬</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">TalkingParents</div>
+          <p class="product-desc">Secure co-parenting communication with unalterable records. Every message is timestamped and archived — perfect when you need documentation for court.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> If your co-parenting situation is high-conflict, TalkingParents' unalterable records give you real legal protection.</div>
+          <a href="TALKINGPARENTS_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try TalkingParents →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCE -->
+<section class="toolkit-section" id="finance">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow">Financial Tools</div>
+      <h2>Get on top of your <em>finances</em></h2>
+      <p>Divorce is one of the biggest financial events of your life. These tools help you understand where you stand and build a solid foundation going forward.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon">📊</div>
+        <div class="product-body">
+          <span class="product-badge badge-ours">Our Tool</span>
+          <div class="product-name">Divorce Tracker</div>
+          <p class="product-desc">Our own free tool — enter your assets, debts, and income and Angel analyzes your complete financial picture. Know exactly where you stand before every lawyer meeting.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Because we built it specifically for this. It's free, private, and the most useful first step anyone going through a divorce can take.</div>
+          <a href="https://divorcetracker.netlify.app/" class="product-cta" target="_blank" rel="noopener">Try Divorce Tracker — free →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">💰</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">YNAB (You Need A Budget)</div>
+          <p class="product-desc">The best budgeting app for people rebuilding their finances. YNAB's zero-based budgeting method is particularly powerful when you're suddenly managing money on one income.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Most people going through divorce have never managed a budget alone. YNAB makes it understandable, not overwhelming.</div>
+          <a href="YNAB_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try YNAB free for 34 days →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">📈</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">Credit Karma</div>
+          <p class="product-desc">Free credit monitoring and financial overview. Know your credit score, track spending, and get alerts — especially important when separating joint accounts.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Your credit score matters more than ever during and after divorce. Monitoring it for free is a no-brainer.</div>
+          <a href="CREDITKARMA_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Check your credit free →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section class="toolkit-section" id="legal" style="background:var(--g0);">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow">Legal Tools</div>
+      <h2>Navigate the legal process <em>confidently</em></h2>
+      <p>These tools help you stay organized, communicate clearly, and arrive prepared — saving you thousands in legal fees.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon">✍️</div>
+        <div class="product-body">
+          <span class="product-badge badge-tool">Tool</span>
+          <div class="product-name">DocuSign</div>
+          <p class="product-desc">E-signature platform for signing legal documents securely from anywhere. Accepted by courts and lawyers across North America.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Divorce generates a lot of paperwork. Being able to sign and send documents instantly — without printing or scanning — saves real time and stress.</div>
+          <a href="DOCUSIGN_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try DocuSign →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">📁</div>
+        <div class="product-body">
+          <span class="product-badge badge-tool">Tool</span>
+          <div class="product-name">Dropbox</div>
+          <p class="product-desc">Secure cloud storage for all your documents — financial statements, legal correspondence, property records. Access from anywhere, share securely with your lawyer.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Having all your documents organized and accessible in one place dramatically reduces the chaos of the legal process.</div>
+          <a href="DROPBOX_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try Dropbox free →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">🤖</div>
+        <div class="product-body">
+          <span class="product-badge badge-ours">Our Tool</span>
+          <div class="product-name">Angel — AI Divorce Coach</div>
+          <p class="product-desc">Ask Angel anything about the legal process — what to expect, what your rights are, how to prepare for meetings. Plain language answers, available 24/7.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Understanding what's happening legally reduces anxiety and helps you make better decisions. Angel explains everything without the hourly rate.</div>
+          <a href="/#angel-section" class="product-cta">✦ Chat with Angel — free →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE AFTER -->
+<section class="toolkit-section" id="life-after">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow">Life After Divorce</div>
+      <h2>Building your <em>next chapter</em></h2>
+      <p>When you're ready to start rebuilding — your social life, your confidence, and eventually your love life — these tools help.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon">💛</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">Bumble</div>
+          <p class="product-desc">Dating app where women make the first move. Also has BFF mode for making new friends — genuinely useful when your social circle has shifted post-divorce.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> When you're ready — and only when you're ready — Bumble's format tends to attract more respectful interactions than other apps.</div>
+          <a href="BUMBLE_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try Bumble →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">❤️</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">Match.com</div>
+          <p class="product-desc">The original serious dating platform. Tends to attract people looking for meaningful relationships rather than casual ones — a better fit for most post-divorce daters.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Match's user base skews older and more relationship-focused, which aligns better with where post-divorce daters are emotionally.</div>
+          <a href="MATCH_AFFILIATE_LINK" class="product-cta" target="_blank" rel="noopener">Try Match.com →</a>
+          <div class="affiliate-note">Affiliate link — we may earn a commission at no cost to you</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">🏃</div>
+        <div class="product-body">
+          <span class="product-badge badge-app">App</span>
+          <div class="product-name">Meetup</div>
+          <p class="product-desc">Find local groups for activities, hobbies, and social events. A great way to rebuild your social life and try new things without the pressure of dating.</p>
+          <div class="product-why"><strong>Why we recommend it:</strong> Post-divorce social rebuilding is underrated. Meetup makes it easy to find your people around shared interests rather than relationship status.</div>
+          <a href="https://meetup.com" class="product-cta" target="_blank" rel="noopener">Find local groups →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section class="toolkit-section" id="books" style="background:var(--g0);">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow">Books</div>
+      <h2>Books worth <em>reading</em></h2>
+      <p>The books our community recommends most — for understanding the process, healing emotionally, and building what comes next.</p>
+    </div>
+    <div class="book-grid">
+      <div class="book-card">
+        <div class="book-icon">📗</div>
+        <div class="book-body">
+          <div class="book-title">Splitting: Protecting Yourself While Divorcing Someone with Borderline or Narcissistic Personality Disorder</div>
+          <div class="book-author">Bill Eddy &amp; Randi Kreger</div>
+          <p class="book-desc">Essential reading if your divorce involves a high-conflict personality.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📘</div>
+        <div class="book-body">
+          <div class="book-title">The Good Karma Divorce</div>
+          <div class="book-author">Judge Michele Lowrance</div>
+          <p class="book-desc">A family court judge shares how to divorce without destroying yourself, your kids, or your finances.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📙</div>
+        <div class="book-body">
+          <div class="book-title">Rebuilding: When Your Relationship Ends</div>
+          <div class="book-author">Bruce Fisher &amp; Robert Alberti</div>
+          <p class="book-desc">The classic guide to healing after divorce. The "divorce recovery ladder" has helped millions of people rebuild.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📕</div>
+        <div class="book-body">
+          <div class="book-title">Co-parenting Works!</div>
+          <div class="book-author">Tammy Daughtry</div>
+          <p class="book-desc">Practical guidance for making co-parenting work even when the relationship was difficult.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📗</div>
+        <div class="book-body">
+          <div class="book-title">The Financially Smart Divorce</div>
+          <div class="book-author">Stan Corey</div>
+          <p class="book-desc">How to protect your financial interests throughout the divorce process. Written by a Certified Divorce Financial Analyst.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📘</div>
+        <div class="book-body">
+          <div class="book-title">Uncoupling: How Relationships Come Apart</div>
+          <div class="book-author">Diane Vaughan</div>
+          <p class="book-desc">A sociologist explains why relationships end. Deeply insightful for anyone trying to understand what happened.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📙</div>
+        <div class="book-body">
+          <div class="book-title">Mom's House, Dad's House</div>
+          <div class="book-author">Isolina Ricci</div>
+          <p class="book-desc">The definitive guide to making two homes work for your children. A must-read for any divorcing parent.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-icon">📕</div>
+        <div class="book-body">
+          <div class="book-title">Starting Over: The Single Parent's Guide</div>
+          <div class="book-author">Judith Ruskay Rabinor</div>
+          <p class="book-desc">Warm, practical guidance for single parents navigating life after divorce.</p>
+          <a href="AMAZON_AFFILIATE_LINK" class="book-cta" target="_blank" rel="noopener">View on Amazon →</a>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <p><strong>Affiliate disclosure:</strong> Some links on this page are affiliate links. If you click and make a purchase, Divorce Angels may earn a small commission at no extra cost to you. We only recommend products we genuinely believe in. This helps us keep the site and Angel free for everyone.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="/DA-logo.jpg" alt="Divorce Angels" style="height:40px;width:auto;display:block;margin-bottom:12px;border-radius:4px;mix-blend-mode:multiply;filter:brightness(10);"><p class="footer-tag">Real guidance for real people navigating one of life's hardest transitions.</p><div class="footer-socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
+      <div><div class="footer-col-title">Content</div><ul class="footer-links"><li><a href="/blog/">Blog</a></li><li><a href="/resources/">Resources</a></li><li><a href="/#angel-section">Ask Angel</a></li></ul></div>
+      <div><div class="footer-col-title">Community</div><ul class="footer-links"><li><a href="https://www.facebook.com/groups/3705373593017325" target="_blank">Facebook Group</a></li><li><a href="#">Newsletter</a></li></ul></div>
+      <div><div class="footer-col-title">Tools</div><ul class="footer-links"><li><a href="https://divorcetracker.netlify.app/" target="_blank">Divorce Tracker</a></li><li><a href="/#angel-section">Angel AI</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-txt">© 2026 Divorce Angels. All rights reserved.</div><div class="footer-bottom-txt">Not legal advice. Always consult a licensed attorney.</div></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('menu-btn').addEventListener('click',()=>{
+  const n=document.getElementById('mobile-nav');
+  n.style.display=n.style.display==='flex'?'none':'flex';
+});
+const sections=document.querySelectorAll('.toolkit-section');
+const navLinks=document.querySelectorAll('.cat-nav-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-250)current=s.id;});
+  navLinks.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+current)l.classList.add('active');});
+});
+</script>
+
+
+</body>
+</html>
