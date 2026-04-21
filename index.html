@@ -327,6 +327,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </section>
 
 <script>
+<script>
 (function(){
   var REPO = 'DivorceAngels/divorceangels-site';
   var BRANCH = 'main';
@@ -360,7 +361,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   }
 
   function slugFromFilename(name){
-    // Filenames look like: 2026-04-21-my-post-title.md
     return name.replace(/\.md$/,'').replace(/^\d{4}-\d{1,2}-\d{1,2}-/, '');
   }
 
@@ -381,22 +381,47 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     }).join('');
   }
 
-  fetch('https://api.github.com/repos/'+REPO+'/contents/'+POSTS_FOLDER+'?ref='+BRANCH)
-    .then(function(r){ if(!r.ok) throw new Error('list'); return r.json(); })
-    .then(function(files){
-      files = files.filter(function(f){ return f.name && f.name.match(/\.md$/i); });
-      // Sort filenames descending (newest first) — works because of YYYY-MM-DD- prefix
-      files.sort(function(a,b){ return a.name < b.name ? 1 : -1; });
-      files = files.slice(0, MAX_POSTS);
-      return Promise.all(files.map(function(f){
-        return fetch(f.download_url)
+  // Step 1: get the list of recently-committed files in _posts using the commits API
+  // This gives us the most recently added/edited posts without fetching every file.
+  fetch('https://api.github.com/repos/'+REPO+'/commits?path='+POSTS_FOLDER+'&sha='+BRANCH+'&per_page=40')
+    .then(function(r){ if(!r.ok) throw new Error('commits'); return r.json(); })
+    .then(function(commits){
+      // For each commit, find the _posts/*.md files it touched, in order
+      return Promise.all(commits.map(function(c){
+        return fetch(c.url).then(function(r){ return r.json(); });
+      }));
+    })
+    .then(function(commitDetails){
+      // Collect unique post filenames in order of most recent commit
+      var seen = {};
+      var orderedFiles = [];
+      commitDetails.forEach(function(c){
+        if (!c.files) return;
+        c.files.forEach(function(f){
+          if (!f.filename) return;
+          if (f.filename.indexOf(POSTS_FOLDER + '/') !== 0) return;
+          if (!f.filename.match(/\.md$/i)) return;
+          if (f.status === 'removed') return;
+          if (seen[f.filename]) return;
+          seen[f.filename] = true;
+          orderedFiles.push(f.filename);
+        });
+      });
+      orderedFiles = orderedFiles.slice(0, MAX_POSTS);
+      if (!orderedFiles.length) throw new Error('no posts');
+
+      // Step 2: fetch each post's raw content to get its frontmatter
+      return Promise.all(orderedFiles.map(function(path){
+        var rawUrl = 'https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/'+path;
+        return fetch(rawUrl)
           .then(function(r){ return r.text(); })
           .then(function(text){
             var fm = parseFrontmatter(text);
+            var filename = path.split('/').pop();
             return {
-              slug: slugFromFilename(f.name),
-              title: fm.title || slugFromFilename(f.name),
-              date: fm.date || f.name.slice(0,10),
+              slug: slugFromFilename(filename),
+              title: fm.title || slugFromFilename(filename),
+              date: fm.date || '',
               category: fm.category || '',
               cover_image: fm.cover_image || ''
             };
@@ -404,13 +429,16 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
       }));
     })
     .then(function(posts){
-      // Final sort by date descending (in case frontmatter dates differ from filename)
-      posts.sort(function(a,b){ return new Date(b.date) - new Date(a.date); });
+      // Sort by frontmatter date descending (newest first); missing dates go last
+      posts.sort(function(a,b){
+        var da = a.date ? new Date(a.date).getTime() : 0;
+        var db = b.date ? new Date(b.date).getTime() : 0;
+        return db - da;
+      });
       render(posts);
     })
     .catch(function(err){
       console.error('Blog list failed, using fallback:', err);
-      // Fallback to the existing hard-coded list so the page never shows empty
       grid.innerHTML = '<a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt="" onerror="this.style.background=\'#CFE6F3\';this.removeAttribute(\'src\')"><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child\'s Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a>'
         + '<a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/"><img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt="" onerror="this.style.background=\'#B8D4E8\';this.removeAttribute(\'src\')"><div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div></a>'
         + '<a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/"><img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt="" onerror="this.style.background=\'#D4E8D4\';this.removeAttribute(\'src\')"><div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce — Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div></a>';
