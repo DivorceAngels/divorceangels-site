@@ -7,105 +7,134 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--b:#4A7B94;--bl:#EDF4F8;--bm:#B5D4E8;--dk:#1A2A35;--ds:#2D4A5C;--wr:#D4956B;--gn:#5BA67D;--rd:#B94040;--bg:#f5f8fa}
+:root{--b:#4A7B94;--bl:#6FAACB;--bm:#B8D4E8;--bg:#E8F4FA;--dk:#1A2A35;--ds:#2D4A5C;--tx:#6a8fa5;--wr:#D4956B;--wrbg:#FFF3E6;--gn:#5BA67D;--rd:#B94040;--hr:rgba(184,212,232,.35);--hrdk:rgba(184,212,232,.55)}
 html,body{background:transparent}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--dk);font-size:13px;line-height:1.5}
-.demo-wrap{max-width:100%;margin:0 auto;padding:0;font-family:'Cormorant Garamond',Georgia,serif}
-.site-card{background:#E8F4FA;border-radius:16px;border:1px solid #B8D4E8;padding:18px 18px 14px;position:relative;overflow:hidden}
+body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dk);font-size:13px;line-height:1.5}
+.demo-wrap{max-width:100%;margin:0 auto;padding:0}
+.site-card{background:var(--bg);border-radius:16px;border:1px solid var(--bm);padding:18px 18px 14px;position:relative;overflow:hidden}
 .site-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--b)}
 .demo-hdr{text-align:center;margin-bottom:12px}
 .demo-h1{font-size:28px;font-weight:400;color:var(--dk);line-height:1.25}
-.demo-h1 em{color:#6FAACB;font-style:italic}
-.nav-strip{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px}
-.nav-step{font-size:14px;font-weight:500;color:var(--dk);background:white;padding:6px 18px;border-radius:20px;border:1px solid #B8D4E8;min-width:200px;text-align:center}
-.frame{background:white;border-radius:12px;border:1px solid #B8D4E8;overflow:hidden}
-.topbar{background:var(--b);padding:7px 16px;display:flex;align-items:center;justify-content:space-between}
-.topbar-t{color:#fff;font-size:15px;font-weight:500}
-.topbar-u{color:rgba(255,255,255,.8);font-size:12px;display:flex;align-items:center;gap:5px}
-.topbar-av{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600}
-.body{background:#fff;padding:16px;min-height:460px;position:relative}
-.panel{position:absolute;top:16px;left:16px;right:16px;bottom:16px;opacity:0;pointer-events:none;transition:opacity .5s;overflow:hidden}
+.demo-h1 em{color:var(--bl);font-style:italic}
+.nav-strip{display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.nav-step{font-size:13px;font-weight:500;color:var(--dk);background:white;padding:6px 18px;border-radius:20px;border:1px solid var(--bm);min-width:200px;text-align:center;letter-spacing:.2px}
+.frame{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(42,90,122,.06);border:1px solid var(--hrdk);position:relative;min-height:540px}
+.panel-hdr{padding:20px 24px 16px;border-bottom:1px solid var(--hr)}
+.panel-step-label{font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--bl);margin-bottom:6px;font-family:-apple-system,sans-serif}
+.panel-title{font-size:20px;font-weight:400;color:var(--dk);font-family:'Cormorant Garamond',serif;line-height:1.2;margin-bottom:4px}
+.panel-subtitle{font-size:13px;color:var(--tx);font-style:italic;font-family:'Cormorant Garamond',serif;line-height:1.4}
+.panel-meta{margin-top:12px;padding-top:12px;border-top:1px solid var(--hr);display:flex;gap:14px;font-size:11px;color:var(--tx);letter-spacing:.2px;font-family:-apple-system,sans-serif;font-weight:500;flex-wrap:wrap}
+.panel-meta span{display:flex;align-items:center;gap:4px}
+.body{position:relative;min-height:440px}
+.panel{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;pointer-events:none;transition:opacity .5s;overflow:hidden;display:flex;flex-direction:column}
 .panel.vis{opacity:1;pointer-events:auto}
-.p-title{font-size:16px;font-weight:500;color:var(--dk);margin-bottom:3px}
-.p-desc{font-size:13px;color:#6a8fa5;margin-bottom:8px;font-style:italic}
-.tabs{display:flex;gap:3px;margin-bottom:7px}
-.tab{flex:1;text-align:center;padding:5px 3px;font-size:11px;font-weight:500;color:#6a8fa5;border:1px solid rgba(74,123,148,.12);border-radius:4px}
-.tab.on{background:var(--b);color:#fff;border-color:var(--b)}
-.row{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border:1px solid rgba(74,123,148,.1);border-radius:6px;margin-bottom:4px;min-height:33px;background:#fff;font-size:13px;font-family:-apple-system,sans-serif;transition:border-color .3s,background .3s}
-.row.hl{border-color:var(--b);background:rgba(74,123,148,.03)}
-.rv{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;color:var(--dk);min-width:90px;text-align:right;white-space:nowrap}
+.panel-body{padding:18px 24px 22px;flex:1;overflow:hidden}
+.sect-l{font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--b);margin-bottom:8px;margin-top:14px;font-family:-apple-system,sans-serif}
+.sect-l:first-child{margin-top:0}
+.row{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--hr);transition:background .3s}
+.row:last-child{border-bottom:none}
+.row.hl{background:rgba(74,123,148,.035)}
+.row-label{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ds);font-family:-apple-system,sans-serif;font-weight:500;letter-spacing:.1px}
+.row-emoji{font-size:16px;width:22px;text-align:center;flex-shrink:0}
+.rv{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;color:var(--dk);min-width:100px;text-align:right;white-space:nowrap;letter-spacing:-.2px}
 .rv.e{color:var(--bm);font-family:-apple-system,sans-serif;font-weight:400;font-size:12px}
 .rv.tp{border-right:2px solid var(--b);padding-right:3px}
-.tot-grid{display:grid;gap:4px;margin-top:8px}
-.tot-card{padding:6px 9px;border:1px solid rgba(74,123,148,.1);border-radius:5px;background:#f8fbfd}
-.tot-l{font-size:9px;letter-spacing:.6px;text-transform:uppercase;color:#6a8fa5;font-family:-apple-system,sans-serif}
-.tot-v{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:500;color:var(--dk)}
-.sc{background:var(--bl);border-radius:6px;padding:10px;text-align:center;opacity:0;transform:translateY(5px);transition:all .4s}
+.totals{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:16px;padding-top:16px;border-top:1px solid var(--hrdk)}
+.totals.two{grid-template-columns:1fr 1fr}
+.tot-cell{text-align:center;padding:0 10px;border-right:1px solid var(--hr)}
+.tot-cell:last-child{border-right:none}
+.tot-l{font-size:9px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx);font-family:-apple-system,sans-serif;margin-bottom:4px}
+.tot-v{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dk);line-height:1.1}
+.tot-v.net{color:var(--b)}
+.tabs{display:flex;gap:0;margin-bottom:14px;border-bottom:1px solid var(--hr)}
+.tab{padding:6px 12px;font-size:11px;font-weight:500;color:var(--tx);font-family:-apple-system,sans-serif;letter-spacing:.3px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab.on{color:var(--b);border-bottom-color:var(--b)}
+.scores{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-bottom:18px;padding:14px 0;border-top:1px solid var(--hr);border-bottom:1px solid var(--hr)}
+.sc{text-align:center;padding:0 10px;border-right:1px solid var(--hr);opacity:0;transform:translateY(5px);transition:all .4s}
+.sc:last-child{border-right:none}
 .sc.pop{opacity:1;transform:translateY(0)}
-.sc-l{font-size:9px;letter-spacing:.6px;text-transform:uppercase;color:var(--b);font-family:-apple-system,sans-serif}
-.sc-v{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--dk)}
-.rpt{opacity:0;transform:translateY(6px);transition:all .5s;margin-bottom:8px}
+.sc-l{font-size:9px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx);font-family:-apple-system,sans-serif;margin-bottom:4px}
+.sc-v{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--dk);line-height:1.1}
+.rpt{opacity:0;transform:translateY(5px);transition:all .5s;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--hr)}
+.rpt:last-child{border-bottom:none}
 .rpt.pop{opacity:1;transform:translateY(0)}
-.rpt-h{font-size:13px;font-weight:500;color:var(--dk);border-bottom:1px solid rgba(74,123,148,.12);padding-bottom:3px;margin-bottom:4px}
-.rpt-h span{color:var(--b);margin-right:5px}
-.rpt-p{font-size:13px;line-height:1.6;color:var(--ds);font-family:Georgia,serif}
+.rpt-h{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--b);margin-bottom:6px;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:8px}
+.rpt-h .num{width:18px;height:18px;border-radius:50%;background:var(--bg);color:var(--b);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600}
+.rpt-p{font-size:14px;line-height:1.6;color:var(--ds);font-family:'Cormorant Garamond',serif}
 .rpt-p strong{font-weight:600;color:var(--dk)}
-.angel{background:var(--bl);border-left:3px solid var(--b);padding:8px 11px;opacity:0;transform:translateY(5px);transition:all .4s;margin-top:6px}
-.angel.pop{opacity:1;transform:translateY(0)}
-.angel-h{font-size:12px;font-weight:500;color:var(--b);margin-bottom:3px}
-.angel-p{font-size:12px;line-height:1.55;color:var(--dk);font-family:Georgia,serif}
-.angel-p strong{font-weight:600}
-.re-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
-.re-c{padding:6px 7px;border:1px solid rgba(74,123,148,.1);border-radius:5px;opacity:0;transform:translateY(4px);transition:all .35s}
+.re-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:10px}
+.re-c{padding:10px 14px;border-right:1px solid var(--hr);border-bottom:1px solid var(--hr);opacity:0;transform:translateY(4px);transition:all .35s}
+.re-c:nth-child(2n){border-right:none}
+.re-c:nth-last-child(-n+2){border-bottom:none}
 .re-c.pop{opacity:1;transform:translateY(0)}
-.re-l{font-size:9px;letter-spacing:.4px;text-transform:uppercase;color:#6a8fa5;font-family:-apple-system,sans-serif}
-.re-v{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:500;color:var(--dk)}
-.warn{font-size:11px;padding:6px 8px;background:#FFF3E6;border-left:3px solid var(--wr);color:#8B5E3C;margin-top:6px;opacity:0;transition:opacity .4s;font-family:Georgia,serif}
+.re-l{font-size:9px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx);font-family:-apple-system,sans-serif;margin-bottom:3px}
+.re-v{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--dk);line-height:1.1}
+.scenario-tabs{display:flex;gap:6px;margin-bottom:10px}
+.scn{flex:1;padding:6px;text-align:center;font-size:11px;font-weight:500;font-family:-apple-system,sans-serif;letter-spacing:.3px;border-radius:6px}
+.scn.on{background:var(--b);color:#fff}
+.scn.off{background:var(--bg);color:var(--b)}
+.warn{font-size:12px;padding:8px 12px;background:var(--wrbg);border-left:3px solid var(--wr);color:#8B5E3C;margin-top:12px;opacity:0;transition:opacity .4s;font-family:'Cormorant Garamond',serif;line-height:1.5;border-radius:0 4px 4px 0}
 .warn.pop{opacity:1}
 .warn strong{font-weight:600}
-.gbtn{display:inline-block;background:var(--b);color:#fff;padding:5px 12px;border-radius:5px;font-size:11px;font-weight:500;margin-bottom:6px;opacity:0;transform:scale(.95);transition:all .4s}
+.gbtn{display:inline-block;background:var(--b);color:#fff;padding:6px 14px;border-radius:6px;font-size:11px;font-weight:500;margin-bottom:14px;opacity:0;transform:scale(.95);transition:all .4s;letter-spacing:.3px;font-family:-apple-system,sans-serif}
 .gbtn.pop{opacity:1;transform:scale(1)}
-.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-.cat-c{padding:8px;border:1px solid rgba(74,123,148,.1);border-radius:5px;opacity:0;transform:translateY(4px);transition:all .35s}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cat-c{padding:12px 14px;border:1px solid var(--hr);border-radius:8px;opacity:0;transform:translateY(4px);transition:all .35s}
 .cat-c.pop{opacity:1;transform:translateY(0)}
-.cat-l{font-size:10px;letter-spacing:.5px;text-transform:uppercase;font-weight:500;margin-bottom:2px}
-.cat-item{font-size:12px;color:var(--ds);padding:2px 0;line-height:1.45;font-family:Georgia,serif}
+.cat-l{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;font-weight:600;margin-bottom:8px;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:6px}
+.cat-item{font-size:12px;color:var(--ds);padding:3px 0;line-height:1.5;font-family:'Cormorant Garamond',serif}
 .cat-item strong{font-weight:600;color:var(--dk)}
-.q-cols{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.q-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .q-sec{opacity:0;transform:translateY(5px);transition:all .4s}
 .q-sec.pop{opacity:1;transform:translateY(0)}
-.q-sec-h{font-size:10px;letter-spacing:.6px;text-transform:uppercase;font-weight:500;padding-bottom:3px;border-bottom:1px solid rgba(74,123,148,.1);margin-bottom:4px}
-.q-item{font-size:12px;line-height:1.5;color:var(--ds);padding:4px 0;border-bottom:1px solid rgba(74,123,148,.05);font-family:Georgia,serif}
+.q-sec-h{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--hr);margin-bottom:6px;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:5px}
+.q-item{font-size:12px;line-height:1.55;color:var(--ds);padding:5px 0;border-bottom:1px solid var(--hr);font-family:'Cormorant Garamond',serif}
+.q-item:last-child{border-bottom:none}
 .q-item strong{font-weight:600;color:var(--dk)}
-.pri{opacity:0;transform:translateY(5px);transition:all .4s;margin-bottom:6px}
+.pri{opacity:0;transform:translateY(5px);transition:all .4s;margin-bottom:10px;border-radius:8px;overflow:hidden}
 .pri.pop{opacity:1;transform:translateY(0)}
-.pri-h{font-size:11px;font-weight:500;padding:4px 8px;margin-bottom:3px}
-.pri-item{font-size:12px;line-height:1.5;color:var(--ds);padding:3px 8px;border-left:2px solid transparent;font-family:Georgia,serif}
+.pri-h{font-size:11px;font-weight:600;padding:6px 12px;letter-spacing:1px;text-transform:uppercase;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:6px}
+.pri-item{font-size:13px;line-height:1.55;color:var(--ds);padding:6px 12px;border-left:2px solid transparent;font-family:'Cormorant Garamond',serif;background:#fff}
 .pri-item strong{font-weight:600;color:var(--dk)}
-.strat{background:var(--bl);border-left:3px solid var(--b);padding:8px 11px;margin-top:6px;opacity:0;transform:translateY(5px);transition:all .5s}
+.strat{background:var(--bg);border-left:3px solid var(--b);padding:12px 14px;margin-top:10px;opacity:0;transform:translateY(5px);transition:all .5s;border-radius:0 6px 6px 0}
 .strat.pop{opacity:1;transform:translateY(0)}
-.strat-h{font-size:12px;font-weight:500;color:var(--b);margin-bottom:3px}
-.strat-p{font-size:12px;line-height:1.55;color:var(--dk);font-family:Georgia,serif}
+.strat-h{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--b);margin-bottom:6px;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:6px}
+.strat-p{font-size:13px;line-height:1.6;color:var(--dk);font-family:'Cormorant Garamond',serif}
 .strat-p strong{font-weight:600}
-.doc-r{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(74,123,148,.06);font-size:13px;font-family:Georgia,serif;opacity:0;transition:opacity .3s}
+.doc-r{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--hr);font-size:13px;font-family:'Cormorant Garamond',serif;color:var(--ds);opacity:0;transition:opacity .3s}
+.doc-r:last-child{border-bottom:none}
 .doc-r.pop{opacity:1}
-.doc-s{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.doc-s{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .doc-s.g{background:var(--gn)}
 .doc-s.p{background:var(--bm)}
-.doc-bar{margin-top:7px;height:5px;background:rgba(74,123,148,.08);border-radius:3px;overflow:hidden}
-.doc-fill{height:100%;width:0%;background:var(--b);border-radius:3px;transition:width 1s ease}
-.dtag{display:inline-block;padding:3px 9px;border-radius:4px;font-size:11px;margin:2px;color:#fff;opacity:0;transform:translateY(3px);transition:all .3s}
+.doc-bar{margin-top:12px;height:4px;background:rgba(184,212,232,.3);border-radius:2px;overflow:hidden}
+.doc-fill{height:100%;width:0%;background:var(--b);border-radius:2px;transition:width 1s ease}
+.doc-progress{display:flex;align-items:center;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--tx);font-family:-apple-system,sans-serif}
+.doc-progress .export{color:var(--b);font-weight:600;letter-spacing:.3px}
+.dtags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 12px}
+.dtag{display:inline-block;padding:4px 10px;border-radius:4px;font-size:11px;font-weight:500;font-family:-apple-system,sans-serif;letter-spacing:.2px;opacity:0;transform:translateY(3px);transition:all .3s}
 .dtag.pop{opacity:1;transform:translateY(0)}
-.upzone{border:2px dashed var(--bm);border-radius:8px;padding:18px;text-align:center;margin-top:7px;opacity:0;transition:opacity .5s}
+.upzone{border:2px dashed var(--bm);border-radius:10px;padding:22px;text-align:center;margin-top:10px;opacity:0;transition:opacity .5s;background:rgba(232,244,250,.3)}
 .upzone.pop{opacity:1}
-.ch-u{align-self:flex-end;background:var(--dk);color:#fff;border-radius:10px 10px 2px 10px;padding:8px 12px;max-width:78%;font-size:13px;line-height:1.5;font-family:Georgia,serif;opacity:0;transform:translateY(4px);transition:all .35s}
+.upzone-t{font-size:13px;color:var(--tx);font-family:'Cormorant Garamond',serif;font-style:italic}
+.upzone-s{font-size:11px;color:var(--bm);margin-top:4px;font-family:-apple-system,sans-serif}
+.upzone-btn{display:inline-block;margin-top:10px;background:var(--b);color:#fff;padding:6px 18px;border-radius:6px;font-size:12px;font-weight:500;font-family:-apple-system,sans-serif;letter-spacing:.2px}
+.angel{background:var(--bg);border-left:3px solid var(--b);padding:11px 14px;margin-top:14px;opacity:0;transform:translateY(5px);transition:all .4s;border-radius:0 6px 6px 0}
+.angel.pop{opacity:1;transform:translateY(0)}
+.angel-h{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--b);margin-bottom:6px;font-family:-apple-system,sans-serif;display:flex;align-items:center;gap:5px}
+.angel-p{font-size:13px;line-height:1.6;color:var(--dk);font-family:'Cormorant Garamond',serif}
+.angel-p strong{font-weight:600}
+.legal-note{font-size:10px;color:var(--tx);padding:5px 10px;background:var(--bg);margin-top:4px;font-family:-apple-system,sans-serif;border-radius:4px;display:inline-block;letter-spacing:.2px}
+.anl-cta{background:var(--b);border-radius:10px;padding:14px 18px;text-align:center;margin-top:14px;opacity:0;transform:scale(.97);transition:all .5s}
+.anl-cta.pop{opacity:1;transform:scale(1)}
+.anl-cta-s{color:rgba(255,255,255,.7);font-size:11px;font-family:-apple-system,sans-serif;letter-spacing:.3px;margin-bottom:4px}
+.anl-cta-t{color:#fff;font-size:15px;font-weight:500;font-family:'Cormorant Garamond',serif;font-style:italic}
+.chat-body{display:flex;flex-direction:column;gap:8px;padding-top:6px}
+.ch-u{align-self:flex-end;background:var(--dk);color:#fff;border-radius:12px 12px 3px 12px;padding:10px 14px;max-width:78%;font-size:13px;line-height:1.5;font-family:'Cormorant Garamond',serif;opacity:0;transform:translateY(4px);transition:all .35s}
 .ch-u.pop{opacity:1;transform:translateY(0)}
-.ch-a{align-self:flex-start;background:var(--bl);color:var(--dk);border-radius:10px 10px 10px 2px;padding:8px 12px;max-width:86%;font-size:13px;line-height:1.5;border-left:2px solid var(--b);font-family:Georgia,serif;opacity:0;transform:translateY(4px);transition:all .35s}
+.ch-a{align-self:flex-start;background:var(--bg);color:var(--dk);border-radius:12px 12px 12px 3px;padding:10px 14px;max-width:86%;font-size:13px;line-height:1.55;border-left:3px solid var(--b);font-family:'Cormorant Garamond',serif;opacity:0;transform:translateY(4px);transition:all .35s}
 .ch-a.pop{opacity:1;transform:translateY(0)}
 .ch-a strong{font-weight:600}
-.jur{font-size:11px;color:var(--b);padding:4px 8px;background:#f0f7fb;margin-bottom:6px;font-family:-apple-system,sans-serif}
-.anl-cta{background:var(--b);border-radius:8px;padding:14px;text-align:center;margin-top:10px;opacity:0;transform:scale(.97);transition:all .5s}
-.anl-cta.pop{opacity:1;transform:scale(1)}
 .progress-bar{height:3px;background:rgba(74,123,148,.12);margin-top:10px;border-radius:2px;overflow:hidden}
 .progress-fill{height:100%;width:0%;background:var(--b);transition:width linear}
 .disclaimer{text-align:center;font-size:11px;color:#8ca8b8;margin-top:8px;font-style:italic}
@@ -113,24 +142,261 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:va
 </head>
 <body>
 <div class="demo-wrap">
-<div class="site-card"><div class="demo-hdr"><div class="demo-h1">From Overwhelmed to <em>Prepared</em></div></div>
+<div class="site-card">
+<div class="demo-hdr"><div class="demo-h1">From Overwhelmed to <em>Prepared</em></div></div>
 <div class="nav-strip"><div class="nav-step" id="slbl">Step 1 &middot; Your finances</div></div>
-<div class="frame"><div class="topbar"><span class="topbar-t">Your Divorce Angel</span><div class="topbar-u"><div class="topbar-av">C</div>Cindy</div></div>
-<div class="body" id="bd">
-<div class="panel vis" id="p0"><div class="p-title">Your assets &amp; debts</div><div class="p-desc">Everything courts require, in one guided form.</div><div class="jur">&#127482;&#127480; Florida &middot; Equitable dist. &middot; 18.8 yrs &middot; 1 child</div><div class="row" id="r00"><span>&#127968; Home (marital)</span><div class="rv e" id="v00">$</div></div><div class="row" id="r01"><span>&#128179; Retirement (401k)</span><div class="rv e" id="v01">$</div></div><div class="row" id="r02"><span>&#127974; Savings &amp; investments</span><div class="rv e" id="v02">$</div></div><div class="row" id="r03"><span>&#128663; Vehicle</span><div class="rv e" id="v03">$</div></div><div style="height:4px"></div><div class="row" id="r04"><span>&#127968; Mortgage</span><div class="rv e" id="v04">$</div></div><div class="row" id="r05"><span>&#128179; HELOC + credit cards</span><div class="rv e" id="v05">$</div></div><div class="row" id="r06"><span>&#128663; Auto + student loan</span><div class="rv e" id="v06">$</div></div><div class="tot-grid" style="grid-template-columns:1fr 1fr 1fr"><div class="tot-card"><div class="tot-l">Assets</div><div class="tot-v" id="ta">$0</div></div><div class="tot-card"><div class="tot-l">Debts</div><div class="tot-v" id="td" style="color:var(--rd)">$0</div></div><div class="tot-card"><div class="tot-l">Net worth</div><div class="tot-v" id="tn">$0</div></div></div></div>
-<div class="panel" id="p1"><div class="p-title">Income &amp; expenses</div><div class="p-desc">Determines support calculations and cash flow.</div><div class="row" id="r10"><span>Your salary</span><div class="rv e" id="v10">$</div></div><div class="row" id="r11"><span>Bonuses + investments</span><div class="rv e" id="v11">$</div></div><div class="row" id="r12"><span>Spouse salary (est.)</span><div class="rv e" id="v12">$</div></div><div style="height:4px"></div><div style="font-size:11px;font-weight:600;color:var(--b);margin-bottom:4px;font-family:-apple-system,sans-serif">Monthly expenses</div><div class="row" id="r13"><span>&#127968; Housing + utilities</span><div class="rv e" id="v13">$</div></div><div class="row" id="r14"><span>&#128118; Kids + food</span><div class="rv e" id="v14">$</div></div><div class="row" id="r15"><span>&#128663; Transport + insurance</span><div class="rv e" id="v15">$</div></div><div class="tot-grid" style="grid-template-columns:1fr 1fr"><div class="tot-card"><div class="tot-l">Net income</div><div class="tot-v" id="tni">$0</div></div><div class="tot-card"><div class="tot-l">Cash flow</div><div class="tot-v" id="tcf">$0</div></div></div><div class="anl-cta" id="acta"><div style="color:rgba(255,255,255,.7);font-size:12px;margin-bottom:3px">Found 11 assets, 4 debts, and income data</div><div style="color:#fff;font-size:16px;font-weight:500">&#10022; My financial analysis</div></div></div>
-<div class="panel" id="p2"><div class="p-title" style="text-align:center">&#10022; Angel's analysis</div><div class="p-desc" style="text-align:center">Personalized report based on Cindy's data.</div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:8px"><div class="sc" id="x0"><div class="sc-l">Assets</div><div class="sc-v" style="color:var(--b)">$760,000</div></div><div class="sc" id="x1"><div class="sc-l">Debts</div><div class="sc-v" style="color:var(--rd)">$328,400</div></div><div class="sc" id="x2"><div class="sc-l">Net worth</div><div class="sc-v">$431,600</div></div></div><div class="rpt" id="rp0"><div class="rpt-h"><span>1</span> Overall position</div><div class="rpt-p">Your position is <strong>genuinely strong</strong>. <strong>$760k in assets</strong> against $328k debts. Concern: expenses of <strong>$8,987 exceed income of $5,970</strong>, leaving a gap of <strong>-$1,687/mo</strong>.</div></div><div class="rpt" id="rp1"><div class="rpt-h"><span>2</span> Key risks</div><div class="rpt-p">Biggest vulnerability: <strong>income gap</strong>. Spouse earns <strong>$7,800/mo</strong> vs your $5,400. The $45k Chase Visa is <strong>joint debt</strong> &mdash; if spouse stops paying, your credit takes the hit.</div></div><div class="rpt" id="rp2"><div class="rpt-h"><span>3</span> Strengths &amp; priorities</div><div class="rpt-p">Real estate equity of <strong>$160,000</strong> gives leverage. Your $180k 401(k) is in your name. <strong>Income disparity strengthens spousal support</strong>. Get temporary support formalized &mdash; the -$1,687/mo deficit is unsustainable.</div></div></div>
-<div class="panel" id="p3"><div class="p-title">Settlement scenarios</div><div class="p-desc">Real estate analyzer &mdash; keep vs. sell.</div><div class="tabs"><div class="tab">Assets</div><div class="tab">Child supp.</div><div class="tab">Spousal</div><div class="tab on">Real estate</div></div><div style="display:flex;gap:3px;margin-bottom:5px"><div style="flex:1;padding:4px;background:var(--b);color:#fff;text-align:center;font-size:11px;font-weight:500;border-radius:4px">I keep the house</div><div style="flex:1;padding:4px;background:var(--bl);color:var(--b);text-align:center;font-size:11px;border-radius:4px">We sell</div></div><div class="re-grid"><div class="re-c" id="re0"><div class="re-l">Home value</div><div class="re-v">$425,000</div></div><div class="re-c" id="re1"><div class="re-l">Mortgage</div><div class="re-v">$265,000</div></div><div class="re-c" id="re2"><div class="re-l">New payment</div><div class="re-v" style="color:var(--rd)">$2,230/mo</div></div><div class="re-c" id="re3"><div class="re-l">Income needed</div><div class="re-v">$8,370/mo</div></div><div class="re-c" id="re4"><div class="re-l">Can you refinance?</div><div class="re-v" style="color:var(--rd)">&#9888; Income gap</div></div><div class="re-c" id="re5"><div class="re-l">5-yr equity (est.)</div><div class="re-v" style="color:var(--gn)">$480,000</div></div></div><div class="warn" id="rew">&#9888; Housing cost ratio: <strong>68% of take-home</strong> &mdash; High risk.</div></div>
-<div class="panel" id="p4"><div class="p-title">&#9989; Negotiation checklist</div><div class="p-desc">Personalized to your assets, jurisdiction, and situation.</div><div class="tabs"><div class="tab on">&#9989; Checklist</div><div class="tab">&#10067; Questions</div><div class="tab">&#127919; Priorities</div></div><div class="gbtn" id="gb4">&#10022; Generate my checklist</div><div class="cat-grid"><div class="cat-c" id="c0"><div class="cat-l" style="color:var(--b)">&#128196; Documents to gather</div><div class="cat-item">&#8226; Last 3 years tax returns</div><div class="cat-item">&#8226; Mortgage stmt (<strong>$265k</strong>)</div><div class="cat-item">&#8226; 401(k) stmts (<strong>$180k</strong>)</div><div class="cat-item">&#8226; HELOC agreement (<strong>$35k</strong>)</div></div><div class="cat-c" id="c1"><div class="cat-l" style="color:var(--wr)">&#128176; Financial items to verify</div><div class="cat-item">&#8226; Spouse income (<strong>$7,800?</strong>)</div><div class="cat-item">&#8226; Joint credit card (<strong>$47k</strong>)</div><div class="cat-item">&#8226; Investment ownership</div><div class="cat-item">&#8226; Vehicle titles &amp; liens</div></div><div class="cat-c" id="c2"><div class="cat-l" style="color:var(--rd)">&#128274; What to protect</div><div class="cat-item">&#8226; 401(k) pre-marital portion</div><div class="cat-item">&#8226; Your credit score</div><div class="cat-item">&#8226; Child's school stability</div><div class="cat-item">&#8226; Health insurance</div></div><div class="cat-c" id="c3"><div class="cat-l" style="color:var(--gn)">&#9888; Red flags</div><div class="cat-item">&#8226; Spouse moving assets</div><div class="cat-item">&#8226; Pressure to settle fast</div><div class="cat-item">&#8226; Waiving pension rights</div><div class="cat-item">&#8226; Undervalued appraisal</div></div></div></div>
-<div class="panel" id="p5"><div class="p-title">&#10067; Questions to ask your lawyer</div><div class="p-desc">Targeted questions based on your actual numbers.</div><div class="tabs"><div class="tab">&#9989; Checklist</div><div class="tab on">&#10067; Questions</div><div class="tab">&#127919; Priorities</div></div><div class="gbtn" id="gb5">&#10022; Generate my questions</div><div class="q-cols"><div class="q-sec" id="qs0"><div class="q-sec-h" style="color:var(--b)">&#9878; For your lawyer</div><div class="q-item">Given spouse's income of <strong>$7,800/mo vs your $5,400</strong>, how strong is your alimony case after 18.8 years?</div><div class="q-item">Cash flow of <strong>-$1,687/mo</strong> is unsustainable &mdash; can you petition for <strong>temporary support</strong>?</div></div><div class="q-sec" id="qs1"><div class="q-sec-h" style="color:var(--wr)">&#128176; Assets &amp; debts</div><div class="q-item">Your 401(k) holds <strong>$180,000</strong> vs spouse's $20,000 &mdash; will a <strong>QDRO</strong> be needed?</div><div class="q-item">With <strong>$47,400</strong> joint debt, what's your exposure if spouse stops paying?</div></div></div><div class="q-cols" style="margin-top:5px"><div class="q-sec" id="qs2"><div class="q-sec-h" style="color:var(--gn)">&#128118; Support &amp; custody</div><div class="q-item">Given the income gap and 18.8-year marriage, what alimony range under Florida's <strong>revised 2023 statute</strong>?</div></div><div class="q-sec" id="qs3"><div class="q-sec-h" style="color:var(--rd)">&#127919; Settlement strategy</div><div class="q-item">With net worth of <strong>$431,600</strong>, would mediation be more cost-effective and protect your share?</div></div></div></div>
-<div class="panel" id="p6"><div class="p-title">&#127919; Financial priorities</div><div class="p-desc">What to fight for and what to let go.</div><div class="tabs"><div class="tab">&#9989; Checklist</div><div class="tab">&#10067; Questions</div><div class="tab on">&#127919; Priorities</div></div><div class="gbtn" id="gb6">&#10022; Generate my priorities</div><div class="pri" id="pr0"><div class="pri-h" style="background:#e8f5e9;color:#2e7d32">&#128994; Fight hard for</div><div class="pri-item" style="border-left-color:#2e7d32"><strong>Home ($425k)</strong> &mdash; 56% of total assets. Strong claim after 18.8 years.</div><div class="pri-item" style="border-left-color:#2e7d32"><strong>Your 401(k) ($180k)</strong> &mdash; protect pre-marital contributions.</div><div class="pri-item" style="border-left-color:#2e7d32"><strong>Alimony</strong> &mdash; spouse earns <strong>$7,800/mo</strong> vs $5,400. Potentially your most valuable "asset."</div></div><div class="pri" id="pr1"><div class="pri-h" style="background:#fff8e1;color:#f57f17">&#128992; Negotiate carefully</div><div class="pri-item" style="border-left-color:#f57f17"><strong>Spouse's investments ($34k)</strong> &mdash; tradeable against concessions.</div><div class="pri-item" style="border-left-color:#f57f17"><strong>Vehicles ($23,800)</strong> &mdash; use as goodwill leverage.</div></div><div class="pri" id="pr2"><div class="pri-h" style="background:#fce4ec;color:#c62828">&#128308; Consider letting go</div><div class="pri-item" style="border-left-color:#c62828"><strong>Joint credit card ($45k)</strong> &mdash; don't lose leverage on house.</div><div class="pri-item" style="border-left-color:#c62828"><strong>Auto loan ($12k)</strong> &mdash; let debt follow whoever keeps the car.</div></div><div class="strat" id="strat"><div class="strat-h">&#10022; Angel's strategic advice</div><div class="strat-p">Your greatest strength: 18.8-year marriage + <strong>$2,400/mo income gap</strong>. Florida courts take both seriously for alimony. Your greatest vulnerability: <strong>-$1,687/mo cash flow</strong>. Filing for temporary support is <strong>urgent</strong>.</div></div></div>
-<div class="panel" id="p7"><div class="p-title">&#128196; Document collection</div><div class="p-desc">67 documents tailored to Florida. Upload &amp; export.</div><div class="tabs"><div class="tab on">Personal</div><div class="tab">Financial</div><div class="tab">Property</div><div class="tab">Insurance</div><div class="tab">Legal</div></div><div class="doc-r" id="d0"><div class="doc-s g"></div>Marriage certificate</div><div class="doc-r" id="d1"><div class="doc-s g"></div>Birth certificates</div><div class="doc-r" id="d2"><div class="doc-s g"></div>Tax returns (3 yrs)</div><div class="doc-r" id="d3"><div class="doc-s g"></div>Mortgage statement</div><div class="doc-r" id="d4"><div class="doc-s g"></div>401(k) statements</div><div class="doc-r" id="d5"><div class="doc-s p"></div>Bank statements (6 mo)</div><div class="doc-r" id="d6"><div class="doc-s p"></div>Credit card statements</div><div class="doc-r" id="d7"><div class="doc-s p"></div>HELOC agreement</div><div class="doc-r" id="d8"><div class="doc-s p"></div>Pay stubs (both parties)</div><div class="doc-bar"><div class="doc-fill" id="dfill"></div></div><div style="font-size:11px;color:#6a8fa5;text-align:right;margin-top:3px;font-family:-apple-system,sans-serif">5 of 67 collected &middot; <span style="color:var(--b);font-weight:600">Export &#8594;</span></div></div>
-<div class="panel" id="p8"><div class="p-title">&#10022; Document analyzer</div><div class="p-desc">Upload any document &mdash; Angel explains it in plain English.</div><div style="display:flex;flex-wrap:wrap;gap:3px;margin:5px 0"><div class="dtag" id="tg0" style="background:var(--b)">Separation agreements</div><div class="dtag" id="tg1" style="background:var(--dk)">Court orders</div><div class="dtag" id="tg2" style="background:#6a8fa5">Lawyer letters</div><div class="dtag" id="tg3" style="background:var(--b)">Financial disclosure</div><div class="dtag" id="tg4" style="background:var(--dk)">Settlement offers</div></div><div style="font-size:11px;color:#6a8fa5;padding:4px 8px;background:var(--bg);margin-bottom:6px;font-family:-apple-system,sans-serif">&#9878; Understanding only, not legal advice.</div><div class="upzone" id="upz"><div style="font-size:13px;color:#6a8fa5">&#128196; Drop your document here or click to upload</div><div style="font-size:11px;color:var(--bm);margin-top:2px">PDF, JPG, PNG supported</div><div style="margin-top:7px"><span style="display:inline-block;background:var(--b);color:#fff;padding:5px 16px;border-radius:5px;font-size:12px;font-weight:500">&#10022; Choose file</span></div></div><div class="angel" id="ab8"><div class="angel-h">&#10022; Angel</div><div class="angel-p" id="at8"></div></div></div>
-<div class="panel" id="p9"><div class="p-title" style="text-align:center;margin-top:4px">Ask Angel anything</div><div class="p-desc" style="text-align:center">Angel knows your entire file. No judgment. No hourly rate.</div><div style="display:flex;flex-direction:column;gap:5px;margin-top:8px"><div class="ch-u" id="q0">Should I keep the house or sell?</div><div class="ch-a" id="a0"><strong>Selling puts you $57,500 ahead.</strong> Carrying the mortgage alone would consume 68% of take-home. I'd recommend the sale and redirecting equity toward your retirement gap.</div><div class="ch-u" id="q1">Is his 401(k) really all his?</div><div class="ch-a" id="a1">No. Contributions during marriage are <strong>marital property</strong> in Florida. You're entitled to approx. <strong>$74,000</strong> via a QDRO &mdash; don't leave it on the table.</div><div class="ch-u" id="q2">What should I ask my lawyer first?</div><div class="ch-a" id="a2"><strong>1)</strong> How will the HELOC be handled? <strong>2)</strong> Timeline for a QDRO? <strong>3)</strong> Should we get an independent appraisal? Full list is in your Negotiation Prep.</div></div></div>
-</div></div>
+
+<div class="frame">
+
+<div class="panel vis" id="p0">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 1 of 6</div>
+    <div class="panel-title">Your assets &amp; debts</div>
+    <div class="panel-subtitle">Everything the court requires, in one guided form.</div>
+    <div class="panel-meta">
+      <span>&#127482;&#127480; Florida</span>
+      <span>Equitable distribution</span>
+      <span>18.8 years married</span>
+      <span>1 child</span>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="sect-l">Assets</div>
+    <div class="row" id="r00"><div class="row-label"><span class="row-emoji">&#127968;</span>Home (marital)</div><div class="rv e" id="v00">$</div></div>
+    <div class="row" id="r01"><div class="row-label"><span class="row-emoji">&#128179;</span>Retirement (401k)</div><div class="rv e" id="v01">$</div></div>
+    <div class="row" id="r02"><div class="row-label"><span class="row-emoji">&#127974;</span>Savings &amp; investments</div><div class="rv e" id="v02">$</div></div>
+    <div class="row" id="r03"><div class="row-label"><span class="row-emoji">&#128663;</span>Vehicle</div><div class="rv e" id="v03">$</div></div>
+    <div class="sect-l">Debts</div>
+    <div class="row" id="r04"><div class="row-label"><span class="row-emoji">&#127968;</span>Mortgage</div><div class="rv e" id="v04">$</div></div>
+    <div class="row" id="r05"><div class="row-label"><span class="row-emoji">&#128179;</span>HELOC + credit cards</div><div class="rv e" id="v05">$</div></div>
+    <div class="row" id="r06"><div class="row-label"><span class="row-emoji">&#128663;</span>Auto + student loan</div><div class="rv e" id="v06">$</div></div>
+    <div class="totals">
+      <div class="tot-cell"><div class="tot-l">Assets</div><div class="tot-v" id="ta">$0</div></div>
+      <div class="tot-cell"><div class="tot-l">Debts</div><div class="tot-v" id="td">$0</div></div>
+      <div class="tot-cell"><div class="tot-l">Net worth</div><div class="tot-v net" id="tn">$0</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="p1">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 1 of 6 &middot; continued</div>
+    <div class="panel-title">Income &amp; expenses</div>
+    <div class="panel-subtitle">Determines support calculations and cash flow.</div>
+  </div>
+  <div class="panel-body">
+    <div class="sect-l">Monthly income</div>
+    <div class="row" id="r10"><div class="row-label">Your salary</div><div class="rv e" id="v10">$</div></div>
+    <div class="row" id="r11"><div class="row-label">Bonuses + investments</div><div class="rv e" id="v11">$</div></div>
+    <div class="row" id="r12"><div class="row-label">Spouse salary (est.)</div><div class="rv e" id="v12">$</div></div>
+    <div class="sect-l">Monthly expenses</div>
+    <div class="row" id="r13"><div class="row-label"><span class="row-emoji">&#127968;</span>Housing + utilities</div><div class="rv e" id="v13">$</div></div>
+    <div class="row" id="r14"><div class="row-label"><span class="row-emoji">&#128118;</span>Kids + food</div><div class="rv e" id="v14">$</div></div>
+    <div class="row" id="r15"><div class="row-label"><span class="row-emoji">&#128663;</span>Transport + insurance</div><div class="rv e" id="v15">$</div></div>
+    <div class="totals two">
+      <div class="tot-cell"><div class="tot-l">Net income</div><div class="tot-v" id="tni">$0</div></div>
+      <div class="tot-cell"><div class="tot-l">Cash flow</div><div class="tot-v" id="tcf">$0</div></div>
+    </div>
+    <div class="anl-cta" id="acta">
+      <div class="anl-cta-s">Found 11 assets, 4 debts, and income data</div>
+      <div class="anl-cta-t">&#10022; My financial analysis</div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="p2">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 2 of 6</div>
+    <div class="panel-title">&#10022; Angel&rsquo;s analysis</div>
+    <div class="panel-subtitle">Personalized report based on Cindy&rsquo;s data.</div>
+  </div>
+  <div class="panel-body">
+    <div class="scores">
+      <div class="sc" id="x0"><div class="sc-l">Assets</div><div class="sc-v">$760,000</div></div>
+      <div class="sc" id="x1"><div class="sc-l">Debts</div><div class="sc-v">$328,400</div></div>
+      <div class="sc" id="x2"><div class="sc-l">Net worth</div><div class="sc-v" style="color:var(--b)">$431,600</div></div>
+    </div>
+    <div class="rpt" id="rp0"><div class="rpt-h"><span class="num">1</span> Overall position</div><div class="rpt-p">Your position is <strong>genuinely strong</strong>. <strong>$760k in assets</strong> against $328k debts. Concern: expenses of <strong>$8,987 exceed income of $5,970</strong>, leaving a gap of <strong>-$1,687/mo</strong>.</div></div>
+    <div class="rpt" id="rp1"><div class="rpt-h"><span class="num">2</span> Key risks</div><div class="rpt-p">Biggest vulnerability: <strong>income gap</strong>. Spouse earns <strong>$7,800/mo</strong> vs your $5,400. The $45k Chase Visa is <strong>joint debt</strong> &mdash; if spouse stops paying, your credit takes the hit.</div></div>
+    <div class="rpt" id="rp2"><div class="rpt-h"><span class="num">3</span> Strengths &amp; priorities</div><div class="rpt-p">Real estate equity of <strong>$160,000</strong> gives leverage. Your $180k 401(k) is in your name. <strong>Income disparity strengthens spousal support</strong>. Get temporary support formalized &mdash; the -$1,687/mo deficit is unsustainable.</div></div>
+  </div>
+</div>
+
+<div class="panel" id="p3">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 3 of 6</div>
+    <div class="panel-title">Settlement scenarios</div>
+    <div class="panel-subtitle">Real estate analyzer &mdash; keep vs. sell.</div>
+  </div>
+  <div class="panel-body">
+    <div class="tabs">
+      <div class="tab">Assets</div>
+      <div class="tab">Child support</div>
+      <div class="tab">Spousal</div>
+      <div class="tab on">Real estate</div>
+    </div>
+    <div class="scenario-tabs">
+      <div class="scn on">I keep the house</div>
+      <div class="scn off">We sell</div>
+    </div>
+    <div class="re-grid">
+      <div class="re-c" id="re0"><div class="re-l">Home value</div><div class="re-v">$425,000</div></div>
+      <div class="re-c" id="re1"><div class="re-l">Mortgage</div><div class="re-v">$265,000</div></div>
+      <div class="re-c" id="re2"><div class="re-l">New payment</div><div class="re-v" style="color:var(--rd)">$2,230/mo</div></div>
+      <div class="re-c" id="re3"><div class="re-l">Income needed</div><div class="re-v">$8,370/mo</div></div>
+      <div class="re-c" id="re4"><div class="re-l">Can you refinance?</div><div class="re-v" style="color:var(--rd)">&#9888; Income gap</div></div>
+      <div class="re-c" id="re5"><div class="re-l">5-year equity (est.)</div><div class="re-v" style="color:var(--gn)">$480,000</div></div>
+    </div>
+    <div class="warn" id="rew">&#9888; Housing cost ratio: <strong>68% of take-home</strong> &mdash; High risk.</div>
+  </div>
+</div>
+
+<div class="panel" id="p4">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 4 of 6</div>
+    <div class="panel-title">&#9989; Negotiation checklist</div>
+    <div class="panel-subtitle">Personalized to your assets, jurisdiction, and situation.</div>
+  </div>
+  <div class="panel-body">
+    <div class="tabs">
+      <div class="tab on">&#9989; Checklist</div>
+      <div class="tab">&#10067; Questions</div>
+      <div class="tab">&#127919; Priorities</div>
+    </div>
+    <div class="gbtn" id="gb4">&#10022; Generate my checklist</div>
+    <div class="cat-grid">
+      <div class="cat-c" id="c0"><div class="cat-l" style="color:var(--b)"><span>&#128196;</span> Documents to gather</div><div class="cat-item">&bull; Last 3 years tax returns</div><div class="cat-item">&bull; Mortgage stmt (<strong>$265k</strong>)</div><div class="cat-item">&bull; 401(k) stmts (<strong>$180k</strong>)</div><div class="cat-item">&bull; HELOC agreement (<strong>$35k</strong>)</div></div>
+      <div class="cat-c" id="c1"><div class="cat-l" style="color:var(--wr)"><span>&#128176;</span> Financial items to verify</div><div class="cat-item">&bull; Spouse income (<strong>$7,800?</strong>)</div><div class="cat-item">&bull; Joint credit card (<strong>$47k</strong>)</div><div class="cat-item">&bull; Investment ownership</div><div class="cat-item">&bull; Vehicle titles &amp; liens</div></div>
+      <div class="cat-c" id="c2"><div class="cat-l" style="color:var(--rd)"><span>&#128274;</span> What to protect</div><div class="cat-item">&bull; 401(k) pre-marital portion</div><div class="cat-item">&bull; Your credit score</div><div class="cat-item">&bull; Child&rsquo;s school stability</div><div class="cat-item">&bull; Health insurance</div></div>
+      <div class="cat-c" id="c3"><div class="cat-l" style="color:var(--gn)"><span>&#9888;</span> Red flags</div><div class="cat-item">&bull; Spouse moving assets</div><div class="cat-item">&bull; Pressure to settle fast</div><div class="cat-item">&bull; Waiving pension rights</div><div class="cat-item">&bull; Undervalued appraisal</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="p5">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 4 of 6 &middot; continued</div>
+    <div class="panel-title">&#10067; Questions to ask your lawyer</div>
+    <div class="panel-subtitle">Targeted questions based on your actual numbers.</div>
+  </div>
+  <div class="panel-body">
+    <div class="tabs">
+      <div class="tab">&#9989; Checklist</div>
+      <div class="tab on">&#10067; Questions</div>
+      <div class="tab">&#127919; Priorities</div>
+    </div>
+    <div class="gbtn" id="gb5">&#10022; Generate my questions</div>
+    <div class="q-cols">
+      <div class="q-sec" id="qs0"><div class="q-sec-h" style="color:var(--b)"><span>&#9878;</span> For your lawyer</div><div class="q-item">Given spouse&rsquo;s income of <strong>$7,800/mo vs your $5,400</strong>, how strong is your alimony case after 18.8 years?</div><div class="q-item">Cash flow of <strong>-$1,687/mo</strong> is unsustainable &mdash; can you petition for <strong>temporary support</strong>?</div></div>
+      <div class="q-sec" id="qs1"><div class="q-sec-h" style="color:var(--wr)"><span>&#128176;</span> Assets &amp; debts</div><div class="q-item">Your 401(k) holds <strong>$180,000</strong> vs spouse&rsquo;s $20,000 &mdash; will a <strong>QDRO</strong> be needed?</div><div class="q-item">With <strong>$47,400</strong> joint debt, what&rsquo;s your exposure if spouse stops paying?</div></div>
+    </div>
+    <div class="q-cols" style="margin-top:10px">
+      <div class="q-sec" id="qs2"><div class="q-sec-h" style="color:var(--gn)"><span>&#128118;</span> Support &amp; custody</div><div class="q-item">Given the income gap and 18.8-year marriage, what alimony range under Florida&rsquo;s <strong>revised 2023 statute</strong>?</div></div>
+      <div class="q-sec" id="qs3"><div class="q-sec-h" style="color:var(--rd)"><span>&#127919;</span> Settlement strategy</div><div class="q-item">With net worth of <strong>$431,600</strong>, would mediation be more cost-effective and protect your share?</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="p6">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 4 of 6 &middot; continued</div>
+    <div class="panel-title">&#127919; Financial priorities</div>
+    <div class="panel-subtitle">What to fight for and what to let go.</div>
+  </div>
+  <div class="panel-body">
+    <div class="tabs">
+      <div class="tab">&#9989; Checklist</div>
+      <div class="tab">&#10067; Questions</div>
+      <div class="tab on">&#127919; Priorities</div>
+    </div>
+    <div class="gbtn" id="gb6">&#10022; Generate my priorities</div>
+    <div class="pri" id="pr0"><div class="pri-h" style="background:#e8f5e9;color:#2e7d32"><span>&#128994;</span> Fight hard for</div><div class="pri-item" style="border-left-color:#2e7d32"><strong>Home ($425k)</strong> &mdash; 56% of total assets. Strong claim after 18.8 years.</div><div class="pri-item" style="border-left-color:#2e7d32"><strong>Your 401(k) ($180k)</strong> &mdash; protect pre-marital contributions.</div><div class="pri-item" style="border-left-color:#2e7d32"><strong>Alimony</strong> &mdash; spouse earns <strong>$7,800/mo</strong> vs $5,400. Potentially your most valuable &ldquo;asset.&rdquo;</div></div>
+    <div class="pri" id="pr1"><div class="pri-h" style="background:#fff8e1;color:#f57f17"><span>&#128992;</span> Negotiate carefully</div><div class="pri-item" style="border-left-color:#f57f17"><strong>Spouse&rsquo;s investments ($34k)</strong> &mdash; tradeable against concessions.</div><div class="pri-item" style="border-left-color:#f57f17"><strong>Vehicles ($23,800)</strong> &mdash; use as goodwill leverage.</div></div>
+    <div class="pri" id="pr2"><div class="pri-h" style="background:#fce4ec;color:#c62828"><span>&#128308;</span> Consider letting go</div><div class="pri-item" style="border-left-color:#c62828"><strong>Joint credit card ($45k)</strong> &mdash; don&rsquo;t lose leverage on house.</div><div class="pri-item" style="border-left-color:#c62828"><strong>Auto loan ($12k)</strong> &mdash; let debt follow whoever keeps the car.</div></div>
+    <div class="strat" id="strat"><div class="strat-h"><span>&#10022;</span> Angel&rsquo;s strategic advice</div><div class="strat-p">Your greatest strength: 18.8-year marriage + <strong>$2,400/mo income gap</strong>. Florida courts take both seriously for alimony. Your greatest vulnerability: <strong>-$1,687/mo cash flow</strong>. Filing for temporary support is <strong>urgent</strong>.</div></div>
+  </div>
+</div>
+
+<div class="panel" id="p7">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 5 of 6</div>
+    <div class="panel-title">&#128196; Document collection</div>
+    <div class="panel-subtitle">67 documents tailored to Florida. Upload &amp; export.</div>
+  </div>
+  <div class="panel-body">
+    <div class="tabs">
+      <div class="tab on">Personal</div>
+      <div class="tab">Financial</div>
+      <div class="tab">Property</div>
+      <div class="tab">Insurance</div>
+      <div class="tab">Legal</div>
+    </div>
+    <div class="doc-r" id="d0"><div class="doc-s g"></div>Marriage certificate</div>
+    <div class="doc-r" id="d1"><div class="doc-s g"></div>Birth certificates</div>
+    <div class="doc-r" id="d2"><div class="doc-s g"></div>Tax returns (3 yrs)</div>
+    <div class="doc-r" id="d3"><div class="doc-s g"></div>Mortgage statement</div>
+    <div class="doc-r" id="d4"><div class="doc-s g"></div>401(k) statements</div>
+    <div class="doc-r" id="d5"><div class="doc-s p"></div>Bank statements (6 mo)</div>
+    <div class="doc-r" id="d6"><div class="doc-s p"></div>Credit card statements</div>
+    <div class="doc-r" id="d7"><div class="doc-s p"></div>HELOC agreement</div>
+    <div class="doc-r" id="d8"><div class="doc-s p"></div>Pay stubs (both parties)</div>
+    <div class="doc-bar"><div class="doc-fill" id="dfill"></div></div>
+    <div class="doc-progress"><span>5 of 67 collected</span><span class="export">Export &rarr;</span></div>
+  </div>
+</div>
+
+<div class="panel" id="p8">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Step 6 of 6</div>
+    <div class="panel-title">&#10022; Document analyzer</div>
+    <div class="panel-subtitle">Upload any document &mdash; Angel explains it in plain English.</div>
+  </div>
+  <div class="panel-body">
+    <div class="sect-l">Supported document types</div>
+    <div class="dtags">
+      <div class="dtag" id="tg0" style="background:var(--b);color:#fff">Separation agreements</div>
+      <div class="dtag" id="tg1" style="background:var(--dk);color:#fff">Court orders</div>
+      <div class="dtag" id="tg2" style="background:#6a8fa5;color:#fff">Lawyer letters</div>
+      <div class="dtag" id="tg3" style="background:var(--b);color:#fff">Financial disclosure</div>
+      <div class="dtag" id="tg4" style="background:var(--dk);color:#fff">Settlement offers</div>
+    </div>
+    <div class="legal-note">&#9878; Understanding only, not legal advice.</div>
+    <div class="upzone" id="upz">
+      <div class="upzone-t">&#128196; Drop your document here or click to upload</div>
+      <div class="upzone-s">PDF, JPG, PNG supported</div>
+      <div class="upzone-btn">&#10022; Choose file</div>
+    </div>
+    <div class="angel" id="ab8">
+      <div class="angel-h"><span>&#10022;</span> Angel</div>
+      <div class="angel-p" id="at8"></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="p9">
+  <div class="panel-hdr">
+    <div class="panel-step-label">Your Divorce Angel</div>
+    <div class="panel-title">Ask Angel anything</div>
+    <div class="panel-subtitle">Angel knows your entire file. No judgment. No hourly rate.</div>
+  </div>
+  <div class="panel-body">
+    <div class="chat-body">
+      <div class="ch-u" id="q0">Should I keep the house or sell?</div>
+      <div class="ch-a" id="a0"><strong>Selling puts you $57,500 ahead.</strong> Carrying the mortgage alone would consume 68% of take-home. I&rsquo;d recommend the sale and redirecting equity toward your retirement gap.</div>
+      <div class="ch-u" id="q1">Is his 401(k) really all his?</div>
+      <div class="ch-a" id="a1">No. Contributions during marriage are <strong>marital property</strong> in Florida. You&rsquo;re entitled to approx. <strong>$74,000</strong> via a QDRO &mdash; don&rsquo;t leave it on the table.</div>
+      <div class="ch-u" id="q2">What should I ask my lawyer first?</div>
+      <div class="ch-a" id="a2"><strong>1)</strong> How will the HELOC be handled? <strong>2)</strong> Timeline for a QDRO? <strong>3)</strong> Should we get an independent appraisal? Full list is in your Negotiation Prep.</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
 <div class="progress-bar"><div class="progress-fill" id="pf"></div></div>
 <div class="disclaimer">Example data &mdash; Cindy, Florida &middot; 18.8-year marriage &middot; 1 child</div>
 </div></div>
+
 <script>
 var playing=true,TOs=[],step=0,N=10;
 var labels=['Step 1 \u00b7 Your finances','Step 1 \u00b7 Income & expenses','Step 2 \u00b7 Angel\u2019s analysis','Step 3 \u00b7 Settlement scenarios','Step 4 \u00b7 Negotiation checklist','Step 4 \u00b7 Questions to ask','Step 4 \u00b7 Financial priorities','Step 5 \u00b7 Documents','Step 6 \u00b7 Document analyzer','Your Angel \u00b7 Ask anything'];
@@ -142,7 +408,7 @@ function typeV(vid,val,cb){var el=document.getElementById(vid);el.classList.remo
 function fillRow(rid,vid,val,delay){Q(function(){document.getElementById(rid).classList.add('hl');typeV(vid,val,function(){document.getElementById(rid).classList.remove('hl');});},delay);}
 function resetAll(){
 for(var s=0;s<2;s++)for(var i=0;i<7;i++){var e=document.getElementById('v'+s+i);if(e){e.textContent='$';e.classList.add('e');e.classList.remove('tp');}var r=document.getElementById('r'+s+i);if(r)r.classList.remove('hl');}
-['ta','td','tn','tni','tcf'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent='$0';});
+['ta','td','tn','tni','tcf'].forEach(function(id){var e=document.getElementById(id);if(e){e.textContent='$0';e.style.color='';}});
 document.getElementById('acta').classList.remove('pop');
 ['x0','x1','x2','rp0','rp1','rp2'].forEach(function(id){var e=document.getElementById(id);if(e)e.classList.remove('pop');});
 for(var i=0;i<6;i++){var e=document.getElementById('re'+i);if(e)e.classList.remove('pop');}
@@ -169,7 +435,7 @@ function run5(){show(5);Q(function(){document.getElementById('gb5').classList.ad
 function run6(){show(6);Q(function(){document.getElementById('gb6').classList.add('pop');},200);Q(function(){document.getElementById('pr0').classList.add('pop');},700);Q(function(){document.getElementById('pr1').classList.add('pop');},3200);Q(function(){document.getElementById('pr2').classList.add('pop');},5200);Q(function(){document.getElementById('strat').classList.add('pop');},8500);Q(next,durs[6]);}
 function run7(){show(7);for(var i=0;i<9;i++){(function(i){Q(function(){document.getElementById('d'+i).classList.add('pop');},i*200);})(i);}Q(function(){document.getElementById('dfill').style.width='7%';},2000);Q(next,durs[7]);}
 function run8(){show(8);['tg0','tg1','tg2','tg3','tg4'].forEach(function(id,i){Q(function(){document.getElementById(id).classList.add('pop');},i*180);});Q(function(){document.getElementById('upz').classList.add('pop');},1100);Q(function(){document.getElementById('ab8').classList.add('pop');var txt='Upload your separation agreement and I\'ll highlight what\'s <strong>fair vs. unfair</strong> based on your numbers, flag anything you might be <strong>giving up too much</strong> on, and generate questions for your lawyer.';var el=document.getElementById('at8');el.innerHTML='';var plain=txt.replace(/<[^>]+>/g,''),ci=0;var iv=setInterval(function(){ci++;var out='',count=0,inTag=false,buf='';for(var j=0;j<txt.length;j++){if(txt[j]==='<'){inTag=true;buf+=txt[j];continue;}if(inTag){buf+=txt[j];if(txt[j]==='>'){inTag=false;out+=buf;buf='';}continue;}count++;if(count<=ci)out+=txt[j];else break;}el.innerHTML=out;if(ci>=plain.length)clearInterval(iv);},16);},2200);Q(next,durs[8]);}
-function run9(){show(9);Q(function(){document.getElementById('q0').classList.add('pop');},200);Q(function(){document.getElementById('a0').classList.add('pop');},700);Q(function(){document.getElementById('q1').classList.add('pop');},2400);Q(function(){document.getElementById('a1').classList.add('pop');},2900);Q(function(){document.getElementById('q2').classList.add('pop');},4800);Q(function(){document.getElementById('a2').classList.add('pop');},5300);Q(function(){step=-1;resetAll();next();},durs[9]);}
+function run9(){show(9);Q(function(){document.getElementById('q0').classList.add('pop');},200);Q(function(){document.getElementById('a0').classList.add('pop');},700);Q(function(){document.getElementById('q1').classList.add('pop');},2400);Q(function(){document.getElementById('a1').classList.add('pop');},2900);Q(function(){step=-1;resetAll();next();},durs[9]);}
 var runners=[run0,run1,run2,run3,run4,run5,run6,run7,run8,run9];
 function next(){if(!playing)return;if(step>=N-1){step=-1;resetAll();}step++;runTimer();runners[step]();}
 function runTimer(){var t=document.getElementById('pf'),el=0;for(var i=0;i<step;i++)el+=durs[i];var tot=0;for(var i=0;i<N;i++)tot+=durs[i];t.style.transition='none';t.style.width=Math.round(el/tot*100)+'%';t.offsetHeight;t.style.transition='width '+durs[step]+'ms linear';t.style.width=Math.round((el+durs[step])/tot*100)+'%';}
