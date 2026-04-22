@@ -84,11 +84,12 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   .feature-grid{grid-template-columns:1fr!important;}
 }
 @media(max-width:768px){
-  .nav-logo-bar{padding:10px 20px;}
-  .nav-logo{height:52px!important;}
-  .nav{height:auto;padding:8px 16px;}
-  .nav-links{flex-wrap:wrap;gap:14px;font-size:16px;justify-content:center;}
-  .cta-btn{top:14px;right:16px;font-size:13px;padding:8px 14px;}
+  .nav-logo-bar{padding:10px 16px;justify-content:space-between;position:static;}
+  .nav-logo{height:44px!important;}
+  .nav{height:auto;padding:8px 12px;position:static;top:auto;}
+  .nav-links{flex-wrap:wrap;gap:12px 18px;font-size:15px;justify-content:center;}
+  .cta-btn{position:static;top:auto;right:auto;font-size:13px;padding:9px 16px;box-shadow:none;flex-shrink:0;order:2;}
+  .nav-logo-bar > a:first-child{order:1;flex-shrink:1;min-width:0;}
   .hero{padding:24px 20px;gap:20px;grid-template-columns:1fr;}
   .hero h1{font-size:1.8rem;}
   .hero iframe{display:none!important;}
@@ -100,12 +101,17 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   .test-grid{grid-template-columns:1fr;}
   .cta-row{justify-content:center!important;}
   .join-bar-inner{flex-direction:column!important;text-align:center;gap:16px!important;}
+  .footer-nav-bar{flex-wrap:wrap;gap:14px 22px;padding:14px 20px;}
+  .footer-nav-bar a{font-size:15px;}
 }
 @media(max-width:480px){
-  .cta-btn{display:none;}
+  .nav-logo{height:38px!important;}
+  .cta-btn{font-size:12px;padding:8px 12px;}
   .hero h1{font-size:1.5rem;}
   .sec-h2{font-size:1.3rem;}
-  .nav-links{gap:10px;font-size:14px;}
+  .nav-links{gap:8px 14px;font-size:14px;}
+  .sec-wrap{padding:28px 16px;}
+  .hero{padding:20px 16px;}
 }
 .angel-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
 .af-list{display:flex;flex-direction:column;gap:20px;margin-top:26px;}
@@ -154,9 +160,9 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <div class="nav-logo-bar">
   <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+  <a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started →</a>
 </div>
 
-<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started →</a>
 <nav class="nav">
   <div class="nav-links">
     <a href="https://divorcetracker.netlify.app" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
@@ -182,7 +188,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </div>
     </div>
 
-    <div style="width:100%;max-width:560px;">
+    <div class="hero-demo" style="width:100%;max-width:560px;">
       <iframe src="/divorce-angels-product-demo.html" style="width:100%;height:620px;border:none;" scrolling="no" title="Product Demo"></iframe>
     </div>
   </div>
@@ -484,7 +490,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <!-- 5. COMMUNITY -->
 <section class="bg-blue full-sec" id="community">
   <div class="sec-wrap">
-   <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:36px;">
+   <div class="comm-top-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:36px;">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12z"/></svg>
@@ -513,13 +519,13 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
         </div>
       </div>
     </div>
- <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
+ <div class="posts-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
       <div class="comm-posts" style="margin:0;border-radius:12px;"><div class="cp"><div class="cp-row"><div class="cp-av">S</div><div class="cp-name">Sarah M.</div><div class="cp-time">2 hours ago</div></div><p class="cp-text">One year out today. The first six months were the hardest thing I've ever done. But I am genuinely okay &mdash; more than okay. Sending love to everyone just starting. &#128153;</p><div class="cp-react">&#10084;&#65039; 148 &middot; &#128172; 63 comments</div></div></div>
       <div class="comm-posts" style="margin:0;border-radius:12px;"><div class="cp"><div class="cp-row"><div class="cp-av" style="background:#6FAACB;">R</div><div class="cp-name">Rachel B.</div><div class="cp-time">5 hours ago</div></div><p class="cp-text">Used <em>Your Divorce Angel</em> to prep for my first lawyer meeting. Walked in with the full financial analysis &mdash; my lawyer said it was the most prepared she'd ever seen a client.</p><div class="cp-react">&#128077; 89 &middot; &#128172; 31 comments</div></div></div>
       <div class="comm-posts" style="margin:0;border-radius:12px;"><div class="cp"><div class="cp-row"><div class="cp-av" style="background:#4A7A9B;">M</div><div class="cp-name">Michelle T.</div><div class="cp-time">Yesterday</div></div><p class="cp-text">To anyone just finding this group: you're in the right place. I was terrified and didn't know where to start. Six months later I have a signed agreement I'm actually happy with.</p><div class="cp-react">&#10084;&#65039; 212 &middot; &#128172; 47 comments</div></div></div>
       <div class="comm-posts" style="margin:0;border-radius:12px;"><div class="cp"><div class="cp-row"><div class="cp-av" style="background:#5A9ABB;">J</div><div class="cp-name">Jennifer L.</div><div class="cp-time">Yesterday</div></div><p class="cp-text">Just got my temporary support order approved. For anyone hesitant &mdash; the financial analysis from Angel gave my lawyer exactly what she needed to make the case. Don't wait.</p><div class="cp-react">&#128077; 156 &middot; &#128172; 38 comments</div></div></div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;background:white;border-radius:14px;border:1px solid #D0E8F5;padding:22px 28px;gap:24px;">
+    <div class="join-bar-inner" style="display:flex;align-items:center;justify-content:space-between;background:white;border-radius:14px;border:1px solid #D0E8F5;padding:22px 28px;gap:24px;">
       <div style="display:flex;align-items:center;gap:16px;">
         <div style="display:flex;"><div style="width:36px;height:36px;border-radius:50%;border:2px solid white;background:#9DCBE4;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:white;">S</div><div style="width:36px;height:36px;border-radius:50%;border:2px solid white;margin-left:-10px;background:#6FAACB;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:white;">R</div><div style="width:36px;height:36px;border-radius:50%;border:2px solid white;margin-left:-10px;background:#4A7A9B;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:white;">M</div><div style="width:36px;height:36px;border-radius:50%;border:2px solid white;margin-left:-10px;background:#5A9ABB;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:white;">J</div><div style="width:36px;height:36px;border-radius:50%;border:2px solid white;margin-left:-10px;background:#2A5A7A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:white;">+</div></div>
         <div style="font-size:16px;color:#4A6070;"><strong style="color:#1A2A35;">238 people</strong> joined this week</div>
