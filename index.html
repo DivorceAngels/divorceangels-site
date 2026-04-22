@@ -169,7 +169,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     </div>
 
     <div style="width:100%;max-width:560px;">
-      <iframe src="/divorce-angels-product-demo.html" style="width:100%;height:720px;border:none;" scrolling="no" title="Product Demo"></iframe>
+      <iframe src="/divorce-angels-product-demo.html" style="width:100%;height:620px;border:none;" scrolling="no" title="Product Demo"></iframe>
     </div>
   </div>
 </section>
@@ -224,36 +224,37 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </section>
 
 <!-- 2. ASK ANGEL -->
-<section class="bg-white full-sec" id="how-it-works">
+<section class="bg-blue full-sec" id="how-it-works">
   <div class="sec-wrap">
     <div class="angel-grid">
       <div>
-        <div class="sec-eyebrow">Your Divorce Strategist</div>
-        <h2 class="sec-h2">Ask anything. Angel already knows <em>your numbers.</em></h2>
-        <p style="font-size:19px;color:#4A6070;line-height:1.55;margin-top:14px;margin-bottom:32px;">Angel has read your complete financial picture, your jurisdiction, your custody arrangement, and your goals. Every answer uses your actual numbers.</p>
+        <div class="sec-eyebrow">Your personal advisor</div>
+        <h2 class="sec-h2">Stop Googling at 2am.<br><em>Ask Angel instead.</em></h2>
+        <p style="font-size:19px;color:#4A6070;line-height:1.6;margin-top:14px;margin-bottom:10px;">Most divorce questions don't come up during office hours. They hit at night, after the kids are asleep, when you're replaying conversations and second-guessing everything.</p>
+        <p style="font-size:19px;color:#4A6070;line-height:1.6;margin-bottom:32px;"><em>Your Divorce Angel</em> already knows your finances, your jurisdiction, and your custody situation. Every answer is specific to <strong>your</strong> numbers &mdash; not generic advice from a forum.</p>
         <div class="af-list">
           <div class="af">
-            <div class="af-icon">&#9881;</div>
-            <div><div class="af-title">Knows your whole situation</div><div class="af-desc">Picks up where you left off &mdash; every answer uses your actual data, not generic advice.</div></div>
+            <div class="af-icon">&#128172;</div>
+            <div><div class="af-title">She remembers everything</div><div class="af-desc">Pick up where you left off. Angel knows your assets, debts, income, and what you've already decided &mdash; no repeating yourself.</div></div>
           </div>
           <div class="af">
             <div class="af-icon">&#128153;</div>
-            <div><div class="af-title">Available at 2am</div><div class="af-desc">No judgment. No hourly rate. Ask about the process, your rights, or a specific clause you don&rsquo;t understand.</div></div>
+            <div><div class="af-title">No hourly rate. No judgment.</div><div class="af-desc">Ask about the process, your rights, a clause you don't understand, or just say "I feel overwhelmed." Angel is there.</div></div>
           </div>
           <div class="af">
             <div class="af-icon">&#127758;</div>
-            <div><div class="af-title">Jurisdiction-aware</div><div class="af-desc">US, Canada, UK, and Australia &mdash; she knows the laws that apply to where you live.</div></div>
+            <div><div class="af-title">Knows the law where you live</div><div class="af-desc">US, Canada, UK, and Australia. Angel applies the rules that actually matter for your location.</div></div>
           </div>
         </div>
         <div class="cta-row" style="margin-top:32px;justify-content:center;">
-          <a class="btn-primary" href="https://divorcetracker.netlify.app">Try <em>Your Divorce Angel</em> &rarr;</a>
+          <a class="btn-primary" href="https://divorcetracker.netlify.app">Ask <em>Your Divorce Angel</em> &rarr;</a>
         </div>
       </div>
       <div>
         <div class="chat-demo" id="chatFrame">
           <div class="chat-hdr">
             <div class="ch-av" style="background:#4A7A9B;"><img src="/wings_white.png" alt="Your Divorce Angel" style="width:100%;height:100%;object-fit:contain;padding:3px;"><div class="ch-dot"></div></div>
-            <div><div class="ch-name">Your Divorce Angel</div><div class="ch-status">Live &middot; Ask me anything</div></div>
+            <div><div class="ch-name">Your Divorce Angel</div><div class="ch-status">Online &middot; Ask me anything</div></div>
           </div>
           <div class="chat-body" id="chatBody" style="min-height:280px;">
             <div class="user-b" id="u0" style="opacity:0;transform:translateY(8px);transition:all 0.4s;">Should I try to keep the house or sell it?</div>
@@ -262,14 +263,13 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
             <div class="angel-b" id="a1" style="opacity:0;transform:translateY(8px);transition:all 0.5s;"><span id="a1t"></span><span class="chat-cur" id="a1c" style="display:none;"></span></div>
           </div>
           <div class="chat-sugs" id="chatSugs" style="opacity:0;transition:opacity 0.5s;">
-            <div class="sug" onclick="openAngel('How does mediation work?')">How does mediation work?</div>
-            <div class="sug" onclick="openAngel('What am I entitled to?')">What am I entitled to?</div>
-            <div class="sug" onclick="openAngel('I feel overwhelmed')">I feel overwhelmed</div>
-            <div class="sug" onclick="openAngel('Where do I start?')">Where do I start?</div>
+            <div class="sug">What am I entitled to?</div>
+            <div class="sug">I feel overwhelmed</div>
+            <div class="sug">Where do I start?</div>
           </div>
           <div class="chat-inp" id="chatInp" style="opacity:0;transition:opacity 0.4s;">
-            <input class="inp-box" type="text" placeholder="Ask Angel anything..." onkeydown="if(event.key==='Enter')openAngel(this.value)">
-            <button class="inp-btn" onclick="openAngel(document.querySelector('.inp-box').value)">&rarr;</button>
+            <input class="inp-box" type="text" placeholder="Ask Angel anything...">
+            <button class="inp-btn">&rarr;</button>
           </div>
         </div>
       </div>
@@ -330,36 +330,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 </script>
 
 
-<!-- 3. WHY USE -->
-<section class="bg-blue full-sec">
-  <div class="sec-wrap">
-    <p class="sec-eyebrow" style="text-align:center;">Why use <em style="text-transform:none;letter-spacing:0;font-style:italic;">Your Divorce Angel</em></p>
-    <h2 class="sec-h2" style="text-align:center;">Clarity before you commit<br><em>Numbers before you negotiate</em></h2>
-    <div class="v-grid" style="margin-top:32px;">
-      <div class="vcard">
-        <div class="v-icon">&#128176;</div>
-        <div class="v-title">Save thousands in legal fees</div>
-        <div class="v-desc">Walk into every meeting already knowing your numbers. Less time explaining basics means significantly less spent on billable hours.</div>
-      </div>
-      <div class="vcard">
-        <div class="v-icon">&#127919;</div>
-        <div class="v-title">Know what&rsquo;s worth fighting for</div>
-        <div class="v-desc">Real settlement scenarios show what each outcome could cost you &mdash; in dollars &mdash; before you agree to anything. Negotiate from data, not guesswork.</div>
-      </div>
-      <div class="vcard">
-        <div style="width:44px;height:44px;border-radius:10px;background:#CFE6F3;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="#4A7A9B" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
-            <path d="M15 3v5h5" stroke="#4A7A9B" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
-            <path d="M8.5 14.5l2 2 4-4.5" stroke="#4A7A9B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <div class="v-title">She&rsquo;s read your whole file</div>
-        <div class="v-desc">Angel has your complete financial picture modeled and ready. She remembers your situation, flags what matters, and is available at 2am when your mind won&rsquo;t stop racing.</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- 4. BLOG -->
 <section class="bg-white full-sec">
