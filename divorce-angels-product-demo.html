@@ -467,7 +467,7 @@ var labels=['Step 1 \u00b7 Your finances','Step 1 \u00b7 Income & expenses','Ste
 var durs=[4500,4500,6500,10000,5500,6500,10500,4000,5000,7000];
 function clr(){TOs.forEach(clearTimeout);TOs=[];}
 function Q(fn,d){TOs.push(setTimeout(fn,d));}
-function show(n){for(var i=0;i<N;i++)document.getElementById('p'+i).classList.toggle('vis',i===n);document.getElementById('slbl').textContent=labels[n]||'';}
+function show(n){for(var i=0;i<N;i++)document.getElementById('p'+i).classList.toggle('vis',i===n);var sl=document.getElementById('slbl');if(sl)sl.textContent=labels[n]||'';}
 function typeV(vid,val,cb){var el=document.getElementById(vid);el.classList.remove('e');el.classList.add('tp');el.textContent='';var ch=val.split(''),ci=0;function nx(){if(ci<ch.length){el.textContent+=ch[ci];ci++;TOs.push(setTimeout(nx,22));}else{el.classList.remove('tp');if(cb)cb();}}nx();}
 function fillRow(rid,vid,val,delay){Q(function(){document.getElementById(rid).classList.add('hl');typeV(vid,val,function(){document.getElementById(rid).classList.remove('hl');});},delay);}
 function resetAll(){
