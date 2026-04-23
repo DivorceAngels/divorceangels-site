@@ -92,10 +92,10 @@ const NAV = `<!-- LOGO BAR -->
   <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
 </div>
 <!-- NAV -->
-<a class="cta-btn" href="https://divorcetracker.netlify.app">Get Started &rarr;</a>
+<a class="cta-btn" href="https://app.thedivorceangels.com">Get Started &rarr;</a>
 <nav class="nav">
   <div class="nav-links">
-    <a href="https://divorcetracker.netlify.app" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
+    <a href="https://app.thedivorceangels.com" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
     <a href="/blog/">Blog</a>
     <a href="/resources/">Resources</a>
     <a href="/community/">Community</a>
@@ -125,7 +125,7 @@ const FOOTER = `<footer style="background:#4a7fa5;padding:48px 0 28px;">
       <div>
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Tools</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <a href="https://divorcetracker.netlify.app/" target="_blank" style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Divorce Tracker</a>
+          <a href="https://app.thedivorceangels.com/" target="_blank" style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Divorce Tracker</a>
         </div>
       </div>
     </div>

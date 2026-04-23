@@ -3539,7 +3539,7 @@ async function handleSignup(e){
       email, password: pass,
       options: {
         data: { full_name: name },
-        emailRedirectTo: 'https://divorcetracker.netlify.app'
+        emailRedirectTo: 'https://app.thedivorceangels.com'
       }
     });
     if(error){ showAuthError(error.message); return; }
