@@ -23,9 +23,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .hero-p{font-size:19px;color:#4A6070;line-height:1.5;margin-bottom:14px;}
 .hero-p em{font-style:italic;color:#3A7A9B;}
 .hero-p strong{font-weight:600;color:#1A2A35;}
-.hero-anchor{display:inline-block;white-space:nowrap;font-size:17.5px;}
-.hero-lead{font-size:20px;color:#3A5060;line-height:1.45;margin-bottom:20px;font-style:normal;}
-.hero-lead em{font-style:italic;color:#3A5060;}
 .hero-stamp{font-size:16px;color:#6FAACB;line-height:1.4;margin-top:6px;margin-bottom:18px;letter-spacing:.3px;}
 .hero-stamp em{font-style:italic;color:#6FAACB;}
 .hero-privacy{font-size:13px;color:#7A95A8;line-height:1.5;margin-top:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.1px;}
@@ -41,15 +38,16 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .bg-white{background:#fff;}
 .bg-blue{background:#E8F4FA;}
 .full-sec{width:100%;}
+
+/* SIX TOOLS SECTION - matches screenshot style */
 .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
-.tool-card{background:white;border-radius:14px;padding:30px 26px;border:1px solid #D0E8F5;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
-.tool-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(74,123,148,.12);}
-.tool-num{font-size:11px;font-weight:600;letter-spacing:1.5px;color:#9DCBE4;font-family:-apple-system,sans-serif;margin-bottom:14px;}
-.tool-icon{width:52px;height:52px;border-radius:12px;background:#E8F4FA;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;}
-.tool-title{font-size:21px;font-weight:500;color:#1A2A35;margin-bottom:10px;font-family:Georgia,serif;line-height:1.3;}
-.tool-title em{font-style:italic;color:#6FAACB;}
-.tool-desc{font-size:16px;color:#5A7A8A;line-height:1.55;}
-.tool-desc strong{color:#3A7A9B;font-weight:600;}
+.tool-card{background:white;border-radius:14px;padding:36px 32px;border:1px solid #D0E8F5;display:flex;flex-direction:column;}
+.tool-icon{font-size:32px;margin-bottom:24px;line-height:1;}
+.tool-title{font-size:24px;font-weight:400;color:#1A2A35;margin-bottom:14px;font-family:Georgia,serif;line-height:1.2;}
+.tool-desc{font-size:17px;color:#4A6070;line-height:1.55;font-style:italic;font-family:'Cormorant Garamond',Georgia,serif;}
+.tool-desc strong{font-style:normal;font-weight:500;color:#1A2A35;}
+.tool-icon-wings{width:32px;height:32px;display:inline-block;}
+
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .blog-card{border-radius:12px;overflow:hidden;border:1px solid #E0EEF5;text-decoration:none;display:block;}
 .blog-card:hover{border-color:#9DCBE4;}
@@ -98,7 +96,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   .hero h1{font-size:2rem;}
   .sec-h2{font-size:1.8rem;}
   .blog-grid{grid-template-columns:1fr!important;}
-  .hero-anchor{white-space:normal;font-size:16px;}
 }
 @media(max-width:480px){
   .cta-btn{display:none;}
@@ -151,12 +148,12 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     <div>
       <div class="hero-eyebrow">AI-guided divorce strategy</div>
       <h1>Your Divorce. Your Numbers.<br><em>Your Future.</em></h1>
-      <p class="hero-p hero-lead"><em>Smart preparation for divorce. Understand your finances, settlement options, and next steps &mdash; before costly legal decisions are made.</em></p>
-      <p class="hero-p">Tell <em>Your Divorce Angel</em> about your family, your marriage, and your finances. From that moment, Angel knows your file and puts six powerful tools to work for you: settlement scenarios, support calculators, negotiation prep, financial analysis, document organization, and AI-powered document insights &mdash; all tailored to your location and your situation.</p>
-      <p class="hero-p">When questions come at 2am (and they will) Angel is there.<br><strong class="hero-anchor">She knows your file. No hourly rate. No judgment.</strong></p>
+      <p class="hero-p">Most people going through divorce don't know what they're entitled to until they're already paying a lawyer to find out.</p>
+      <p class="hero-p">Tell <em>Your Divorce Angel</em> about your family, your marriage, your finances. Once Angel knows your situation she puts six powerful tools to work for you: settlement scenarios, support calculators, negotiation prep, financial analysis, document organization, and AI-powered document insights.</p>
+      <p class="hero-p">Then when you have questions, <em>Your Divorce Angel</em> is there 24/7. <strong>She knows your file. No hourly rate. No judgment.</strong></p>
       <p class="hero-stamp"><em>Walk in prepared &middot; Make smarter decisions &middot; Reduce legal costs</em></p>
       <div class="cta-row">
-        <a class="btn-primary" href="https://app.thedivorceangels.com">Run my scenarios &rarr;</a>
+        <a class="btn-primary" href="https://app.thedivorceangels.com">See My Divorce Options &rarr;</a>
         <a class="btn-ghost" href="#how-it-works">See how she works</a>
       </div>
       <p class="hero-privacy">&#128274; Your data is encrypted and never sold or shared with third parties.</p>
@@ -177,50 +174,49 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     <div class="tools-grid">
 
       <div class="tool-card">
-        <div class="tool-num">TOOL 01</div>
-        <div class="tool-icon">&#128202;</div>
-        <div class="tool-title">Settlement <em>Scenarios</em></div>
+        <div class="tool-icon">&#128200;</div>
+        <div class="tool-title">The Settlement Modeler</div>
         <div class="tool-desc">Plug in your assets, debts, and income. See exactly how different settlement scenarios look <strong>for you</strong> &mdash; before you agree to anything.</div>
       </div>
 
       <div class="tool-card">
-        <div class="tool-num">TOOL 02</div>
-        <div class="tool-icon">&#128176;</div>
-        <div class="tool-title">Support <em>Calculators</em></div>
-        <div class="tool-desc">Estimate child support, spousal support, and alimony based on your <strong>actual numbers</strong> and the laws that apply where you live.</div>
+        <div class="tool-icon">&#128181;</div>
+        <div class="tool-title">The Post-Separation Tracker</div>
+        <div class="tool-desc">Most people underestimate post-separation costs by <strong>20%.</strong> Track every expense so your support numbers are based on reality, not guesses.</div>
       </div>
 
       <div class="tool-card">
-        <div class="tool-num">TOOL 03</div>
         <div class="tool-icon">&#129309;</div>
-        <div class="tool-title">Negotiation <em>Prep</em></div>
-        <div class="tool-desc">Personalized checklist, <strong>questions for your lawyer</strong>, and a ranked list of your financial priorities &mdash; tailored to your jurisdiction.</div>
+        <div class="tool-title">Negotiation Prep</div>
+        <div class="tool-desc">Personalized checklist, <strong>questions for your lawyer,</strong> and a ranked list of your financial priorities &mdash; tailored to your jurisdiction.</div>
       </div>
 
       <div class="tool-card">
-        <div class="tool-num">TOOL 04</div>
-        <div class="tool-icon">&#128200;</div>
-        <div class="tool-title">Financial <em>Analysis</em></div>
-        <div class="tool-desc">Angel reviews your complete picture and tells you where you stand &mdash; <strong>your strengths, your risks</strong>, and what to focus on first.</div>
+        <div class="tool-icon">&#128209;</div>
+        <div class="tool-title">Document Scanner &amp; Assistant</div>
+        <div class="tool-desc">Upload confusing legal letters or financial statements. Angel explains the jargon in <strong>plain English</strong> and tells you exactly what it means for your case.</div>
       </div>
 
       <div class="tool-card">
-        <div class="tool-num">TOOL 05</div>
         <div class="tool-icon">&#128194;</div>
-        <div class="tool-title">Document <em>Organization</em></div>
-        <div class="tool-desc">A jurisdiction-specific checklist of every document you'll need. Upload, track, and <strong>export a professional bundle</strong> ready to send to your lawyer.</div>
+        <div class="tool-title">Lawyer-Ready Downloads</div>
+        <div class="tool-desc">Stop paying your lawyer to organize messy folders. <strong>One click</strong> bundles your files into a professional brief, ready to send.</div>
       </div>
 
       <div class="tool-card">
-        <div class="tool-num">TOOL 06</div>
-        <div class="tool-icon">&#128221;</div>
-        <div class="tool-title">AI Document <em>Insights</em></div>
-        <div class="tool-desc">Upload separation agreements, court orders, or settlement offers. Angel explains them in <strong>plain English</strong> and flags what to ask about.</div>
+        <div class="tool-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12c2-3 5-5 9-5s7 2 9 5c-2-1-5-2-9-2s-7 1-9 2z" stroke="#6FAACB" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 12c2 3 5 5 9 5s7-2 9-5" stroke="#6FAACB" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="tool-title">Your Divorce Angel</div>
+        <div class="tool-desc"><strong>She knows your specific file.</strong> Ask her "How does my credit card debt affect my settlement?" or "What should I ask my lawyer tomorrow?" &mdash; answers based on your data, not generic advice.</div>
       </div>
 
     </div>
     <div class="cta-row" style="margin-top:40px;justify-content:center;">
-      <a class="btn-primary" href="https://app.thedivorceangels.com">Get started with all six &rarr;</a>
+      <a class="btn-primary" href="https://app.thedivorceangels.com">See My Divorce Options &rarr;</a>
     </div>
   </div>
 </section>
@@ -240,7 +236,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
           </div>
           <div class="af">
             <div class="af-icon">&#128153;</div>
-            <div><div class="af-title">Available at 2am</div><div class="af-desc">No judgment. No hourly rate. Ask about the process, your rights, or a specific clause you don&rsquo;t understand.</div></div>
+            <div><div class="af-title">Available 24/7</div><div class="af-desc">No judgment. No hourly rate. Ask about the process, your rights, or a specific clause you don&rsquo;t understand.</div></div>
           </div>
           <div class="af">
             <div class="af-icon">&#127758;</div>
@@ -386,7 +382,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <!-- CTA -->
 <section style="background:#6FAACB;padding:48px 40px;text-align:center;">
-  <a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Try Your Divorce Angel &rarr;</a>
+  <a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">See My Divorce Options &rarr;</a>
 </section>
 
 <footer>
