@@ -24,6 +24,13 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .hero-p em{font-style:italic;color:#3A7A9B;}
 .hero-p strong{font-weight:600;color:#1A2A35;}
 .hero-anchor{display:inline-block;white-space:nowrap;font-size:17.5px;font-weight:600;color:#1A2A35;}
+.hero-tools{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:6px;}
+.hero-tools li{font-size:18px;color:#1A2A35;line-height:1.5;font-family:'Cormorant Garamond',Georgia,serif;display:flex;gap:10px;align-items:flex-start;}
+.hero-tools li::before{content:"\2022";color:#6FAACB;font-weight:600;flex-shrink:0;font-size:18px;line-height:1.5;}
+.hero-trust{font-size:18px;color:#1A2A35;line-height:1.55;margin-top:10px;margin-bottom:14px;font-family:'Cormorant Garamond',Georgia,serif;}
+.hero-trust strong{font-weight:600;color:#1A2A35;}
+.hero-trust em{font-style:italic;color:#3A7A9B;}
+.hero-stamp{font-size:16px;color:#6FAACB;line-height:1.4;margin-top:6px;margin-bottom:18px;letter-spacing:.3px;font-style:italic;}
 .hero-privacy{font-size:13px;color:#7A95A8;line-height:1.5;margin-top:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.1px;}
 .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
 .btn-primary{background:#6FAACB;color:white;font-size:17px;font-weight:500;padding:14px 32px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;}
@@ -202,12 +209,22 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
     <div>
       <div class="hero-eyebrow">AI-guided divorce strategy</div>
       <h1>Your Divorce. Your Numbers.<br><em>Your Future.</em></h1>
-      <p class="hero-p">Most people going through divorce don't know what they're entitled to until they're already paying a lawyer to find out.</p>
-      <p class="hero-p">Tell <em>Your Divorce Angel</em> about your family, your marriage, your finances. Once Angel knows your situation she puts six powerful tools to work for you: settlement scenarios, support calculators, negotiation prep, financial analysis, document organization, and AI-powered document insights.</p>
-      <p class="hero-p">Then when you have questions, <em>Your Divorce Angel</em> is there 24/7.<br><strong class="hero-anchor">She knows your file. No hourly rate. No judgment.</strong></p>
-      <p style="font-size:17px;color:#1A2A35;font-weight:600;margin-top:20px;letter-spacing:0.3px;text-align:center;">Walk in prepared &middot; Make smarter decisions &middot; Reduce legal costs</p>
+      <p class="hero-p">Most people going through divorce don't know what they're entitled to until they've already spent thousands on lawyers.</p>
+      <p class="hero-p"><em>Your Divorce Angel</em> is a divorce guidance platform that helps you understand your options, support, assets, and possible settlement outcomes &mdash; before mediation or court.</p>
+      <p class="hero-p">Tell Angel about your marriage, finances, children, assets, and concerns. She analyzes your information and puts six powerful tools to work for you:</p>
+      <ul class="hero-tools">
+        <li>Settlement scenario planning</li>
+        <li>Child and spousal support estimates</li>
+        <li>Financial analysis and asset breakdowns</li>
+        <li>Negotiation preparation</li>
+        <li>Smart document organization</li>
+        <li>Document insights</li>
+      </ul>
+      <p class="hero-p">Then, whenever questions come up, <em>Your Divorce Angel</em> is there 24/7.</p>
+      <p class="hero-trust"><strong>She knows your file. No hourly billing. No judgment.</strong> Just clarity when you need it most.</p>
+      <p class="hero-stamp">Walk into negotiations informed, prepared, and financially confident.</p>
       <div class="cta-row" style="justify-content:center;margin-top:28px;">
-        <a class="btn-primary" href="https://app.thedivorceangels.com">See My Divorce Options &rarr;</a>
+        <a class="btn-primary" href="https://app.thedivorceangels.com">Get Started &rarr;</a>
         <a class="btn-ghost" href="#how-it-works">See how she works</a>
       </div>
       <p class="hero-privacy" style="text-align:center;margin-top:18px;">&#128274; Your data is encrypted and never sold or shared with third parties.</p>
@@ -416,7 +433,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
         <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#1A2A35;line-height:1.5;font-family:'Cormorant Garamond',Georgia,serif;"><span style="color:#6FAACB;flex-shrink:0;font-weight:600;">&#10003;</span> Your data encrypted and never shared</li>
       </ul>
 
-      <a class="btn-primary" href="https://app.thedivorceangels.com" style="display:block;text-align:center;margin-bottom:14px;">See My Divorce Options &rarr;</a>
+      <a class="btn-primary" href="https://app.thedivorceangels.com" style="display:block;text-align:center;margin-bottom:14px;">Get Started &rarr;</a>
       <p style="font-size:13px;color:#7A95A8;text-align:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.1px;">&#128274; Cancel anytime, for any reason. No questions asked.</p>
     </div>
   </div>
@@ -661,7 +678,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <!-- CTA -->
 <section style="background:#6FAACB;padding:48px 40px;text-align:center;">
-  <a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">See My Divorce Options &rarr;</a>
+  <a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Get Started &rarr;</a>
 </section>
 
 <footer>
@@ -690,3 +707,4 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 </body>
 </html>
+
