@@ -54,7 +54,16 @@ function escapeHtml(str) {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-const SHARED_CSS = `<link rel="preconnect" href="https://fonts.googleapis.com">
+const SHARED_CSS = `<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT5NYFWVTB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PT5NYFWVTB');
+</script>
+<!-- End Google Analytics -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
 :root{--g0:#EDF4F8;--g1:#CFE6F3;--g2:#9DCBE4;--g4:#6FAACB;--g5:#1A3A4F;--blue:#4a7fa5;--ink:#1A2A35;--ink-m:#4a6878;--ink-l:#6A8A9F;--bdr:#b8d6e8}
@@ -396,4 +405,3 @@ const latest = posts.slice(0, 6).map(p => ({
 }));
 fs.writeFileSync('./latest-posts.json', JSON.stringify(latest, null, 2));
 console.log('✓ latest-posts.json written with 6 most recent posts');
-
