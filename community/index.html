@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT5NYFWVTB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PT5NYFWVTB');
+</script>
+<!-- End Google Analytics -->
 <title>Community - Your Divorce Angel</title>
 <meta name="description" content="Join 45,000+ people navigating divorce together. Real conversations, real support, real people who understand exactly what you're going through.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +48,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 .stars{color:#6FAACB;font-size:16px;margin-bottom:12px;letter-spacing:3px;}
 .tquote{font-size:17px;color:#4A6070;line-height:1.5;margin-bottom:14px;font-style:italic;}
 .tauthor{font-size:14px;font-weight:500;color:#6FAACB;}
-.footer-nav-bar{background:#9DCBE4;width:100%;padding:14px 48px;display:flex;align-items:center;justify-content:center;gap:36px;}
+.footer-nav-bar{background:#9DCBE4;width:100%;padding:14px 48px;display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;}
 .footer-nav-bar a{font-size:16px;color:white;text-decoration:none;letter-spacing:.02em;}
 .footer-nav-bar a:first-child{font-style:italic;font-weight:600;}
 .footer-nav-bar a:hover{color:rgba(255,255,255,.8);}
@@ -60,29 +69,33 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   .footer-nav-bar,.footer-logo-bar{padding:14px 24px;}
 }
 @media(max-width:768px){
-  .nav-logo-bar{padding:10px 20px;}
-  .nav-logo{height:52px!important;}
-  .cta-btn{top:14px;right:16px;font-size:13px;padding:8px 14px;}
+  .nav-logo-bar{padding:10px 16px;justify-content:space-between;position:static;}
+  .nav-logo{height:44px!important;}
+  .nav{height:auto;padding:8px 12px;position:static;top:auto;}
+  .nav-links{flex-wrap:wrap;gap:12px 18px;font-size:15px;justify-content:center;}
+  .cta-btn{position:static;font-size:13px;padding:9px 16px;box-shadow:none;}
+  .nav-logo-bar > a:first-child{flex-shrink:1;min-width:0;}
   .sec-h2{font-size:1.8rem;}
+  .footer-nav-bar{flex-wrap:wrap;gap:14px 22px;padding:14px 20px;}
 }
 @media(max-width:480px){
-  .cta-btn{display:none;}
   .sec-h2{font-size:1.5rem;}
+  .nav-links{gap:8px 14px;font-size:14px;}
 }
 </style>
 <!-- Facebook Pixel --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1284726757099146');fbq('track','PageView');</script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1284726757099146&ev=PageView&noscript=1"/></noscript><!-- End Facebook Pixel --></head>
 <body>
 
-<!-- LOGO BAR -->
 <div class="nav-logo-bar">
   <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+  <a class="cta-btn" href="https://app.thedivorceangels.com">Get Started &rarr;</a>
 </div>
 
-<!-- NAV -->
-<a class="cta-btn" href="https://app.thedivorceangels.com">Get Started →</a>
 <nav class="nav">
   <div class="nav-links">
-    <a href="https://app.thedivorceangels.com" style="font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
+    <a href="https://app.thedivorceangels.com" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/faq/">FAQs</a>
     <a href="/blog/">Blog</a>
     <a href="/resources/">Resources</a>
     <a href="/community/">Community</a>
@@ -154,13 +167,15 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <!-- CTA -->
 <section style="background:#6FAACB;padding:48px 40px;text-align:center;">
-  <a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Try Your Divorce Angel &rarr;</a>
+  <a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Get Started &rarr;</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-nav-bar">
     <a href="https://app.thedivorceangels.com"><em>Your Divorce Angel</em></a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/faq/">FAQs</a>
     <a href="/resources/">Resources</a>
     <a href="/blog/">Blog</a>
     <a href="/community/">Community</a>
