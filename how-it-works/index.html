@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Your Divorce Angel</title>
+<meta name="description" content="See exactly what Your Divorce Angel produces — from your financial snapshot to settlement scenarios, negotiation prep, and financial priorities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A35;}
+.nav-logo-bar{background:white;width:100%;padding:14px 40px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:101;border-bottom:1px solid #EDF4F8;}
+.nav-logo{height:68px;mix-blend-mode:multiply;display:block;}
+.nav{background:#9DCBE4;width:100%;height:52px;display:flex;align-items:center;justify-content:center;padding:0 36px;position:sticky;top:100px;z-index:99;}
+.nav-links{display:flex;gap:36px;font-size:19px;flex:1;justify-content:center;align-items:center;}
+.nav-links a{color:white;text-decoration:none;letter-spacing:.02em;}
+.nav-links a:hover{color:rgba(255,255,255,.8);}
+.cta-btn{position:fixed;top:22px;right:32px;z-index:200;background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.signin-btn{position:fixed;top:22px;right:170px;z-index:200;background:white;color:#3A7A9B;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;padding:10px 22px;border-radius:8px;text-decoration:none;border:1.5px solid #6FAACB;}
+.footer-nav-bar{background:#9DCBE4;width:100%;padding:14px 48px;display:flex;align-items:center;justify-content:center;gap:36px;}
+.footer-nav-bar a{font-size:16px;color:white;text-decoration:none;}
+.footer-nav-bar a:first-child{font-style:italic;font-weight:600;}
+.footer-logo-bar{background:white;width:100%;padding:18px 48px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;border-top:1px solid #EDF4F8;}
+.footer-logo{height:56px;mix-blend-mode:multiply;}
+.footer-legal{font-size:13px;color:#9BAAB5;}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A2A35;}
+.wrap{max-width:1060px;margin:0 auto;padding:56px 48px;}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#6FAACB;margin-bottom:12px;}
+.sec-title{font-size:38px;font-weight:400;line-height:1.2;margin-bottom:8px;}
+.sec-title em{font-style:italic;color:#6FAACB;}
+.sec-sub{font-size:17px;color:#4a6878;line-height:1.5;margin-bottom:40px;max-width:520px;font-style:italic;}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:start;}
+
+/* LEFT NAV */
+.step-nav{position:sticky;top:24px;}
+.step-btn{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:10px;cursor:pointer;border:1.5px solid transparent;background:transparent;text-align:left;width:100%;margin-bottom:2px;transition:all 0.2s;font-family:'Cormorant Garamond',Georgia,serif;}
+.step-btn:hover{background:rgba(255,255,255,.6);}
+.step-btn.active{background:white;border-color:#9DCBE4;}
+.snum{width:26px;height:26px;border-radius:50%;background:#e0eef5;color:#6FAACB;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:500;transition:all 0.2s;}
+.step-btn.active .snum{background:#6FAACB;color:white;}
+.slbl{font-size:14px;color:#4a6878;line-height:1.3;transition:color 0.2s;}
+.step-btn.active .slbl{color:#1A2A35;font-weight:500;}
+.pbar-wrap{height:2px;background:#d4e9f3;border-radius:2px;margin:0 0 2px 36px;overflow:hidden;}
+.pbar{height:100%;background:#6FAACB;border-radius:2px;width:0%;}
+
+/* SCREEN */
+.screen{display:none;}
+.screen.active{display:block;}
+
+/* STEP HEADER */
+.step-hdr{margin-bottom:18px;}
+.step-hdr-eyebrow{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6FAACB;margin-bottom:5px;}
+.step-hdr-title{font-size:26px;font-weight:400;color:#1A2A35;line-height:1.2;margin-bottom:6px;}
+.step-hdr-title em{font-style:italic;color:#6FAACB;}
+.step-hdr-desc{font-size:15px;color:#4a6878;line-height:1.65;font-style:italic;}
+
+/* APP WINDOW */
+.app-win{background:white;border-radius:12px;border:1px solid #d4e9f3;overflow:hidden;}
+.app-bar{background:#f8fbfd;border-bottom:1px solid #d4e9f3;padding:9px 14px;display:flex;align-items:center;gap:10px;}
+.app-dots{display:flex;gap:5px;}
+.app-dot{width:10px;height:10px;border-radius:50%;}
+.app-bar-t{font-size:11px;color:#6A8A9F;font-style:italic;flex:1;}
+.app-bar-btns{display:flex;gap:5px;}
+.app-bar-btn{font-size:10px;color:#6A8A9F;border:1px solid #d4e9f3;border-radius:4px;padding:3px 8px;font-family:'Cormorant Garamond',Georgia,serif;background:white;}
+.app-inner{padding:18px;}
+
+/* SUMMARY BAR */
+.sum-bar{background:#f5f9fb;border:1px solid #d4e9f3;border-radius:10px;padding:13px 16px;margin-bottom:14px;}
+.sum-bar-t{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#9BAAB5;margin-bottom:10px;}
+.sum-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
+.si .sl{font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;}
+.si .sv{font-size:16px;font-weight:500;color:#1A2A35;}
+.si .sv.blue{color:#6FAACB;}
+.si .sv.red{color:#C53030;}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.ibox{background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;}
+.ibox-t{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+.ibox-t.blue{color:#2D5A8A;}.ibox-t.red{color:#C53030;}.ibox-t.green{color:#2D8A4E;}.ibox-t.amber{color:#B07020;}
+.ibox ul{padding-left:13px;}
+.ibox li{font-size:11px;color:#1A2A35;line-height:1.7;margin-bottom:4px;}
+.sub{font-size:10px;color:#9BAAB5;}
+
+/* ANALYSIS */
+.ana-item{padding:13px 0;border-bottom:1px solid #e8f3f8;}
+.ana-item:last-child{border-bottom:none;padding-bottom:0;}
+.ana-num{font-size:28px;color:#e0eef5;line-height:1;margin-bottom:1px;}
+.ana-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1A2A35;margin-bottom:6px;}
+.ana-text{font-size:12px;color:#2A3A45;line-height:1.78;}
+.ana-text strong{color:#1A2A35;font-weight:600;}
+
+/* SCENARIOS */
+.sc-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;}
+.sc{background:white;border:1px solid #d4e9f3;border-radius:10px;padding:14px;}
+.sc.best{border:2px solid #6FAACB;background:#f8fcff;}
+.sc-badge{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;display:inline-block;padding:2px 7px;border-radius:10px;margin-bottom:8px;}
+.sc-badge.gray{background:#f0f0f0;color:#5A6A7A;}
+.sc-badge.blue{background:#e6f0fb;color:#2D5A8A;}
+.sc-badge.green{background:#e6f7ed;color:#2D8A4E;}
+.sc-name{font-size:14px;font-weight:500;color:#1A2A35;margin-bottom:2px;}
+.sc-lbl{font-size:10px;color:#9BAAB5;margin-bottom:2px;}
+.sc-val{font-size:23px;color:#1A2A35;line-height:1.2;margin-bottom:2px;}
+.sc.best .sc-val{color:#6FAACB;font-weight:500;}
+.sc-net{font-size:11px;color:#4a6878;margin-bottom:10px;}
+.sc.best .sc-net{color:#2D8A4E;font-weight:500;}
+.sc-sep{border:none;border-top:1px solid #e4eff5;margin-bottom:8px;}
+.sc-desc{font-size:11px;color:#4a6878;line-height:1.6;margin-bottom:8px;}
+.at{background:#EDF4F8;border-radius:7px;padding:9px 11px;border-left:2px solid #6FAACB;}
+.at-t{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#6FAACB;margin-bottom:3px;}
+.at-p{font-size:11px;color:#1A2A35;line-height:1.65;}
+.qcomp{background:#f8fbfd;border:1px solid #d4e9f3;border-radius:9px;padding:12px 14px;}
+.qc-t{font-size:10px;color:#9BAAB5;margin-bottom:10px;}
+.qc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;}
+.qc-n{font-size:10px;color:#6A8A9F;margin-bottom:3px;}
+.qc-v{font-size:20px;color:#1A2A35;}
+.qc-v.best{color:#6FAACB;font-weight:500;}
+.qc-star{font-size:10px;color:#6FAACB;margin-top:1px;}
+
+/* CHECKLIST */
+.ck-two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.ck-box{background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;}
+.ck-t{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+.ck-t.blue{color:#2D5A8A;}.ck-t.amber{color:#B07020;}.ck-t.green{color:#2D8A4E;}.ck-t.red{color:#C53030;}
+.ck-box ul{padding-left:13px;}
+.ck-box li{font-size:11px;color:#1A2A35;line-height:1.7;margin-bottom:5px;}
+
+/* PRIORITIES */
+.pri-g{margin-bottom:12px;}
+.pri-g-t{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:4px 9px;border-radius:4px;display:inline-block;margin-bottom:7px;}
+.pri-g-t.fight{background:#e6f7ed;color:#2D8A4E;}
+.pri-g-t.careful{background:#fff8e6;color:#B07020;}
+.pri-g-t.letgo{background:#fdf0f0;color:#C53030;}
+.pri-g-t.action{background:#e6f0fb;color:#2D5A8A;}
+.pri-item{font-size:11px;color:#1A2A35;line-height:1.7;padding:8px 10px;border-radius:7px;margin-bottom:4px;background:#f8fbfd;border:1px solid #e4eff5;}
+.pri-item strong{font-weight:600;}
+
+/* CHAT */
+.chat-wrap{background:#3D5A73;border-radius:10px;padding:14px;}
+.chat-hdr{display:flex;align-items:center;gap:8px;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1);}
+.chat-av{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.chat-n{font-size:13px;color:white;font-style:italic;}
+.chat-s{font-size:10px;color:rgba(255,255,255,.5);}
+.online{width:7px;height:7px;border-radius:50%;background:#5FC87A;margin-left:auto;}
+.msg-q{background:rgba(255,255,255,.1);border-radius:10px 10px 2px 10px;padding:9px 11px;font-size:11px;color:rgba(255,255,255,.9);line-height:1.65;text-align:right;font-style:italic;margin-bottom:7px;max-width:82%;margin-left:auto;}
+.msg-a{background:rgba(255,255,255,.07);border-radius:2px 10px 10px 10px;padding:9px 11px;font-size:11px;color:rgba(255,255,255,.9);line-height:1.75;margin-bottom:7px;}
+.msg-a strong{color:white;font-weight:600;}
+.chips{display:flex;flex-wrap:wrap;gap:5px;padding-top:10px;border-top:1px solid rgba(255,255,255,.1);margin-top:6px;}
+.chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:4px 10px;font-size:11px;font-style:italic;color:rgba(255,255,255,.7);}
+
+/* FOOTER */
+.footer-box{background:white;border:1px solid #d4e9f3;border-radius:12px;padding:24px 28px;text-align:center;margin-top:40px;}
+.footer-box p{font-size:15px;color:#4a6878;line-height:1.7;margin-bottom:14px;font-style:italic;}
+.footer-box p strong{font-style:normal;color:#1A2A35;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:20px;}
+.pill{background:#EDF4F8;border:1px solid #b8d6e8;border-radius:20px;padding:5px 13px;font-size:13px;color:#4a6878;font-style:italic;}
+.cta-btn{background:#6FAACB;color:white;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:18px;padding:14px 40px;border-radius:10px;text-decoration:none;display:inline-block;border:none;cursor:pointer;}
+
+@media(max-width:768px){
+  .nav-logo-bar{padding:10px 16px;position:static;}
+  .nav-logo{height:44px!important;}
+  .nav{height:auto;padding:8px 12px;position:static;}
+  .nav-links{flex-wrap:wrap;gap:12px 18px;font-size:15px;}
+  .cta-btn{position:static;font-size:13px;padding:9px 16px;box-shadow:none;}
+  .signin-btn{position:static;font-size:13px;padding:8px 14px;}
+  .wrap{padding:32px 20px!important;}
+  .layout{grid-template-columns:1fr!important;}
+  .step-nav{position:static!important;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav-logo-bar">
+  <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+  <a class="signin-btn" href="https://app.thedivorceangels.com/?signin=1">Sign In</a>
+  <a class="cta-btn" href="https://app.thedivorceangels.com">Get Started &rarr;</a>
+</div>
+
+<nav class="nav">
+  <div class="nav-links">
+    <a href="https://app.thedivorceangels.com" style="font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/faq/">FAQs</a>
+    <a href="/blog/">Blog</a>
+    <a href="/resources/">Resources</a>
+    <a href="/community/">Community</a>
+  </div>
+</nav>
+
+<div style="background:#ffffff;">
+<div style="background:#EDF4F8;">
+<div class="wrap">
+  <div class="eyebrow">How it works</div>
+  <h2 class="sec-title">From overwhelmed to <em>prepared</em> — in 6 steps</h2>
+  <p class="sec-sub">Here's a small sample of the personalized support Your Divorce Angel provides. Every checklist, analysis, scenario, and priority plan is built specifically around your financial reality: your assets, debts, income, and location. Every output is uniquely yours.</p>
+
+  <div class="layout">
+
+    <!-- LEFT NAV -->
+    <div class="step-nav">
+      <button class="step-btn active" onclick="goTo(0)"><div class="snum">1</div><div class="slbl">Your Financial Snapshot</div></button>
+      <div class="pbar-wrap"><div class="pbar" id="pb0"></div></div>
+      <button class="step-btn" onclick="goTo(1)"><div class="snum">2</div><div class="slbl">Angel's Analysis</div></button>
+      <div class="pbar-wrap"><div class="pbar" id="pb1"></div></div>
+      <button class="step-btn" onclick="goTo(2)"><div class="snum">3</div><div class="slbl">Settlement Scenarios</div></button>
+      <div class="pbar-wrap"><div class="pbar" id="pb2"></div></div>
+      <button class="step-btn" onclick="goTo(3)"><div class="snum">4</div><div class="slbl">Negotiation Checklist</div></button>
+      <div class="pbar-wrap"><div class="pbar" id="pb3"></div></div>
+      <button class="step-btn" onclick="goTo(4)"><div class="snum">5</div><div class="slbl">Financial Priorities</div></button>
+      <div class="pbar-wrap"><div class="pbar" id="pb4"></div></div>
+      <button class="step-btn" onclick="goTo(5)"><div class="snum">6</div><div class="slbl">Ask Angel Anything</div></button>
+      <div class="pbar-wrap"><div class="pbar" id="pb5"></div></div>
+    </div>
+
+    <!-- RIGHT PANELS -->
+    <div>
+
+      <!-- S1 -->
+      <div class="screen active" id="s0">
+        <div class="step-hdr"><div class="step-hdr-eyebrow">Step 1 of 6</div><h3 class="step-hdr-title">Your complete <em>financial picture</em></h3><p class="step-hdr-desc">Enter your assets, debts, income and expenses. Angel organizes everything in about 10 minutes and immediately shows you what you're working with.</p></div>
+        <div class="app-win">
+          <div class="app-bar"><div class="app-dots"><div class="app-dot" style="background:#f87171;"></div><div class="app-dot" style="background:#fbbf24;"></div><div class="app-dot" style="background:#34d399;"></div></div><div class="app-bar-t" id="s0-bar-t">Your Assets</div><div class="app-bar-btns"><span class="app-bar-btn">Step 1 of 6</span></div></div>
+          <div style="display:flex;gap:0;border-bottom:1px solid #d4e9f3;background:#f8fbfd;">
+            <div id="s0tab0" style="padding:9px 14px;font-size:11px;background:#6FAACB;color:white;cursor:pointer;" onclick="s0go(0)">🏠 Assets</div>
+            <div id="s0tab1" style="padding:9px 14px;font-size:11px;color:#6A8A9F;cursor:pointer;border-right:1px solid #e4eff5;" onclick="s0go(1)">💳 Liabilities</div>
+            <div id="s0tab2" style="padding:9px 14px;font-size:11px;color:#6A8A9F;cursor:pointer;border-right:1px solid #e4eff5;" onclick="s0go(2)">💰 Income</div>
+            <div id="s0tab3" style="padding:9px 14px;font-size:11px;color:#6A8A9F;cursor:pointer;" onclick="s0go(3)">📊 Expenses</div>
+          </div>
+          <div class="app-inner">
+
+            <div class="s0screen active" id="s0s0">
+              <div style="font-size:11px;color:#9BAAB5;margin-bottom:14px;">Enter your assets below. Include all property, accounts, and valuables.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">🏠 Real Estate</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Primary Home</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$850,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add property</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">💰 Retirement Accounts</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Your 401(k)</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$200,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Spouse's 401(k)</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$300,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Life insurance policy</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$75,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add account</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">🚗 Vehicles</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Vehicle 1</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$14,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#1A2A35;">Vehicle 2</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$27,000</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">🏦 Bank & Investments</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Joint bank account</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$10,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add account</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+              </div>
+              <div style="background:#EDF4F8;border-radius:8px;padding:10px 13px;margin-top:12px;display:flex;justify-content:space-between;"><span style="font-size:12px;color:#4a6878;">Total Assets</span><span style="font-size:16px;font-weight:600;color:#6FAACB;">$1,476,000</span></div>
+            </div>
+
+            <div class="s0screen" id="s0s1" style="display:none;">
+              <div style="font-size:11px;color:#9BAAB5;margin-bottom:14px;">Enter all debts, loans, and liabilities — both joint and individual.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#C53030;margin-bottom:8px;">🏠 Mortgages</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Primary home mortgage</span><span style="font-size:13px;font-weight:500;color:#C53030;">$300,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add mortgage</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#C53030;margin-bottom:8px;">💳 Credit Cards</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Joint card 1</span><span style="font-size:13px;font-weight:500;color:#C53030;">$6,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Joint card 2</span><span style="font-size:13px;font-weight:500;color:#C53030;">$5,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add card</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#C53030;margin-bottom:8px;">🚗 Auto Loans</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Vehicle 2 loan</span><span style="font-size:13px;font-weight:500;color:#C53030;">$10,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add loan</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#C53030;margin-bottom:8px;">📋 Other Debts</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add debt</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+              </div>
+              <div style="background:#FDF0F0;border-radius:8px;padding:10px 13px;margin-top:12px;display:flex;justify-content:space-between;"><span style="font-size:12px;color:#4a6878;">Total Liabilities</span><span style="font-size:16px;font-weight:600;color:#C53030;">$321,000</span></div>
+            </div>
+
+            <div class="s0screen" id="s0s2" style="display:none;">
+              <div style="font-size:11px;color:#9BAAB5;margin-bottom:14px;">Enter monthly income for both you and your spouse.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D8A4E;margin-bottom:8px;">👤 Your Income</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Gross monthly salary</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$9,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Net monthly income</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$6,608</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add income source</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#B07020;margin-bottom:8px;">👤 Spouse's Income</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Gross monthly salary</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$15,000</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Net monthly income</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$11,250</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#9BAAB5;">+ Add income source</span><span style="font-size:13px;color:#6FAACB;">+</span></div>
+                </div>
+              </div>
+              <div style="background:#EDF4F8;border-radius:8px;padding:10px 13px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:12px;color:#4a6878;">Income gap (monthly)</span>
+                <div style="text-align:right;"><span style="font-size:16px;font-weight:600;color:#C53030;">$6,000/mo</span><div style="font-size:10px;color:#9BAAB5;margin-top:1px;">Spouse earns 67% more than you</div></div>
+              </div>
+            </div>
+
+            <div class="s0screen" id="s0s3" style="display:none;">
+              <div style="font-size:11px;color:#9BAAB5;margin-bottom:14px;">Enter your current monthly living expenses. Estimates are fine — you can refine later.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">🏠 Housing</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Mortgage payment</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$1,842</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Utilities</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$320</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#1A2A35;">Insurance</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$280</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">👨‍👩‍👧‍👦 Family</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Childcare & school</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$1,200</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Food & groceries</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$860</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#1A2A35;">Healthcare</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$480</span></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">🚗 Transport</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Car payment</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$380</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#1A2A35;">Gas & maintenance</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$200</span></div>
+                </div>
+                <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:9px;padding:13px 14px;">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2D5A8A;margin-bottom:8px;">📱 Other</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f5f8;"><span style="font-size:12px;color:#1A2A35;">Phone & internet</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$183</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;"><span style="font-size:12px;color:#1A2A35;">Subscriptions & misc</span><span style="font-size:13px;font-weight:500;color:#1A2A35;">$120</span></div>
+                </div>
+              </div>
+              <div style="background:#FDF0F0;border-radius:8px;padding:10px 13px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:12px;color:#4a6878;">Total expenses vs net income</span>
+                <div style="text-align:right;"><span style="font-size:16px;font-weight:600;color:#C53030;">-$457/mo shortfall</span><div style="font-size:10px;color:#9BAAB5;margin-top:1px;">$7,065 expenses vs $6,608 net income</div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- S2 -->
+      <div class="screen" id="s1">
+        <div class="step-hdr"><div class="step-hdr-eyebrow">Step 2 of 6</div><h3 class="step-hdr-title">Understand exactly <em>what you're entitled to</em></h3><p class="step-hdr-desc">Angel reviews your complete picture and produces a personalized breakdown of your position, risks, strengths, and immediate priorities.</p></div>
+        <div class="app-win">
+          <div class="app-bar"><div class="app-dots"><div class="app-dot" style="background:#f87171;"></div><div class="app-dot" style="background:#fbbf24;"></div><div class="app-dot" style="background:#34d399;"></div></div><div class="app-bar-t">Understand What Your Numbers Mean</div><div class="app-bar-btns"><span class="app-bar-btn">Print</span><span class="app-bar-btn">Download</span></div></div>
+          <div style="display:flex;gap:0;border-bottom:1px solid #d4e9f3;background:#f8fbfd;flex-wrap:wrap;">
+            <div style="padding:9px 14px;font-size:11px;background:#6FAACB;color:white;cursor:pointer;">📊 Financial Summary</div>
+            <div style="padding:9px 14px;font-size:11px;color:#6A8A9F;cursor:pointer;border-right:1px solid #e4eff5;">🤖 AI Analysis</div>
+            <div style="padding:9px 14px;font-size:11px;color:#6A8A9F;cursor:pointer;border-right:1px solid #e4eff5;">⚖️ Division Outlook</div>
+            <div style="padding:9px 14px;font-size:11px;color:#6A8A9F;cursor:pointer;">🚩 Key Risks</div>
+          </div>
+          <div class="app-inner">
+            <div style="background:#f8fbfd;border:1px solid #d4e9f3;border-radius:10px;padding:14px 16px;margin-bottom:16px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;"><div style="font-size:12px;font-weight:500;color:#1A2A35;">Your Financial Summary <span style="font-size:11px;color:#9BAAB5;font-weight:400;">7 assets · 4 debts</span></div><div style="font-size:11px;color:#6FAACB;cursor:pointer;">Edit in Step 1 →</div></div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+                <div><div style="font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;">Total Assets</div><div style="font-size:18px;font-weight:500;color:#6FAACB;">$1,476,000</div></div>
+                <div><div style="font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;">Total Debts</div><div style="font-size:18px;font-weight:500;color:#C53030;">$321,000</div></div>
+                <div><div style="font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;">Net Worth</div><div style="font-size:18px;font-weight:500;color:#6FAACB;">$1,155,000</div></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px;">
+                <div><div style="font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;">Net Income / mo</div><div style="font-size:18px;font-weight:500;color:#1A2A35;">$6,608</div></div>
+                <div><div style="font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;">Cash Flow / mo</div><div style="font-size:18px;font-weight:500;color:#C53030;">-$457</div></div>
+                <div><div style="font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:#9BAAB5;margin-bottom:2px;">Est. Your Share</div><div style="font-size:18px;font-weight:500;color:#1A2A35;">$577,500</div></div>
+              </div>
+            </div>
+
+            <div style="background:#4A7A9B;border-radius:10px;overflow:hidden;margin-bottom:0;">
+              <div style="background:#3D6880;padding:11px 16px;display:flex;align-items:center;justify-content:space-between;">
+                <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:14px;">🪽</span><div><div style="font-size:13px;color:white;font-style:italic;">Angel's Analysis</div><div style="font-size:10px;color:rgba(255,255,255,.5);">Personalised to your financial data</div></div></div>
+                <div style="display:flex;gap:6px;"><span style="font-size:10px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:3px 8px;cursor:pointer;">↺ Regenerate</span><span style="font-size:10px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:3px 8px;cursor:pointer;">Print</span><span style="font-size:10px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:3px 8px;cursor:pointer;">Download</span></div>
+              </div>
+              <div style="background:white;padding:20px;">
+
+                <div style="padding:14px 0;border-bottom:1px solid #e8f3f8;">
+                  <div style="font-size:28px;color:#e0eef5;line-height:1;margin-bottom:2px;">1</div>
+                  <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1A2A35;margin-bottom:8px;">Overall Position</div>
+                  <div style="font-size:13px;color:#2A3A45;line-height:1.8;">Sarah, you're looking at a <strong>$1,155,000 net worth</strong> — that's substantial and worth protecting carefully. Your marital estate includes <strong>$1,476,000 in assets</strong> (mostly the home and retirement accounts) against <strong>$321,000 in debts</strong>, which is a healthy 22% debt-to-asset ratio. The concern right now is your monthly cash flow: you're running <strong>$457 short each month</strong> with your current expenses at $7,065 and net income at $6,608. That gap needs attention, especially since your spouse earns <strong>$6,000 more per month</strong> than you do.</div>
+                </div>
+
+                <div style="padding:14px 0;border-bottom:1px solid #e8f3f8;">
+                  <div style="font-size:28px;color:#e0eef5;line-height:1;margin-bottom:2px;">2</div>
+                  <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1A2A35;margin-bottom:8px;">Key Risks</div>
+                  <div style="font-size:13px;color:#2A3A45;line-height:1.8;">Your biggest vulnerability is that <strong>monthly shortfall of $457</strong> — you can't sustain that long-term, and it puts you in a weak negotiating position if you can't demonstrate financial stability post-divorce. The second risk is the <strong>$500,000 gap in retirement savings</strong> ($200,000 in your 401(k) versus $300,000 in your spouse's) — in Florida's equitable distribution system, courts look at who contributed what and when, but you'll want to understand whether those accounts were built during the marriage or brought into it. Third, you haven't captured your spouse's complete financial picture yet, which means you can't accurately calculate potential alimony / spousal support or see the full scope of what's on the table.</div>
+                </div>
+
+                <div style="padding:14px 0;border-bottom:1px solid #e8f3f8;">
+                  <div style="font-size:28px;color:#e0eef5;line-height:1;margin-bottom:2px;">3</div>
+                  <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1A2A35;margin-bottom:8px;">Strengths</div>
+                  <div style="font-size:13px;color:#2A3A45;line-height:1.8;">You have <strong>$850,000 in home equity</strong> (assuming the $850,000 value minus $300,000 mortgage), which is your single largest asset and gives you real negotiating power — whether you keep the house, sell it, or trade equity for other assets. Your income of <strong>$9,000/month gross</strong> shows you're financially independent and capable of supporting yourself, which strengthens your position even if you're earning less than your spouse. You also have two children, and as a parent, you may be entitled to both child support and potentially alimony / spousal support given the <strong>$6,000 monthly income gap</strong> and your 16.8-year marriage.</div>
+                </div>
+
+                <div style="padding:14px 0;border-bottom:1px solid #e8f3f8;">
+                  <div style="font-size:28px;color:#e0eef5;line-height:1;margin-bottom:2px;">4</div>
+                  <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1A2A35;margin-bottom:8px;">Division Outlook</div>
+                  <div style="font-size:13px;color:#2A3A45;line-height:1.8;">In Florida, courts divide marital assets equitably — not necessarily 50/50, but fairly based on factors like length of marriage, economic circumstances, contributions to the marriage, and each spouse's financial situation. With a <strong>16+ year marriage</strong>, you're likely looking at a relatively even split of marital assets, which means you could reasonably expect somewhere near <strong>$577,500 of the $1,155,000 net worth</strong> as a starting point for negotiation. The big question marks are the retirement accounts (when were they funded?) and whether you'll seek to keep the marital home or liquidate it. You may also qualify for alimony / spousal support — Florida considers the income gap, standard of living during marriage, and duration. With your spouse earning 67% more than you, there's a reasonable case for support, though Florida doesn't use a strict formula like some states.</div>
+                </div>
+
+                <div style="padding:14px 0;">
+                  <div style="font-size:28px;color:#e0eef5;line-height:1;margin-bottom:2px;">5</div>
+                  <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1A2A35;margin-bottom:8px;">Immediate Priorities</div>
+                  <div style="font-size:13px;color:#2A3A45;line-height:1.8;">First, <strong>fix that monthly budget shortfall</strong> — either cut $457+ from your expenses or find where your numbers might be off. You need to show you can live within your means post-divorce, and right now the math doesn't work. Second, <strong>gather complete financial information on your spouse</strong> — income documentation, pay stubs, tax returns, and details on when and how those retirement accounts were funded. You can't negotiate effectively or run accurate support calculations without the full picture. Third, <strong>start collecting your divorce documents</strong> — you're at 0 of 56 documents, and you'll need bank statements, tax returns, mortgage statements, retirement account statements, and vehicle titles to prove the values you've entered and build your case. Having an attorney review your situation would give you confidence that your rights are protected, especially with this much at stake and the complexity of dividing retirement accounts properly (which requires a QDRO).</div>
+                </div>
+
+              </div>
+            </div>
+
+            <div style="background:#f8fbfd;border:1px solid #d4e9f3;border-radius:10px;padding:14px 16px;margin-top:14px;">
+              <div style="font-size:12px;font-weight:500;color:#1A2A35;margin-bottom:10px;">🎯 Key Focus Areas & Next Steps</div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8f3f8;"><span style="font-size:14px;">🔵</span><div style="font-size:12px;color:#4a6878;">Model your options in Settlement Scenarios (Step 3)</div></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8f3f8;"><span style="font-size:14px;">📋</span><div style="font-size:12px;color:#4a6878;">Start collecting documents in the Documents tab</div></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 0;"><span style="font-size:14px;">💬</span><div style="font-size:12px;color:#4a6878;">Ask Angel anything specific about your situation in the chat</div></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- S3 -->
+      <div class="screen" id="s2">
+        <div class="step-hdr"><div class="step-hdr-eyebrow">Step 3 of 6</div><h3 class="step-hdr-title">See every outcome <em>before you negotiate</em></h3><p class="step-hdr-desc">Angel models three realistic settlement paths based on your actual numbers — so you know exactly what each choice means in dollars before you agree to anything.</p></div>
+        <div class="app-win">
+          <div class="app-bar"><div class="app-dots"><div class="app-dot" style="background:#f87171;"></div><div class="app-dot" style="background:#fbbf24;"></div><div class="app-dot" style="background:#34d399;"></div></div><div class="app-bar-t">Model Your Options Before You Negotiate</div><div class="app-bar-btns"><span class="app-bar-btn">Print</span><span class="app-bar-btn">Download</span><span class="app-bar-btn">↺ Recalculate</span></div></div>
+          <div style="display:flex;gap:0;border-bottom:1px solid #d4e9f3;background:#f8fbfd;">
+            <div style="padding:10px 16px;font-size:12px;background:#6FAACB;color:white;border-radius:0;cursor:pointer;">⚖️ Asset Division</div>
+            <div style="padding:10px 16px;font-size:12px;color:#6A8A9F;cursor:pointer;border-right:1px solid #e4eff5;">😊 Child Support</div>
+            <div style="padding:10px 16px;font-size:12px;color:#6A8A9F;cursor:pointer;border-right:1px solid #e4eff5;">🎁 Spousal Support</div>
+            <div style="padding:10px 16px;font-size:12px;color:#6A8A9F;cursor:pointer;">🏠 Real Estate Analyzer</div>
+          </div>
+          <div class="app-inner">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div style="font-size:12px;color:#4a6878;">Three realistic settlement paths based on your actual numbers.</div>
+            </div>
+            <div style="background:#f8fbfd;border:1px solid #d4e9f3;border-radius:8px;padding:10px 14px;margin-bottom:14px;display:flex;gap:20px;align-items:center;">
+              <div style="font-size:12px;font-weight:600;color:#1A2A35;">Equitable Distribution (Florida)</div>
+              <div style="font-size:12px;color:#6A8A9F;">Marital pool: <strong style="color:#1A2A35;">$4,298,800</strong></div>
+              <div style="font-size:12px;color:#6A8A9F;">Total debts: <strong style="color:#C53030;">$601,444</strong></div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;">
+
+              <div style="background:#5A7A9B;border-radius:12px;padding:16px;color:white;">
+                <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.6);margin-bottom:6px;">SCENARIO A</div>
+                <div style="font-size:16px;font-weight:500;color:white;margin-bottom:12px;">⚖️ Equal Split</div>
+                <div style="margin-bottom:4px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Your Asset Share</div><div style="font-size:20px;font-weight:600;color:white;">$2,149,400</div></div>
+                <div style="margin-bottom:14px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Your Net Position</div><div style="font-size:18px;font-weight:600;color:#9DCBE4;">$1,848,678</div></div>
+                <div style="font-size:12px;color:rgba(255,255,255,.85);line-height:1.65;margin-bottom:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15);">All marital assets divided equally. Joint debts split 50/50. The courts default starting position.</div>
+                <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;border-left:3px solid rgba(255,255,255,.3);">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:5px;">ANGEL'S TAKE</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.65;">Courts treat 50/50 as the baseline — not the final answer. For a long marriage, there may be grounds to argue for more. Beyond real estate, your pool includes $35,000 in vehicles, $160,000 in retirement, $34,000 in investments, $23,800 in cash/bank — all factored into this total. Your net position of $1,848,678 is your floor, not your target.</div>
+                </div>
+              </div>
+
+              <div style="background:#4A7A9B;border-radius:12px;padding:16px;color:white;border:2px solid #9DCBE4;position:relative;">
+                <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#9DCBE4;color:#1A2A35;font-size:10px;font-weight:600;padding:3px 12px;border-radius:10px;white-space:nowrap;">Strongest net position</div>
+                <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.6);margin-bottom:6px;">SCENARIO B</div>
+                <div style="font-size:16px;font-weight:500;color:white;margin-bottom:12px;">🏠 You Keep the Home</div>
+                <div style="margin-bottom:4px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Your Asset Share</div><div style="font-size:20px;font-weight:600;color:white;">$3,724,956</div></div>
+                <div style="margin-bottom:4px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Your Net Position</div><div style="font-size:18px;font-weight:600;color:#9DCBE4;">$2,879,790</div></div>
+                <div style="margin-bottom:14px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Buyout to Spouse</div><div style="font-size:16px;font-weight:600;color:#f87171;">$1,727,778</div></div>
+                <div style="font-size:12px;color:rgba(255,255,255,.85);line-height:1.65;margin-bottom:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15);">You refinance in your name and pay spouse their $1,727,778 equity share — as cash or offset against other assets.</div>
+                <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;border-left:3px solid rgba(255,255,255,.3);">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:5px;">ANGEL'S TAKE</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.65;">Your strongest scenario at $2,879,790 net. The estimated mortgage of $3,343/mo is 18% of take-home — within a manageable range. Buyout to your spouse of $1,727,778 can be paid in cash or offset against other assets. Retirement accounts worth $160,000 are included in your net position but will likely require a separate QDRO or court order to transfer.</div>
+                </div>
+              </div>
+
+              <div style="background:#5A7A9B;border-radius:12px;padding:16px;color:white;">
+                <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.6);margin-bottom:6px;">SCENARIO C</div>
+                <div style="font-size:16px;font-weight:500;color:white;margin-bottom:12px;">🏡 Sell the Home & Split</div>
+                <div style="margin-bottom:4px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Your Asset Share</div><div style="font-size:20px;font-weight:600;color:white;">$1,897,178</div></div>
+                <div style="margin-bottom:14px;"><div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px;">Your Net Position</div><div style="font-size:18px;font-weight:600;color:#9DCBE4;">$1,868,678</div></div>
+                <div style="font-size:12px;color:rgba(255,255,255,.85);line-height:1.65;margin-bottom:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15);">House sells for $4,000,000 after $200,000 in costs. You each receive $1,627,778 cash from the sale.</div>
+                <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;border-left:3px solid rgba(255,255,255,.3);">
+                  <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:5px;">ANGEL'S TAKE</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.65;">Selling gives you $1,627,778 in liquid cash plus your share of all other assets — lower than Scenario B but no refinancing risk and all joint debts cleared. Invested at 4%/yr, your cash proceeds grow to $1,980,440.83 in five years. Your $160,000 in retirement accounts are separate from the sale and need their own division process.</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div style="background:#f8fbfd;border:1px solid #d4e9f3;border-radius:10px;padding:14px 18px;margin-bottom:12px;">
+              <div style="font-size:11px;color:#9BAAB5;margin-bottom:12px;">Quick Comparison — Your Net Position <span style="color:#6FAACB;float:right;">Best outcome: 🏠 You Keep the Home ($2,879,790)</span></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;">
+                <div><div style="font-size:11px;color:#6A8A9F;margin-bottom:4px;">⚖️ Equal Split</div><div style="font-size:22px;color:#6FAACB;font-weight:500;">$1,848,678</div></div>
+                <div><div style="font-size:11px;color:#6A8A9F;margin-bottom:4px;">🏠 You Keep the Home</div><div style="font-size:22px;color:#6FAACB;font-weight:500;">$2,879,790</div><div style="font-size:11px;color:#6FAACB;margin-top:2px;">★ Strongest position</div></div>
+                <div><div style="font-size:11px;color:#6A8A9F;margin-bottom:4px;">🏡 Sell the Home & Split</div><div style="font-size:22px;color:#6FAACB;font-weight:500;">$1,868,678</div></div>
+              </div>
+            </div>
+
+            <div style="background:#f8fbfd;border:1px solid #e4eff5;border-radius:8px;padding:12px 14px;font-size:11px;color:#6A8A9F;line-height:1.65;margin-bottom:12px;">
+              <strong style="color:#1A2A35;">These are starting points, not final numbers.</strong> Use the Child Support, Spousal Support, and Real Estate calculators in the next section to add support obligations and refine each scenario. Bring these to your attorney as a foundation for negotiation.
+            </div>
+
+            <div style="background:#3D5A73;border-radius:10px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div>
+                <div style="font-size:14px;color:white;font-weight:500;margin-bottom:4px;">Have a scenario you like? Now let's prepare to negotiate it.</div>
+                <div style="font-size:12px;color:rgba(255,255,255,.65);">Angel will help you build a checklist, anticipate questions, and rank your priorities so you walk into every meeting prepared.</div>
+              </div>
+              <div style="background:#6FAACB;color:white;font-size:13px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;padding:10px 18px;border-radius:8px;white-space:nowrap;flex-shrink:0;cursor:pointer;">Prepare to Negotiate →</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- S4 -->
+      <div class="screen" id="s3">
+        <div class="step-hdr"><div class="step-hdr-eyebrow">Step 4 of 6</div><h3 class="step-hdr-title">Walk into every meeting <em>completely prepared</em></h3><p class="step-hdr-desc">Angel generates a personalized checklist of everything to gather, verify, and protect — plus the red flags to watch for. Specific to your assets and jurisdiction.</p></div>
+        <div class="app-win">
+          <div class="app-bar"><div class="app-dots"><div class="app-dot" style="background:#f87171;"></div><div class="app-dot" style="background:#fbbf24;"></div><div class="app-dot" style="background:#34d399;"></div></div><div class="app-bar-t">✅ Your Negotiation Checklist — Specific to your assets, jurisdiction, and situation</div><div class="app-bar-btns"><span class="app-bar-btn">Print</span><span class="app-bar-btn">Download</span></div></div>
+          <div class="app-inner">
+            <div class="ck-two">
+              <div class="ck-box"><div class="ck-t blue">📋 Documents to Gather</div><ul><li>Recent statements for your $200,000 retirement account showing balance and contribution history</li><li>Deed and recent appraisal for your $850,000 home plus mortgage statements showing the $300,000 balance</li><li>All credit card statements for both joint cards ($6,000 and $5,000) going back at least 6 months</li><li>Title and loan documents for both vehicles including the $10,000 auto loan details</li><li>Bank statements for the joint $10,000 account for the past 12 months</li><li>Documentation on your spouse's $300,000 retirement account and $75,000 insurance policy</li></ul></div>
+              <div class="ck-box"><div class="ck-t amber">💰 Financial Items to Verify</div><ul><li>Get a formal appraisal on your home to confirm the $850,000 value for equitable distribution</li><li>Verify the current cash surrender value of the $75,000 insurance policy and beneficiary designations</li><li>Confirm the exact vested amounts in both retirement accounts and any employer match schedules</li><li>Check current trade-in values on both vehicles to ensure $14,000 and $27,000 are realistic</li><li>Review all joint credit card charges over the past year to identify any dissipation of marital assets</li><li>Calculate your actual monthly expenses against your $9,000 income — you're showing a $457/month shortfall</li></ul></div>
+            </div>
+            <div class="ck-two">
+              <div class="ck-box"><div class="ck-t green">🛡️ What to Protect</div><ul><li>Your $200,000 retirement account — protect yourself with a proper QDRO drafted by an attorney</li><li>The equity in your home ($550,000 after mortgage) — your financial foundation post-divorce</li><li>A fair share of your spouse's $300,000 retirement and the $75,000 insurance policy — marital assets</li><li>Your right to alimony given the income gap ($15,000 vs $9,000) and 16+ year marriage</li><li>Your share of joint bank accounts — separate finances immediately to prevent asset drainage</li></ul></div>
+              <div class="ck-box"><div class="ck-t red">⚠️ Red Flags to Watch For</div><ul><li>Your spouse draining the $10,000 joint bank account or running up joint credit cards before filing</li><li>Hidden assets — that $15,000/month income seems specific; verify with tax returns and pay stubs</li><li>Spouse cashing out or taking loans against their $300,000 retirement account or $75,000 insurance policy</li><li>Any attempt to devalue the $850,000 home or claim separate property — clearly marital for 16+ years</li><li>Pressure to settle quickly without proper valuations, especially given your negative cash flow</li></ul></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S5 -->
+      <div class="screen" id="s4">
+        <div class="step-hdr"><div class="step-hdr-eyebrow">Step 5 of 6</div><h3 class="step-hdr-title">Know exactly what to <em>fight for</em></h3><p class="step-hdr-desc">Angel ranks your assets and tells you what to fight for, what to negotiate carefully, and what to let go — with specific dollar reasoning for every item.</p></div>
+        <div class="app-win">
+          <div class="app-bar"><div class="app-dots"><div class="app-dot" style="background:#f87171;"></div><div class="app-dot" style="background:#fbbf24;"></div><div class="app-dot" style="background:#34d399;"></div></div><div class="app-bar-t">🎯 Financial Priorities — Angel ranks your assets and tells you what to fight for and what to let go</div><div class="app-bar-btns"><span class="app-bar-btn">Print</span><span class="app-bar-btn">Download</span></div></div>
+          <div class="app-inner">
+            <div class="pri-g"><div class="pri-g-t fight">🟢 Fight Hard For — highest value, hardest to replace, or critical for stability</div>
+              <div class="pri-item"><strong>Your Retirement & Pensions ($200,000):</strong> This is your separate retirement account. In Florida you need to protect what's yours from before or during marriage. It's incredibly difficult to rebuild retirement savings on $9,000/mo income.</div>
+              <div class="pri-item"><strong>50% equity in Real Estate — Joint ($850,000):</strong> With $550,000 in equity after the $300,000 mortgage, your share ($275,000) is your largest liquid asset and potential housing security for you and your two kids.</div>
+              <div class="pri-item"><strong>Primary physical custody of your children:</strong> This directly impacts child support — your spouse earns $15,000/mo vs your $9,000 and your living arrangement needs.</div>
+            </div>
+            <div class="pri-g"><div class="pri-g-t careful">🟡 Negotiate Carefully — valuable but tradeable under the right conditions</div>
+              <div class="pri-item"><strong>Spouse's Retirement & Pensions ($300,000):</strong> You may be entitled to a portion accumulated during marriage, but this could be traded against keeping more home equity or your full retirement intact.</div>
+              <div class="pri-item"><strong>Spouse's Insurance Policies ($75,000):</strong> Depending on the policy type, this could be negotiation leverage — clarify what this actually is before claiming it.</div>
+              <div class="pri-item"><strong>Vehicles & Transportation ($27,000 and $14,000):</strong> Total $41,000 — negotiate for the more reliable vehicle if you'll have the kids, but don't fight over both if you can trade one for debt relief.</div>
+            </div>
+            <div class="pri-g"><div class="pri-g-t letgo">🔴 Consider Letting Go — more costly to keep than worth</div>
+              <div class="pri-item"><strong>Spouse's Auto Loans ($10,000):</strong> If your spouse keeps the vehicle this loan is attached to, let them take the debt — it follows the asset. Simpler and cleaner.</div>
+              <div class="pri-item"><strong>Cash & Bank Accounts — Joint ($10,000):</strong> Only $5,000 per person after split — don't waste negotiation energy when you have $550,000 in home equity to discuss.</div>
+            </div>
+            <div class="pri-g"><div class="pri-g-t action">🔵 Immediate Actions — next 2 weeks before negotiations</div>
+              <div class="pri-item"><strong>Freeze joint credit cards immediately:</strong> You have $11,000 in joint credit card debt — call the card companies and request no new charges without both signatures.</div>
+              <div class="pri-item"><strong>Open your own individual bank account:</strong> Move half of the $10,000 joint cash ($5,000) into a new individual account in your name only.</div>
+              <div class="pri-item"><strong>Get three attorney consultations:</strong> With $1,155,000 net marital estate and complex retirement accounts, you need an attorney — most offer free initial consultations in Florida.</div>
+              <div class="pri-item"><strong>Calculate your post-divorce budget:</strong> You're already at -$457/mo cash flow — figure out realistic housing costs and whether you need to pursue alimony.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S6 -->
+      <div class="screen" id="s5">
+        <div class="step-hdr"><div class="step-hdr-eyebrow">Step 6 of 6</div><h3 class="step-hdr-title">Ask anything. <em>She knows your file.</em></h3><p class="step-hdr-desc">Angel isn't a generic chatbot. She's read your complete financial picture and gives answers specific to your numbers — at 2am, before a meeting, or whenever you need her. No hourly rate. No judgment.</p></div>
+        <div class="app-win">
+          <div class="app-bar"><div class="app-dots"><div class="app-dot" style="background:#f87171;"></div><div class="app-dot" style="background:#fbbf24;"></div><div class="app-dot" style="background:#34d399;"></div></div><div class="app-bar-t">My Angel — Your personal divorce coach</div><div class="app-bar-btns"><span class="app-bar-btn" style="color:#2D8A4E;">● Online</span></div></div>
+          <div class="app-inner" style="padding:14px;">
+            <div class="chat-wrap">
+              <div class="chat-hdr"><div class="chat-av">🪽</div><div><div class="chat-n">My Angel</div><div class="chat-s">Your personal divorce coach</div></div><div class="online"></div></div>
+              <div class="msg-q">It's hard to do the expense section. I am estimating a lot of them. Is that okay?</div>
+              <div class="msg-a">Sarah Miller, yes — estimating is totally okay and expected at this stage. The goal right now is to get a realistic picture of your situation, not perfection. You can always refine the numbers later, and your attorney will help you get more precise when needed for legal filings.</div>
+              <div class="msg-q">What should I ask my lawyer tomorrow?</div>
+              <div class="msg-a">Based on your file, focus on three things: <strong>the QDRO timeline for both retirement accounts</strong> ($200,000 yours, $300,000 spouse's), whether the home sale can be structured to clear the $321,000 in joint debts, and <strong>your realistic alimony range in Florida</strong> given the $6,000/month income gap after 16.8 years of marriage.</div>
+              <div class="msg-q">I'm overwhelmed. Where do I even start?</div>
+              <div class="msg-a">That's completely normal — you're dealing with a huge life transition. <strong>Take it one step at a time:</strong> you don't have to figure everything out today. Having an attorney in your corner will help lift some of that weight and give you clarity on next steps, so you can focus on yourself and your kids.</div>
+              <div class="chips"><span class="chip">What am I entitled to?</span><span class="chip">How does mediation work?</span><span class="chip">What is a QDRO?</span><span class="chip">Where do I start?</span><span class="chip">How does alimony work in Florida?</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-box">
+    <p style="margin-bottom:12px;font-size:14px;color:#1A2A35;font-style:normal;font-weight:500;">Your Divorce Angel also includes:</p>
+    <div class="pills">
+      <span class="pill">Child Support Calculator</span>
+      <span class="pill">Spousal Support Calculator</span>
+      <span class="pill">Real Estate Analyzer</span>
+      <span class="pill">Document Scanner & Assistant</span>
+      <span class="pill">Lawyer-Ready Downloads</span>
+      <span class="pill">Questions to Ask Your Lawyer</span>
+      <span class="pill">Document Collection Tracker</span>
+    </div>
+    <a class="cta-btn" href="https://divorcetracker.netlify.app">Get my financial picture →</a>
+    <p style="font-size:13px;color:#9BAAB5;margin-top:12px;font-style:italic;">Start with your financial snapshot. Takes about 10 minutes.</p>
+  </div>
+
+</div>
+</div>
+
+<script>
+// Step 1 sub-tabs
+const s0labels = ['Your Assets','Your Liabilities','Your Income','Your Expenses'];
+let s0cur = 0, s0timer = null;
+function s0go(n) {
+  clearTimeout(s0timer);
+  document.querySelectorAll('.s0screen').forEach((s,i) => { s.style.display = i===n ? 'block' : 'none'; });
+  document.querySelectorAll('[id^="s0tab"]').forEach((t,i) => {
+    t.style.background = i===n ? '#6FAACB' : 'transparent';
+    t.style.color = i===n ? 'white' : '#6A8A9F';
+  });
+  document.getElementById('s0-bar-t').textContent = s0labels[n];
+  s0cur = n;
+  s0timer = setTimeout(() => s0go((n+1)%4), 2000);
+}
+s0go(0);
+
+const DUR = 7000;
+let cur = 0, timer = null;
+
+function goTo(n) {
+  clearTimeout(timer);
+  document.querySelectorAll('.step-btn').forEach((b,i) => b.classList.toggle('active', i===n));
+  document.querySelectorAll('.screen').forEach((s,i) => s.classList.toggle('active', i===n));
+  document.querySelectorAll('.pbar').forEach((p,i) => {
+    p.style.transition = 'none';
+    p.style.width = i < n ? '100%' : '0%';
+  });
+  setTimeout(() => {
+    const pb = document.getElementById('pb'+n);
+    pb.style.transition = 'width '+DUR+'ms linear';
+    pb.style.width = '100%';
+  }, 50);
+  cur = n;
+  timer = setTimeout(() => goTo((n+1)%6), DUR);
+}
+goTo(0);
+</script>
+</div>
+
+<footer>
+  <div class="footer-nav-bar">
+    <a href="https://app.thedivorceangels.com"><em>Your Divorce Angel</em></a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/faq/">FAQs</a>
+    <a href="/resources/">Resources</a>
+    <a href="/blog/">Blog</a>
+    <a href="/community/">Community</a>
+    <a href="/terms/">Terms</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/disclaimer/">Disclaimer</a>
+  </div>
+  <div class="footer-logo-bar">
+    <a href="/"><img class="footer-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
+    <div class="footer-legal">Not legal advice. Always consult a licensed attorney.</div>
+  </div>
+</footer>
+
+</body>
+</html>
