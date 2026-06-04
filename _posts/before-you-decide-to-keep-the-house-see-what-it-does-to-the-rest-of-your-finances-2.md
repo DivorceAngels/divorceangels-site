@@ -1,6 +1,5 @@
 ---
-title: Before You Decide to Keep the House, See What It Does to the Rest of Your
-  Finances
+title: 2026-06-04-before-you-decide-to-keep-the-house.md
 date: 2026-06-04
 category: Financial
 cover_image: /uploads/towfiqu-barbhuiya-05xccftozn4-unsplash.jpg
