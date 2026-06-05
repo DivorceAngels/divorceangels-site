@@ -531,7 +531,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
 <script>
 (function(){
   var REPO='DivorceAngels/divorceangels-site',BRANCH='main',POSTS_FOLDER='_posts',MAX_POSTS=9;
-  var TOKEN='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';
+  var TOKEN='';
   var FALLBACK_BG=['#CFE6F3','#B8D4E8','#D4E8D4','#CFE6F3','#E8D4C8','#D4C8E8'];
   var grid=document.getElementById('blogGrid');
   if(!grid)return;
@@ -548,7 +548,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
       return'<a class="blog-card" href="/'+esc(p.slug)+'/">'+img+'<div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(formatDate(p.date))+'</div></div></a>';
     }).join('');
   }
-  fetch('https://api.github.com/repos/'+REPO+'/git/trees/'+BRANCH+'?recursive=1',{headers:{'Authorization':'token '+TOKEN}})
+  fetch('https://api.github.com/repos/'+REPO+'/git/trees/'+BRANCH+'?recursive=1',(TOKEN?{headers:{'Authorization':'token '+TOKEN}}:{}))
   .then(function(r){if(!r.ok)throw new Error('tree:'+r.status);return r.json();})
   .then(function(data){
     var files=data.tree.filter(function(f){return f.path.indexOf(POSTS_FOLDER+'/')===0&&f.path.match(/\.md$/i)&&f.path.split('/').pop().match(/^\d{4}-\d{2}-\d{2}-/);});
@@ -556,7 +556,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
     files=files.slice(0,MAX_POSTS);
     if(!files.length)throw new Error('no posts');
     return Promise.all(files.map(function(f){
-      return fetch('https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/'+f.path,{headers:{'Authorization':'token '+TOKEN}})
+      return fetch('https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/'+f.path,(TOKEN?{headers:{'Authorization':'token '+TOKEN}}:{}))
         .then(function(r){return r.text();})
         .then(function(text){var fm=parseFrontmatter(text);var filename=f.path.split('/').pop();return{slug:slugFromFilename(filename),title:fm.title||slugFromFilename(filename),date:fm.date||'',category:fm.category||'',cover_image:fm.cover_image||''};});
     }));
@@ -639,7 +639,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
 <script>
 (function(){
   var REPO='DivorceAngels/divorceangels-site',BRANCH='main',POSTS_FOLDER='_posts',MAX_POSTS=9;
-  var TOKEN='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';
+  var TOKEN='';
   var FALLBACK_BG=['#CFE6F3','#B8D4E8','#D4E8D4','#CFE6F3','#E8D4C8','#D4C8E8'];
   var grid=document.getElementById('blogGrid');
   if(!grid)return;
@@ -659,7 +659,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
       return'<a class="blog-card" href="/'+esc(p.slug)+'/">'+img+'<div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(formatDate(p.date))+'</div></div></a>';
     }).join('');
   }
-  fetch('https://api.github.com/repos/'+REPO+'/git/trees/'+BRANCH+'?recursive=1',{headers:{'Authorization':'token '+TOKEN}})
+  fetch('https://api.github.com/repos/'+REPO+'/git/trees/'+BRANCH+'?recursive=1',(TOKEN?{headers:{'Authorization':'token '+TOKEN}}:{}))
   .then(function(r){if(!r.ok)throw new Error('tree:'+r.status);return r.json();})
   .then(function(data){
     var files=data.tree.filter(function(f){
@@ -669,7 +669,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
     files=files.slice(0,MAX_POSTS);
     if(!files.length)throw new Error('no posts');
     return Promise.all(files.map(function(f){
-      return fetch('https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/'+f.path,{headers:{'Authorization':'token '+TOKEN}})
+      return fetch('https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/'+f.path,(TOKEN?{headers:{'Authorization':'token '+TOKEN}}:{}))
         .then(function(r){return r.text();})
         .then(function(text){
           var fm=parseFrontmatter(text);
