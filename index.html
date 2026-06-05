@@ -591,7 +591,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
   var html=POSTS.map(function(p,idx){
     var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
     var img=p.cover_image
-      ?'<img class="blog-img" src="'+esc(p.cover_image)+'" alt="" onerror="this.style.background=''+bg+'';this.removeAttribute('src')">'
+      ?'<img class="blog-img" src="'+esc(p.cover_image)+'" alt="" onerror="this.style.background=&quot;'+bg+'&quot;;this.removeAttribute(&quot;src&quot;)">'
       :'<div class="blog-img" style="background:'+bg+';"></div>';
     return'<a class="blog-card" href="/'+esc(p.slug)+'/">'
       +img
