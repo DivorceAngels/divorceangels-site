@@ -534,26 +534,75 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
   var grid=document.getElementById('blogGrid');
   if(!grid)return;
 
-  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-  function formatDate(d){var dt=new Date(d);if(isNaN(dt))return'';return dt.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}
+  // UPDATE THIS LIST WHEN YOU ADD NEW POSTS
+  var POSTS=[
+    {
+      slug:'before-you-decide-to-keep-the-house-see-what-it-does-to-the-rest-of-your-finances',
+      title:'Before You Decide to Keep the House, See What It Does to the Rest of Your Finances',
+      date:'2026-06-05',
+      category:'Financial',
+      cover_image:'/uploads/towfiqu-barbhuiya-05xccftozn4-unsplash.jpg'
+    },
+    {
+      slug:'dating-after-divorce-in-your-50s-and-60s-youre-braver-than-you-think',
+      title:'Dating After Divorce in Your 50s and 60s: You're Braver Than You Think',
+      date:'2026-04-21',
+      category:'Emotional',
+      cover_image:'/uploads/charlein-gracia-ux5mdmjnea-unsplash.jpg'
+    },
+    {
+      slug:'how-overwhelmed-i-was-trying-to-get-my-finances-prepared-for-my-divorce',
+      title:'How Overwhelmed I Was Trying to Get My Finances Prepared for My Divorce',
+      date:'2026-04-20',
+      category:'Financial',
+      cover_image:'/uploads/jon-matthews-fvhxfrklcpa-unsplash.jpg'
+    },
+    {
+      slug:'mom-has-a-new-boyfriend-navigating-this-change-with-grace',
+      title:'Mom Has a New Boyfriend: Navigating This Change With Grace',
+      date:'2026-04-18',
+      category:'Co-Parenting',
+      cover_image:''
+    },
+    {
+      slug:'protecting-yourself-financially-before-filing-for-divorce',
+      title:'Protecting Yourself Financially Before Filing for Divorce',
+      date:'2026-04-15',
+      category:'Financial',
+      cover_image:'/uploads/lawyer.jpg'
+    },
+    {
+      slug:'why-does-your-divorce-feel-like-its-moving-at-a-snails-pace',
+      title:"Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?",
+      date:'2026-04-10',
+      category:'Emotional',
+      cover_image:''
+    }
+  ];
 
-  function render(posts){
-    if(!posts.length){grid.innerHTML='<p style="color:#9BAAB5;">No posts yet.</p>';return;}
-    grid.innerHTML=posts.map(function(p,idx){
-      var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
-      var imgSrc=p.cover_image?('https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public'+p.cover_image):'';
-      var img=imgSrc?'<img class="blog-img" src="'+esc(imgSrc)+'" alt="" onerror="this.style.background=''+bg+'';this.removeAttribute('src')">':'<div class="blog-img" style="background:'+bg+';"></div>';
-      return'<a class="blog-card" href="/'+esc(p.slug)+'/">'+img+'<div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(formatDate(p.date))+'</div></div></a>';
-    }).join('');
+  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  function formatDate(d){
+    var dt=new Date(d);
+    if(isNaN(dt))return'';
+    return dt.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
   }
 
-  fetch('/.netlify/functions/posts')
-  .then(function(r){if(!r.ok)throw new Error('posts:'+r.status);return r.json();})
-  .then(function(posts){render(posts);})
-  .catch(function(err){
-    console.error('Blog list failed:',err);
-    grid.innerHTML='<a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt=""><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child's Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a><a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/"><img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt=""><div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div></a><a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/"><img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt=""><div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce — Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div></a>';
-  });
+  var html=POSTS.map(function(p,idx){
+    var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
+    var img=p.cover_image
+      ?'<img class="blog-img" src="'+esc(p.cover_image)+'" alt="" onerror="this.style.background=''+bg+'';this.removeAttribute('src')">'
+      :'<div class="blog-img" style="background:'+bg+';"></div>';
+    return'<a class="blog-card" href="/'+esc(p.slug)+'/">'
+      +img
+      +'<div class="blog-body">'
+      +(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')
+      +'<div class="blog-title">'+esc(p.title)+'</div>'
+      +'<div class="blog-date">'+esc(formatDate(p.date))+'</div>'
+      +'</div></a>';
+  }).join('');
+
+  grid.innerHTML=html;
 })();
 </script>
 
