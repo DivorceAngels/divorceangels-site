@@ -530,41 +530,29 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
 </section>
 <script>
 (function(){
-  var REPO='DivorceAngels/divorceangels-site',BRANCH='main',POSTS_FOLDER='_posts',MAX_POSTS=9;
-  var TOKEN='';
   var FALLBACK_BG=['#CFE6F3','#B8D4E8','#D4E8D4','#CFE6F3','#E8D4C8','#D4C8E8'];
   var grid=document.getElementById('blogGrid');
   if(!grid)return;
+
   function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-  function parseFrontmatter(text){var m=text.match(/^---[\s\S]*?\n---/);if(!m)return{};var raw=m[0].replace(/^---\n/,'').replace(/\n---$/,'');var out={};raw.split('\n').forEach(function(line){var i=line.indexOf(':');if(i===-1)return;var key=line.slice(0,i).trim();var val=line.slice(i+1).trim().replace(/^["']|["']$/g,'');out[key]=val;});return out;}
   function formatDate(d){var dt=new Date(d);if(isNaN(dt))return'';return dt.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}
-  function slugFromFilename(name){return name.replace(/\.md$/,'').replace(/^\d{4}-\d{1,2}-\d{1,2}-/,'');}
+
   function render(posts){
     if(!posts.length){grid.innerHTML='<p style="color:#9BAAB5;">No posts yet.</p>';return;}
     grid.innerHTML=posts.map(function(p,idx){
       var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
-      var imgSrc=p.cover_image?('https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/public'+p.cover_image):'';
+      var imgSrc=p.cover_image?('https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public'+p.cover_image):'';
       var img=imgSrc?'<img class="blog-img" src="'+esc(imgSrc)+'" alt="" onerror="this.style.background=''+bg+'';this.removeAttribute('src')">':'<div class="blog-img" style="background:'+bg+';"></div>';
       return'<a class="blog-card" href="/'+esc(p.slug)+'/">'+img+'<div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(formatDate(p.date))+'</div></div></a>';
     }).join('');
   }
-  fetch('https://api.github.com/repos/'+REPO+'/git/trees/'+BRANCH+'?recursive=1',(TOKEN?{headers:{'Authorization':'token '+TOKEN}}:{}))
-  .then(function(r){if(!r.ok)throw new Error('tree:'+r.status);return r.json();})
-  .then(function(data){
-    var files=data.tree.filter(function(f){return f.path.indexOf(POSTS_FOLDER+'/')===0&&f.path.match(/\.md$/i)&&f.path.split('/').pop().match(/^\d{4}-\d{2}-\d{2}-/);});
-    files.sort(function(a,b){return b.path.localeCompare(a.path);});
-    files=files.slice(0,MAX_POSTS);
-    if(!files.length)throw new Error('no posts');
-    return Promise.all(files.map(function(f){
-      return fetch('https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/'+f.path,(TOKEN?{headers:{'Authorization':'token '+TOKEN}}:{}))
-        .then(function(r){return r.text();})
-        .then(function(text){var fm=parseFrontmatter(text);var filename=f.path.split('/').pop();return{slug:slugFromFilename(filename),title:fm.title||slugFromFilename(filename),date:fm.date||'',category:fm.category||'',cover_image:fm.cover_image||''};});
-    }));
-  })
-  .then(function(posts){posts.sort(function(a,b){var da=a.date?new Date(a.date).getTime():0;var db=b.date?new Date(b.date).getTime():0;return db-da;});render(posts);})
+
+  fetch('/.netlify/functions/posts')
+  .then(function(r){if(!r.ok)throw new Error('posts:'+r.status);return r.json();})
+  .then(function(posts){render(posts);})
   .catch(function(err){
     console.error('Blog list failed:',err);
-    grid.innerHTML='<a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt=""><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child\'s Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a><a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/"><img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt=""><div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div></a><a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/"><img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt=""><div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce — Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div></a>';
+    grid.innerHTML='<a class="blog-card" href="/coping-with-divorce-a-childs-emotional-journey/"><img class="blog-img" src="https://cdn.durable.co/getty/8CWKkxcGV15mJoN0FTCQla4K0y2y7NXrmxd2Ccl4Ces7z8RoMJjOcSzlTAtET3dl.jpeg" alt=""><div class="blog-body"><div class="blog-tag">Co-Parenting</div><div class="blog-title">Coping With Divorce: A Child's Emotional Journey</div><div class="blog-date">April 9, 2026</div></div></a><a class="blog-card" href="/divorce-is-one-of-the-biggest-financial-events-of-your-life/"><img class="blog-img" src="https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?w=800&q=80&fit=crop" alt=""><div class="blog-body"><div class="blog-tag">Financial</div><div class="blog-title">Divorce Is One of the Biggest Financial Events of Your Life</div><div class="blog-date">April 9, 2026</div></div></a><a class="blog-card" href="/help-i-am-getting-a-divorce-do-i-need-a-lawyer/"><img class="blog-img" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80&fit=crop" alt=""><div class="blog-body"><div class="blog-tag">Legal</div><div class="blog-title">Help, I Am Getting a Divorce — Do I Need a Lawyer?</div><div class="blog-date">April 9, 2026</div></div></a>';
   });
 })();
 </script>
