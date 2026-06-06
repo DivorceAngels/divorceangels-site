@@ -154,7 +154,10 @@ const posts = postFiles.map((file, idx) => {
     const { data, content: body } = matter(content);
     const rawSlug = file.replace('.md', '');
 const slug = data.slug || rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, '');
-    const coverImg = data.cover_image || POOL[idx % POOL.length];
+   const rawCover = data.cover_image || '';
+const coverImg = rawCover.startsWith('/uploads/')
+  ? 'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public' + rawCover
+  : rawCover || POOL[idx % POOL.length];
     const excerpt = data.excerpt || body.replace(/[#*]/g, '').slice(0, 200) + '…';
     const dateFmt = formatDate(data.date);
     return { ...data, slug, cover_img: coverImg, excerpt, date_fmt: dateFmt, body, idx };
