@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/uploads/*"
-  to = "/public/uploads/:splat"
-  status = 200
