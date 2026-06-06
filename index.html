@@ -601,52 +601,6 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
   var grid=document.getElementById('blogGrid');
   if(!grid)return;
 
-  // UPDATE THIS LIST WHEN YOU ADD NEW POSTS
-  var POSTS=[
-    {
-      slug:'before-you-decide-to-keep-the-house-see-what-it-does-to-the-rest-of-your-finances',
-      title:'Before You Decide to Keep the House, See What It Does to the Rest of Your Finances',
-      date:'2026-06-05',
-      category:'Financial',
-      cover_image:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/towfiqu-barbhuiya-05xccftozn4-unsplash.jpg'
-    },
-    {
-      slug:'dating-after-divorce-in-your-50s-and-60s-youre-braver-than-you-think',
-      title:'Dating After Divorce in Your 50s and 60s: You\'re Braver Than You Think',
-      date:'2026-04-21',
-      category:'Emotional',
-      cover_image:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/charlein-gracia-ux5mdmjnea-unsplash.jpg'
-    },
-    {
-      slug:'how-overwhelmed-i-was-trying-to-get-my-finances-prepared-for-my-divorce',
-      title:'How Overwhelmed I Was Trying to Get My Finances Prepared for My Divorce',
-      date:'2026-04-20',
-      category:'Financial',
-      cover_image:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/jon-matthews-fvhxfrklcpa-unsplash.jpg'
-    },
-    {
-      slug:'mom-has-a-new-boyfriend-navigating-this-change-with-grace',
-      title:'Mom Has a New Boyfriend: Navigating This Change With Grace',
-      date:'2026-04-18',
-      category:'Co-Parenting',
-      cover_image:''
-    },
-    {
-      slug:'protecting-yourself-financially-before-filing-for-divorce',
-      title:'Protecting Yourself Financially Before Filing for Divorce',
-      date:'2026-04-15',
-      category:'Financial',
-      cover_image:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/lawyer.jpg'
-    },
-    {
-      slug:'why-does-your-divorce-feel-like-its-moving-at-a-snails-pace',
-      title:"Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?",
-      date:'2026-04-10',
-      category:'Emotional',
-      cover_image:''
-    }
-  ];
-
   function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 
   function formatDate(d){
@@ -655,11 +609,29 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
     return dt.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
   }
 
-  grid.innerHTML=POSTS.map(function(p,idx){
-    var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
-    var imgDiv='<div class="blog-img" style="background:'+bg+';'+(p.cover_image?'background-image:url('+p.cover_image+');background-size:cover;background-position:center;':'')+'">';
-    return '<a class="blog-card" href="/'+esc(p.slug)+'/">'+imgDiv+'</div><div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(formatDate(p.date))+'</div></div></a>';
-  }).join('');
+  function render(posts){
+    grid.innerHTML=posts.map(function(p,idx){
+      var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
+      var img=p.cover_img||p.cover_image||'';
+      var imgDiv='<div class="blog-img" style="background:'+bg+';'+(img?'background-image:url('+img+');background-size:cover;background-position:center;':'')+'">';
+      var date=p.date_fmt||formatDate(p.date)||'';
+      return '<a class="blog-card" href="/'+esc(p.slug)+'/">'+imgDiv+'</div><div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(date)+'</div></div></a>';
+    }).join('');
+  }
+
+  fetch('/latest-posts.json')
+    .then(function(r){return r.json();})
+    .then(function(posts){render(posts);})
+    .catch(function(){
+      render([
+        {slug:'before-you-decide-to-keep-the-house-see-what-it-does-to-the-rest-of-your-finances',title:'Before You Decide to Keep the House, See What It Does to the Rest of Your Finances',date:'2026-06-05',category:'Financial',cover_img:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/towfiqu-barbhuiya-05xccftozn4-unsplash.jpg'},
+        {slug:'dating-after-divorce-in-your-50s-and-60s-youre-braver-than-you-think',title:"Dating After Divorce in Your 50s and 60s: You're Braver Than You Think",date:'2026-04-21',category:'Emotional',cover_img:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/charlein-gracia-ux5mdmjnea-unsplash.jpg'},
+        {slug:'how-overwhelmed-i-was-trying-to-get-my-finances-prepared-for-my-divorce',title:'How Overwhelmed I Was Trying to Get My Finances Prepared for My Divorce',date:'2026-04-20',category:'Financial',cover_img:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/jon-matthews-fvhxfrklcpa-unsplash.jpg'},
+        {slug:'mom-has-a-new-boyfriend-navigating-this-change-with-grace',title:'Mom Has a New Boyfriend: Navigating This Change With Grace',date:'2026-04-18',category:'Co-Parenting',cover_img:''},
+        {slug:'protecting-yourself-financially-before-filing-for-divorce',title:'Protecting Yourself Financially Before Filing for Divorce',date:'2026-04-15',category:'Financial',cover_img:'https://raw.githubusercontent.com/DivorceAngels/divorceangels-site/main/public/uploads/lawyer.jpg'},
+        {slug:'why-does-your-divorce-feel-like-its-moving-at-a-snails-pace',title:"Why Does Your Divorce Feel Like It's Moving at a Snail's Pace?",date:'2026-04-10',category:'Emotional',cover_img:''}
+      ]);
+    });
 })();
 </script>
 
