@@ -657,7 +657,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
 
   grid.innerHTML=POSTS.map(function(p,idx){
     var bg=FALLBACK_BG[idx%FALLBACK_BG.length];
-    var imgDiv='<div class="blog-img" style="background:'+bg+';'+(p.cover_image?'background-image:url('+p.cover_image+');background-size:cover;background-position:center;':'')+'">';
+    var imgDiv='<div class="blog-img" style="background:'+bg+';'+(p.cover_image?'background-image:url(https://thedivorceangels.com'+p.cover_image+');background-size:cover;background-position:center;':'')+'">';
     return '<a class="blog-card" href="/'+esc(p.slug)+'/">'+imgDiv+'</div><div class="blog-body">'+(p.category?'<div class="blog-tag">'+esc(p.category)+'</div>':'')+'<div class="blog-title">'+esc(p.title)+'</div><div class="blog-date">'+esc(formatDate(p.date))+'</div></div></a>';
   }).join('');
 })();
