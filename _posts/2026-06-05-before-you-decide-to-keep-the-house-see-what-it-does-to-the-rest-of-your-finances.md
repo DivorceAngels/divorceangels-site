@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Before You Decide to Keep the House, See What It Does to the Rest of Your
   Finances
 date: 2026-06-05
