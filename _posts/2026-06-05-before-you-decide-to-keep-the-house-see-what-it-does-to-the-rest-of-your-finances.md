@@ -4,6 +4,7 @@ title: Before You Decide to Keep the House, See What It Does to the Rest of Your
 date: 2026-06-05
 category: Financial
 cover_image: /uploads/towfiqu-barbhuiya-05xccftozn4-unsplash.jpg
+permalink: /before-you-decide-to-keep-the-house-see-what-it-does-to-the-rest-of-your-finances/
 ---
 Keeping the house after divorce feels like holding onto a piece of your past and security. But it’s not just about the home itself—it’s about what happens to your whole financial picture. Our Settlement Modeler shows you how mortgage payments, living costs, and support obligations shift your cash flow and savings. Before you decide, see the real impact on your future so you feel confident, not overwhelmed. [Learn more here](https://thedivorceangels.com/).
 
