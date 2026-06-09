@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- Arizona Divorce Financial Guide | Your Divorce Angel | facts verified vs ARS 25-211/25-318 (community property, equitable division), ARS 25-319 + Arizona Spousal Maintenance Guidelines (eff 9/24/2022), ARS 25-320 income shares child support; June 2026 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divorce in Arizona: A Financial Guide (2026) | Your Divorce Angel</title>
+<meta name="description" content="How money works in an Arizona divorce: community property divided equitably, the new spousal maintenance guidelines, income-shares child support, and the financial timeline.">
+<link rel="canonical" href="https://thedivorceangels.com/arizona/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1A2A35;
+    --sky:#9ECCE6;       /* nav band — sampled from live site */
+    --sage:#6FAACB;      /* buttons / markers */
+    --blue:#4E97C4;      /* readable sky-blue: eyebrow, links, brand-italic on white */
+    --pale:#E8F4FA;
+    --gold:#C9A86A;
+    --paper:#FCFDFE;
+    --line:#D9E6EE;
+    --muted:#5A6B76;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:21px;
+    line-height:1.7;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:Georgia,'Cormorant Garamond',serif;font-weight:600;line-height:1.2;color:var(--ink);}
+  .brand-italic{font-style:italic;color:var(--blue);}
+  a{color:var(--blue);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HEADER LOCKUP + NAV BAND ---------- */
+  .topbar{background:#fff;border-bottom:1px solid var(--line);position:relative;}
+  .topbar-inner{max-width:1140px;margin:0 auto;padding:22px 24px 18px;display:flex;flex-direction:column;align-items:center;}
+  .topbar .logo img{height:56px;display:block;}
+  .topbar .utility{position:absolute;top:20px;right:24px;display:flex;gap:14px;align-items:center;}
+  .topbar .utility a{font-size:16px;text-decoration:none;color:var(--ink);}
+  .topbar .utility a.get{background:var(--sage);color:#fff;padding:8px 17px;border-radius:8px;transition:background .2s;}
+  .topbar .utility a.get:hover{background:var(--blue);}
+
+  .navband{background:var(--sky);position:sticky;top:0;z-index:50;}
+  .navband-inner{max-width:1140px;margin:0 auto;padding:13px 24px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;}
+  .navband a{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#fff;text-decoration:none;white-space:nowrap;}
+  .navband a.brand-italic{font-style:italic;color:#fff;}
+  .navband a:hover{color:var(--ink);}
+
+  .btn{display:inline-block;background:var(--sage);color:#fff;text-decoration:none;padding:11px 24px;border-radius:8px;font-size:18px;border:none;cursor:pointer;transition:background .2s;}
+  .btn:hover{background:var(--blue);}
+  @media(max-width:880px){
+    .topbar .utility{position:static;margin-top:4px;}
+    .navband-inner{gap:16px 20px;}
+    .navband a{font-size:18px;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(180deg,var(--pale) 0%,var(--paper) 100%);padding:54px 0 40px;}
+  .eyebrow{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;}
+  .breadcrumb{font-size:15px;color:var(--muted);margin-bottom:22px;}
+  .breadcrumb a{color:var(--muted);text-decoration:none;}
+  .breadcrumb a:hover{color:var(--blue);}
+  h1{font-size:46px;margin:14px 0 18px;}
+  .lede{font-size:23px;color:var(--ink);}
+  .updated{font-size:15px;color:var(--muted);margin-top:18px;}
+
+  /* ---------- BODY ---------- */
+  main{padding:14px 0 10px;}
+  main h2{font-size:32px;margin:46px 0 14px;}
+  main h3{font-size:24px;margin:30px 0 8px;color:var(--blue);}
+  main p{margin:0 0 18px;}
+  main ul{margin:0 0 18px 22px;}
+  main li{margin-bottom:8px;}
+  strong{font-weight:600;}
+
+  .callout{background:var(--pale);border-left:3px solid var(--sage);border-radius:0 10px 10px 0;padding:18px 22px;margin:26px 0;}
+  .callout .label{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:6px;}
+  .callout p:last-child{margin-bottom:0;}
+
+  .keyfacts{border:1px solid var(--line);border-radius:12px;padding:8px 24px;margin:30px 0;background:#fff;}
+  .keyfacts h3{color:var(--ink);font-size:20px;margin:18px 0 6px;}
+
+  table.facts{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:19px;}
+  table.facts th,table.facts td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.facts th{color:var(--blue);font-family:Georgia,serif;font-weight:600;}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin:30px 0;}
+  .faq details{border-bottom:1px solid var(--line);padding:14px 0;}
+  .faq summary{font-family:Georgia,serif;font-size:21px;color:var(--ink);cursor:pointer;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary:before{content:"+";color:var(--sage);font-weight:700;margin-right:12px;}
+  .faq details[open] summary:before{content:"–";}
+  .faq details p{margin:12px 0 4px;}
+
+  /* ---------- MID-PAGE CTA ---------- */
+  .cta{background:var(--sage);border-radius:16px;padding:42px 34px;margin:48px 0;text-align:center;}
+  .cta h2{color:#fff;margin:0 0 12px;font-size:30px;}
+  .cta p{color:#F3F9FD;margin:0 auto 22px;max-width:540px;}
+  .cta .btn{background:#fff;color:var(--blue);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;padding:13px 34px;border-radius:10px;}
+  .cta .btn:hover{background:#fff;color:var(--sage);}
+  .cta .trust{font-size:16px;color:#EAF4FB;margin-top:18px;}
+
+  .disclaimer{font-size:16px;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:22px;margin-top:40px;}
+
+  /* ---------- FOOTER (three bands) ---------- */
+  footer{margin-top:50px;}
+  .foot-cta{background:var(--sage);text-align:center;padding:48px 24px;}
+  .foot-cta a{display:inline-block;background:#fff;color:var(--blue);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:24px;text-decoration:none;padding:16px 42px;border-radius:12px;transition:color .2s;}
+  .foot-cta a:hover{color:var(--sage);}
+  .foot-links{background:var(--sky);}
+  .foot-links-inner{max-width:1140px;margin:0 auto;padding:20px 24px;display:flex;justify-content:center;flex-wrap:wrap;gap:14px 30px;}
+  .foot-links-inner a{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#fff;text-decoration:none;white-space:nowrap;}
+  .foot-links-inner a.brand-italic{font-style:italic;color:#fff;}
+  .foot-links-inner a:hover{color:var(--ink);}
+  .foot-base{background:#fff;text-align:center;padding:30px 24px 38px;}
+  .foot-base .blogo img{height:46px;margin-bottom:16px;display:inline-block;}
+  .foot-social{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
+  .foot-social a{color:var(--muted);text-decoration:none;font-size:16px;}
+  .foot-social a:hover{color:var(--blue);}
+  .foot-fine{font-size:15px;color:var(--muted);}
+</style>
+
+<!-- ===================== JSON-LD BLOCK 1: ORGANIZATION ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://thedivorceangels.com/#organization",
+  "name":"Your Divorce Angel",
+  "alternateName":"Divorce Angels",
+  "url":"https://thedivorceangels.com/",
+  "logo":"https://thedivorceangels.com/yda-logo.png",
+  "description":"Your Divorce Angel is a divorce financial strategy tool that helps people understand the financial impact of divorce before they negotiate.",
+  "areaServed":["US","CA","GB","AU"],
+  "sameAs":[
+    "https://www.facebook.com/thedivorceangels",
+    "https://www.instagram.com/divorce_angels/",
+    "https://www.linkedin.com/company/divorce-angels",
+    "https://www.tiktok.com/@yourdivorceangel"
+  ]
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 2: WEBSITE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://thedivorceangels.com/#website",
+  "url":"https://thedivorceangels.com/",
+  "name":"Your Divorce Angel",
+  "publisher":{"@id":"https://thedivorceangels.com/#organization"},
+  "inLanguage":"en"
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 3: ARTICLE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Divorce in Arizona: A Financial Guide",
+  "description":"How money works in an Arizona divorce: community property divided equitably, the new spousal maintenance guidelines, income-shares child support, and the financial timeline.",
+  "about":["Arizona divorce","community property","spousal maintenance","child support","maintenance guidelines"],
+  "inLanguage":"en",
+  "isPartOf":{"@id":"https://thedivorceangels.com/#website"},
+  "publisher":{"@id":"https://thedivorceangels.com/#organization"},
+  "author":{"@id":"https://thedivorceangels.com/#organization"},
+  "mainEntityOfPage":"https://thedivorceangels.com/arizona/"
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 4: FAQ PAGE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Is Arizona a community property state?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. Under ARS 25-211 property acquired during the marriage is community property. On divorce, ARS 25-318 directs the court to assign each spouse's sole and separate property to that spouse and to divide the community property equitably, which in practice usually means close to equal, without regard to marital misconduct."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can I get spousal maintenance in Arizona?",
+      "acceptedAnswer":{"@type":"Answer","text":"First you must qualify under ARS 25-319: for example, you lack enough property or income for your reasonable needs, cannot be self-sufficient through work, are caring for a young child, made career sacrifices for the marriage, or had a long marriage at an age that limits employment."}
+    },
+    {
+      "@type":"Question",
+      "name":"How is the amount of spousal maintenance decided in Arizona?",
+      "acceptedAnswer":{"@type":"Answer","text":"This changed in 2022. For cases filed on or after September 24, 2022, once a spouse qualifies the court must apply the Arizona Spousal Maintenance Guidelines, set by the state Supreme Court, to calculate the amount and duration. The award is aimed at enabling the recipient to become self-sufficient, which brought far more predictability than the old purely discretionary approach."}
+    },
+    {
+      "@type":"Question",
+      "name":"How is child support calculated in Arizona?",
+      "acceptedAnswer":{"@type":"Answer","text":"Arizona uses an income shares model under ARS 25-320 and the Arizona Child Support Guidelines, based on both parents' incomes and parenting time, with add-ons such as health insurance and childcare."}
+    },
+    {
+      "@type":"Question",
+      "name":"Is spousal maintenance taxable in Arizona?",
+      "acceptedAnswer":{"@type":"Answer","text":"For agreements signed after December 31, 2018, it is not deductible by the payer and not taxable to the recipient under federal law."}
+    }
+  ]
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 5: BREADCRUMB ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://thedivorceangels.com/"},
+    {"@type":"ListItem","position":2,"name":"Divorce in Arizona: A Financial Guide","item":"https://thedivorceangels.com/arizona/"}
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ========== HEADER LOCKUP ========== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="https://thedivorceangels.com/" aria-label="Your Divorce Angel home">
+      <img src="https://thedivorceangels.com/yda-logo.png" alt="Your Divorce Angel">
+    </a>
+    <div class="utility">
+      <a href="https://app.thedivorceangels.com/?signin=1">Sign In</a>
+      <a class="get" href="https://app.thedivorceangels.com">Get Started →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== NAV BAND ========== -->
+<nav class="navband">
+  <div class="navband-inner">
+    <a class="brand-italic" href="https://app.thedivorceangels.com">Your Divorce Angel</a>
+    <a href="https://thedivorceangels.com/how-it-works/">How It Works</a>
+    <a href="https://thedivorceangels.com/pricing/">Pricing</a>
+    <a href="https://thedivorceangels.com/faq/">FAQs</a>
+    <a href="https://thedivorceangels.com/blog/">Blog</a>
+    <a href="https://thedivorceangels.com/resources/">Resources</a>
+    <a href="https://thedivorceangels.com/community/">Community</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="https://thedivorceangels.com/">Home</a> &nbsp;›&nbsp; Arizona Divorce Financial Guide</div>
+    <div class="eyebrow">Arizona</div>
+    <h1>Divorce in Arizona:<br>What It Means for Your <span class="brand-italic">Finances</span></h1>
+    <p class="lede">Arizona is a community property state, and as of 2022 it calculates spousal maintenance with new guidelines aimed at getting the lower earner self-sufficient. Before you make decisions about your home, your support, and your retirement, here is how Arizona actually handles the money, in plain language.</p>
+    <p class="updated">Reviewed against the Arizona Revised Statutes and the Arizona Spousal Maintenance Guidelines. General financial guidance, not legal advice.</p>
+  </div>
+</header>
+
+<!-- ========== MAIN ========== -->
+<main>
+  <div class="wrap">
+
+    <p>An Arizona divorce is, at its heart, a financial event. The legal process matters, but most of the decisions that shape your next ten years are about money: who keeps the house, how retirement accounts are split, whether support is paid and for how long. This guide walks through how Arizona handles each of those questions so you can plan with a clear head instead of guessing.</p>
+
+    <div class="callout">
+      <div class="label">The short version</div>
+      <p>Arizona is a <strong>community property</strong> state, dividing community property <strong>equitably</strong> (usually close to equal) while each spouse keeps their separate property. The big recent change: since <strong>September 2022</strong>, spousal maintenance is set by <strong>statutory guidelines</strong> aimed at self-sufficiency. Child support runs on the <strong>income shares</strong> model.</p>
+    </div>
+
+    <h2>How Arizona divides property</h2>
+    <p>Arizona is a <strong>community property</strong> state (ARS 25-211): property acquired during the marriage is owned by both spouses. On divorce, <strong>ARS 25-318</strong> directs the court to <strong>assign each spouse's sole and separate property to that spouse</strong> and to divide the <strong>community property equitably, though not necessarily in kind, without regard to marital misconduct</strong>. In practice, "equitably" usually means a roughly <strong>equal</strong> split absent a specific reason to deviate. <strong>Separate property</strong> means assets owned before the marriage or received by gift or inheritance.</p>
+
+    <h3>The house and the retirement accounts</h3>
+    <p>The two biggest assets in most divorces are the family home and retirement savings. Retirement built up during the relationship counts even if the account is in one person's name, and dividing certain accounts takes a separate order so the transfer is not taxed as an early withdrawal. Debts count too. Trading the house for the retirement savings is a common move that can quietly cost a great deal if the after-tax values are not compared properly. Modeling these trade-offs before you agree to anything is exactly the kind of decision <span class="brand-italic">Your Divorce Angel</span> is built to help you see clearly.</p>
+
+    <h2>Spousal maintenance</h2>
+    <p>Arizona handles maintenance in <strong>two stages</strong>. First, the spouse must <strong>qualify</strong> under <strong>ARS 25-319</strong> — for example, lacking enough property or income for reasonable needs, being unable to be self-sufficient, caring for a young child, having made career sacrifices, or a long marriage at an age that limits work. Then comes the part that changed in 2022: for cases filed on or after <strong>September 24, 2022</strong>, the court <strong>must apply the Arizona Spousal Maintenance Guidelines</strong>, developed by the state Supreme Court, to set the <strong>amount and duration</strong>. The award is meant to last only as long as needed for the recipient to become <strong>self-sufficient</strong>. This replaced a purely discretionary system with a calculation, making outcomes far more predictable.</p>
+
+    <div class="callout">
+      <div class="label">A note on taxes</div>
+      <p>For agreements signed after December 31, 2018, spousal support is <strong>not</strong> deductible for the person paying and <strong>not</strong> taxable income for the person receiving it, under federal law. </p>
+    </div>
+
+    <h2>Child support</h2>
+    <p>Arizona uses an <strong>income shares</strong> model under <strong>ARS 25-320</strong> and the Arizona Child Support Guidelines, based on <strong>both parents' incomes</strong> and parenting time, with add-ons such as health insurance and childcare.</p>
+
+    <h2>The financial timeline</h2>
+    <p>Two things people consistently underestimate: how long the process takes and how much costs rise once you are running a household alone. A realistic financial sequence: gather a complete financial picture before filing; temporary orders for support while the case proceeds; financial disclosure and negotiation, with settlement scenarios modeled and compared; settlement or trial (most cases settle); and finally carrying out the division, support, and any account transfers after the decree.</p>
+
+    <div class="keyfacts">
+      <h3>Arizona divorce finance, at a glance</h3>
+      <table class="facts">
+        <tr><th>Property division</th><td>Community property divided equitably, usually near-equal (ARS 25-318)</td></tr>
+        <tr><th>Separate property</th><td>Assigned back to its owner</td></tr>
+        <tr><th>Spousal maintenance</th><td>Eligibility (ARS 25-319), then the Arizona Spousal Maintenance Guidelines (since 9/2022)</td></tr>
+        <tr><th>Child support</th><td>Income shares model (ARS 25-320)</td></tr>
+        <tr><th>Support tax (post-2018)</th><td>Not deductible by payer; not taxable to recipient</td></tr>
+      </table>
+    </div>
+
+    <h2>Questions worth asking before you negotiate</h2>
+    <ul>
+      <li>What is in the community estate, and which assets are provably separate?</li>
+      <li>If we trade the house for the retirement accounts, are we comparing after-tax values?</li>
+      <li>Do I qualify for maintenance, and what do the guidelines suggest for amount and duration?</li>
+      <li>What will my true monthly cost of living be once I am on my own?</li>
+      <li>What does each settlement scenario look like five and ten years out?</li>
+    </ul>
+
+    <h2>Arizona divorce: common questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Is Arizona a community property state?</summary>
+        <p>Yes. Under ARS 25-211 property acquired during the marriage is community property. On divorce, ARS 25-318 directs the court to assign each spouse's sole and separate property to that spouse and to divide the community property equitably, which in practice usually means close to equal, without regard to marital misconduct.</p>
+      </details>
+      <details>
+        <summary>Can I get spousal maintenance in Arizona?</summary>
+        <p>First you must qualify under ARS 25-319: for example, you lack enough property or income for your reasonable needs, cannot be self-sufficient through work, are caring for a young child, made career sacrifices for the marriage, or had a long marriage at an age that limits employment.</p>
+      </details>
+      <details>
+        <summary>How is the amount of spousal maintenance decided in Arizona?</summary>
+        <p>This changed in 2022. For cases filed on or after September 24, 2022, once a spouse qualifies the court must apply the Arizona Spousal Maintenance Guidelines, set by the state Supreme Court, to calculate the amount and duration. The award is aimed at enabling the recipient to become self-sufficient, which brought far more predictability than the old purely discretionary approach.</p>
+      </details>
+      <details>
+        <summary>How is child support calculated in Arizona?</summary>
+        <p>Arizona uses an income shares model under ARS 25-320 and the Arizona Child Support Guidelines, based on both parents' incomes and parenting time, with add-ons such as health insurance and childcare.</p>
+      </details>
+      <details>
+        <summary>Is spousal maintenance taxable in Arizona?</summary>
+        <p>For agreements signed after December 31, 2018, it is not deductible by the payer and not taxable to the recipient under federal law.</p>
+      </details>
+    </div>
+
+    <!-- ========== MID-PAGE CTA ========== -->
+    <div class="cta">
+      <h2>See your Arizona numbers before you decide</h2>
+      <p><span class="brand-italic" style="color:#fff;">Your Divorce Angel</span> builds your complete financial picture, models settlement scenarios against Arizona's rules, and prepares you for every negotiation, so you walk in knowing exactly what you are giving up and what you are keeping.</p>
+      <a class="btn" href="https://app.thedivorceangels.com">Start with clarity →</a>
+      <p class="trust">🔒 Your data is encrypted and never sold or shared with third parties.</p>
+    </div>
+
+    <p class="disclaimer">This guide is general financial information about divorce in Arizona and reflects Arizona law as of the date noted. It is not legal advice, and laws and individual circumstances change. Always consult a licensed Arizona attorney for advice specific to your situation.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="foot-cta">
+    <a href="https://app.thedivorceangels.com">Get Started →</a>
+  </div>
+  <div class="foot-links">
+    <div class="foot-links-inner">
+      <a class="brand-italic" href="https://app.thedivorceangels.com">Your Divorce Angel</a>
+      <a href="https://thedivorceangels.com/how-it-works/">How It Works</a>
+      <a href="https://thedivorceangels.com/pricing/">Pricing</a>
+      <a href="https://thedivorceangels.com/faq/">FAQs</a>
+      <a href="https://thedivorceangels.com/resources/">Resources</a>
+      <a href="https://thedivorceangels.com/blog/">Blog</a>
+      <a href="https://thedivorceangels.com/community/">Community</a>
+      <a href="https://thedivorceangels.com/terms/">Terms</a>
+      <a href="https://thedivorceangels.com/privacy/">Privacy</a>
+      <a href="https://thedivorceangels.com/disclaimer/">Disclaimer</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <a class="blogo" href="https://thedivorceangels.com/"><img src="https://thedivorceangels.com/yda-logo.png" alt="Your Divorce Angel"></a>
+    <div class="foot-social">
+      <a href="https://www.facebook.com/thedivorceangels">Facebook</a>
+      <a href="https://www.instagram.com/divorce_angels/">Instagram</a>
+      <a href="https://www.linkedin.com/company/divorce-angels">LinkedIn</a>
+      <a href="https://www.tiktok.com/@yourdivorceangel">TikTok</a>
+    </div>
+    <p class="foot-fine">Not legal advice. Always consult a licensed attorney.</p>
+  </div>
+</footer>
+
+</body>
+</html>
