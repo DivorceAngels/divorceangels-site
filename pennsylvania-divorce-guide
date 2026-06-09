@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!-- Pennsylvania Divorce Financial Guide | Your Divorce Angel | facts verified vs 23 Pa.C.S. 3502 (equitable distribution), 3701 (alimony 17 factors), Pa.R.C.P. 1910.16-4 (spousal support/APL 33%/40% formula), income shares child support; June 2026 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divorce in Pennsylvania: A Financial Guide (2026) | Your Divorce Angel</title>
+<meta name="description" content="How money works in a Pennsylvania divorce: equitable distribution, the difference between formula-based spousal support and discretionary alimony, income-shares child support, and the financial timeline.">
+<link rel="canonical" href="https://thedivorceangels.com/pennsylvania/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1A2A35;
+    --sky:#9ECCE6;       /* nav band — sampled from live site */
+    --sage:#6FAACB;      /* buttons / markers */
+    --blue:#4E97C4;      /* readable sky-blue: eyebrow, links, brand-italic on white */
+    --pale:#E8F4FA;
+    --gold:#C9A86A;
+    --paper:#FCFDFE;
+    --line:#D9E6EE;
+    --muted:#5A6B76;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:21px;
+    line-height:1.7;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:Georgia,'Cormorant Garamond',serif;font-weight:600;line-height:1.2;color:var(--ink);}
+  .brand-italic{font-style:italic;color:var(--blue);}
+  a{color:var(--blue);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HEADER LOCKUP + NAV BAND ---------- */
+  .topbar{background:#fff;border-bottom:1px solid var(--line);position:relative;}
+  .topbar-inner{max-width:1140px;margin:0 auto;padding:22px 24px 18px;display:flex;flex-direction:column;align-items:center;}
+  .topbar .logo img{height:56px;display:block;}
+  .topbar .utility{position:absolute;top:20px;right:24px;display:flex;gap:14px;align-items:center;}
+  .topbar .utility a{font-size:16px;text-decoration:none;color:var(--ink);}
+  .topbar .utility a.get{background:var(--sage);color:#fff;padding:8px 17px;border-radius:8px;transition:background .2s;}
+  .topbar .utility a.get:hover{background:var(--blue);}
+
+  .navband{background:var(--sky);position:sticky;top:0;z-index:50;}
+  .navband-inner{max-width:1140px;margin:0 auto;padding:13px 24px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;}
+  .navband a{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#fff;text-decoration:none;white-space:nowrap;}
+  .navband a.brand-italic{font-style:italic;color:#fff;}
+  .navband a:hover{color:var(--ink);}
+
+  .btn{display:inline-block;background:var(--sage);color:#fff;text-decoration:none;padding:11px 24px;border-radius:8px;font-size:18px;border:none;cursor:pointer;transition:background .2s;}
+  .btn:hover{background:var(--blue);}
+  @media(max-width:880px){
+    .topbar .utility{position:static;margin-top:4px;}
+    .navband-inner{gap:16px 20px;}
+    .navband a{font-size:18px;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(180deg,var(--pale) 0%,var(--paper) 100%);padding:54px 0 40px;}
+  .eyebrow{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;}
+  .breadcrumb{font-size:15px;color:var(--muted);margin-bottom:22px;}
+  .breadcrumb a{color:var(--muted);text-decoration:none;}
+  .breadcrumb a:hover{color:var(--blue);}
+  h1{font-size:46px;margin:14px 0 18px;}
+  .lede{font-size:23px;color:var(--ink);}
+  .updated{font-size:15px;color:var(--muted);margin-top:18px;}
+
+  /* ---------- BODY ---------- */
+  main{padding:14px 0 10px;}
+  main h2{font-size:32px;margin:46px 0 14px;}
+  main h3{font-size:24px;margin:30px 0 8px;color:var(--blue);}
+  main p{margin:0 0 18px;}
+  main ul{margin:0 0 18px 22px;}
+  main li{margin-bottom:8px;}
+  strong{font-weight:600;}
+
+  .callout{background:var(--pale);border-left:3px solid var(--sage);border-radius:0 10px 10px 0;padding:18px 22px;margin:26px 0;}
+  .callout .label{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:6px;}
+  .callout p:last-child{margin-bottom:0;}
+
+  .keyfacts{border:1px solid var(--line);border-radius:12px;padding:8px 24px;margin:30px 0;background:#fff;}
+  .keyfacts h3{color:var(--ink);font-size:20px;margin:18px 0 6px;}
+
+  table.facts{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:19px;}
+  table.facts th,table.facts td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.facts th{color:var(--blue);font-family:Georgia,serif;font-weight:600;}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin:30px 0;}
+  .faq details{border-bottom:1px solid var(--line);padding:14px 0;}
+  .faq summary{font-family:Georgia,serif;font-size:21px;color:var(--ink);cursor:pointer;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary:before{content:"+";color:var(--sage);font-weight:700;margin-right:12px;}
+  .faq details[open] summary:before{content:"–";}
+  .faq details p{margin:12px 0 4px;}
+
+  /* ---------- MID-PAGE CTA ---------- */
+  .cta{background:var(--sage);border-radius:16px;padding:42px 34px;margin:48px 0;text-align:center;}
+  .cta h2{color:#fff;margin:0 0 12px;font-size:30px;}
+  .cta p{color:#F3F9FD;margin:0 auto 22px;max-width:540px;}
+  .cta .btn{background:#fff;color:var(--blue);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;padding:13px 34px;border-radius:10px;}
+  .cta .btn:hover{background:#fff;color:var(--sage);}
+  .cta .trust{font-size:16px;color:#EAF4FB;margin-top:18px;}
+
+  .disclaimer{font-size:16px;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:22px;margin-top:40px;}
+
+  /* ---------- FOOTER (three bands) ---------- */
+  footer{margin-top:50px;}
+  .foot-cta{background:var(--sage);text-align:center;padding:48px 24px;}
+  .foot-cta a{display:inline-block;background:#fff;color:var(--blue);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:24px;text-decoration:none;padding:16px 42px;border-radius:12px;transition:color .2s;}
+  .foot-cta a:hover{color:var(--sage);}
+  .foot-links{background:var(--sky);}
+  .foot-links-inner{max-width:1140px;margin:0 auto;padding:20px 24px;display:flex;justify-content:center;flex-wrap:wrap;gap:14px 30px;}
+  .foot-links-inner a{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#fff;text-decoration:none;white-space:nowrap;}
+  .foot-links-inner a.brand-italic{font-style:italic;color:#fff;}
+  .foot-links-inner a:hover{color:var(--ink);}
+  .foot-base{background:#fff;text-align:center;padding:30px 24px 38px;}
+  .foot-base .blogo img{height:46px;margin-bottom:16px;display:inline-block;}
+  .foot-social{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
+  .foot-social a{color:var(--muted);text-decoration:none;font-size:16px;}
+  .foot-social a:hover{color:var(--blue);}
+  .foot-fine{font-size:15px;color:var(--muted);}
+</style>
+
+<!-- ===================== JSON-LD BLOCK 1: ORGANIZATION ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://thedivorceangels.com/#organization",
+  "name":"Your Divorce Angel",
+  "alternateName":"Divorce Angels",
+  "url":"https://thedivorceangels.com/",
+  "logo":"https://thedivorceangels.com/yda-logo.png",
+  "description":"Your Divorce Angel is a divorce financial strategy tool that helps people understand the financial impact of divorce before they negotiate.",
+  "areaServed":["US","CA","GB","AU"],
+  "sameAs":[
+    "https://www.facebook.com/thedivorceangels",
+    "https://www.instagram.com/divorce_angels/",
+    "https://www.linkedin.com/company/divorce-angels",
+    "https://www.tiktok.com/@yourdivorceangel"
+  ]
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 2: WEBSITE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://thedivorceangels.com/#website",
+  "url":"https://thedivorceangels.com/",
+  "name":"Your Divorce Angel",
+  "publisher":{"@id":"https://thedivorceangels.com/#organization"},
+  "inLanguage":"en"
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 3: ARTICLE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Divorce in Pennsylvania: A Financial Guide",
+  "description":"How money works in a Pennsylvania divorce: equitable distribution, formula-based spousal support versus discretionary post-divorce alimony, income-shares child support, and the financial timeline.",
+  "about":["Pennsylvania divorce","equitable distribution","spousal support","alimony","child support"],
+  "inLanguage":"en",
+  "isPartOf":{"@id":"https://thedivorceangels.com/#website"},
+  "publisher":{"@id":"https://thedivorceangels.com/#organization"},
+  "author":{"@id":"https://thedivorceangels.com/#organization"},
+  "mainEntityOfPage":"https://thedivorceangels.com/pennsylvania/"
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 4: FAQ PAGE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Is Pennsylvania a community property state?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Pennsylvania is an equitable distribution state. Marital property is divided fairly based on the statutory factors in 23 Pa.C.S. 3502, which can mean an unequal split, not an automatic 50/50. Property owned before the marriage or received by gift or inheritance is generally separate."}
+    },
+    {
+      "@type":"Question",
+      "name":"How is spousal support calculated in Pennsylvania?",
+      "acceptedAnswer":{"@type":"Answer","text":"Pennsylvania has three kinds of support. Spousal support (after separation) and alimony pendente lite (during the divorce) use a formula under Pa.R.C.P. 1910.16-4: with no children, 33 percent of the higher earner's monthly net income minus 40 percent of the lower earner's; when child support is also paid, 25 percent and 30 percent. Post-divorce alimony is different and has no formula."}
+    },
+    {
+      "@type":"Question",
+      "name":"How is post-divorce alimony decided in Pennsylvania?",
+      "acceptedAnswer":{"@type":"Answer","text":"Post-divorce alimony under 23 Pa.C.S. 3701 has no fixed formula and no fixed duration. The court weighs 17 statutory factors, including the length of the marriage, each spouse's earning capacity, the standard of living, age and health, and contributions to the other spouse's career."}
+    },
+    {
+      "@type":"Question",
+      "name":"How is child support calculated in Pennsylvania?",
+      "acceptedAnswer":{"@type":"Answer","text":"Pennsylvania uses the income shares model. Support is based on both parents' combined monthly net income and a statewide guideline schedule, then divided between them in proportion to their incomes, with add-ons for childcare, health insurance, and unreimbursed medical costs."}
+    },
+    {
+      "@type":"Question",
+      "name":"Is spousal support taxable in Pennsylvania?",
+      "acceptedAnswer":{"@type":"Answer","text":"For agreements signed after December 31, 2018, support is not deductible by the paying spouse and not taxable income to the receiving spouse, under federal law."}
+    }
+  ]
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 5: BREADCRUMB ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://thedivorceangels.com/"},
+    {"@type":"ListItem","position":2,"name":"Divorce in Pennsylvania: A Financial Guide","item":"https://thedivorceangels.com/pennsylvania/"}
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ========== HEADER LOCKUP ========== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="https://thedivorceangels.com/" aria-label="Your Divorce Angel home">
+      <img src="https://thedivorceangels.com/yda-logo.png" alt="Your Divorce Angel">
+    </a>
+    <div class="utility">
+      <a href="https://app.thedivorceangels.com/?signin=1">Sign In</a>
+      <a class="get" href="https://app.thedivorceangels.com">Get Started →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== NAV BAND ========== -->
+<nav class="navband">
+  <div class="navband-inner">
+    <a class="brand-italic" href="https://app.thedivorceangels.com">Your Divorce Angel</a>
+    <a href="https://thedivorceangels.com/how-it-works/">How It Works</a>
+    <a href="https://thedivorceangels.com/pricing/">Pricing</a>
+    <a href="https://thedivorceangels.com/faq/">FAQs</a>
+    <a href="https://thedivorceangels.com/blog/">Blog</a>
+    <a href="https://thedivorceangels.com/resources/">Resources</a>
+    <a href="https://thedivorceangels.com/community/">Community</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="https://thedivorceangels.com/">Home</a> &nbsp;›&nbsp; Pennsylvania Divorce Financial Guide</div>
+    <div class="eyebrow">Pennsylvania</div>
+    <h1>Divorce in Pennsylvania:<br>What It Means for Your <span class="brand-italic">Finances</span></h1>
+    <p class="lede">Pennsylvania splits support into a part with a formula and a part left to the judge, and it divides property "equitably," which is not the same as equally. Before you make decisions about your home, your support, and your retirement, here is how Pennsylvania actually handles the money, in plain language.</p>
+    <p class="updated">Reviewed against Pennsylvania divorce law as of the date noted. General financial guidance, not legal advice.</p>
+  </div>
+</header>
+
+<!-- ========== MAIN ========== -->
+<main>
+  <div class="wrap">
+
+    <p>A Pennsylvania divorce is, at its heart, a financial event. The legal process matters, but most of the decisions that shape your next ten years are about money: who keeps the house, how retirement accounts are split, whether support is paid and for how long. This guide walks through how Pennsylvania handles each of those questions so you can plan with a clear head instead of guessing.</p>
+
+    <div class="callout">
+      <div class="label">The short version</div>
+      <p>Pennsylvania divides property by <strong>equitable distribution</strong>, which is fair, not automatically equal. Support before and during the divorce follows a <strong>formula</strong>, but <strong>post-divorce alimony</strong> is left to the judge's discretion under 17 factors. Child support uses the <strong>income shares</strong> model.</p>
+    </div>
+
+    <h2>How Pennsylvania divides property</h2>
+    <p>Pennsylvania is an <strong>equitable distribution</strong> state, not a community property state. The court divides <strong>marital property</strong> fairly, weighing the statutory factors in <strong>23 Pa.C.S. 3502</strong>, which can produce an unequal split. Property <strong>owned before the marriage</strong> or received by gift or inheritance is generally separate, though it can become marital through commingling.</p>
+
+    <h3>The house and the retirement accounts</h3>
+    <p>The two biggest assets in most divorces are the family home and retirement savings. A retirement account built up during the marriage is marital property even if it is in one spouse's name, and dividing certain accounts takes a separate court order so the transfer is not taxed as an early withdrawal. Debts are divided too. Trading the house for the retirement account is a common move that can quietly cost a great deal if the after-tax values are not compared properly. Modeling these trade-offs before you agree to anything is exactly the kind of decision <span class="brand-italic">Your Divorce Angel</span> is built to help you see clearly.</p>
+
+    <h2>Spousal support and alimony</h2>
+    <p>Pennsylvania splits support into <strong>three stages</strong>, and they do not all work the same way.</p>
+    <ul>
+      <li><strong>Spousal support</strong> — available after you separate but before a divorce complaint is filed.</li>
+      <li><strong>Alimony pendente lite (APL)</strong> — temporary support during the divorce itself.</li>
+      <li><strong>Post-divorce alimony</strong> — support after the divorce is final.</li>
+    </ul>
+    <p>Spousal support and APL are set by a <strong>formula</strong> under Pa.R.C.P. 1910.16-4: with <strong>no children</strong>, 33% of the higher earner's monthly net income minus 40% of the lower earner's; when <strong>child support is also paid</strong>, the figures drop to 25% and 30%. <strong>Post-divorce alimony is different</strong>: there is <strong>no formula and no fixed duration</strong>. Under 23 Pa.C.S. 3701 the court weighs <strong>17 factors</strong>, such as the length of the marriage, earning capacities, the standard of living, age and health, and contributions to the other spouse's career.</p>
+
+    <div class="callout">
+      <div class="label">A note on taxes</div>
+      <p>For divorce or separation agreements signed after December 31, 2018, spousal support is <strong>not</strong> deductible for the person paying and <strong>not</strong> taxable income for the person receiving it, under the federal Tax Cuts and Jobs Act. This changes the real cost and value of every support number, so pre-tax and after-tax figures should never be confused at the negotiating table.</p>
+    </div>
+
+    <h2>Child support</h2>
+    <p>Pennsylvania uses the <strong>income shares</strong> model. Support starts from a statewide guideline <strong>schedule</strong> based on the parents' <strong>combined monthly net income</strong> and the number of children, then is divided between the parents <strong>in proportion to their incomes</strong>. Add-ons such as childcare, health insurance, and unreimbursed medical expenses are shared on top. Support is generally calculated <strong>before</strong> the spousal support formula is applied.</p>
+
+    <h2>The financial timeline</h2>
+    <p>Two things people consistently underestimate: how long the process takes and how much costs rise once you are running a household alone. A realistic financial sequence:</p>
+    <ul>
+      <li><strong>Before filing</strong> — gather a complete picture of assets, debts, income, and expenses. Every later decision rests on these.</li>
+      <li><strong>Spousal support or APL</strong> — formula-based support while you are separated or the case proceeds.</li>
+      <li><strong>Disclosure and negotiation</strong> — both sides exchange financial information; settlement scenarios get modeled and compared.</li>
+      <li><strong>Settlement or trial</strong> — most Pennsylvania divorces settle. The ones that go to trial cost more and hand the decisions to a judge.</li>
+      <li><strong>After the decree</strong> — the distribution, any post-divorce alimony, and account transfers are carried out.</li>
+    </ul>
+
+    <div class="keyfacts">
+      <h3>Pennsylvania divorce finance, at a glance</h3>
+      <table class="facts">
+        <tr><th>Property division</th><td>Equitable distribution (23 Pa.C.S. 3502); not automatically 50/50</td></tr>
+        <tr><th>Spousal support / APL</th><td>Formula: 33% higher net minus 40% lower net (25%/30% with children)</td></tr>
+        <tr><th>Post-divorce alimony</th><td>No formula; 17 factors (23 Pa.C.S. 3701); no fixed duration</td></tr>
+        <tr><th>Child support</th><td>Income shares model, both parents' net incomes</td></tr>
+        <tr><th>Support tax (post-2018)</th><td>Not deductible by payer; not taxable to recipient</td></tr>
+      </table>
+    </div>
+
+    <h2>Questions worth asking before you negotiate</h2>
+    <ul>
+      <li>What is the full marital estate, and which assets are actually separate property?</li>
+      <li>If we trade the house for the retirement account, are we comparing after-tax values?</li>
+      <li>Given our incomes and the length of the marriage, what is the realistic range for support?</li>
+      <li>What will my true monthly cost of living be once I am on my own?</li>
+      <li>What does each settlement scenario look like five and ten years out, not just on signing day?</li>
+    </ul>
+
+    <h2>Pennsylvania divorce: common questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Is Pennsylvania a community property state?</summary>
+        <p>No. Pennsylvania is an equitable distribution state. Marital property is divided fairly based on the statutory factors in 23 Pa.C.S. 3502, which can mean an unequal split, not an automatic 50/50. Property owned before the marriage or received by gift or inheritance is generally separate.</p>
+      </details>
+      <details>
+        <summary>How is spousal support calculated in Pennsylvania?</summary>
+        <p>Pennsylvania has three kinds of support. Spousal support (after separation) and alimony pendente lite (during the divorce) use a formula under Pa.R.C.P. 1910.16-4: with no children, 33 percent of the higher earner's monthly net income minus 40 percent of the lower earner's; when child support is also paid, 25 percent and 30 percent. Post-divorce alimony is different and has no formula.</p>
+      </details>
+      <details>
+        <summary>How is post-divorce alimony decided in Pennsylvania?</summary>
+        <p>Post-divorce alimony under 23 Pa.C.S. 3701 has no fixed formula and no fixed duration. The court weighs 17 statutory factors, including the length of the marriage, each spouse's earning capacity, the standard of living, age and health, and contributions to the other spouse's career.</p>
+      </details>
+      <details>
+        <summary>How is child support calculated in Pennsylvania?</summary>
+        <p>Pennsylvania uses the income shares model. Support is based on both parents' combined monthly net income and a statewide guideline schedule, then divided between them in proportion to their incomes, with add-ons for childcare, health insurance, and unreimbursed medical costs.</p>
+      </details>
+      <details>
+        <summary>Is spousal support taxable in Pennsylvania?</summary>
+        <p>For agreements signed after December 31, 2018, support is not deductible by the paying spouse and not taxable income to the receiving spouse, under federal law.</p>
+      </details>
+    </div>
+
+    <!-- ========== MID-PAGE CTA ========== -->
+    <div class="cta">
+      <h2>See your Pennsylvania numbers before you decide</h2>
+      <p><span class="brand-italic" style="color:#fff;">Your Divorce Angel</span> builds your complete financial picture, models settlement scenarios against Pennsylvania's rules, and prepares you for every negotiation, so you walk in knowing exactly what you are giving up and what you are keeping.</p>
+      <a class="btn" href="https://app.thedivorceangels.com">Start with clarity →</a>
+      <p class="trust">🔒 Your data is encrypted and never sold or shared with third parties.</p>
+    </div>
+
+    <p class="disclaimer">This guide is general financial information about divorce in Pennsylvania and reflects Pennsylvania law as of the date noted. It is not legal advice, and laws and individual circumstances change. Always consult a licensed Pennsylvania attorney for advice specific to your situation.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="foot-cta">
+    <a href="https://app.thedivorceangels.com">Get Started →</a>
+  </div>
+  <div class="foot-links">
+    <div class="foot-links-inner">
+      <a class="brand-italic" href="https://app.thedivorceangels.com">Your Divorce Angel</a>
+      <a href="https://thedivorceangels.com/how-it-works/">How It Works</a>
+      <a href="https://thedivorceangels.com/pricing/">Pricing</a>
+      <a href="https://thedivorceangels.com/faq/">FAQs</a>
+      <a href="https://thedivorceangels.com/resources/">Resources</a>
+      <a href="https://thedivorceangels.com/blog/">Blog</a>
+      <a href="https://thedivorceangels.com/community/">Community</a>
+      <a href="https://thedivorceangels.com/terms/">Terms</a>
+      <a href="https://thedivorceangels.com/privacy/">Privacy</a>
+      <a href="https://thedivorceangels.com/disclaimer/">Disclaimer</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <a class="blogo" href="https://thedivorceangels.com/"><img src="https://thedivorceangels.com/yda-logo.png" alt="Your Divorce Angel"></a>
+    <div class="foot-social">
+      <a href="https://www.facebook.com/thedivorceangels">Facebook</a>
+      <a href="https://www.instagram.com/divorce_angels/">Instagram</a>
+      <a href="https://www.linkedin.com/company/divorce-angels">LinkedIn</a>
+      <a href="https://www.tiktok.com/@yourdivorceangel">TikTok</a>
+    </div>
+    <p class="foot-fine">Not legal advice. Always consult a licensed attorney.</p>
+  </div>
+</footer>
+
+</body>
+</html>
