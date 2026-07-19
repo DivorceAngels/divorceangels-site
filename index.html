@@ -370,13 +370,15 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#EDF4F8;color:#1A
       },600));
     },800));
   }
-  var frame=document.getElementById('chatFrame');
-  if(frame){
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){if(e.isIntersecting){startChat();obs.disconnect();}});
-    },{threshold:0.3});
-    obs.observe(frame);
-  }
+ window.addEventListener('DOMContentLoaded', function(){
+    var frame=document.getElementById('chatFrame');
+    if(frame){
+      var obs=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){if(e.isIntersecting){startChat();obs.disconnect();}});
+      },{threshold:0.3});
+      obs.observe(frame);
+    }
+  });
 })();
 </script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=390212521153176&ev=PageView&noscript=1"/></noscript><!-- End Facebook Pixel -->
 <script type="application/ld+json">
