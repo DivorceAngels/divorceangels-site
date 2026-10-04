@@ -13,7 +13,7 @@
 </script>
 <!-- End Google Analytics -->
 <title>Pricing &middot; Your Divorce Angel</title>
-<meta name="description" content="$29.99 a month. One plan, everything included. Cancel anytime, no questions asked.">
+<meta name="description" content="Start free, no credit card. Upgrade to Plus when you want every tool: monthly, or a 3 or 6 month pass that never renews on its own.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
@@ -144,17 +144,13 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
   "url": "https://app.thedivorceangels.com/",
   "description": "A divorce financial strategy app that builds your complete financial picture, runs settlement scenarios, calculates support, prepares negotiation checklists for your jurisdiction, and answers your questions through Angel.",
   "publisher": { "@id": "https://thedivorceangels.com/#organization" },
-  "offers": {
-    "@type": "Offer",
-    "price": "29.99",
-    "priceCurrency": "USD",
-    "priceSpecification": {
-      "@type": "UnitPriceSpecification",
-      "price": "29.99",
-      "priceCurrency": "USD",
-      "billingDuration": "P1M"
-    }
-  }
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Plus monthly", "price": "29.99", "priceCurrency": "USD",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29.99", "priceCurrency": "USD", "billingDuration": "P1M" } },
+    { "@type": "Offer", "name": "Plus 3-month pass", "price": "69", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Plus 6-month pass", "price": "119", "priceCurrency": "USD" }
+  ]
 }
 </script>
 </head>
@@ -162,7 +158,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <div class="nav-logo-bar">
   <a href="/"><img class="nav-logo" src="/yda-logo.png" alt="Your Divorce Angel"></a>
- <a class="cta-btn" href="https://app.thedivorceangels.com">Try Free &rarr;</a>
+ <a class="cta-btn" href="https://app.thedivorceangels.com">Start free &rarr;</a>
 </div>
 
 <nav class="nav">
@@ -180,35 +176,47 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <section class="bg-blue full-sec">
   <div class="sec-wrap" style="text-align:center;padding-bottom:32px;">
     <p class="sec-eyebrow">Simple pricing</p>
-    <h2 class="sec-h2">One plan. <em>Everything included.</em></h2>
-    <p class="sec-sub">No tiers, no upgrades, no surprises.</p>
+    <h2 class="sec-h2">Start free. <em>Upgrade when you're ready.</em></h2>
+    <p class="sec-sub">No credit card to start. No contracts. Passes never renew on their own.</p>
   </div>
 
-  <div style="padding:0 24px 64px;">
-    <div class="price-card">
-     <div class="price-top">
-        <div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin-bottom:12px;">Start with 3 days free</div>
-        <div class="price-amount">
-          <span class="num">$29.99</span>
-          <span class="per">a month</span>
-        </div>
-        <div class="price-cancel">No credit card required &middot; Cancel anytime</div>
+  <div style="padding:0 24px 64px;display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:24px;">
+    <div class="price-card" style="margin:0;flex:1 1 320px;max-width:460px;">
+      <div class="price-top">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin-bottom:12px;">Free plan</div>
+        <div class="price-amount"><span class="num">$0</span><span class="per">forever</span></div>
+        <div class="price-cancel">No credit card required</div>
       </div>
-
-      <div class="price-include-h">Everything you need to walk in prepared</div>
-
+      <div class="price-include-h">See where you stand</div>
       <ul class="price-list">
-        <li><span class="check">&#10003;</span> All six tools &mdash; settlement modeler, support calculators, negotiation prep, financial analysis, document organization, and AI document insights</li>
-        <li><span class="check">&#10003;</span> Your Divorce Angel available 24/7</li>
-        <li><span class="check">&#10003;</span> Jurisdiction-aware for US, Canada, UK, and Australia</li>
-        <li><span class="check">&#10003;</span> Unlimited document uploads and analysis</li>
-        <li><span class="check">&#10003;</span> Export-ready reports for your lawyer</li>
-        <li><span class="check">&#10003;</span> Access to the 44,000+ member community</li>
-        <li><span class="check">&#10003;</span> Your data encrypted and never shared</li>
+        <li><span class="check">&#10003;</span> Your complete financial picture: assets, debts, income and expenses</li>
+        <li><span class="check">&#10003;</span> Your first settlement scenario</li>
+        <li><span class="check">&#10003;</span> An overview of your financial analysis</li>
+        <li><span class="check">&#10003;</span> Angel for general questions, 24/7</li>
+        <li><span class="check">&#10003;</span> Private and encrypted. Only you can see it</li>
       </ul>
+      <a class="btn-primary price-cta" href="https://app.thedivorceangels.com">Start free &rarr;</a>
+    </div>
 
-      <a class="btn-primary price-cta" href="https://app.thedivorceangels.com">Try Free for 3 Days &rarr;</a>
-      <p class="price-foot">&#128274; Cancel anytime, for any reason. No questions asked.</p>
+    <div class="price-card" style="margin:0;flex:1 1 320px;max-width:460px;border:2px solid #6FAACB;">
+      <div class="price-top">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6FAACB;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin-bottom:12px;">Plus</div>
+        <div class="price-amount"><span class="num">$69</span><span class="per">for 3 months</span></div>
+        <div class="price-cancel">One-time payment &middot; Most people need about 3 months</div>
+        <div style="margin-top:14px;font-size:17px;line-height:1.6;color:#4d5c65;">Or $29.99 a month (cancel anytime)<br>or $119 for 6 months</div>
+      </div>
+      <div class="price-include-h">Everything you need to walk in prepared</div>
+      <ul class="price-list">
+        <li><span class="check">&#10003;</span> Everything in the free plan</li>
+        <li><span class="check">&#10003;</span> All three settlement scenarios, side by side</li>
+        <li><span class="check">&#10003;</span> Child and spousal support estimates using the official guidelines where you live</li>
+        <li><span class="check">&#10003;</span> Negotiation prep: priorities, red flags and questions for your lawyer</li>
+        <li><span class="check">&#10003;</span> Document checklist and document analyzer</li>
+        <li><span class="check">&#10003;</span> Angel answers using your actual numbers</li>
+        <li><span class="check">&#10003;</span> Lawyer-ready PDF and Excel reports</li>
+      </ul>
+      <a class="btn-primary price-cta" href="https://app.thedivorceangels.com">Start free, upgrade anytime &rarr;</a>
+      <p class="price-foot">&#128274; Secure checkout by Stripe. Passes never renew on their own.</p>
     </div>
   </div>
 </section>
@@ -216,20 +224,20 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 <!-- COMPARISON -->
 <section class="bg-white full-sec">
   <div class="sec-wrap" style="text-align:center;">
-    <p class="sec-eyebrow">A small monthly investment</p>
+    <p class="sec-eyebrow">A small investment</p>
     <h2 class="sec-h2">A clearer picture <em>before the meter starts.</em></h2>
-    <p class="sec-sub" style="max-width:640px;margin:0 auto;">For less than a single hour with a divorce lawyer, you get a month of clarity, planning, and 24/7 access to Your Divorce Angel.</p>
+    <p class="sec-sub" style="max-width:640px;margin:0 auto;">For less than a single hour with a divorce lawyer, you get three months of clarity, planning, and 24/7 access to Your Divorce Angel.</p>
 
     <div class="compare-row">
       <div class="compare-card">
         <div class="compare-h">One hour with a divorce lawyer</div>
-        <div class="compare-cost">$300 &mdash; $500+</div>
-        <div class="compare-d">One conversation. The clock is running. You leave with notes &mdash; and another bill next time.</div>
+        <div class="compare-cost">$300 to $500+</div>
+        <div class="compare-d">One conversation. The clock is running. You leave with notes, and another bill next time.</div>
       </div>
       <div class="compare-card highlight">
-        <div class="compare-h">A month of Your Divorce Angel</div>
-        <div class="compare-cost"><em>$29.99</em></div>
-        <div class="compare-d">Every tool, 24/7 Angel access, and every answer based on your actual file. Cancel anytime.</div>
+        <div class="compare-h">Three months of Your Divorce Angel Plus</div>
+        <div class="compare-cost"><em>$69</em></div>
+        <div class="compare-d">Every tool, 24/7 Angel access, and every answer based on your actual file. One payment, no renewal.</div>
       </div>
     </div>
   </div>
@@ -247,22 +255,19 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
       <details class="faq-item" open>
         <summary class="faq-q">How much does it cost?<span class="faq-plus">+</span></summary>
-        <p class="faq-a">$29.99 a month. One plan, everything included. Cancel anytime &mdash; for any reason, no questions asked.</p>
+        <p class="faq-a">You can start free. Plus unlocks every tool: $29.99 a month (cancel anytime), $69 for a 3-month pass, or $119 for a 6-month pass. Passes are a one-time payment and never renew on their own.</p>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-q">What happens if I cancel?<span class="faq-plus">+</span></summary>
-        <p class="faq-a">You stop being billed at the end of your current billing cycle. You can re-activate anytime, and your data stays in your account if you want to come back. If you'd rather delete everything, you can do that from Settings with one click.</p>
+        <summary class="faq-q">What is included free?<span class="faq-plus">+</span></summary>
+        <p class="faq-a">Your complete financial picture (assets, debts, income and expenses), your first settlement scenario, an overview of your financial analysis, and Angel for general questions. The free plan has no time limit and needs no credit card.</p>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-q">Is there a free trial?<span class="faq-plus">+</span></summary>
-        <p class="faq-a">Yes &mdash; you can try Your Divorce Angel free for 3 days, no credit card required. After that it's $29.99 a month if you'd like to continue, and you can cancel anytime. Most people find clarity in the first week.</p>
+        <summary class="faq-q">Which option should I choose?<span class="faq-plus">+</span></summary>
+        <p class="faq-a">Most people need about 3 months while they gather documents, compare scenarios and prepare for negotiations, so the 3-month pass is the best value for most. Choose monthly if you only need a short burst, or the 6-month pass for longer or contested cases.</p>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-q">Do I have to commit to anything long-term?<span class="faq-plus">+</span></summary>
-        <p class="faq-a">No. There are no annual contracts, no hidden fees, and no cancellation penalties. Pay month-to-month for as long as Angel is useful &mdash; many people use her for 3-6 months while their case is active, then cancel.</p>
+        <summary class="faq-q">What happens when my pass ends or I cancel?<span class="faq-plus">+</span></summary>
+        <p class="faq-a">Nothing is lost. Your account returns to the free plan and everything you entered stays there, so you can pick up where you left off or upgrade again anytime. Monthly plans stop billing at the end of the current month. If you would rather delete everything, you can do that from Settings.</p>
       </details>
 
     </div>
@@ -275,7 +280,7 @@ body{font-family:'Cormorant Garamond',Georgia,serif;background:#fff;color:#1A2A3
 
 <!-- BOTTOM CTA -->
 <section style="background:#6FAACB;padding:48px 40px;text-align:center;">
-<a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Try Free for 3 Days &rarr;</a>
+<a href="https://app.thedivorceangels.com" style="background:white;color:#6FAACB;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;padding:18px 44px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Start free &rarr;</a>
 </section>
 
 <footer>
