@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!-- Divorce Financial Guides hub | Your Divorce Angel | lists every jurisdiction guide; Oct 2026 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divorce Financial Guides by Province, State and Country | Your Divorce Angel</title>
+<meta name="description" content="Plain-language financial guides to divorce for every Canadian province and territory, every US state and Washington, D.C., England and Wales, Scotland, Northern Ireland and Australia.">
+<link rel="canonical" href="https://thedivorceangels.com/guides/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1A2A35;
+    --sky:#9ECCE6;       /* nav band — sampled from live site */
+    --sage:#6FAACB;      /* buttons / markers */
+    --blue:#4E97C4;      /* readable sky-blue: eyebrow, links, brand-italic on white */
+    --pale:#E8F4FA;
+    --gold:#C9A86A;
+    --paper:#FCFDFE;
+    --line:#D9E6EE;
+    --muted:#5A6B76;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:21px;
+    line-height:1.7;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:Georgia,'Cormorant Garamond',serif;font-weight:600;line-height:1.2;color:var(--ink);}
+  .brand-italic{font-style:italic;color:var(--blue);}
+  a{color:var(--blue);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HEADER LOCKUP + NAV BAND ---------- */
+  .topbar{background:#fff;border-bottom:1px solid var(--line);position:relative;}
+  .topbar-inner{max-width:1140px;margin:0 auto;padding:22px 24px 18px;display:flex;flex-direction:column;align-items:center;}
+  .topbar .logo img{height:56px;display:block;}
+  .topbar .utility{position:absolute;top:20px;right:24px;display:flex;gap:14px;align-items:center;}
+  .topbar .utility a{font-size:16px;text-decoration:none;color:var(--ink);}
+  .topbar .utility a.get{background:var(--sage);color:#fff;padding:8px 17px;border-radius:8px;transition:background .2s;}
+  .topbar .utility a.get:hover{background:var(--blue);}
+
+  .navband{background:var(--sky);position:sticky;top:0;z-index:50;}
+  .navband-inner{max-width:1140px;margin:0 auto;padding:13px 24px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;}
+  .navband a{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#fff;text-decoration:none;white-space:nowrap;}
+  .navband a.brand-italic{font-style:italic;color:#fff;}
+  .navband a:hover{color:var(--ink);}
+
+  .btn{display:inline-block;background:var(--sage);color:#fff;text-decoration:none;padding:11px 24px;border-radius:8px;font-size:18px;border:none;cursor:pointer;transition:background .2s;}
+  .btn:hover{background:var(--blue);}
+  @media(max-width:880px){
+    .topbar .utility{position:static;margin-top:4px;}
+    .navband-inner{gap:16px 20px;}
+    .navband a{font-size:18px;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(180deg,var(--pale) 0%,var(--paper) 100%);padding:54px 0 40px;}
+  .eyebrow{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;}
+  .breadcrumb{font-size:15px;color:var(--muted);margin-bottom:22px;}
+  .breadcrumb a{color:var(--muted);text-decoration:none;}
+  .breadcrumb a:hover{color:var(--blue);}
+  h1{font-size:46px;margin:14px 0 18px;}
+  .lede{font-size:23px;color:var(--ink);}
+  .updated{font-size:15px;color:var(--muted);margin-top:18px;}
+
+  /* ---------- BODY ---------- */
+  main{padding:14px 0 10px;}
+  main h2{font-size:32px;margin:46px 0 14px;}
+  main h3{font-size:24px;margin:30px 0 8px;color:var(--blue);}
+  main p{margin:0 0 18px;}
+  main ul{margin:0 0 18px 22px;}
+  main li{margin-bottom:8px;}
+  strong{font-weight:600;}
+
+  .callout{background:var(--pale);border-left:3px solid var(--sage);border-radius:0 10px 10px 0;padding:18px 22px;margin:26px 0;}
+  .callout .label{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:6px;}
+  .callout p:last-child{margin-bottom:0;}
+
+  .keyfacts{border:1px solid var(--line);border-radius:12px;padding:8px 24px;margin:30px 0;background:#fff;}
+  .keyfacts h3{color:var(--ink);font-size:20px;margin:18px 0 6px;}
+
+  table.facts{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:19px;}
+  table.facts th,table.facts td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.facts th{color:var(--blue);font-family:Georgia,serif;font-weight:600;}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin:30px 0;}
+  .faq details{border-bottom:1px solid var(--line);padding:14px 0;}
+  .faq summary{font-family:Georgia,serif;font-size:21px;color:var(--ink);cursor:pointer;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary:before{content:"+";color:var(--sage);font-weight:700;margin-right:12px;}
+  .faq details[open] summary:before{content:"–";}
+  .faq details p{margin:12px 0 4px;}
+
+  /* ---------- MID-PAGE CTA ---------- */
+  .cta{background:var(--sage);border-radius:16px;padding:42px 34px;margin:48px 0;text-align:center;}
+  .cta h2{color:#fff;margin:0 0 12px;font-size:30px;}
+  .cta p{color:#F3F9FD;margin:0 auto 22px;max-width:540px;}
+  .cta .btn{background:#fff;color:var(--blue);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;padding:13px 34px;border-radius:10px;}
+  .cta .btn:hover{background:#fff;color:var(--sage);}
+  .cta .trust{font-size:16px;color:#EAF4FB;margin-top:18px;}
+
+  .disclaimer{font-size:16px;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:22px;margin-top:40px;}
+
+  /* ---------- FOOTER (three bands) ---------- */
+  footer{margin-top:50px;}
+  .foot-cta{background:var(--sage);text-align:center;padding:48px 24px;}
+  .foot-cta a{display:inline-block;background:#fff;color:var(--blue);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:24px;text-decoration:none;padding:16px 42px;border-radius:12px;transition:color .2s;}
+  .foot-cta a:hover{color:var(--sage);}
+  .foot-links{background:var(--sky);}
+  .foot-links-inner{max-width:1140px;margin:0 auto;padding:20px 24px;display:flex;justify-content:center;flex-wrap:wrap;gap:14px 30px;}
+  .foot-links-inner a{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;color:#fff;text-decoration:none;white-space:nowrap;}
+  .foot-links-inner a.brand-italic{font-style:italic;color:#fff;}
+  .foot-links-inner a:hover{color:var(--ink);}
+  .foot-base{background:#fff;text-align:center;padding:30px 24px 38px;}
+  .foot-base .blogo img{height:46px;margin-bottom:16px;display:inline-block;}
+  .foot-social{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
+  .foot-social a{color:var(--muted);text-decoration:none;font-size:16px;}
+  .foot-social a:hover{color:var(--blue);}
+  .foot-fine{font-size:15px;color:var(--muted);}
+  .guide-group{margin:40px 0 10px;}
+  .guide-group h2{font-size:30px;margin:0 0 14px;}
+  .guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;list-style:none;margin:0 !important;padding:0;}
+  .guide-grid li{margin:0;}
+  .guide-grid a{display:block;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fff;text-decoration:none;color:var(--ink);font-size:19px;line-height:1.3;transition:border-color .15s,background .15s;}
+  .guide-grid a:hover,.guide-grid a:focus-visible{border-color:var(--sage);background:var(--pale);}
+  .guide-count{font-size:16px;color:var(--muted);font-weight:400;margin-left:6px;}
+</style>
+
+<!-- ===================== JSON-LD BLOCK 1: ORGANIZATION ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://thedivorceangels.com/#organization",
+  "name":"Your Divorce Angel",
+  "alternateName":"Divorce Angels",
+  "url":"https://thedivorceangels.com/",
+  "logo":"https://thedivorceangels.com/yda-logo.png",
+  "description":"Your Divorce Angel is a divorce financial strategy tool that helps people understand the financial impact of divorce before they negotiate.",
+  "areaServed":["US","CA","GB","AU"],
+  "sameAs":[
+    "https://www.facebook.com/thedivorceangels",
+    "https://www.instagram.com/divorce_angels/",
+    "https://www.linkedin.com/company/divorce-angels",
+    "https://www.tiktok.com/@yourdivorceangel"
+  ]
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 2: WEBSITE ===================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://thedivorceangels.com/#website",
+  "url":"https://thedivorceangels.com/",
+  "name":"Your Divorce Angel",
+  "publisher":{"@id":"https://thedivorceangels.com/#organization"},
+  "inLanguage":"en"
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 3: COLLECTION ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Divorce Financial Guides",
+  "description": "Plain-language financial guides to divorce for every Canadian province and territory, every US state and Washington, D.C., England and Wales, Scotland, Northern Ireland and Australia.",
+  "url": "https://thedivorceangels.com/guides/",
+  "isPartOf": {
+    "@id": "https://thedivorceangels.com/#website"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Divorce in Alberta: A Financial Guide",
+        "url": "https://thedivorceangels.com/alberta-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Divorce in British Columbia: A Financial Guide",
+        "url": "https://thedivorceangels.com/british-columbia-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Divorce in Manitoba: A Financial Guide",
+        "url": "https://thedivorceangels.com/manitoba-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Divorce in New Brunswick: A Financial Guide",
+        "url": "https://thedivorceangels.com/new-brunswick-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Divorce in Newfoundland and Labrador: A Financial Guide",
+        "url": "https://thedivorceangels.com/newfoundland-and-labrador-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Divorce in Northwest Territories: A Financial Guide",
+        "url": "https://thedivorceangels.com/northwest-territories-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Divorce in Nova Scotia: A Financial Guide",
+        "url": "https://thedivorceangels.com/nova-scotia-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "Divorce in Nunavut: A Financial Guide",
+        "url": "https://thedivorceangels.com/nunavut-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "Divorce in Ontario: A Financial Guide",
+        "url": "https://thedivorceangels.com/ontario-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "Divorce in Prince Edward Island: A Financial Guide",
+        "url": "https://thedivorceangels.com/prince-edward-island-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "name": "Divorce in Quebec: A Financial Guide",
+        "url": "https://thedivorceangels.com/quebec-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "name": "Divorce in Saskatchewan: A Financial Guide",
+        "url": "https://thedivorceangels.com/saskatchewan-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "name": "Divorce in Yukon: A Financial Guide",
+        "url": "https://thedivorceangels.com/yukon-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "name": "Divorce in Alabama: A Financial Guide",
+        "url": "https://thedivorceangels.com/alabama-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "name": "Divorce in Alaska: A Financial Guide",
+        "url": "https://thedivorceangels.com/alaska-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "name": "Divorce in Arizona: A Financial Guide",
+        "url": "https://thedivorceangels.com/arizona-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "name": "Divorce in Arkansas: A Financial Guide",
+        "url": "https://thedivorceangels.com/arkansas-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "name": "Divorce in California: A Financial Guide",
+        "url": "https://thedivorceangels.com/california-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "name": "Divorce in Colorado: A Financial Guide",
+        "url": "https://thedivorceangels.com/colorado-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "name": "Divorce in Connecticut: A Financial Guide",
+        "url": "https://thedivorceangels.com/connecticut-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "name": "Divorce in Delaware: A Financial Guide",
+        "url": "https://thedivorceangels.com/delaware-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "name": "Divorce in Florida: A Financial Guide",
+        "url": "https://thedivorceangels.com/florida-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "name": "Divorce in Georgia: A Financial Guide",
+        "url": "https://thedivorceangels.com/georgia-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "name": "Divorce in Hawaii: A Financial Guide",
+        "url": "https://thedivorceangels.com/hawaii-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "name": "Divorce in Idaho: A Financial Guide",
+        "url": "https://thedivorceangels.com/idaho-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "name": "Divorce in Illinois: A Financial Guide",
+        "url": "https://thedivorceangels.com/illinois-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "name": "Divorce in Indiana: A Financial Guide",
+        "url": "https://thedivorceangels.com/indiana-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "name": "Divorce in Iowa: A Financial Guide",
+        "url": "https://thedivorceangels.com/iowa-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "name": "Divorce in Kansas: A Financial Guide",
+        "url": "https://thedivorceangels.com/kansas-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "name": "Divorce in Kentucky: A Financial Guide",
+        "url": "https://thedivorceangels.com/kentucky-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "name": "Divorce in Louisiana: A Financial Guide",
+        "url": "https://thedivorceangels.com/louisiana-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "name": "Divorce in Maine: A Financial Guide",
+        "url": "https://thedivorceangels.com/maine-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "name": "Divorce in Maryland: A Financial Guide",
+        "url": "https://thedivorceangels.com/maryland-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "name": "Divorce in Massachusetts: A Financial Guide",
+        "url": "https://thedivorceangels.com/massachusetts-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "name": "Divorce in Michigan: A Financial Guide",
+        "url": "https://thedivorceangels.com/michigan-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "name": "Divorce in Minnesota: A Financial Guide",
+        "url": "https://thedivorceangels.com/minnesota-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "name": "Divorce in Mississippi: A Financial Guide",
+        "url": "https://thedivorceangels.com/mississippi-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 38,
+        "name": "Divorce in Missouri: A Financial Guide",
+        "url": "https://thedivorceangels.com/missouri-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 39,
+        "name": "Divorce in Montana: A Financial Guide",
+        "url": "https://thedivorceangels.com/montana-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 40,
+        "name": "Divorce in Nebraska: A Financial Guide",
+        "url": "https://thedivorceangels.com/nebraska-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 41,
+        "name": "Divorce in Nevada: A Financial Guide",
+        "url": "https://thedivorceangels.com/nevada-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 42,
+        "name": "Divorce in New Hampshire: A Financial Guide",
+        "url": "https://thedivorceangels.com/new-hampshire-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 43,
+        "name": "Divorce in New Jersey: A Financial Guide",
+        "url": "https://thedivorceangels.com/new-jersey-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 44,
+        "name": "Divorce in New Mexico: A Financial Guide",
+        "url": "https://thedivorceangels.com/new-mexico-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 45,
+        "name": "Divorce in New York: A Financial Guide",
+        "url": "https://thedivorceangels.com/new-york-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 46,
+        "name": "Divorce in North Carolina: A Financial Guide",
+        "url": "https://thedivorceangels.com/north-carolina-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 47,
+        "name": "Divorce in North Dakota: A Financial Guide",
+        "url": "https://thedivorceangels.com/north-dakota-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 48,
+        "name": "Divorce in Ohio: A Financial Guide",
+        "url": "https://thedivorceangels.com/ohio-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 49,
+        "name": "Divorce in Oklahoma: A Financial Guide",
+        "url": "https://thedivorceangels.com/oklahoma-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 50,
+        "name": "Divorce in Oregon: A Financial Guide",
+        "url": "https://thedivorceangels.com/oregon-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 51,
+        "name": "Divorce in Pennsylvania: A Financial Guide",
+        "url": "https://thedivorceangels.com/pennsylvania-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 52,
+        "name": "Divorce in Rhode Island: A Financial Guide",
+        "url": "https://thedivorceangels.com/rhode-island-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 53,
+        "name": "Divorce in South Carolina: A Financial Guide",
+        "url": "https://thedivorceangels.com/south-carolina-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 54,
+        "name": "Divorce in South Dakota: A Financial Guide",
+        "url": "https://thedivorceangels.com/south-dakota-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 55,
+        "name": "Divorce in Tennessee: A Financial Guide",
+        "url": "https://thedivorceangels.com/tennessee-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 56,
+        "name": "Divorce in Texas: A Financial Guide",
+        "url": "https://thedivorceangels.com/texas-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 57,
+        "name": "Divorce in Utah: A Financial Guide",
+        "url": "https://thedivorceangels.com/utah-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 58,
+        "name": "Divorce in Vermont: A Financial Guide",
+        "url": "https://thedivorceangels.com/vermont-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 59,
+        "name": "Divorce in Virginia: A Financial Guide",
+        "url": "https://thedivorceangels.com/virginia-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 60,
+        "name": "Divorce in Washington: A Financial Guide",
+        "url": "https://thedivorceangels.com/washington-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 61,
+        "name": "Divorce in Washington, D.C.: A Financial Guide",
+        "url": "https://thedivorceangels.com/district-of-columbia-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 62,
+        "name": "Divorce in West Virginia: A Financial Guide",
+        "url": "https://thedivorceangels.com/west-virginia-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 63,
+        "name": "Divorce in Wisconsin: A Financial Guide",
+        "url": "https://thedivorceangels.com/wisconsin-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 64,
+        "name": "Divorce in Wyoming: A Financial Guide",
+        "url": "https://thedivorceangels.com/wyoming-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 65,
+        "name": "Divorce in England & Wales: A Financial Guide",
+        "url": "https://thedivorceangels.com/england-and-wales-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 66,
+        "name": "Divorce in Scotland: A Financial Guide",
+        "url": "https://thedivorceangels.com/scotland-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 67,
+        "name": "Divorce in Northern Ireland: A Financial Guide",
+        "url": "https://thedivorceangels.com/northern-ireland-divorce-guide/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 68,
+        "name": "Divorce in Australia: A Financial Guide",
+        "url": "https://thedivorceangels.com/australia-divorce-guide/"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- ===================== JSON-LD BLOCK 5: BREADCRUMB ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thedivorceangels.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Divorce Financial Guides",
+      "item": "https://thedivorceangels.com/guides/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ========== HEADER LOCKUP ========== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="https://thedivorceangels.com/" aria-label="Your Divorce Angel home">
+      <img src="https://thedivorceangels.com/yda-logo.png" alt="Your Divorce Angel">
+    </a>
+    <div class="utility">
+      <a href="https://app.thedivorceangels.com/?signin=1">Sign In</a>
+      <a class="get" href="https://app.thedivorceangels.com">Get Started →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== NAV BAND ========== -->
+<nav class="navband">
+  <div class="navband-inner">
+    <a class="brand-italic" href="https://app.thedivorceangels.com">Your Divorce Angel</a>
+    <a href="https://thedivorceangels.com/how-it-works/">How It Works</a>
+    <a href="https://thedivorceangels.com/pricing/">Pricing</a>
+    <a href="https://thedivorceangels.com/faq/">FAQs</a>
+    <a href="https://thedivorceangels.com/blog/">Blog</a>
+    <a href="https://thedivorceangels.com/guides/">Guides</a>
+    <a href="https://thedivorceangels.com/resources/">Resources</a>
+    <a href="https://thedivorceangels.com/community/">Community</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="https://thedivorceangels.com/">Home</a> &nbsp;›&nbsp; Guides</div>
+    <div class="eyebrow">Guides</div>
+    <h1>Divorce and your money,<br>wherever you <span class="brand-italic">live</span></h1>
+    <p class="lede">How property, pensions, support and taxes work in a divorce depends on where you live. Pick your province, state or country for a plain-language guide to the rules that apply to you.</p>
+    <p class="updated">Each guide is reviewed against that place's own family law. General financial guidance, not legal advice.</p>
+  </div>
+</header>
+
+<!-- ========== MAIN ========== -->
+<main>
+  <div class="wrap">
+    <section class="guide-group">
+      <h2>Canada<span class="guide-count">13 guides</span></h2>
+      <ul class="guide-grid">
+        <li><a href="https://thedivorceangels.com/alberta-divorce-guide/">Alberta</a></li>
+        <li><a href="https://thedivorceangels.com/british-columbia-divorce-guide/">British Columbia</a></li>
+        <li><a href="https://thedivorceangels.com/manitoba-divorce-guide/">Manitoba</a></li>
+        <li><a href="https://thedivorceangels.com/new-brunswick-divorce-guide/">New Brunswick</a></li>
+        <li><a href="https://thedivorceangels.com/newfoundland-and-labrador-divorce-guide/">Newfoundland and Labrador</a></li>
+        <li><a href="https://thedivorceangels.com/northwest-territories-divorce-guide/">Northwest Territories</a></li>
+        <li><a href="https://thedivorceangels.com/nova-scotia-divorce-guide/">Nova Scotia</a></li>
+        <li><a href="https://thedivorceangels.com/nunavut-divorce-guide/">Nunavut</a></li>
+        <li><a href="https://thedivorceangels.com/ontario-divorce-guide/">Ontario</a></li>
+        <li><a href="https://thedivorceangels.com/prince-edward-island-divorce-guide/">Prince Edward Island</a></li>
+        <li><a href="https://thedivorceangels.com/quebec-divorce-guide/">Quebec</a></li>
+        <li><a href="https://thedivorceangels.com/saskatchewan-divorce-guide/">Saskatchewan</a></li>
+        <li><a href="https://thedivorceangels.com/yukon-divorce-guide/">Yukon</a></li>
+      </ul>
+    </section>
+    <section class="guide-group">
+      <h2>United States<span class="guide-count">51 guides</span></h2>
+      <ul class="guide-grid">
+        <li><a href="https://thedivorceangels.com/alabama-divorce-guide/">Alabama</a></li>
+        <li><a href="https://thedivorceangels.com/alaska-divorce-guide/">Alaska</a></li>
+        <li><a href="https://thedivorceangels.com/arizona-divorce-guide/">Arizona</a></li>
+        <li><a href="https://thedivorceangels.com/arkansas-divorce-guide/">Arkansas</a></li>
+        <li><a href="https://thedivorceangels.com/california-divorce-guide/">California</a></li>
+        <li><a href="https://thedivorceangels.com/colorado-divorce-guide/">Colorado</a></li>
+        <li><a href="https://thedivorceangels.com/connecticut-divorce-guide/">Connecticut</a></li>
+        <li><a href="https://thedivorceangels.com/delaware-divorce-guide/">Delaware</a></li>
+        <li><a href="https://thedivorceangels.com/florida-divorce-guide/">Florida</a></li>
+        <li><a href="https://thedivorceangels.com/georgia-divorce-guide/">Georgia</a></li>
+        <li><a href="https://thedivorceangels.com/hawaii-divorce-guide/">Hawaii</a></li>
+        <li><a href="https://thedivorceangels.com/idaho-divorce-guide/">Idaho</a></li>
+        <li><a href="https://thedivorceangels.com/illinois-divorce-guide/">Illinois</a></li>
+        <li><a href="https://thedivorceangels.com/indiana-divorce-guide/">Indiana</a></li>
+        <li><a href="https://thedivorceangels.com/iowa-divorce-guide/">Iowa</a></li>
+        <li><a href="https://thedivorceangels.com/kansas-divorce-guide/">Kansas</a></li>
+        <li><a href="https://thedivorceangels.com/kentucky-divorce-guide/">Kentucky</a></li>
+        <li><a href="https://thedivorceangels.com/louisiana-divorce-guide/">Louisiana</a></li>
+        <li><a href="https://thedivorceangels.com/maine-divorce-guide/">Maine</a></li>
+        <li><a href="https://thedivorceangels.com/maryland-divorce-guide/">Maryland</a></li>
+        <li><a href="https://thedivorceangels.com/massachusetts-divorce-guide/">Massachusetts</a></li>
+        <li><a href="https://thedivorceangels.com/michigan-divorce-guide/">Michigan</a></li>
+        <li><a href="https://thedivorceangels.com/minnesota-divorce-guide/">Minnesota</a></li>
+        <li><a href="https://thedivorceangels.com/mississippi-divorce-guide/">Mississippi</a></li>
+        <li><a href="https://thedivorceangels.com/missouri-divorce-guide/">Missouri</a></li>
+        <li><a href="https://thedivorceangels.com/montana-divorce-guide/">Montana</a></li>
+        <li><a href="https://thedivorceangels.com/nebraska-divorce-guide/">Nebraska</a></li>
+        <li><a href="https://thedivorceangels.com/nevada-divorce-guide/">Nevada</a></li>
+        <li><a href="https://thedivorceangels.com/new-hampshire-divorce-guide/">New Hampshire</a></li>
+        <li><a href="https://thedivorceangels.com/new-jersey-divorce-guide/">New Jersey</a></li>
+        <li><a href="https://thedivorceangels.com/new-mexico-divorce-guide/">New Mexico</a></li>
+        <li><a href="https://thedivorceangels.com/new-york-divorce-guide/">New York</a></li>
+        <li><a href="https://thedivorceangels.com/north-carolina-divorce-guide/">North Carolina</a></li>
+        <li><a href="https://thedivorceangels.com/north-dakota-divorce-guide/">North Dakota</a></li>
+        <li><a href="https://thedivorceangels.com/ohio-divorce-guide/">Ohio</a></li>
+        <li><a href="https://thedivorceangels.com/oklahoma-divorce-guide/">Oklahoma</a></li>
+        <li><a href="https://thedivorceangels.com/oregon-divorce-guide/">Oregon</a></li>
+        <li><a href="https://thedivorceangels.com/pennsylvania-divorce-guide/">Pennsylvania</a></li>
+        <li><a href="https://thedivorceangels.com/rhode-island-divorce-guide/">Rhode Island</a></li>
+        <li><a href="https://thedivorceangels.com/south-carolina-divorce-guide/">South Carolina</a></li>
+        <li><a href="https://thedivorceangels.com/south-dakota-divorce-guide/">South Dakota</a></li>
+        <li><a href="https://thedivorceangels.com/tennessee-divorce-guide/">Tennessee</a></li>
+        <li><a href="https://thedivorceangels.com/texas-divorce-guide/">Texas</a></li>
+        <li><a href="https://thedivorceangels.com/utah-divorce-guide/">Utah</a></li>
+        <li><a href="https://thedivorceangels.com/vermont-divorce-guide/">Vermont</a></li>
+        <li><a href="https://thedivorceangels.com/virginia-divorce-guide/">Virginia</a></li>
+        <li><a href="https://thedivorceangels.com/washington-divorce-guide/">Washington</a></li>
+        <li><a href="https://thedivorceangels.com/district-of-columbia-divorce-guide/">Washington, D.C.</a></li>
+        <li><a href="https://thedivorceangels.com/west-virginia-divorce-guide/">West Virginia</a></li>
+        <li><a href="https://thedivorceangels.com/wisconsin-divorce-guide/">Wisconsin</a></li>
+        <li><a href="https://thedivorceangels.com/wyoming-divorce-guide/">Wyoming</a></li>
+      </ul>
+    </section>
+    <section class="guide-group">
+      <h2>United Kingdom<span class="guide-count">3 guides</span></h2>
+      <ul class="guide-grid">
+        <li><a href="https://thedivorceangels.com/england-and-wales-divorce-guide/">England &amp; Wales</a></li>
+        <li><a href="https://thedivorceangels.com/scotland-divorce-guide/">Scotland</a></li>
+        <li><a href="https://thedivorceangels.com/northern-ireland-divorce-guide/">Northern Ireland</a></li>
+      </ul>
+    </section>
+    <section class="guide-group">
+      <h2>Australia</h2>
+      <ul class="guide-grid">
+        <li><a href="https://thedivorceangels.com/australia-divorce-guide/">Australia</a></li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <h2>See your own numbers</h2>
+      <p><span class="brand-italic" style="color:#fff;">Your Divorce Angel</span> applies your province's or state's rules to your real numbers, so you can compare settlement options before you negotiate.</p>
+      <a class="btn" href="https://app.thedivorceangels.com">Start free →</a>
+      <p class="trust">🔒 Your data is encrypted and never sold or shared with third parties.</p>
+    </div>
+
+    <p class="disclaimer">These guides are general financial information about divorce and separation. They are not legal advice, and laws and individual circumstances change. Always consult a licensed family lawyer where you live for advice specific to your situation.</p>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="foot-cta">
+    <a href="https://app.thedivorceangels.com">Get Started →</a>
+  </div>
+  <div class="foot-links">
+    <div class="foot-links-inner">
+      <a class="brand-italic" href="https://app.thedivorceangels.com">Your Divorce Angel</a>
+      <a href="https://thedivorceangels.com/how-it-works/">How It Works</a>
+      <a href="https://thedivorceangels.com/pricing/">Pricing</a>
+      <a href="https://thedivorceangels.com/faq/">FAQs</a>
+      <a href="https://thedivorceangels.com/resources/">Resources</a>
+      <a href="https://thedivorceangels.com/blog/">Blog</a>
+    <a href="https://thedivorceangels.com/guides/">Guides</a>
+      <a href="https://thedivorceangels.com/community/">Community</a>
+      <a href="https://thedivorceangels.com/terms/">Terms</a>
+      <a href="https://thedivorceangels.com/privacy/">Privacy</a>
+      <a href="https://thedivorceangels.com/disclaimer/">Disclaimer</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <a class="blogo" href="https://thedivorceangels.com/"><img src="https://thedivorceangels.com/yda-logo.png" alt="Your Divorce Angel"></a>
+    <div class="foot-social">
+      <a href="https://www.facebook.com/thedivorceangels">Facebook</a>
+      <a href="https://www.instagram.com/divorce_angels/">Instagram</a>
+      <a href="https://www.linkedin.com/company/divorce-angels">LinkedIn</a>
+      <a href="https://www.tiktok.com/@yourdivorceangel">TikTok</a>
+    </div>
+    <p class="foot-fine">Not legal advice. Always consult a licensed attorney.</p>
+  </div>
+</footer>
+
+</body>
+</html>

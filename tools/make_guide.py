@@ -2,7 +2,10 @@
 (same head, styles, header, nav and footer). Run: python3 tools/make_guide.py <content.py>"""
 import json, re, sys, html, os, importlib.util
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-T = open(os.path.join(ROOT, 'alberta-divorce-guide/index.html'), encoding='utf-8').read()
+TEMPLATES = {}
+def template(name):
+    if name not in TEMPLATES: TEMPLATES[name] = open(os.path.join(ROOT, name + '-divorce-guide/index.html'), encoding='utf-8').read()
+    return TEMPLATES[name]
 
 def esc(s): return html.escape(s, quote=True)
 def strip(s): return html.unescape(re.sub(r'<[^>]+>', '', s))
@@ -10,9 +13,11 @@ def strip(s): return html.unescape(re.sub(r'<[^>]+>', '', s))
 def build(g):
     url = 'https://thedivorceangels.com/%s-divorce-guide/' % g['slug']
     name = g['name']
-    t = T
+    tpl = g.get('template', 'alberta')
+    t = template(tpl)
+    TN = tpl.replace('-', ' ').title()
     # head comment
-    t = re.sub(r'<!-- Alberta Divorce Financial Guide \|.*?-->', '<!-- %s Divorce Financial Guide | Your Divorce Angel | %s -->' % (name, g['verified']), t, count=1)
+    t = re.sub(r'<!-- ' + TN + r' Divorce Financial Guide \|.*?-->', '<!-- %s Divorce Financial Guide | Your Divorce Angel | %s -->' % (name, g['verified']), t, count=1)
     t = re.sub(r'<title>.*?</title>', '<title>Divorce in %s: A Financial Guide (2026) | Your Divorce Angel</title>' % esc(g.get('title_name', name)), t, count=1)
     t = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="%s">' % esc(g['desc']), t, count=1)
     t = re.sub(r'<link rel="canonical" href="[^"]*">', '<link rel="canonical" href="%s">' % url, t, count=1)
@@ -74,7 +79,8 @@ def build(g):
 </main>''' % (name, g.get('possessive', name + "'s"), g['disclaimer']))
     a = t.index('<!-- ========== HERO ========== -->'); b = t.index('</main>') + len('</main>')
     t = t[:a] + '<!-- ========== HERO ========== -->\n' + hero + '\n\n<!-- ========== MAIN ========== -->\n' + ''.join(body) + t[b:]
-    assert 'Alberta' not in t.replace('alberta-divorce-guide', ''), [m.start() for m in re.finditer('Alberta', t)][:5]
+    if TN not in name:
+        assert TN not in t.replace(tpl + '-divorce-guide', ''), [t[m.start()-60:m.start()+20] for m in re.finditer(TN, t)][:3]
     out = os.path.join(ROOT, g['slug'] + '-divorce-guide', 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(t)

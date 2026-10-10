@@ -115,6 +115,7 @@ const NAV = `<!-- LOGO BAR -->
   <div class="nav-links">
     <a href="https://app.thedivorceangels.com" style="color:white;text-decoration:none;font-weight:600;font-style:italic;"><em>Your Divorce Angel</em></a>
     <a href="/blog/">Blog</a>
+    <a href="/guides/">Guides</a>
     <a href="/resources/">Resources</a>
     <a href="/community/">Community</a>
   </div>
