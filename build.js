@@ -369,3 +369,34 @@ const latest = posts.slice(0, 6).map(p => ({
 }));
 fs.writeFileSync('./latest-posts.json', JSON.stringify(latest, null, 2));
 console.log('✓ latest-posts.json written with 6 most recent posts');
+
+// ── sitemap.xml: every published page, so search engines find the guides and posts ──
+(() => {
+    const path = require('path');
+    const { execSync } = require('child_process');
+    const SITE = 'https://thedivorceangels.com';
+    const SKIP = new Set(['admin', 'node_modules', 'netlify', 'public', 'tools', 'images', 'js', 'uploads', 'category', '.git']);
+    // Latest commit date per top-level folder (falls back to no date if git history is unavailable)
+    const dates = {};
+    try {
+        let cur = null;
+        execSync('git log --name-only --format=@%cs', { maxBuffer: 64 * 1024 * 1024 }).toString().split('\n').forEach(l => {
+            if (l.startsWith('@')) cur = l.slice(1);
+            else if (l && cur) { const top = l.split('/')[0]; if (!dates[top]) dates[top] = cur; }
+        });
+    } catch (e) {}
+    const today = new Date().toISOString().slice(0, 10);
+    const urls = [{ loc: SITE + '/', lastmod: dates['index.html'] || today }];
+    fs.readdirSync('.', { withFileTypes: true }).forEach(d => {
+        if (!d.isDirectory() || SKIP.has(d.name) || d.name.startsWith('.') || /[%\s]/.test(d.name)) return;
+        if (!fs.existsSync(path.join(d.name, 'index.html'))) return;
+        const html = fs.readFileSync(path.join(d.name, 'index.html'), 'utf8');
+        if (/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html)) return;
+        urls.push({ loc: `${SITE}/${encodeURI(d.name)}/`, lastmod: dates[d.name] || (d.name === 'blog' ? today : null) });
+    });
+    const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+        urls.map(u => `  <url><loc>${u.loc.replace(/&/g, '&amp;')}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}</url>`).join('\n') +
+        '\n</urlset>\n';
+    fs.writeFileSync('./sitemap.xml', xml);
+    console.log(`✓ sitemap.xml written with ${urls.length} pages`);
+})();
