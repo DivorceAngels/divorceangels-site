@@ -294,6 +294,7 @@ function buildBlogIndex(pagePosts, pageNum, totalPages, activeCategory = 'All') 
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Blog — Divorce Angels</title>
+<link rel="canonical" href="https://thedivorceangels.com${activeCategory === 'All' ? (pageNum === 1 ? '/blog/' : `/blog/page/${pageNum}/`) : `/blog/category/${activeCategory.toLowerCase().replace(/ /g, '-').replace(/-/g, '_')}/`}">
 <meta name="description" content="Expert articles on divorce — legal process, finances, emotional wellness, co-parenting, and building a new life.">
 ${SHARED_CSS}
 <style>
