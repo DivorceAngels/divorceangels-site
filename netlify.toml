@@ -3,6 +3,537 @@
   command = "npm install && node build.js"
   functions = "netlify/functions"
 
+# --- Old WordPress addresses found as 404s in Search Console (Oct 2026) ---
+[[redirects]]
+  from = "/faq/gets-legal-custody-family-pet-divorce-2"
+  to = "/dog-custody/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/i-think-my-spouse-is-cheating-should-i-hire-a-private-investigator"
+  to = "/how-can-a-private-investigator-help-with-your-divorce/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/benefits-mediation-vs-litigation"
+  to = "/understanding-mediation-arbitration-and-litigation-key-differences-explained/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/what-is-mediation-and-how-is-different-from-litigation"
+  to = "/understanding-mediation-arbitration-and-litigation-key-differences-explained/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/what-happens-in-divorce-mediation"
+  to = "/why-choose-mediation-for-your-divorce/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/what-are-the-effects-of-a-divorce-on-children"
+  to = "/what-happens-to-kids-during-divorce/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/happens-parties-want-stay-family-home"
+  to = "/were-getting-divorced-i-guess-we-have-to-sell-the-house-but-i-really-want-to-stay-here/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/what-can-i-do-if-all-our-funds-are-tied-up-in-our-home"
+  to = "/moving-using-home-equity/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/what-are-the-steps-my-lawyer-will-take-once-i-have-hired-him-her"
+  to = "/your-first-lawyer-meeting-what-to-expect/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/child-support-payments-decided-ontario-divorce"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/could-a-judge-ever-refuse-my-divorce"
+  to = "/could-a-judge-ever-refuse-my-divorce/"
+  status = 301
+
+[[redirects]]
+  from = "/frequently-asked-questions"
+  to = "/faq/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/*"
+  to = "/faq/"
+  status = 301
+
+[[redirects]]
+  from = "/angels-update/infidelity"
+  to = "/infidelity-is-never-easy-to-process/"
+  status = 301
+
+[[redirects]]
+  from = "/angels-update/do-you-need-to-know-about-a-one-time-affair"
+  to = "/recovering-after-an-affair/"
+  status = 301
+
+[[redirects]]
+  from = "/angels-update/happily-ever-after-post-divorce/*"
+  to = "/happily-ever-divorce-unedited/"
+  status = 301
+
+[[redirects]]
+  from = "/angels-update/happily-ever-after-post-divorce"
+  to = "/happily-ever-divorce-unedited/"
+  status = 301
+
+[[redirects]]
+  from = "/angels-update/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/page/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/author/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/press-release/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/press-releases/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/do-it-yourself-divorce/*"
+  to = "/guides/"
+  status = 301
+
+[[redirects]]
+  from = "/do-it-yourself-divorce"
+  to = "/guides/"
+  status = 301
+
+[[redirects]]
+  from = "/montreal-divorce-services"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy/"
+  status = 301
+
+[[redirects]]
+  from = "/our-vetting-process"
+  to = "/how-it-works/"
+  status = 301
+
+[[redirects]]
+  from = "/our-story"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/careers"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/testimonials"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/lets-talk/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/recommendations/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/angels-recommendations"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/classified/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/classified"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/promotion/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/event/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/family-law-lawyers-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-law-lawyers-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-law-lawyers-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-law-lawyers-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-law-lawyers-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/collaborative-lawyers-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/collaborative-lawyers-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/collaborative-lawyers-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/collaborative-lawyers-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/collaborative-lawyers-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-mediation-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-mediation-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-mediation-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-mediation-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/family-mediation-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mediators-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mediators-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mediators-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mediators-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mediators-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/financial-planners-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/financial-planners-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/financial-planners-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/financial-planners-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/financial-planners-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mortgage-broker-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mortgage-broker-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mortgage-broker-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mortgage-broker-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mortgage-broker-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/private-investigator-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/private-investigator-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/private-investigator-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/private-investigator-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/private-investigator-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/couples-therapy-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/couples-therapy-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/couples-therapy-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/couples-therapy-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/couples-therapy-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/addiction-therapy-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/addiction-therapy-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/addiction-therapy-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/addiction-therapy-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/addiction-therapy-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coach-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coach-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coach-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coach-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coach-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coaches-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coaches-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coaches-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coaches-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/divorce-coaches-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/estate-lawyers-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/estate-lawyers-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/estate-lawyers-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/estate-lawyers-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/estate-lawyers-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/matchmakers-toronto"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/matchmakers-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/matchmakers-vancouver"
+  to = "/british-columbia-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/matchmakers-montreal"
+  to = "/quebec-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/matchmakers-winnipeg"
+  to = "/manitoba-divorce-guide/"
+  status = 301
+
+[[redirects]]
+  from = "/mediators-toronto-ontario"
+  to = "/ontario-divorce-guide/"
+  status = 301
+
 [[redirects]]
   from = "/blog/page/1/"
   to = "/blog/"
