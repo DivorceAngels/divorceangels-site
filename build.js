@@ -421,3 +421,41 @@ console.log('✓ latest-posts.json written with 6 most recent posts');
     fs.writeFileSync('./sitemap.xml', xml);
     console.log(`✓ sitemap.xml written with ${urls.length} pages`);
 })();
+
+// ── IndexNow: list the pages this deploy changed, so Bing (and ChatGPT search) hear about them right away ──
+// The list is written to /indexnow-urls.json. After a successful production deploy,
+// netlify/functions/deploy-succeeded.js reads it and sends it to IndexNow.
+(() => {
+    const path = require('path');
+    const { execSync } = require('child_process');
+    const SITE = 'https://thedivorceangels.com';
+    const matter = require('gray-matter');
+    const urls = new Set();
+    const prev = process.env.CACHED_COMMIT_REF, cur = process.env.COMMIT_REF;
+    let changed = [];
+    if (prev && cur && prev !== cur) {
+        try { changed = execSync(`git diff --name-only ${prev} ${cur}`).toString().split('\n').filter(Boolean); }
+        catch (e) { console.warn('! IndexNow: could not diff commits, sending the homepage only'); }
+    }
+    changed.forEach(f => {
+        if (f === 'index.html') return urls.add(SITE + '/');
+        if (f.startsWith('_posts/') && f.endsWith('.md')) {
+            if (!fs.existsSync(f)) return;
+            const raw = path.basename(f, '.md');
+            const slug = matter(fs.readFileSync(f, 'utf8')).data.slug || raw.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+            urls.add(`${SITE}/${encodeURI(slug)}/`);
+            urls.add(SITE + '/blog/');
+            urls.add(SITE + '/');
+            return;
+        }
+        const top = f.split('/')[0];
+        if (f.includes('/') && fs.existsSync(path.join(top, 'index.html'))) {
+            const html = fs.readFileSync(path.join(top, 'index.html'), 'utf8');
+            if (!/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html)) urls.add(`${SITE}/${encodeURI(top)}/`);
+        }
+    });
+    urls.add(SITE + '/');
+    const list = [...urls].filter(u => !/\/(admin|node_modules|netlify|tools|js|images|public)\//.test(u)).slice(0, 10000);
+    fs.writeFileSync('./indexnow-urls.json', JSON.stringify({ commit: cur || null, urls: list }, null, 2));
+    console.log(`✓ indexnow-urls.json written with ${list.length} changed page(s)`);
+})();
