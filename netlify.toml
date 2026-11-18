@@ -3,6 +3,25 @@
   command = "npm install && node build.js"
   functions = "netlify/functions"
 
+# --- One canonical domain: send www and the Netlify address to https://thedivorceangels.com ---
+[[redirects]]
+  from = "https://www.thedivorceangels.com/*"
+  to = "https://thedivorceangels.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.thedivorceangels.com/*"
+  to = "https://thedivorceangels.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://divorceangelssite.netlify.app/*"
+  to = "https://thedivorceangels.com/:splat"
+  status = 301
+  force = true
+
 # --- Old WordPress addresses found as 404s in Search Console (Oct 2026) ---
 [[redirects]]
   from = "/faq/gets-legal-custody-family-pet-divorce-2"
@@ -609,3 +628,29 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
+
+# --- Keep prototypes, backups and the CMS out of search results ---
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/tracker-restyled.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/divorce-angels-product-demo.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/latest-posts.json"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
