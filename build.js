@@ -241,7 +241,7 @@ ${NAV}
     ${htmlContent}
     <div class="angel-cta">
       <div><h3>Have a question about your situation?</h3><p style="font-size:0.88rem;margin:0;">Try <em>Your Divorce Angel</em> — available 24/7, save time, save money, reduce stress.</p></div>
-      <a href="https://divorceangelssite.netlify.app">Learn More →</a>
+      <a href="https://thedivorceangels.com/">Learn More →</a>
     </div>
   </div>
   ${relHtml}
@@ -370,6 +370,26 @@ const latest = posts.slice(0, 6).map(p => ({
 }));
 fs.writeFileSync('./latest-posts.json', JSON.stringify(latest, null, 2));
 console.log('✓ latest-posts.json written with 6 most recent posts');
+
+// ── Homepage: write the latest 3 posts into index.html as plain HTML ──
+// Crawlers (Google, Bing, ChatGPT search) see the links without running JavaScript.
+// The homepage script still refreshes the grid from latest-posts.json in the browser.
+(() => {
+    const START = '<!-- LATEST_POSTS:START -->', END = '<!-- LATEST_POSTS:END -->';
+    let home;
+    try { home = fs.readFileSync('./index.html', 'utf8'); } catch (e) { return; }
+    const a = home.indexOf(START), b = home.indexOf(END);
+    if (a === -1 || b === -1 || b < a) { console.warn('! index.html has no LATEST_POSTS markers, skipped'); return; }
+    const esc = s => String(s || '').trim().replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const BG = ['#CFE6F3', '#B8D4E8', '#D4E8D4'];
+    const cards = latest.slice(0, 3).map((p, i) => {
+        const img = /^https?:\/\/|^\//.test(p.cover_img || '') ? p.cover_img.replace(/["'()\\]/g, encodeURIComponent) : '';
+        return `<a class="blog-card" href="/${encodeURI(p.slug || '')}/"><div class="blog-img" style="background-color:${BG[i]};${img ? `background-image:url('${img}');` : ''}"></div>` +
+            `<div class="blog-body">${p.category ? `<div class="blog-tag">${esc(p.category)}</div>` : ''}<div class="blog-title">${esc(p.title)}</div><div class="blog-date">${esc(p.date_fmt)}</div></div></a>`;
+    }).join('\n        ');
+    fs.writeFileSync('./index.html', home.slice(0, a + START.length) + '\n        ' + cards + '\n        ' + home.slice(b));
+    console.log('✓ index.html latest posts written as static HTML');
+})();
 
 // ── sitemap.xml: every published page, so search engines find the guides and posts ──
 (() => {
