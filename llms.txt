@@ -11,6 +11,7 @@ Your Divorce Angel (thedivorceangels.com) is the marketing and education site fo
 ## Key pages
 
 - [Home](https://thedivorceangels.com/): What Your Divorce Angel does, a sample account tour, and answers to common questions.
+- [About](https://thedivorceangels.com/about/): Who is behind Divorce Angels and Your Divorce Angel, the company history since 2015, how accuracy and privacy are handled, and contact details.
 - [How It Works](https://thedivorceangels.com/how-it-works/): A walkthrough of the seven-step process, from building a financial picture to negotiation prep and ongoing questions with Angel.
 - [Pricing](https://thedivorceangels.com/pricing/): Subscription pricing for the app.
 - [FAQs](https://thedivorceangels.com/faq/): Common questions about the product, data privacy, jurisdictions covered, and what the tool does and does not do.
