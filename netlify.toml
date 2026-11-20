@@ -22,6 +22,12 @@
   status = 301
   force = true
 
+# --- Short link for the Facebook group: tags visits so GA4 shows group signups ---
+[[redirects]]
+  from = "/group"
+  to = "https://app.thedivorceangels.com/?utm_source=facebook&utm_medium=group&utm_campaign=everything_divorce"
+  status = 302
+
 # --- Old WordPress addresses found as 404s in Search Console (Oct 2026) ---
 [[redirects]]
   from = "/faq/gets-legal-custody-family-pet-divorce-2"
